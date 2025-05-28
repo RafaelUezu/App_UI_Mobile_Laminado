@@ -16,23 +16,47 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
     {
         private CancellationTokenSource _cts;
         private Task _backgroundTask;
-        private bool _running;
+       
+
+        public bool IsRunning
+        {
+            get
+            {
+                return _backgroundTask != null &&
+                       !_backgroundTask.IsCompleted &&
+                       !_backgroundTask.IsCanceled &&
+                       !_backgroundTask.IsFaulted;
+            }
+        }
 
         public void Start()
         {
-            if (_running) return;
+            if (IsRunning) return;
 
             _cts = new CancellationTokenSource();
             _backgroundTask = Task.Run(() => RunLoop(_cts.Token, "192.168.1.100", 4840, 1000, "opc.tcp://192.168.1.100:4840", 800));
-            _running = true;
         }
 
         public async Task StopAsync()
         {
-            _cts?.Cancel();
-            if (_backgroundTask != null)
+            if (!IsRunning)
+                return;
+
+            try
             {
-                try { await _backgroundTask; } catch { /* evitar exceções de cancelamento */ }
+                _cts?.Cancel();
+                if (_backgroundTask != null)
+                    await _backgroundTask;
+            }
+            catch (Exception ex)
+            {
+                // Log se necessário
+                System.Diagnostics.Debug.WriteLine($"Erro ao parar o driver: {ex.Message}");
+            }
+            finally
+            {
+                _backgroundTask = null;
+                _cts = null;
             }
         }
         private bool _rebootRequested = false;

@@ -114,6 +114,9 @@
 	  <Compile Update="MVVM\View\Pages\Operacao\Page_Operacao_SupervisaodosTempos.xaml.cs">
 	    <DependentUpon>Page_Operacao_SupervisaodosTempos.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="MVVM\View\Pages\Relatorios\Page_Relatorios_Temperatura.xaml.cs">
+	    <DependentUpon>Page_Relatorios_Temperatura.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 
@@ -122,10 +125,22 @@
 	  <MauiXaml Update="AppShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao.xaml">
+	  <MauiXaml Update="MVVM\View\Pages\Inicial\Page_Inicial.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_IOTest.xaml">
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_Configuracao.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_Entradas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_Manual.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_Referencias.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_Saidas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\View\Pages\Menu_FlyoutPage.xaml">
@@ -146,7 +161,7 @@
 	  <MauiXaml Update="MVVM\View\Pages\Receitas\Page_Receitas_Edicao.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\View\Pages\Relatorios\Pages_Alarmes_Temperatura.xaml">
+	  <MauiXaml Update="MVVM\View\Pages\Relatorios\Page_Relatorios_Temperatura.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\View\Pages\Relatorios\Page_Relatorios_Alarmes.xaml">

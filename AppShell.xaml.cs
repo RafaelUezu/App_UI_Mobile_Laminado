@@ -13,7 +13,7 @@ namespace App_UI_Mobile_Laminado
 
             // Rotas podem ser registradas aqui se forem navegáveis
             
-            Routing.RegisterRoute(nameof(Page_Manutencao_IOTest), typeof(Page_Manutencao_IOTest));
+            
         }
     }
 }
