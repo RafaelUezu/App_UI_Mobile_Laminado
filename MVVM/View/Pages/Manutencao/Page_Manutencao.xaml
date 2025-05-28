@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao.Page_Manutencao"
+             Title="Page_Manutencao">
+    <VerticalStackLayout
+        BackgroundColor="Aqua"
+        VerticalOptions="Center"
+        >
+        <Label 
+            Text="Esta será a tela de manutenção"
+            VerticalOptions="Center" 
+            FontSize="30"
+            HorizontalOptions="Center" />
+        
+        
+        
+        <Button x:Name="Button_IOTest"
+                Text="Teste de I/O"
+                FontSize="20"
+                Clicked="Button_IOTest_Clicked"
+                
+                />
+    </VerticalStackLayout>
+</ContentPage>

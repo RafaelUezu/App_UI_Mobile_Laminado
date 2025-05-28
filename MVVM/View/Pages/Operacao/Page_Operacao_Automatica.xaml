@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao.Page_Operacao_Automatica"
+             
+             Title="Operação Automática">
+    <VerticalStackLayout
+        BackgroundColor="Red"
+        VerticalOptions="Center"
+        >
+        <Label 
+            Text="Esta será a tela de operação"
+            VerticalOptions="Center" 
+            FontSize="30"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

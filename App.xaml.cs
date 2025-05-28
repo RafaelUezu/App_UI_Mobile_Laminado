@@ -12,7 +12,7 @@ namespace App_UI_Mobile_Laminado
             InitializeComponent();
             _driver = driver;
             _driver.Start();
-            MainPage = new Menu_FlyoutPage();
+            MainPage = new AppShell();
         }
 
         protected override async void OnSleep() => await _driver.StopAsync();

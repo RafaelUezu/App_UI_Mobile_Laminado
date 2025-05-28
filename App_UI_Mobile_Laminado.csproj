@@ -47,8 +47,42 @@
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
+		
 		<MauiImage Include="Resources\Images\*" />
+		
+		<MauiImage Update="Resources\Images\data_backup.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		
+		<MauiImage Update="Resources\Images\lab_items.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
+		<MauiImage Update="Resources\Images\menu.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
+		<MauiImage Update="Resources\Images\mind_map.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
+		<MauiImage Update="Resources\Images\ophthalmology.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
+		<MauiImage Update="Resources\Images\pen.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
+		<MauiImage Update="Resources\Images\services.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		
+		<MauiImage Update="Resources\Images\statistics.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -56,6 +90,8 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+
+
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
@@ -69,11 +105,54 @@
 
 	<ItemGroup>
 	  <Folder Include="MVVM\Model\" />
-	  <Folder Include="MVVM\ViewModel\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="MVVM\View\Pages\Operacao\Page_Operacao_Automatica.xaml.cs">
+	    <DependentUpon>Page_Operacao_Automatica.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\View\Pages\Operacao\Page_Operacao_SupervisaodosTempos.xaml.cs">
+	    <DependentUpon>Page_Operacao_SupervisaodosTempos.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+	  <MauiXaml Update="AppShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_IOTest.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\View\Pages\Menu_FlyoutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Operacao\Page_Operacao_Manual.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Operacao\Page_Operacao_Automatica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Operacao\Page_Operacao_SupervisaodosTempos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\ProgramacaoHoraria\Page_ProgramacaoHoraria.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Receitas\Page_Receitas_Edicao.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Relatorios\Pages_Alarmes_Temperatura.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Relatorios\Page_Relatorios_Alarmes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\View\Pages\Relatorios\Page_Relatorios_Energia.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
