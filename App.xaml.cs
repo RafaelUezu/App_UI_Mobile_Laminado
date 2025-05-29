@@ -1,6 +1,6 @@
 ﻿using MAUI_Opcua.Services.Drivers.Opcua;
 using App_UI_Mobile_Laminado.MVVM.View.Pages;
-
+using App_UI_Mobile_Laminado.MVVM.View.Pages.Login;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
@@ -16,7 +16,7 @@ namespace App_UI_Mobile_Laminado
             InitializeComponent();
             _driver = driver;
             _driver.Start(); // Inicia driver ao abrir o app
-            MainPage = new AppShell();
+            MainPage = new Page_Login_Inicial();
         }
 
         protected override void OnSleep()

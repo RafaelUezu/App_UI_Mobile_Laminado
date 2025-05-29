@@ -220,6 +220,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             while (!token.IsCancellationRequested)
                             {
                                 System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("Error :" + Error));
+                                GVL.StatusOpcua.xStatusOpcua = false;
                                 if (Error >= 20)
                                 {
                                     break;
@@ -236,6 +237,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                         await Task.Delay(delay_request, token); // Delay controlado
                                         System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Métodos de leitura e escrita finalizados");
+                                        GVL.StatusOpcua.xStatusOpcua = true;
                                     }
                                     catch (Exception ex)
                                     {

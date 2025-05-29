@@ -13,6 +13,17 @@
 
             
             <controls:CurrentShellItemConverter x:Key="CurrentShellItemConverter" />
+            
+            <!-- Cores HighPerformance -->
+            <Color x:Key="Normal_Cor1">#E1E4EB</Color>
+            <Color x:Key="Normal_Cor2">#CBD0DB</Color>
+            <Color x:Key="Normal_Cor3">#AFB7C7</Color>
+            <Color x:Key="Normal_Cor4">#9DA7BB</Color>
+            <Color x:Key="Normal_Cor5">#8592AB</Color>
+            <Color x:Key="Normal_Cor6">#62718E</Color>
+
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

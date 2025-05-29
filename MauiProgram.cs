@@ -1,5 +1,6 @@
 ﻿using MAUI_Opcua.Services.Drivers.Opcua;
 using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui;
 
 namespace App_UI_Mobile_Laminado
 {
@@ -12,6 +13,7 @@ namespace App_UI_Mobile_Laminado
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkitMediaElement()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

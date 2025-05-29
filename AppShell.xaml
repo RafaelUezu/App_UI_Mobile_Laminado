@@ -7,13 +7,13 @@
     Shell.FlyoutBehavior="Flyout"
     >
     
-    
-    
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
-                    <Image Source="{Binding Icon}" WidthRequest="40" HeightRequest="40" />
+                    <Image Source="{Binding Icon}"
+                           WidthRequest="40"
+                           HeightRequest="40" />
                     <Label Text="{Binding Title}"
                            FontSize="20"
                            TextColor="Black"
@@ -22,15 +22,47 @@
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
+    
+    <Shell.FlyoutHeader>
+        <StackLayout
+            Padding="10"
+            Orientation="Horizontal">
+            <Frame
+                BackgroundColor="{StaticResource Normal_Cor1}"
+                MaximumHeightRequest="60"
+                MaximumWidthRequest="60"
+                CornerRadius="30"
+                Padding="0"
+                Margin="0">
+                <Image
+                    Source="login.png"
+                    Aspect="AspectFill"
+                    Margin="0"
+                    MaximumHeightRequest="60"/>
+            </Frame>
+            <Label
+                x:Name="Label_UserName"
+                Text="Teste_Usuário1"
+                TextColor="{StaticResource Normal_Cor6}"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="FillAndExpand"
+                Margin="10,0,20,0"/>
+            
+            <Button x:Name="Button_Logout"
+                    Text="Logout"
+                    ImageSource="logout.png"
+                    ContentLayout="Left,10"
+                    MaximumHeightRequest="50"
+                    Clicked="Button_Logout_Clicked"
+                    BackgroundColor="{StaticResource Normal_Cor6}"
+                    />
+        </StackLayout>
+    </Shell.FlyoutHeader>
 
-    <ShellContent
-        Title="Tela Inicial"
-        Icon="house.png"
-        ContentTemplate="{DataTemplate Pages:Inicial.Page_Inicial}"
-        Route="Page_Inicial"
-        />
 
-    <FlyoutItem Title="Operação" Icon="factory.png" FlyoutDisplayOptions="AsSingleItem"
+    
+    <!--<FlyoutItem Title="Operação" Icon="factory.png" FlyoutDisplayOptions="AsSingleItem"
                 >
         <ShellContent Title="Operação Automática"
                       Icon="head_gear.png"
@@ -47,7 +79,7 @@
                       ContentTemplate="{DataTemplate Pages:Operacao.Page_Operacao_Manual}"
                       Route="Page_Operacao_Manual" 
                       />
-    </FlyoutItem>
+    </FlyoutItem>-->
 
     <FlyoutItem Title="Receitas" Icon="lab_items" FlyoutDisplayOptions="AsSingleItem">
         <ShellContent Title="Edição de receitas"
@@ -110,6 +142,5 @@
                       Route="Page_Manutencao_Configuracao"
                       />
     </FlyoutItem>
-
 
 </Shell>

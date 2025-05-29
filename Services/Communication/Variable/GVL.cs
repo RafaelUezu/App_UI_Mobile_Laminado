@@ -1,8 +1,10 @@
-﻿using System;
+﻿using App_UI_Mobile_Laminado.Services.Authentication.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace MAUI_Opcua.Services.Communication.Variable
 {
@@ -704,6 +706,48 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
+            }
+        }
+
+        public class Authentication
+        {
+            public static class SessaoUsuario
+            {
+                /*
+                private static ReaderWriterLockSlim _rwLock = new();
+                private static Usuario _UsuarioAtual;
+
+                public static Usuario UsuarioAtual
+                {
+                    get
+                    {
+                        _rwLock.EnterReadLock();
+                        try { return _UsuarioAtual; }
+                        finally { _rwLock.ExitReadLock(); }
+                    }
+                    set
+                    {
+                        _rwLock.EnterWriteLock();
+                        try { _UsuarioAtual = value; }
+                        finally { _rwLock.ExitWriteLock(); }
+                    }
+                }
+
+
+
+
+                public static void Login(Usuario usuario)
+                {
+                    UsuarioAtual = usuario;
+                }
+
+                public static void Logout()
+                {
+                    UsuarioAtual = null;
+                }
+
+                public static bool EstaLogado => UsuarioAtual != null;
+                */
             }
         }
     }

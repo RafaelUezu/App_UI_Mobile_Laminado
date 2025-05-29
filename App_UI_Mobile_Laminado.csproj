@@ -94,6 +94,7 @@
 
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="4.1.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
@@ -101,10 +102,6 @@
 		<PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Client.ComplexTypes" Version="1.5.376.213" />
 		<PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Configuration" Version="1.5.376.213" />
 		<PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Core" Version="1.5.376.213" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="MVVM\Model\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -119,13 +116,19 @@
 	  </Compile>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\forno_laminado_rodando.mp4">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiAsset>
+	</ItemGroup>
+
 
 
 	<ItemGroup>
 	  <MauiXaml Update="AppShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\View\Pages\Inicial\Page_Inicial.xaml">
+	  <MauiXaml Update="MVVM\View\Pages\Login\Page_Login_Inicial.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\View\Pages\Manutencao\Page_Manutencao_Configuracao.xaml">
