@@ -79,24 +79,29 @@
                       ContentTemplate="{DataTemplate Pages:Operacao.Page_Operacao_Manual}"
                       Route="Page_Operacao_Manual" 
                       />
-    </FlyoutItem>-->
+    </FlyoutItem>
+    -->
 
-    <FlyoutItem Title="Receitas" Icon="lab_items" FlyoutDisplayOptions="AsSingleItem">
+    
+    <!--<FlyoutItem Title="Receitas" Icon="lab_items.png" FlyoutDisplayOptions="AsSingleItem">
         <ShellContent Title="Edição de receitas"
-                      Icon="pen"
+                      Icon="pen.png"
                       ContentTemplate="{DataTemplate Pages:Receitas.Page_Receitas_Edicao}"
                       Route="Page_Receitas_Edicao"
                       />
-    </FlyoutItem>
+    </FlyoutItem>-->
 
-    <FlyoutItem Title="Programação Horária" Icon="alarm_clock.png" FlyoutDisplayOptions="AsSingleItem">
+    
+    <!--<FlyoutItem Title="Programação Horária" Icon="alarm_clock.png" FlyoutDisplayOptions="AsSingleItem">
         <ShellContent Title="Programação Horária"
                       Icon="alarm_clock.png"
                       ContentTemplate="{DataTemplate Pages:ProgramacaoHoraria.Page_ProgramacaoHoraria}"
                       Route="Page_ProgramacaoHoraria"
                       />
-    </FlyoutItem>
-
+    </FlyoutItem>-->
+    
+    
+    <!--
     <FlyoutItem Title="Relatórios" Icon="statistics.png" FlyoutDisplayOptions="AsSingleItem">
         <ShellContent Title="Histórico de Alarmes"
                       Icon="alarm.png"
@@ -114,8 +119,8 @@
                       Route="Page_Relatorios_Temperatura"
                       />
     </FlyoutItem>
-
-    <FlyoutItem Title="Manutenção" Icon="services.png" FlyoutDisplayOptions="AsSingleItem">
+    -->
+    <!--<FlyoutItem Title="Manutenção" Icon="services.png" FlyoutDisplayOptions="AsSingleItem">
         <ShellContent Title="Referências"
                       Icon="lighthouse.png"
                       ContentTemplate="{DataTemplate Pages:Manutencao.Page_Manutencao_Referencias}"
@@ -141,6 +146,6 @@
                       ContentTemplate="{DataTemplate Pages:Manutencao.Page_Manutencao_Configuracao}"
                       Route="Page_Manutencao_Configuracao"
                       />
-    </FlyoutItem>
+    </FlyoutItem>-->
 
 </Shell>
