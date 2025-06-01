@@ -180,9 +180,9 @@ namespace App_UI_Mobile_Laminado
                 itemManutencao.Items.Add(new ShellContent
                 {
                     Title = "Supervisão das Saídas",
-                    Icon = "screwdriver.png",
-                    ContentTemplate = new DataTemplate(typeof(Page_Manutencao_Configuracao)),
-                    Route = "Page_Manutencao_Configuracao"
+                    Icon = "control.png",
+                    ContentTemplate = new DataTemplate(typeof(Page_Manutencao_Saidas)),
+                    Route = "Page_Manutencao_Saidas"
                 });
             }
 
