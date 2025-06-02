@@ -19,6 +19,7 @@ namespace App_UI_Mobile_Laminado
             CriarMenuDinamico();
             // Rotas podem ser registradas aqui se forem navegáveis
             Routing.RegisterRoute(nameof(Page_Login_Inicial), typeof(Page_Login_Inicial));
+            Routing.RegisterRoute(nameof(Page_Manutencao_Entradas), typeof(Page_Manutencao_Entradas));
 
         }
 

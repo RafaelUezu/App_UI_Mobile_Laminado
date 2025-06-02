@@ -3,10 +3,1016 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao.Page_Manutencao_Entradas"
              Title="Page_Manutencao_Entradas">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout
+            Orientation="Vertical"
+            Grid.Column="0"
+            Grid.Row="0">
+            <Label
+                Text ="AX-324NA0PA1P"
+                Margin="10,5,5,5"
+                FontSize="24"
+                />
+            
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40">
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,0,0,0"
+                             Padding="0"
+                             >
+                    <Label
+                        x:Name="C1_Label_DI0"
+                        Text="DI0"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI0"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI0_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                            
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI0"
+                        Text="{Binding C1_sDI0_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"
+                        FontSize="Micro"
+                        IsEnabled="True"
+                        />
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40">
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI1"
+                        Text="DI1"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                         <Border
+                             x:Name="C1_Display_DI1"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI1_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry x:Name="C1_Entry_DI1"
+                                   Text="{Binding C1_sDI1_Descricao, Mode=TwoWay}"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   Margin="0,0,0,0"/>
+
+                </StackLayout>
+            </Frame>
+            
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI2"
+                        Text="DI2"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI2"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI2_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI2"
+                        Text="{Binding C1_sDI2_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI3"
+                        Text="DI3"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI3"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI3_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI3"
+                        Text="{Binding C1_sDI3_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI4"
+                        Text="DI4"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI4"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI4_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI4"
+                        Text="{Binding C1_sDI4_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI5"
+                        Text="DI5"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI5"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI5_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI5"
+                        Text="{Binding C1_sDI5_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI6"
+                        Text="DI6"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI6"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI6_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI6"
+                        Text="{Binding C1_sDI6_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI7"
+                        Text="DI7"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI7"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI7_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI7"
+                        Text="{Binding C1_sDI7_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI8"
+                        Text="DI8"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI8"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI8_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI8"
+                        Text="{Binding C1_sDI8_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI9"
+                        Text="DI9"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI9"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI9_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI9"
+                        Text="{Binding C1_sDI9_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI10"
+                        Text="DI10"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI10"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI10_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI10"
+                        Text="{Binding C1_sDI10_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI11"
+                        Text="DI11"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI11"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI11_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI11"
+                        Text="{Binding C1_sDI11_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI12"
+                        Text="DI12"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI12"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI12_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI12"
+                        Text="{Binding C1_sDI12_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI13"
+                        Text="DI13"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI13"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI13_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI13"
+                        Text="{Binding C1_sDI13_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI14"
+                        Text="DI14"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI14"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI14_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI14"
+                        Text="{Binding C1_sDI14_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="C1_Label_DI15"
+                        Text="DI15"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="C1_Display_DI15"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C1_sDI15_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="C1_Entry_DI15"
+                        Text="{Binding C1_sDI15_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+
+
+
+
+        </StackLayout>
+        <StackLayout
+            Orientation="Vertical"
+            Grid.Column="1"
+            Grid.Row="0">
+            <Label
+                Text ="AS08AM10N-A"
+                Margin="10,5,5,5"
+                FontSize="24"
+                />
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40">
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,0,0,0"
+                             Padding="0"
+                             >
+                    <Label
+                        x:Name="Label_DI0"
+                        Text="DI0"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI0"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI0_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                            
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI0"
+                        Text="{Binding C2_sDI0_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"
+                        FontSize="Micro"
+                        IsEnabled="True"
+                        />
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40">
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI1"
+                        Text="DI1"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI1"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI1_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry x:Name="Entry_DI1"
+                                   Text="{Binding C2_sDI1_Descricao, Mode=TwoWay}"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   Margin="0,0,0,0"/>
+
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI2"
+                        Text="DI2"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI2"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI2_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI2"
+                        Text="{Binding C2_sDI2_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI3"
+                        Text="DI3"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI3"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI3_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI3"
+                        Text="{Binding C2_sDI3_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI4"
+                        Text="DI4"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI4"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI4_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI4"
+                        Text="{Binding C2_sDI4_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI5"
+                        Text="DI5"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI5"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI5_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI5"
+                        Text="{Binding C2_sDI5_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI6"
+                        Text="DI6"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI6"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI6_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI6"
+                        Text="{Binding C2_sDI6_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame
+                Padding="0"
+                Margin="5,0,0,0"
+                HeightRequest="40"    >
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="Label_DI7"
+                        Text="DI7"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <Frame
+                         Padding="0"
+                         HorizontalOptions="Start"
+                         Margin="0,0,0,0"
+                         BorderColor="Transparent"
+                         >
+                        <Border
+                             x:Name="Display_DI7"
+                             WidthRequest="25" HeightRequest="25"
+                             BackgroundColor="{Binding C2_sDI7_Color, Mode=OneWay}"
+                             Stroke="Black"
+                             StrokeThickness="2"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             StrokeShape="RoundRectangle 3"
+                             />
+                    </Frame>
+                    <Entry
+                        x:Name="Entry_DI7"
+                        Text="{Binding C2_sDI7_Descricao, Mode=TwoWay}"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+
+
+
+        </StackLayout>
+    </Grid>
 </ContentPage>

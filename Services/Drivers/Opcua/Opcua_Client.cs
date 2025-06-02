@@ -125,14 +125,33 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                             List<ReadValueId> nodesToRead_GVL_Test = new List<ReadValueId>
                             {
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ0"), AttributeId = Attributes.Value },//0
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ1"), AttributeId = Attributes.Value },//1
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ2"), AttributeId = Attributes.Value },//2
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ3"), AttributeId = Attributes.Value },//3
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ4"), AttributeId = Attributes.Value },//4
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ5"), AttributeId = Attributes.Value },//5
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ6"), AttributeId = Attributes.Value },//6
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ7"), AttributeId = Attributes.Value },//7
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI0"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI1"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI2"), AttributeId = Attributes.Value },//2
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI3"), AttributeId = Attributes.Value },//3
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI4"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI5"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI6"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI7"), AttributeId = Attributes.Value },//7
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI8"), AttributeId = Attributes.Value },//8
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI9"), AttributeId = Attributes.Value },//9
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI10"), AttributeId = Attributes.Value },//10
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI11"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI12"), AttributeId = Attributes.Value },//12
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI13"), AttributeId = Attributes.Value },//13
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI14"), AttributeId = Attributes.Value },//14
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DI15"), AttributeId = Attributes.Value },//15
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ0"), AttributeId = Attributes.Value },//16
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ1"), AttributeId = Attributes.Value },//17
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ2"), AttributeId = Attributes.Value },//18
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ3"), AttributeId = Attributes.Value },//19
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ4"), AttributeId = Attributes.Value },//20
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ5"), AttributeId = Attributes.Value },//21
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ6"), AttributeId = Attributes.Value },//22
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ7"), AttributeId = Attributes.Value },//23
+
+
 
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.iTest"), AttributeId = Attributes.Value },//8
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.rTest"), AttributeId = Attributes.Value },//9
@@ -150,43 +169,43 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ1",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ1",
                                     GetValue = () => GVL.Opcua.Test.xDQ1.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ1.Write = null
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ2",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ2",
                                     GetValue = () => GVL.Opcua.Test.xDQ2.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ2.Write = null
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ3",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ3",
                                     GetValue = () => GVL.Opcua.Test.xDQ3.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ3.Write = null
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ4",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ4",
                                     GetValue = () => GVL.Opcua.Test.xDQ4.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ4.Write = null
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ5",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ5",
                                     GetValue = () => GVL.Opcua.Test.xDQ5.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ5.Write = null
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ6",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ6",
                                     GetValue = () => GVL.Opcua.Test.xDQ6.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ6.Write = null
                                 },
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ7",
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ7",
                                     GetValue = () => GVL.Opcua.Test.xDQ7.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.xDQ7.Write = null
                                 },
