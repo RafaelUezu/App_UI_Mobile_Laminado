@@ -46,7 +46,7 @@
                         <Border
                              x:Name="C1_Display_DI0"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI0_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI0_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -90,7 +90,7 @@
                          <Border
                              x:Name="C1_Display_DI1"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI1_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI1_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -130,7 +130,7 @@
                         <Border
                              x:Name="C1_Display_DI2"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI2_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI2_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -170,7 +170,7 @@
                         <Border
                              x:Name="C1_Display_DI3"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI3_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI3_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -210,7 +210,7 @@
                         <Border
                              x:Name="C1_Display_DI4"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI4_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI4_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -250,7 +250,7 @@
                         <Border
                              x:Name="C1_Display_DI5"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI5_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI5_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -290,7 +290,7 @@
                         <Border
                              x:Name="C1_Display_DI6"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI6_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI6_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -330,7 +330,7 @@
                         <Border
                              x:Name="C1_Display_DI7"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI7_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI7_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -370,7 +370,7 @@
                         <Border
                              x:Name="C1_Display_DI8"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI8_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI8_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -410,7 +410,7 @@
                         <Border
                              x:Name="C1_Display_DI9"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI9_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI9_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -450,7 +450,7 @@
                         <Border
                              x:Name="C1_Display_DI10"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI10_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI10_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -490,7 +490,7 @@
                         <Border
                              x:Name="C1_Display_DI11"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI11_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI11_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -530,7 +530,7 @@
                         <Border
                              x:Name="C1_Display_DI12"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI12_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI12_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -570,7 +570,7 @@
                         <Border
                              x:Name="C1_Display_DI13"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI13_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI13_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -610,7 +610,7 @@
                         <Border
                              x:Name="C1_Display_DI14"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI14_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI14_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -650,7 +650,7 @@
                         <Border
                              x:Name="C1_Display_DI15"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C1_sDI15_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C1_cDI15_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -707,7 +707,7 @@
                         <Border
                              x:Name="Display_DI0"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI0_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI0_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -751,7 +751,7 @@
                         <Border
                              x:Name="Display_DI1"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI1_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI1_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -791,7 +791,7 @@
                         <Border
                              x:Name="Display_DI2"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI2_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI2_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -831,7 +831,7 @@
                         <Border
                              x:Name="Display_DI3"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI3_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI3_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -871,7 +871,7 @@
                         <Border
                              x:Name="Display_DI4"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI4_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI4_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -911,7 +911,7 @@
                         <Border
                              x:Name="Display_DI5"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI5_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI5_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -951,7 +951,7 @@
                         <Border
                              x:Name="Display_DI6"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI6_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI6_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"
@@ -991,7 +991,7 @@
                         <Border
                              x:Name="Display_DI7"
                              WidthRequest="25" HeightRequest="25"
-                             BackgroundColor="{Binding C2_sDI7_Color, Mode=OneWay}"
+                             BackgroundColor="{Binding C2_cDI7_Color, Mode=OneWay}"
                              Stroke="Black"
                              StrokeThickness="2"
                              HorizontalOptions="Center"

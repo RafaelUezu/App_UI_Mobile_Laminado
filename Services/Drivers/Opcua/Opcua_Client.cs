@@ -364,7 +364,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 GVL.Opcua.Test.xC1_DQ6.Write = GVL.Opcua.Test.xC1_DQ6.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ6.Read.Value : (bool?)null;
                                 GVL.Opcua.Test.xC1_DQ7.Write = GVL.Opcua.Test.xC1_DQ7.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ7.Read.Value : (bool?)null;
 
-
                                 GVL.Opcua.Test.xC2_DQ0.Write = GVL.Opcua.Test.xC2_DQ0.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ0.Read.Value : (bool?)null;
                                 GVL.Opcua.Test.xC2_DQ1.Write = GVL.Opcua.Test.xC2_DQ1.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ1.Read.Value : (bool?)null;
                                 GVL.Opcua.Test.xC2_DQ2.Write = GVL.Opcua.Test.xC2_DQ2.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ2.Read.Value : (bool?)null;
@@ -373,7 +372,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 GVL.Opcua.Test.xC2_DQ5.Write = GVL.Opcua.Test.xC2_DQ5.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ5.Read.Value : (bool?)null;
                                 GVL.Opcua.Test.xC2_DQ6.Write = GVL.Opcua.Test.xC2_DQ6.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ6.Read.Value : (bool?)null;
                                 GVL.Opcua.Test.xC2_DQ7.Write = GVL.Opcua.Test.xC2_DQ7.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ7.Read.Value : (bool?)null;
-
 
                                 GVL.Opcua.Test.sTest.Write = "Teste";
                                 GVL.Opcua.Test.iTest.Write = 112;
@@ -430,39 +428,45 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 {
                                     Stopwatch sw = Stopwatch.StartNew();
 
-                                    //if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC1_DQ0.Read = (bool)results_GVL_Test[0].Value; }
+                                    if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC1_DI0.Read = (bool)results_GVL_Test[0].Value; }
+                                    if ((bool?)results_GVL_Test[1].Value != null) { GVL.Opcua.Test.xC1_DI1.Read = (bool)results_GVL_Test[1].Value; }
+                                    if ((bool?)results_GVL_Test[2].Value != null) { GVL.Opcua.Test.xC1_DI2.Read = (bool)results_GVL_Test[2].Value; }
+                                    if ((bool?)results_GVL_Test[3].Value != null) { GVL.Opcua.Test.xC1_DI3.Read = (bool)results_GVL_Test[3].Value; }
+                                    if ((bool?)results_GVL_Test[4].Value != null) { GVL.Opcua.Test.xC1_DI4.Read = (bool)results_GVL_Test[4].Value; }
+                                    if ((bool?)results_GVL_Test[5].Value != null) { GVL.Opcua.Test.xC1_DI5.Read = (bool)results_GVL_Test[5].Value; }
+                                    if ((bool?)results_GVL_Test[6].Value != null) { GVL.Opcua.Test.xC1_DI6.Read = (bool)results_GVL_Test[6].Value; }
+                                    if ((bool?)results_GVL_Test[7].Value != null) { GVL.Opcua.Test.xC1_DI7.Read = (bool)results_GVL_Test[7].Value; }
+                                    if ((bool?)results_GVL_Test[8].Value != null) { GVL.Opcua.Test.xC1_DI8.Read = (bool)results_GVL_Test[8].Value; }
+                                    if ((bool?)results_GVL_Test[9].Value != null) { GVL.Opcua.Test.xC1_DI9.Read = (bool)results_GVL_Test[9].Value; }
+                                    if ((bool?)results_GVL_Test[10].Value != null) { GVL.Opcua.Test.xC1_DI10.Read = (bool)results_GVL_Test[10].Value; }
+                                    if ((bool?)results_GVL_Test[11].Value != null) { GVL.Opcua.Test.xC1_DI11.Read = (bool)results_GVL_Test[11].Value; }
+                                    if ((bool?)results_GVL_Test[12].Value != null) { GVL.Opcua.Test.xC1_DI12.Read = (bool)results_GVL_Test[12].Value; }
+                                    if ((bool?)results_GVL_Test[13].Value != null) { GVL.Opcua.Test.xC1_DI13.Read = (bool)results_GVL_Test[13].Value; }
+                                    if ((bool?)results_GVL_Test[14].Value != null) { GVL.Opcua.Test.xC1_DI14.Read = (bool)results_GVL_Test[14].Value; }
+                                    if ((bool?)results_GVL_Test[15].Value != null) { GVL.Opcua.Test.xC1_DI15.Read = (bool)results_GVL_Test[15].Value; }
 
+                                    if ((bool?)results_GVL_Test[16].Value != null) { GVL.Opcua.Test.xC1_DQ0.Read = (bool)results_GVL_Test[16].Value; }
+                                    if ((bool?)results_GVL_Test[17].Value != null) { GVL.Opcua.Test.xC1_DQ1.Read = (bool)results_GVL_Test[17].Value; }
+                                    if ((bool?)results_GVL_Test[18].Value != null) { GVL.Opcua.Test.xC1_DQ2.Read = (bool)results_GVL_Test[18].Value; }
+                                    if ((bool?)results_GVL_Test[19].Value != null) { GVL.Opcua.Test.xC1_DQ3.Read = (bool)results_GVL_Test[19].Value; }
+                                    if ((bool?)results_GVL_Test[20].Value != null) { GVL.Opcua.Test.xC1_DQ4.Read = (bool)results_GVL_Test[20].Value; }
+                                    if ((bool?)results_GVL_Test[21].Value != null) { GVL.Opcua.Test.xC1_DQ5.Read = (bool)results_GVL_Test[21].Value; }
+                                    if ((bool?)results_GVL_Test[22].Value != null) { GVL.Opcua.Test.xC1_DQ6.Read = (bool)results_GVL_Test[22].Value; }
+                                    if ((bool?)results_GVL_Test[23].Value != null) { GVL.Opcua.Test.xC1_DQ7.Read = (bool)results_GVL_Test[23].Value; }
 
+                                    if ((bool?)results_GVL_Test[24].Value != null) { GVL.Opcua.Test.xC2_DQ0.Read = (bool)results_GVL_Test[24].Value; }
+                                    if ((bool?)results_GVL_Test[25].Value != null) { GVL.Opcua.Test.xC2_DQ1.Read = (bool)results_GVL_Test[25].Value; }
+                                    if ((bool?)results_GVL_Test[26].Value != null) { GVL.Opcua.Test.xC2_DQ2.Read = (bool)results_GVL_Test[26].Value; }
+                                    if ((bool?)results_GVL_Test[27].Value != null) { GVL.Opcua.Test.xC2_DQ3.Read = (bool)results_GVL_Test[27].Value; }
+                                    if ((bool?)results_GVL_Test[28].Value != null) { GVL.Opcua.Test.xC2_DQ4.Read = (bool)results_GVL_Test[28].Value; }
+                                    if ((bool?)results_GVL_Test[29].Value != null) { GVL.Opcua.Test.xC2_DQ5.Read = (bool)results_GVL_Test[29].Value; }
+                                    if ((bool?)results_GVL_Test[30].Value != null) { GVL.Opcua.Test.xC2_DQ6.Read = (bool)results_GVL_Test[30].Value; }
+                                    if ((bool?)results_GVL_Test[31].Value != null) { GVL.Opcua.Test.xC2_DQ7.Read = (bool)results_GVL_Test[31].Value; }
 
-
-
-
-
-
-                                    if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC1_DQ0.Read = (bool)results_GVL_Test[0].Value; }
-                                    if ((bool?)results_GVL_Test[1].Value != null) { GVL.Opcua.Test.xC1_DQ1.Read = (bool)results_GVL_Test[1].Value; }
-                                    if ((bool?)results_GVL_Test[2].Value != null) { GVL.Opcua.Test.xC1_DQ2.Read = (bool)results_GVL_Test[2].Value; }
-                                    if ((bool?)results_GVL_Test[3].Value != null) { GVL.Opcua.Test.xC1_DQ3.Read = (bool)results_GVL_Test[3].Value; }
-                                    if ((bool?)results_GVL_Test[4].Value != null) { GVL.Opcua.Test.xC1_DQ4.Read = (bool)results_GVL_Test[4].Value; }
-                                    if ((bool?)results_GVL_Test[5].Value != null) { GVL.Opcua.Test.xC1_DQ5.Read = (bool)results_GVL_Test[5].Value; }
-                                    if ((bool?)results_GVL_Test[6].Value != null) { GVL.Opcua.Test.xC1_DQ6.Read = (bool)results_GVL_Test[6].Value; }
-                                    if ((bool?)results_GVL_Test[7].Value != null) { GVL.Opcua.Test.xC1_DQ7.Read = (bool)results_GVL_Test[7].Value; }
-
-                                    if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC2_DQ0.Read = (bool)results_GVL_Test[0].Value; }
-                                    if ((bool?)results_GVL_Test[1].Value != null) { GVL.Opcua.Test.xC2_DQ1.Read = (bool)results_GVL_Test[1].Value; }
-                                    if ((bool?)results_GVL_Test[2].Value != null) { GVL.Opcua.Test.xC2_DQ2.Read = (bool)results_GVL_Test[2].Value; }
-                                    if ((bool?)results_GVL_Test[3].Value != null) { GVL.Opcua.Test.xC2_DQ3.Read = (bool)results_GVL_Test[3].Value; }
-                                    if ((bool?)results_GVL_Test[4].Value != null) { GVL.Opcua.Test.xC2_DQ4.Read = (bool)results_GVL_Test[4].Value; }
-                                    if ((bool?)results_GVL_Test[5].Value != null) { GVL.Opcua.Test.xC2_DQ5.Read = (bool)results_GVL_Test[5].Value; }
-                                    if ((bool?)results_GVL_Test[6].Value != null) { GVL.Opcua.Test.xC2_DQ6.Read = (bool)results_GVL_Test[6].Value; }
-                                    if ((bool?)results_GVL_Test[7].Value != null) { GVL.Opcua.Test.xC2_DQ7.Read = (bool)results_GVL_Test[7].Value; }
-
-
-
-                                    if ((Int16?)results_GVL_Test[8].Value != null) { GVL.Opcua.Test.iTest.Read = (Int16)results_GVL_Test[8].Value; }
-                                    if ((float?)results_GVL_Test[9].Value != null) { GVL.Opcua.Test.rTest.Read = (float)results_GVL_Test[9].Value; }
-                                    if ((string?)results_GVL_Test[10].Value != null) { GVL.Opcua.Test.sTest.Read = (string)results_GVL_Test[10].Value; }
-                                    if ((Int16?)results_GVL_Test[11].Value != null) { GVL.Opcua.Test.iCount.Read = (Int16)results_GVL_Test[11].Value; }
+                                    if ((Int16?)results_GVL_Test[32].Value != null) { GVL.Opcua.Test.iTest.Read = (Int16)results_GVL_Test[32].Value; }
+                                    if ((float?)results_GVL_Test[33].Value != null) { GVL.Opcua.Test.rTest.Read = (float)results_GVL_Test[33].Value; }
+                                    if ((string?)results_GVL_Test[34].Value != null) { GVL.Opcua.Test.sTest.Read = (string)results_GVL_Test[34].Value; }
+                                    if ((Int16?)results_GVL_Test[35].Value != null) { GVL.Opcua.Test.iCount.Read = (Int16)results_GVL_Test[35].Value; }
 
                                     sw.Stop();
                                     System.Diagnostics.Debug.WriteLine("Tempo de passagem de valor" + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
