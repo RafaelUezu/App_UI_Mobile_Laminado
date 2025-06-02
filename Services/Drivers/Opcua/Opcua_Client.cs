@@ -151,63 +151,118 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ6"), AttributeId = Attributes.Value },//22
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ7"), AttributeId = Attributes.Value },//23
 
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ0"), AttributeId = Attributes.Value },//24
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ1"), AttributeId = Attributes.Value },//25
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ2"), AttributeId = Attributes.Value },//26
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ3"), AttributeId = Attributes.Value },//27
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ4"), AttributeId = Attributes.Value },//28
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ5"), AttributeId = Attributes.Value },//29
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ6"), AttributeId = Attributes.Value },//30
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ7"), AttributeId = Attributes.Value },//31
 
-
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.iTest"), AttributeId = Attributes.Value },//8
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.rTest"), AttributeId = Attributes.Value },//9
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.sTest"), AttributeId = Attributes.Value },//10
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.iCount"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.iTest"), AttributeId = Attributes.Value },//32
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.rTest"), AttributeId = Attributes.Value },//33
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.sTest"), AttributeId = Attributes.Value },//34
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.iCount"), AttributeId = Attributes.Value },//35
                             };
 
                             var itemsToWrite = new List<OpcWriteItem>
                             {
                                 new OpcWriteItem
                                 {
-                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.DQ0",
-                                    GetValue = () => GVL.Opcua.Test.xDQ0.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ0.Write = null
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ0",
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ0.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ0.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ1",
-                                    GetValue = () => GVL.Opcua.Test.xDQ1.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ1.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ1.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ1.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ2",
-                                    GetValue = () => GVL.Opcua.Test.xDQ2.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ2.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ2.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ2.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ3",
-                                    GetValue = () => GVL.Opcua.Test.xDQ3.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ3.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ3.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ3.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ4",
-                                    GetValue = () => GVL.Opcua.Test.xDQ4.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ4.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ4.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ4.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ5",
-                                    GetValue = () => GVL.Opcua.Test.xDQ5.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ5.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ5.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ5.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ6",
-                                    GetValue = () => GVL.Opcua.Test.xDQ6.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ6.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ6.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ6.Write = null
                                 },
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C1_DQ7",
-                                    GetValue = () => GVL.Opcua.Test.xDQ7.Write,
-                                    ClearWriteFlag = () => GVL.Opcua.Test.xDQ7.Write = null
+                                    GetValue = () => GVL.Opcua.Test.xC1_DQ7.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC1_DQ7.Write = null
+                                },
+                                 new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ0",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ0.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ0.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ1",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ1.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ1.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ2",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ2.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ2.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ3",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ3.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ3.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ4",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ4.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ4.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ5",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ5.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ5.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ6",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ6.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ6.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Test.C2_DQ7",
+                                    GetValue = () => GVL.Opcua.Test.xC2_DQ7.Write,
+                                    ClearWriteFlag = () => GVL.Opcua.Test.xC2_DQ7.Write = null
                                 },
                                 new OpcWriteItem
                                 {
@@ -227,6 +282,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     GetValue = () => GVL.Opcua.Test.rTest.Write,
                                     ClearWriteFlag = () => GVL.Opcua.Test.rTest.Write = null
                                 },
+                                
 
                             };
 
@@ -301,12 +357,23 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             async Task WriteDataAsync()
                             {
 
-                                GVL.Opcua.Test.xDQ2.Write = GVL.Opcua.Test.xDQ2.Read.HasValue ? !GVL.Opcua.Test.xDQ2.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xDQ3.Write = GVL.Opcua.Test.xDQ3.Read.HasValue ? !GVL.Opcua.Test.xDQ3.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xDQ4.Write = GVL.Opcua.Test.xDQ4.Read.HasValue ? !GVL.Opcua.Test.xDQ4.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xDQ5.Write = GVL.Opcua.Test.xDQ5.Read.HasValue ? !GVL.Opcua.Test.xDQ5.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xDQ6.Write = GVL.Opcua.Test.xDQ6.Read.HasValue ? !GVL.Opcua.Test.xDQ6.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xDQ7.Write = GVL.Opcua.Test.xDQ7.Read.HasValue ? !GVL.Opcua.Test.xDQ7.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC1_DQ2.Write = GVL.Opcua.Test.xC1_DQ2.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ2.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC1_DQ3.Write = GVL.Opcua.Test.xC1_DQ3.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ3.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC1_DQ4.Write = GVL.Opcua.Test.xC1_DQ4.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ4.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC1_DQ5.Write = GVL.Opcua.Test.xC1_DQ5.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ5.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC1_DQ6.Write = GVL.Opcua.Test.xC1_DQ6.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ6.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC1_DQ7.Write = GVL.Opcua.Test.xC1_DQ7.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ7.Read.Value : (bool?)null;
+
+
+                                GVL.Opcua.Test.xC2_DQ0.Write = GVL.Opcua.Test.xC2_DQ0.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ0.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ1.Write = GVL.Opcua.Test.xC2_DQ1.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ1.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ2.Write = GVL.Opcua.Test.xC2_DQ2.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ2.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ3.Write = GVL.Opcua.Test.xC2_DQ3.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ3.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ4.Write = GVL.Opcua.Test.xC2_DQ4.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ4.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ5.Write = GVL.Opcua.Test.xC2_DQ5.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ5.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ6.Write = GVL.Opcua.Test.xC2_DQ6.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ6.Read.Value : (bool?)null;
+                                GVL.Opcua.Test.xC2_DQ7.Write = GVL.Opcua.Test.xC2_DQ7.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ7.Read.Value : (bool?)null;
+
 
                                 GVL.Opcua.Test.sTest.Write = "Teste";
                                 GVL.Opcua.Test.iTest.Write = 112;
@@ -362,14 +429,34 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 try
                                 {
                                     Stopwatch sw = Stopwatch.StartNew();
-                                    if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xDQ0.Read = (bool)results_GVL_Test[0].Value; }
-                                    if ((bool?)results_GVL_Test[1].Value != null) { GVL.Opcua.Test.xDQ1.Read = (bool)results_GVL_Test[1].Value; }
-                                    if ((bool?)results_GVL_Test[2].Value != null) { GVL.Opcua.Test.xDQ2.Read = (bool)results_GVL_Test[2].Value; }
-                                    if ((bool?)results_GVL_Test[3].Value != null) { GVL.Opcua.Test.xDQ3.Read = (bool)results_GVL_Test[3].Value; }
-                                    if ((bool?)results_GVL_Test[4].Value != null) { GVL.Opcua.Test.xDQ4.Read = (bool)results_GVL_Test[4].Value; }
-                                    if ((bool?)results_GVL_Test[5].Value != null) { GVL.Opcua.Test.xDQ5.Read = (bool)results_GVL_Test[5].Value; }
-                                    if ((bool?)results_GVL_Test[6].Value != null) { GVL.Opcua.Test.xDQ6.Read = (bool)results_GVL_Test[6].Value; }
-                                    if ((bool?)results_GVL_Test[7].Value != null) { GVL.Opcua.Test.xDQ7.Read = (bool)results_GVL_Test[7].Value; }
+
+                                    //if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC1_DQ0.Read = (bool)results_GVL_Test[0].Value; }
+
+
+
+
+
+
+
+
+                                    if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC1_DQ0.Read = (bool)results_GVL_Test[0].Value; }
+                                    if ((bool?)results_GVL_Test[1].Value != null) { GVL.Opcua.Test.xC1_DQ1.Read = (bool)results_GVL_Test[1].Value; }
+                                    if ((bool?)results_GVL_Test[2].Value != null) { GVL.Opcua.Test.xC1_DQ2.Read = (bool)results_GVL_Test[2].Value; }
+                                    if ((bool?)results_GVL_Test[3].Value != null) { GVL.Opcua.Test.xC1_DQ3.Read = (bool)results_GVL_Test[3].Value; }
+                                    if ((bool?)results_GVL_Test[4].Value != null) { GVL.Opcua.Test.xC1_DQ4.Read = (bool)results_GVL_Test[4].Value; }
+                                    if ((bool?)results_GVL_Test[5].Value != null) { GVL.Opcua.Test.xC1_DQ5.Read = (bool)results_GVL_Test[5].Value; }
+                                    if ((bool?)results_GVL_Test[6].Value != null) { GVL.Opcua.Test.xC1_DQ6.Read = (bool)results_GVL_Test[6].Value; }
+                                    if ((bool?)results_GVL_Test[7].Value != null) { GVL.Opcua.Test.xC1_DQ7.Read = (bool)results_GVL_Test[7].Value; }
+
+                                    if ((bool?)results_GVL_Test[0].Value != null) { GVL.Opcua.Test.xC2_DQ0.Read = (bool)results_GVL_Test[0].Value; }
+                                    if ((bool?)results_GVL_Test[1].Value != null) { GVL.Opcua.Test.xC2_DQ1.Read = (bool)results_GVL_Test[1].Value; }
+                                    if ((bool?)results_GVL_Test[2].Value != null) { GVL.Opcua.Test.xC2_DQ2.Read = (bool)results_GVL_Test[2].Value; }
+                                    if ((bool?)results_GVL_Test[3].Value != null) { GVL.Opcua.Test.xC2_DQ3.Read = (bool)results_GVL_Test[3].Value; }
+                                    if ((bool?)results_GVL_Test[4].Value != null) { GVL.Opcua.Test.xC2_DQ4.Read = (bool)results_GVL_Test[4].Value; }
+                                    if ((bool?)results_GVL_Test[5].Value != null) { GVL.Opcua.Test.xC2_DQ5.Read = (bool)results_GVL_Test[5].Value; }
+                                    if ((bool?)results_GVL_Test[6].Value != null) { GVL.Opcua.Test.xC2_DQ6.Read = (bool)results_GVL_Test[6].Value; }
+                                    if ((bool?)results_GVL_Test[7].Value != null) { GVL.Opcua.Test.xC2_DQ7.Read = (bool)results_GVL_Test[7].Value; }
+
 
 
                                     if ((Int16?)results_GVL_Test[8].Value != null) { GVL.Opcua.Test.iTest.Read = (Int16)results_GVL_Test[8].Value; }

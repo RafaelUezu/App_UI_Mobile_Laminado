@@ -16,7 +16,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-
+        
 
         private string _C1_sDI0_Descricao;
 
