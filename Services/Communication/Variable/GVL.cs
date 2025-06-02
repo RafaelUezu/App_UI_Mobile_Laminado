@@ -222,7 +222,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
         {
             public class Test
             {
-                public static class xDQ0
+                public static class xC1_DQ0
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -262,7 +262,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ1
+                public static class xC1_DQ1
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -302,7 +302,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ2
+                public static class xC1_DQ2
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -342,7 +342,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ3
+                public static class xC1_DQ3
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -382,7 +382,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ4
+                public static class xC1_DQ4
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -422,7 +422,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ5
+                public static class xC1_DQ5
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -462,7 +462,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ6
+                public static class xC1_DQ6
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -502,7 +502,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xDQ7
+                public static class xC1_DQ7
                 {
                     private static readonly object _lock = new object();
                     private static bool? _readValue;
@@ -542,6 +542,332 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
+
+                public static class xC2_DQ0
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ1
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ2
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ3
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ4
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ5
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ6
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xC2_DQ7
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+
+
+
+
+
 
                 public static class iTest
                 {
