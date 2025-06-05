@@ -34,7 +34,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             if (IsRunning) return;
 
             _cts = new CancellationTokenSource();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, "192.168.1.100", 4840, 1000, "opc.tcp://192.168.1.100:4840", 800));
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, "192.168.1.100", 4840, 1000, "opc.tcp://192.168.1.100:4840", 300));
         }
 
         public async Task StopAsync()
@@ -357,25 +357,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             async Task WriteDataAsync()
                             {
 
-                                GVL.Opcua.Test.xC1_DQ2.Write = GVL.Opcua.Test.xC1_DQ2.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ2.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC1_DQ3.Write = GVL.Opcua.Test.xC1_DQ3.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ3.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC1_DQ4.Write = GVL.Opcua.Test.xC1_DQ4.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ4.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC1_DQ5.Write = GVL.Opcua.Test.xC1_DQ5.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ5.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC1_DQ6.Write = GVL.Opcua.Test.xC1_DQ6.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ6.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC1_DQ7.Write = GVL.Opcua.Test.xC1_DQ7.Read.HasValue ? !GVL.Opcua.Test.xC1_DQ7.Read.Value : (bool?)null;
-
-                                GVL.Opcua.Test.xC2_DQ0.Write = GVL.Opcua.Test.xC2_DQ0.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ0.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ1.Write = GVL.Opcua.Test.xC2_DQ1.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ1.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ2.Write = GVL.Opcua.Test.xC2_DQ2.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ2.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ3.Write = GVL.Opcua.Test.xC2_DQ3.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ3.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ4.Write = GVL.Opcua.Test.xC2_DQ4.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ4.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ5.Write = GVL.Opcua.Test.xC2_DQ5.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ5.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ6.Write = GVL.Opcua.Test.xC2_DQ6.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ6.Read.Value : (bool?)null;
-                                GVL.Opcua.Test.xC2_DQ7.Write = GVL.Opcua.Test.xC2_DQ7.Read.HasValue ? !GVL.Opcua.Test.xC2_DQ7.Read.Value : (bool?)null;
-
-                                GVL.Opcua.Test.sTest.Write = "Teste";
-                                GVL.Opcua.Test.iTest.Write = 112;
-                                GVL.Opcua.Test.rTest.Write = (float)222.222;
 
                                 try
                                 {

@@ -2,59 +2,149 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao.Page_Manutencao_Saidas"
+             xmlns:controles="clr-namespace:App_UI_Mobile_Laminado.Commands.UserControl"
              Title="Page Manutenção Saídas">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Border
-           Grid.Row="0"
-           Stroke="Black"
-           StrokeThickness="2"
-           Padding="5"
-           StrokeShape="RoundRectangle 10">
-        <Entry
-                x:Name ="txtInput"
-                VerticalTextAlignment="Center"
-                HorizontalTextAlignment="Center"
-                Text="{Binding BoundText, Mode=TwoWay}"
-                FontSize="16"
-                Margin="5,5,5,5"/>
-        </Border>
-
-        <Border
-            Stroke="Black"
-            StrokeThickness="2"
-            Padding="5"
-            StrokeShape="RoundRectangle 10"
-            Grid.Row="1"
-            >
-            <Button
-                
-                Text="Enviar"
-                Command="{Binding SendCommand}"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
-        </Border>
-
-        <Border
-            Grid.Row="2"
-            Stroke="Black"
-            StrokeThickness="2"
-            Padding="5"
-            StrokeShape="RoundRectangle 10"
-            >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackLayout
+             Orientation="Vertical"
+             Grid.Column="0"
+             Grid.Row="0">
             <Label
-            Text="{Binding BoundText, Mode=TwoWay}"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            FontSize="16"
-            TextColor="Black"
-            Margin="5,5,5,5"/>
-        </Border>
-
-
+                 Text ="AX-324NA0PA1P"
+                 Margin="10,5,5,5"
+                 FontSize="24"
+                 />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ0"
+                DqLabel="DQ0"
+                DqEstado_Read="{Binding xC1_DQ0}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ0}"
+                DqDescricao="{Binding sC1_DQ0_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ1"
+                DqLabel="DQ1"
+                DqEstado_Read="{Binding xC1_DQ1}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ1}"
+                DqDescricao="{Binding sC1_DQ1_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ2"
+                DqLabel="DQ2"
+                DqEstado_Read="{Binding xC1_DQ2}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ2}"
+                DqDescricao="{Binding sC1_DQ2_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ3"
+                DqLabel="DQ3"
+                DqEstado_Read="{Binding xC1_DQ3}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ3}"
+                DqDescricao="{Binding sC1_DQ3_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ4"
+                DqLabel="DQ4"
+                DqEstado_Read="{Binding xC1_DQ4}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ4}"
+                DqDescricao="{Binding sC1_DQ4_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ5"
+                DqLabel="DQ5"
+                DqEstado_Read="{Binding xC1_DQ5}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ5}"
+                DqDescricao="{Binding sC1_DQ5_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ6"
+                DqLabel="DQ6"
+                DqEstado_Read="{Binding xC1_DQ6}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ6}"
+                DqDescricao="{Binding sC1_DQ6_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C1_DQ7"
+                DqLabel="DQ7"
+                DqEstado_Read="{Binding xC1_DQ7}"
+                ComandoToggle="{Binding Cmd_Toggle_C1_DQ7}"
+                DqDescricao="{Binding sC1_DQ7_Descricao}"
+                />
+        </StackLayout>
+        <StackLayout
+             Orientation="Vertical"
+             Grid.Column="1"
+             Grid.Row="0">
+            <Label
+                 Text ="AS08AN01P-A"
+                 Margin="10,5,5,5"
+                 FontSize="24"
+                 />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ0"
+                DqLabel="DQ0"
+                DqEstado_Read="{Binding xC2_DQ0}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ0}"
+                DqDescricao="{Binding sC2_DQ0_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ1"
+                DqLabel="DQ1"
+                DqEstado_Read="{Binding xC2_DQ1}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ1}"
+                DqDescricao="{Binding sC2_DQ1_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ2"
+                DqLabel="DQ2"
+                DqEstado_Read="{Binding xC2_DQ2}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ2}"
+                DqDescricao="{Binding sC2_DQ2_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ3"
+                DqLabel="DQ3"
+                DqEstado_Read="{Binding xC2_DQ3}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ3}"
+                DqDescricao="{Binding sC2_DQ3_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ4"
+                DqLabel="DQ4"
+                DqEstado_Read="{Binding xC2_DQ4}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ4}"
+                DqDescricao="{Binding sC2_DQ4_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ5"
+                DqLabel="DQ5"
+                DqEstado_Read="{Binding xC2_DQ5}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ5}"
+                DqDescricao="{Binding sC2_DQ5_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ6"
+                DqLabel="DQ6"
+                DqEstado_Read="{Binding xC2_DQ6}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ6}"
+                DqDescricao="{Binding sC2_DQ6_Descricao}"
+                />
+            <controles:UC_Test_Dq
+                x:Name="UC_Test_Dq_C2_DQ7"
+                DqLabel="DQ7"
+                DqEstado_Read="{Binding xC2_DQ7}"
+                ComandoToggle="{Binding Cmd_Toggle_C2_DQ7}"
+                DqDescricao="{Binding sC2_DQ7_Descricao}"
+                />
+        </StackLayout>        
+        
     </Grid>
+    
+    
+    
+    
 </ContentPage>

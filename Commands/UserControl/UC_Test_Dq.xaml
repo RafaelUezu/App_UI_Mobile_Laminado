@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_UI_Mobile_Laminado.Commands.UserControl.UC_Test_Dq"
+             x:Name="Root">
+    
+    <Frame
+        Padding="0"
+        Margin="5,0,0,0"
+        HeightRequest="40">
+        <StackLayout
+        Orientation="Horizontal"
+        Margin="0,0,0,0"
+        Padding="0"
+        >
+        <Label
+            Text="{Binding DqLabel, Source={x:Reference Name=Root}}"
+            FontSize="Micro"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            />
+            <Grid>
+
+                <Switch
+                IsToggled="{Binding DqEstado_Read, Source={x:Reference Name=Root}}"
+                OnColor="Green"
+                >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="On">
+                                    <VisualState.Setters>
+                                        <Setter Property="ThumbColor"
+                                Value="MediumSpringGreen" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Off">
+                                    <VisualState.Setters>
+                                        <Setter Property="ThumbColor"
+                                Value="Red" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Switch>
+                <Button
+                    BackgroundColor="Transparent"
+                    Opacity="0.05"
+                    Command="{Binding ComandoToggle, Source={x:Reference Root}}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill" />
+
+            </Grid>
+            
+
+            
+            
+            <Entry
+            Text="{Binding DqDescricao, Source={x:Reference Name=Root}}"
+            TextColor="Black"
+            FontAttributes="Bold"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"
+            Margin="0,0,0,0"
+            IsEnabled="True"
+            />
+        </StackLayout>
+    </Frame>
+</ContentView>
