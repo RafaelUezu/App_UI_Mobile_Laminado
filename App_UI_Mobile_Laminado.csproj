@@ -128,6 +128,9 @@
 	  <MauiXaml Update="AppShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Commands\UserControl\UC_Switch_StatusDescription.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Commands\UserControl\UC_Test_Dq.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

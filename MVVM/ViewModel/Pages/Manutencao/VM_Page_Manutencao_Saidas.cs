@@ -25,7 +25,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         public VM_Page_Manutencao_Saidas()
         {
             IniciarlizarDescricao();
-            _timer = new System.Timers.Timer(100); // 200 ms
+            _timer = new System.Timers.Timer(100);
             _timer.Elapsed += Timer_Elapsed;
             _timer.AutoReset = true;
         }
@@ -47,23 +47,136 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
         public void AtualizaEstadoDQ()
         {
-            xC1_DQ0 = (GVL.Opcua.Test.xC1_DQ0.Read ?? false) ? true : false;
-            xC1_DQ1 = (GVL.Opcua.Test.xC1_DQ1.Read ?? false) ? true : false;
-            xC1_DQ2 = (GVL.Opcua.Test.xC1_DQ2.Read ?? false) ? true : false;
-            xC1_DQ3 = (GVL.Opcua.Test.xC1_DQ3.Read ?? false) ? true : false;
-            xC1_DQ4 = (GVL.Opcua.Test.xC1_DQ4.Read ?? false) ? true : false;
-            xC1_DQ5 = (GVL.Opcua.Test.xC1_DQ5.Read ?? false) ? true : false;
-            xC1_DQ6 = (GVL.Opcua.Test.xC1_DQ6.Read ?? false) ? true : false;
-            xC1_DQ7 = (GVL.Opcua.Test.xC1_DQ7.Read ?? false) ? true : false;
+            if (GVL.Opcua.Test.xC1_DQ0.Write != null)
+            {
+                xC1_DQ0 = (GVL.Opcua.Test.xC1_DQ0.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ0 = (GVL.Opcua.Test.xC1_DQ0.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ1.Write != null)
+            {
+                xC1_DQ1 = (GVL.Opcua.Test.xC1_DQ1.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ1 = (GVL.Opcua.Test.xC1_DQ1.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ2.Write != null)
+            {
+                xC1_DQ2 = (GVL.Opcua.Test.xC1_DQ2.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ2 = (GVL.Opcua.Test.xC1_DQ2.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ3.Write != null)
+            {
+                xC1_DQ3 = (GVL.Opcua.Test.xC1_DQ3.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ3 = (GVL.Opcua.Test.xC1_DQ3.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ4.Write != null)
+            {
+                xC1_DQ4 = (GVL.Opcua.Test.xC1_DQ4.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ4 = (GVL.Opcua.Test.xC1_DQ4.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ5.Write != null)
+            {
+                xC1_DQ5 = (GVL.Opcua.Test.xC1_DQ5.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ5 = (GVL.Opcua.Test.xC1_DQ5.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ6.Write != null)
+            {
+                xC1_DQ6 = (GVL.Opcua.Test.xC1_DQ6.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ6 = (GVL.Opcua.Test.xC1_DQ6.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC1_DQ7.Write != null)
+            {
+                xC1_DQ7 = (GVL.Opcua.Test.xC1_DQ7.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC1_DQ7 = (GVL.Opcua.Test.xC1_DQ7.Read ?? false) ? true : false;
+            }
 
-            xC2_DQ0 = (GVL.Opcua.Test.xC2_DQ0.Read ?? false) ? true : false;
-            xC2_DQ1 = (GVL.Opcua.Test.xC2_DQ1.Read ?? false) ? true : false;
-            xC2_DQ2 = (GVL.Opcua.Test.xC2_DQ2.Read ?? false) ? true : false;
-            xC2_DQ3 = (GVL.Opcua.Test.xC2_DQ3.Read ?? false) ? true : false;
-            xC2_DQ4 = (GVL.Opcua.Test.xC2_DQ4.Read ?? false) ? true : false;
-            xC2_DQ5 = (GVL.Opcua.Test.xC2_DQ5.Read ?? false) ? true : false;
-            xC2_DQ6 = (GVL.Opcua.Test.xC2_DQ6.Read ?? false) ? true : false;
-            xC2_DQ7 = (GVL.Opcua.Test.xC2_DQ7.Read ?? false) ? true : false;
+            if (GVL.Opcua.Test.xC2_DQ0.Write != null)
+            {
+                xC2_DQ0 = (GVL.Opcua.Test.xC2_DQ0.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ0 = (GVL.Opcua.Test.xC2_DQ0.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ1.Write != null)
+            {
+                xC2_DQ1 = (GVL.Opcua.Test.xC2_DQ1.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ1 = (GVL.Opcua.Test.xC2_DQ1.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ2.Write != null)
+            {
+                xC2_DQ2 = (GVL.Opcua.Test.xC2_DQ2.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ2 = (GVL.Opcua.Test.xC2_DQ2.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ3.Write != null)
+            {
+                xC2_DQ3 = (GVL.Opcua.Test.xC2_DQ3.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ3 = (GVL.Opcua.Test.xC2_DQ3.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ4.Write != null)
+            {
+                xC2_DQ4 = (GVL.Opcua.Test.xC2_DQ4.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ4 = (GVL.Opcua.Test.xC2_DQ4.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ5.Write != null)
+            {
+                xC2_DQ5 = (GVL.Opcua.Test.xC2_DQ5.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ5 = (GVL.Opcua.Test.xC2_DQ5.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ6.Write != null)
+            {
+                xC2_DQ6 = (GVL.Opcua.Test.xC2_DQ6.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ6 = (GVL.Opcua.Test.xC2_DQ6.Read ?? false) ? true : false;
+            }
+            if (GVL.Opcua.Test.xC2_DQ7.Write != null)
+            {
+                xC2_DQ7 = (GVL.Opcua.Test.xC2_DQ7.Write ?? false) ? true : false;
+            }
+            else
+            {
+                xC2_DQ7 = (GVL.Opcua.Test.xC2_DQ7.Read ?? false) ? true : false;
+            }
+
         }
 
         public void IniciarlizarDescricao()
@@ -90,97 +203,81 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         public ICommand Cmd_Toggle_C1_DQ0 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ0.Write = !xC1_DQ0_Read;
-
         });
         public bool xC1_DQ1_Read => GVL.Opcua.Test.xC1_DQ1.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ1 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ1.Write = !xC1_DQ1_Read;
-
         });
         public bool xC1_DQ2_Read => GVL.Opcua.Test.xC1_DQ2.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ2 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ2.Write = !xC1_DQ2_Read;
-
         });
         public bool xC1_DQ3_Read => GVL.Opcua.Test.xC1_DQ3.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ3 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ3.Write = !xC1_DQ3_Read;
-
         });
         public bool xC1_DQ4_Read => GVL.Opcua.Test.xC1_DQ4.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ4 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ4.Write = !xC1_DQ4_Read;
-
         });
         public bool xC1_DQ5_Read => GVL.Opcua.Test.xC1_DQ5.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ5 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ5.Write = !xC1_DQ5_Read;
-
         });
         public bool xC1_DQ6_Read => GVL.Opcua.Test.xC1_DQ6.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ6 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ6.Write = !xC1_DQ6_Read;
-
         });
         public bool xC1_DQ7_Read => GVL.Opcua.Test.xC1_DQ7.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ7 => new Command(() =>
         {
             GVL.Opcua.Test.xC1_DQ7.Write = !xC1_DQ7_Read;
-
         });
         public bool xC2_DQ0_Read => GVL.Opcua.Test.xC2_DQ0.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ0 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ0.Write = !xC2_DQ0_Read;
-
         });
         public bool xC2_DQ1_Read => GVL.Opcua.Test.xC2_DQ1.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ1 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ1.Write = !xC2_DQ1_Read;
-
         });
         public bool xC2_DQ2_Read => GVL.Opcua.Test.xC2_DQ2.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ2 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ2.Write = !xC2_DQ2_Read;
-
         });
         public bool xC2_DQ3_Read => GVL.Opcua.Test.xC2_DQ3.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ3 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ3.Write = !xC2_DQ3_Read;
-
         });
         public bool xC2_DQ4_Read => GVL.Opcua.Test.xC2_DQ4.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ4 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ4.Write = !xC2_DQ4_Read;
-
         });
         public bool xC2_DQ5_Read => GVL.Opcua.Test.xC2_DQ5.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ5 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ5.Write = !xC2_DQ5_Read;
-
         });
         public bool xC2_DQ6_Read => GVL.Opcua.Test.xC2_DQ6.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ6 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ6.Write = !xC2_DQ6_Read;
-
         });
         public bool xC2_DQ7_Read => GVL.Opcua.Test.xC2_DQ7.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ7 => new Command(() =>
         {
             GVL.Opcua.Test.xC2_DQ7.Write = !xC2_DQ7_Read;
-
         });
 
 

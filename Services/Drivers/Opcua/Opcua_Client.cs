@@ -34,7 +34,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             if (IsRunning) return;
 
             _cts = new CancellationTokenSource();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, "192.168.1.100", 4840, 1000, "opc.tcp://192.168.1.100:4840", 300));
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, "192.168.1.100", 4840, 1000, "opc.tcp://192.168.1.100:4840", 700));
         }
 
         public async Task StopAsync()

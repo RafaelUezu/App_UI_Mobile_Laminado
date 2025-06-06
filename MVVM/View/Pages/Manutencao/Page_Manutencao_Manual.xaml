@@ -2,11 +2,257 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao.Page_Manutencao_Manual"
-             Title="Page_Manutencao_Manual">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Operação Manual"
+             xmlns:controles="clr-namespace:App_UI_Mobile_Laminado.Commands.UserControl"
+             Background="White"
+             >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout
+            Grid.Column="0"
+            Orientation="Vertical">
+            <controles:UC_Switch_StatusDescription
+                x:Name="UC_Sw_SD_Dumper"
+                xSwitch_Read="{Binding xSwitch_Read_Dumper}"
+                sLabel_Dispositivo="Dumper"
+                sLabel_Status="{Binding sLabel_Status_Dumper}"
+                CommandToggle="{Binding Cmd_Toggle_Dumper}"
+                />
+            <controles:UC_Switch_StatusDescription
+                x:Name="UC_Sw_SD_BombaVacuo"
+                xSwitch_Read="{Binding xSwitch_Read_BombaVacuo}"
+                sLabel_Dispositivo="Bomba de Vácuo"
+                sLabel_Status="{Binding sLabel_Status_BombaVacuo}"
+                CommandToggle="{Binding Cmd_Toggle_BombaVacuo}"
+                />
+            <controles:UC_Switch_StatusDescription
+                x:Name="UC_Sw_SD_Ventilador"
+                xSwitch_Read="{Binding xSwitch_Read_Ventilador}"
+                sLabel_Dispositivo="Ventilador"
+                sLabel_Status="{Binding sLabel_Status_Ventilador}"
+                CommandToggle="{Binding Cmd_Toggle_Ventilador}"
+                />
+            </StackLayout>
+        
+        <Grid
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                >
+                <Label
+                    Text="Temperatura do Termopar"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    />
+                <Label
+                    Text="{Binding sTemperaturaTermopar}"
+                    FontSize="Medium"
+                    TextColor="Red"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Start"
+                >
+                <controles:UC_Switch_StatusDescription
+                    x:Name="UC_Sw_SD_Resistencia01"
+                    xSwitch_Read="{Binding xSwitch_Read_Resistencia01}"
+                    sLabel_Dispositivo="Resistência 01"
+                    sLabel_Status="{Binding sLabel_Status_Resistencia01}"
+                    CommandToggle="{Binding Cmd_Toggle_Resistencia01}"
+                    />
+                <controles:UC_Switch_StatusDescription
+                    x:Name="UC_Sw_SD_Resistencia02"
+                    xSwitch_Read="{Binding xSwitch_Read_Resistencia02}"
+                    sLabel_Dispositivo="Resistência 02"
+                    sLabel_Status="{Binding sLabel_Status_Resistencia02}"
+                    CommandToggle="{Binding Cmd_Toggle_Resistencia02}"
+                    />
+                <controles:UC_Switch_StatusDescription
+                    x:Name="UC_Sw_SD_Resistencia03"
+                    xSwitch_Read="{Binding xSwitch_Read_Resistencia03}"
+                    sLabel_Dispositivo="Resistência 03"
+                    sLabel_Status="{Binding sLabel_Status_Resistencia03}"
+                    CommandToggle="{Binding Cmd_Toggle_Resistencia03}"
+                    />
+                <controles:UC_Switch_StatusDescription
+                    x:Name="UC_Sw_SD_Resistencia04"
+                    xSwitch_Read="{Binding xSwitch_Read_Resistencia04}"
+                    sLabel_Dispositivo="Resistência 04"
+                    sLabel_Status="{Binding sLabel_Status_Resistencia04}"
+                    CommandToggle="{Binding Cmd_Toggle_Resistencia04}"
+                    />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalOptions="Start"
+                >
+                <Border
+                    HorizontalOptions="Start"
+                    Padding="0"
+                    Margin="5,5,5,5"
+                    HeightRequest="60"
+                    Background="Transparent"
+                    Stroke="Gray"
+                    StrokeThickness="0.5"
+                    StrokeShape="RoundRectangle 5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal"
+                        WidthRequest="390" 
+                        >
+                        <Label
+                            Text="Corrente da Fase R: "
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                        <Label
+                            Text="{Binding sLabel_CorrenteR}"
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                    </StackLayout>
+                </Border>
+                <Border
+                    HorizontalOptions="Start"
+                    Padding="0"
+                    Margin="5,5,5,5"
+                    HeightRequest="60"
+                    Background="Transparent"
+                    Stroke="Gray"
+                    StrokeThickness="0.5"
+                    StrokeShape="RoundRectangle 5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal"
+                        WidthRequest="390"
+                        >
+                        <Label
+                            Text="Corrente da Fase S: "
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                        <Label
+                            Text="{Binding sLabel_CorrenteS}"
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                    </StackLayout>
+                </Border>
+                <Border
+                    HorizontalOptions="Start"
+                    Padding="0"
+                    Margin="5,5,5,5"
+                    HeightRequest="60"
+                    Background="Transparent"
+                    Stroke="Gray"
+                    StrokeThickness="0.5"
+                    StrokeShape="RoundRectangle 5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal"
+                        WidthRequest="390"
+                        >
+                        <Label
+                            Text="Corrente da Fase T: "
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                        <Label
+                            Text="{Binding sLabel_CorrenteT}"
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                    </StackLayout>
+                </Border>
+                <Border
+                    HorizontalOptions="Start"
+                    Padding="0"
+                    Margin="5,5,5,5"
+                    HeightRequest="60"
+                    Background="Transparent"
+                    Stroke="Gray"
+                    StrokeThickness="0.5"
+                    StrokeShape="RoundRectangle 5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal"
+                        WidthRequest="390"
+                        >
+                        <Label
+                            Text="Corrente da Fase N: "
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                        <Label
+                            Text="{Binding sLabel_CorrenteN}"
+                            FontSize="Medium"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            />
+                    </StackLayout>
+                </Border>
+                
+                
+                
+                
+                
+            </StackLayout>
+        </Grid>        
+    </Grid>
 </ContentPage>

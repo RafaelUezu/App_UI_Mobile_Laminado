@@ -7,37 +7,36 @@
     <Frame
         Padding="0"
         Margin="5,0,0,0"
-        HeightRequest="40">
+        HeightRequest="60">
         <StackLayout
-        Orientation="Horizontal"
-        Margin="0,0,0,0"
-        Padding="0"
-        >
-        <Label
-            Text="{Binding DqLabel, Source={x:Reference Name=Root}}"
-            FontSize="Micro"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            />
+            Orientation="Horizontal"
+            Margin="0,0,0,0"
+            Padding="0"
+            >
+            <Label
+                Text="{Binding DqLabel, Source={x:Reference Name=Root}}"
+                FontSize="Micro"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                />
             <Grid>
-
                 <Switch
-                IsToggled="{Binding DqEstado_Read, Source={x:Reference Name=Root}}"
-                OnColor="Green"
-                >
+                    IsToggled="{Binding DqEstado_Read, Source={x:Reference Name=Root}}"
+                    OnColor="Green"
+                    >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="On">
                                     <VisualState.Setters>
                                         <Setter Property="ThumbColor"
-                                Value="MediumSpringGreen" />
+                                    Value="MediumSpringGreen" />
                                     </VisualState.Setters>
                                 </VisualState>
                                 <VisualState x:Name="Off">
                                     <VisualState.Setters>
                                         <Setter Property="ThumbColor"
-                                Value="Red" />
+                                    Value="Red" />
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
@@ -45,17 +44,13 @@
                     </VisualStateManager.VisualStateGroups>
                 </Switch>
                 <Button
-                    BackgroundColor="Transparent"
-                    Opacity="0.05"
-                    Command="{Binding ComandoToggle, Source={x:Reference Root}}"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Fill" />
-
+                        BackgroundColor="Transparent"
+                        Opacity="0.05"
+                        Command="{Binding ComandoToggle, Source={x:Reference Root}}"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill" />
             </Grid>
-            
 
-            
-            
             <Entry
             Text="{Binding DqDescricao, Source={x:Reference Name=Root}}"
             TextColor="Black"
