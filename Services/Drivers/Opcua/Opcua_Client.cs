@@ -1,17 +1,35 @@
-﻿using System;
+﻿using MAUI_Opcua.Services.Communication.Variable;
+using MAUI_Opcua.Services.Net.Tools;
+using Newtonsoft.Json.Linq;
+using Opc.Ua;
+using Opc.Ua.Client;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Net.Tools;
-using Opc.Ua.Client;
-using Opc.Ua;
-using MAUI_Opcua.Services.Communication.Variable;
-using Newtonsoft.Json.Linq;
+using static App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao.VM_Page_Manutencao_Saidas;
 
 namespace MAUI_Opcua.Services.Drivers.Opcua
 {
+    public static class OpcUaEvents
+    {
+        public static event Func<Task>? LeituraFinalizadaAsync;
+
+        public static async Task DispararLeituraFinalizadaAsync()
+        {
+            if (LeituraFinalizadaAsync != null)
+            {
+                var handlers = LeituraFinalizadaAsync.GetInvocationList().Cast<Func<Task>>();
+                foreach (var handler in handlers)
+                {
+                    await handler();
+                }
+            }
+        }
+    }
+
     public class Opcua_Client
     {
         private CancellationTokenSource _cts;
@@ -139,7 +157,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             List<ReadValueId> nodesToRead_GVL_EntradasSaidas = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgTesteEntLog"), AttributeId = Attributes.Value },//0
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog_Test"), AttributeId = Attributes.Value },//0
                             };
 
                             var itemsToWrite = new List<OpcWriteItem>()
@@ -148,19 +166,17 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
      
                             };
 
-                            for (int i = 1; i < 16; i++)
+                            for (int i = 0; i < 16; i++)
                             {
-                                int idx = i;
+                                int idx_opc = i + 1;
+                                int idx_sup = i;
                                 itemsToWrite.Add(new OpcWriteItem
                                 {
-                                    NodeIdString = $"ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog_Test[{idx}]",
-                                    GetValue = (index) => GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetWrite(idx),
-                                    ClearWriteFlag = (index) => GVL.Opcua.EntradasSaidas.ImgForceSaiLog.ClearWrite(idx)
+                                    NodeIdString = $"ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog_Test[{idx_opc}]",
+                                    GetValue = (index) => GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetWrite(idx_sup),
+                                    ClearWriteFlag = (index) => GVL.Opcua.EntradasSaidas.ImgForceSaiLog.ClearWrite(idx_sup)
                                 });
                             }
-
-
-
                             RequestHeader requestHeader_GVL_EntradasSaidas = new RequestHeader();
                             double maxAge_GVL_EntradasSaidas = 0;
                             TimestampsToReturn timestampsToReturn_GVL_EntradasSaidas = TimestampsToReturn.Both;
@@ -184,7 +200,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         await ReadDataAsync();
                                         await AscribeDataAsync();
                                         await WriteDataAsync();
-
+                                        await OpcUaEvents.DispararLeituraFinalizadaAsync();
                                         await Task.Delay(delay_request, token); // Delay controlado
                                         System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Métodos de leitura e escrita finalizados");
                                         GVL.StatusOpcua.xStatusOpcua = true;
@@ -231,13 +247,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             // Função local de escrita
                             async Task WriteDataAsync()
                             {
-
-
-                                bool? aaaaa8 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetWrite(8);
-                                bool? aaaaa9 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetWrite(9);
-                                GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(15, false);
-                                
-
                                 try
                                 {
                                     Stopwatch sw = Stopwatch.StartNew();
@@ -278,7 +287,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
 
                                     sw.Stop();
-                                    System.Diagnostics.Debug.WriteLine($"Tempo de Escrita - {sw.Elapsed.TotalMilliseconds:F2} ms");
+                                    System.Diagnostics.Debug.WriteLine($"Tempo de Escrita " + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
                                 }
                                 catch (Exception ex)
                                 {

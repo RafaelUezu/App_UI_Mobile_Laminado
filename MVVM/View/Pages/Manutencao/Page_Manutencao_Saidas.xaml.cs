@@ -13,6 +13,8 @@ public partial class Page_Manutencao_Saidas : ContentPage
         BindingContext = _viewModel;
     }
 
+    /*
+
     protected override void OnAppearing()
     {
         base.OnAppearing();
@@ -27,6 +29,6 @@ public partial class Page_Manutencao_Saidas : ContentPage
             vm.StopAtualizacaoDQ(); // Evita leitura fora da tela
     }
 
-
+    */
 
 }

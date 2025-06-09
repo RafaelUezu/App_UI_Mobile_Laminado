@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using MAUI_Opcua.Services.Drivers.Opcua;
+using Microsoft.Maui.Dispatching;
+using Microsoft.Maui.ApplicationModel;
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 {
@@ -24,17 +27,27 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
         public VM_Page_Manutencao_Saidas()
         {
+            
             IniciarlizarDescricao();
+            /*
             _timer = new System.Timers.Timer(100);
             _timer.Elapsed += Timer_Elapsed;
             _timer.AutoReset = true;
+            */
+            OpcUaEvents.LeituraFinalizadaAsync += () =>
+            {
+                OnLeituraFinalizada();
+                return Task.CompletedTask;
+            };
+
         }
 
+        /*
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             MainThread.BeginInvokeOnMainThread(AtualizaEstadoDQ);
         }
-
+        
         public void StartAtualizacaoDQ()
         {
             _timer?.Start();
@@ -44,139 +57,36 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         {
             _timer?.Stop();
         }
+        */
+        private void OnLeituraFinalizada()
+        {
+            MainThread.BeginInvokeOnMainThread(AtualizaEstadoDQ);
+        }
+
+
 
         public void AtualizaEstadoDQ()
         {
-            if (GVL.Opcua.Test.xC1_DQ0.Write != null)
-            {
-                xC1_DQ0 = (GVL.Opcua.Test.xC1_DQ0.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ0 = (GVL.Opcua.Test.xC1_DQ0.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ1.Write != null)
-            {
-                xC1_DQ1 = (GVL.Opcua.Test.xC1_DQ1.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ1 = (GVL.Opcua.Test.xC1_DQ1.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ2.Write != null)
-            {
-                xC1_DQ2 = (GVL.Opcua.Test.xC1_DQ2.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ2 = (GVL.Opcua.Test.xC1_DQ2.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ3.Write != null)
-            {
-                xC1_DQ3 = (GVL.Opcua.Test.xC1_DQ3.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ3 = (GVL.Opcua.Test.xC1_DQ3.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ4.Write != null)
-            {
-                xC1_DQ4 = (GVL.Opcua.Test.xC1_DQ4.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ4 = (GVL.Opcua.Test.xC1_DQ4.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ5.Write != null)
-            {
-                xC1_DQ5 = (GVL.Opcua.Test.xC1_DQ5.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ5 = (GVL.Opcua.Test.xC1_DQ5.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ6.Write != null)
-            {
-                xC1_DQ6 = (GVL.Opcua.Test.xC1_DQ6.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ6 = (GVL.Opcua.Test.xC1_DQ6.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC1_DQ7.Write != null)
-            {
-                xC1_DQ7 = (GVL.Opcua.Test.xC1_DQ7.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC1_DQ7 = (GVL.Opcua.Test.xC1_DQ7.Read ?? false) ? true : false;
-            }
+            // Cartão 1
+            xC1_DQ0 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(0) ?? false;
+            xC1_DQ1 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(1) ?? false;
+            xC1_DQ2 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(2) ?? false;
+            xC1_DQ3 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(3) ?? false;
 
-            if (GVL.Opcua.Test.xC2_DQ0.Write != null)
-            {
-                xC2_DQ0 = (GVL.Opcua.Test.xC2_DQ0.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ0 = (GVL.Opcua.Test.xC2_DQ0.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ1.Write != null)
-            {
-                xC2_DQ1 = (GVL.Opcua.Test.xC2_DQ1.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ1 = (GVL.Opcua.Test.xC2_DQ1.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ2.Write != null)
-            {
-                xC2_DQ2 = (GVL.Opcua.Test.xC2_DQ2.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ2 = (GVL.Opcua.Test.xC2_DQ2.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ3.Write != null)
-            {
-                xC2_DQ3 = (GVL.Opcua.Test.xC2_DQ3.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ3 = (GVL.Opcua.Test.xC2_DQ3.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ4.Write != null)
-            {
-                xC2_DQ4 = (GVL.Opcua.Test.xC2_DQ4.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ4 = (GVL.Opcua.Test.xC2_DQ4.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ5.Write != null)
-            {
-                xC2_DQ5 = (GVL.Opcua.Test.xC2_DQ5.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ5 = (GVL.Opcua.Test.xC2_DQ5.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ6.Write != null)
-            {
-                xC2_DQ6 = (GVL.Opcua.Test.xC2_DQ6.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ6 = (GVL.Opcua.Test.xC2_DQ6.Read ?? false) ? true : false;
-            }
-            if (GVL.Opcua.Test.xC2_DQ7.Write != null)
-            {
-                xC2_DQ7 = (GVL.Opcua.Test.xC2_DQ7.Write ?? false) ? true : false;
-            }
-            else
-            {
-                xC2_DQ7 = (GVL.Opcua.Test.xC2_DQ7.Read ?? false) ? true : false;
-            }
+            xC1_DQ4 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(4) ?? false;
+            xC1_DQ5 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(5) ?? false;
+            xC1_DQ6 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(6) ?? false;
+            xC1_DQ7 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(7) ?? false;
+            // Cartão 2
+            xC2_DQ0 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(8) ?? false;
+            xC2_DQ1 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(9) ?? false;
+            xC2_DQ2 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(10) ?? false;
+            xC2_DQ3 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(11) ?? false;
 
+            xC2_DQ4 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(12) ?? false;
+            xC2_DQ5 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(13) ?? false;
+            xC2_DQ6 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(14) ?? false;
+            xC2_DQ7 = GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(15) ?? false;
         }
 
         public void IniciarlizarDescricao()
@@ -199,96 +109,101 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             sC2_DQ6_Descricao = "Ativar SSR4: Resistência 4";
             sC2_DQ7_Descricao = "Reserva";
         }
-        public bool xC1_DQ0_Read => GVL.Opcua.Test.xC1_DQ0.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ0 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ0.Write = !xC1_DQ0_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(0) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(0, novoValor);
+            xC1_DQ0 = novoValor;
         });
-        public bool xC1_DQ1_Read => GVL.Opcua.Test.xC1_DQ1.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ1 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ1.Write = !xC1_DQ1_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(1) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(1, novoValor);
+            xC1_DQ1 = novoValor;
         });
-        public bool xC1_DQ2_Read => GVL.Opcua.Test.xC1_DQ2.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ2 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ2.Write = !xC1_DQ2_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(2) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(2, novoValor);
+            xC1_DQ2 = novoValor;
         });
-        public bool xC1_DQ3_Read => GVL.Opcua.Test.xC1_DQ3.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ3 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ3.Write = !xC1_DQ3_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(3) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(3, novoValor);
+            xC1_DQ3 = novoValor;
         });
-        public bool xC1_DQ4_Read => GVL.Opcua.Test.xC1_DQ4.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ4 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ4.Write = !xC1_DQ4_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(4) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(4, novoValor);
+            xC1_DQ4 = novoValor;
         });
-        public bool xC1_DQ5_Read => GVL.Opcua.Test.xC1_DQ5.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ5 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ5.Write = !xC1_DQ5_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(5) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(5, novoValor);
+            xC1_DQ5 = novoValor;
         });
-        public bool xC1_DQ6_Read => GVL.Opcua.Test.xC1_DQ6.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ6 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ6.Write = !xC1_DQ6_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(6) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(6, novoValor);
+            xC1_DQ6 = novoValor;
         });
-        public bool xC1_DQ7_Read => GVL.Opcua.Test.xC1_DQ7.Read ?? false;
         public ICommand Cmd_Toggle_C1_DQ7 => new Command(() =>
         {
-            GVL.Opcua.Test.xC1_DQ7.Write = !xC1_DQ7_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(7) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(7, novoValor);
+            xC1_DQ7 = novoValor;
         });
-        public bool xC2_DQ0_Read => GVL.Opcua.Test.xC2_DQ0.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ0 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ0.Write = !xC2_DQ0_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(8) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(8, novoValor);
+            xC2_DQ0 = novoValor;
         });
-        public bool xC2_DQ1_Read => GVL.Opcua.Test.xC2_DQ1.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ1 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ1.Write = !xC2_DQ1_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(9) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(9, novoValor);
+            xC2_DQ1 = novoValor;
         });
-        public bool xC2_DQ2_Read => GVL.Opcua.Test.xC2_DQ2.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ2 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ2.Write = !xC2_DQ2_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(10) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(10, novoValor);
+            xC2_DQ2 = novoValor;
         });
-        public bool xC2_DQ3_Read => GVL.Opcua.Test.xC2_DQ3.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ3 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ3.Write = !xC2_DQ3_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(11) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(11, novoValor);
+            xC2_DQ3 = novoValor;
         });
-        public bool xC2_DQ4_Read => GVL.Opcua.Test.xC2_DQ4.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ4 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ4.Write = !xC2_DQ4_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(12) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(12, novoValor);
+            xC2_DQ4 = novoValor;
         });
-        public bool xC2_DQ5_Read => GVL.Opcua.Test.xC2_DQ5.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ5 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ5.Write = !xC2_DQ5_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(13) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(13, novoValor);
+            xC2_DQ5 = novoValor;
         });
-        public bool xC2_DQ6_Read => GVL.Opcua.Test.xC2_DQ6.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ6 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ6.Write = !xC2_DQ6_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(14) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(14, novoValor);
+            xC2_DQ6 = novoValor;
         });
-        public bool xC2_DQ7_Read => GVL.Opcua.Test.xC2_DQ7.Read ?? false;
         public ICommand Cmd_Toggle_C2_DQ7 => new Command(() =>
         {
-            GVL.Opcua.Test.xC2_DQ7.Write = !xC2_DQ7_Read;
+            bool novoValor = !(GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(15) ?? false);
+            GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetWrite(15, novoValor);
+            xC2_DQ7 = novoValor;
         });
-
-
-
-
-
-
-
-
-
-
-
     }
 }

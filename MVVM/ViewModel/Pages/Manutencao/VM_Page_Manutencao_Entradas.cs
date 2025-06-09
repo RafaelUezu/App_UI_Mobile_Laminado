@@ -41,22 +41,22 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
         public void AtualizaEstadoDI()
         {
-            C1_cDI0_Color = (GVL.Opcua.Test.xC1_DI0.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI1_Color = (GVL.Opcua.Test.xC1_DI1.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI2_Color = (GVL.Opcua.Test.xC1_DI2.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI3_Color = (GVL.Opcua.Test.xC1_DI3.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI4_Color = (GVL.Opcua.Test.xC1_DI4.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI5_Color = (GVL.Opcua.Test.xC1_DI5.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI6_Color = (GVL.Opcua.Test.xC1_DI6.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI7_Color = (GVL.Opcua.Test.xC1_DI7.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI8_Color = (GVL.Opcua.Test.xC1_DI8.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI9_Color = (GVL.Opcua.Test.xC1_DI9.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI10_Color = (GVL.Opcua.Test.xC1_DI10.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI11_Color = (GVL.Opcua.Test.xC1_DI11.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI12_Color = (GVL.Opcua.Test.xC1_DI12.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI13_Color = (GVL.Opcua.Test.xC1_DI13.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI14_Color = (GVL.Opcua.Test.xC1_DI14.Read ?? false) ? Colors.Green : Colors.Red;
-            C1_cDI15_Color = (GVL.Opcua.Test.xC1_DI15.Read ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI0_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(0) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI1_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(1) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI2_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(2) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI3_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(3) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI4_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(4) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI5_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(5) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI6_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(6) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI7_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(7) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI8_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(8) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI9_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(9) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI10_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(10) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI11_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(11) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI12_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(12) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI13_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(13) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI14_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(14) ?? false) ? Colors.Green : Colors.Red;
+            C1_cDI15_Color = (GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetRead(15) ?? false) ? Colors.Green : Colors.Red;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

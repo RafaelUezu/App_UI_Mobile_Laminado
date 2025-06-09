@@ -19,7 +19,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 {
                     _xC1_DQ0 = value;
                     OnPropertyChanged();
-
                 }
             }
         }
@@ -38,7 +37,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC1_DQ2;
         public bool xC1_DQ2
         {
@@ -113,7 +111,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC1_DQ7;
         public bool xC1_DQ7
         {
@@ -128,7 +125,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ0;
         public bool xC2_DQ0
         {
@@ -143,7 +139,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ1;
         public bool xC2_DQ1
         {
@@ -158,7 +153,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ2;
         public bool xC2_DQ2
         {
@@ -173,7 +167,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ3;
         public bool xC2_DQ3
         {
@@ -188,7 +181,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ4;
         public bool xC2_DQ4
         {
@@ -203,7 +195,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ5;
         public bool xC2_DQ5
         {
@@ -218,7 +209,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ6;
         public bool xC2_DQ6
         {
@@ -233,7 +223,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-
         private bool _xC2_DQ7;
         public bool xC2_DQ7
         {
