@@ -24,6 +24,13 @@
             >
 
             <Grid>
+                <Button
+                    x:Name="Button_Toggle"
+                    BackgroundColor="Transparent"
+                    Opacity="0.05"
+                    Command="{Binding CommandToggle, Source={x:Reference Root}}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill" />
                 <Switch
                     IsToggled="{Binding xSwitch_Read, Source={x:Reference Name=Root}}"
                     OnColor="Green"
@@ -52,12 +59,7 @@
                         </VisualStateGroupList>
                     </VisualStateManager.VisualStateGroups>
                 </Switch>
-                <Button
-                    BackgroundColor="Transparent"
-                    Opacity="0.05"
-                    Command="{Binding CommandToggle, Source={x:Reference Root}}"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Fill" />
+
             </Grid>
             <Border
                 HorizontalOptions="Center"

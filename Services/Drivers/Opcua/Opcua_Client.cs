@@ -197,18 +197,21 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 {
                                     try
                                     {
+                                        
+                                        
                                         await ReadDataAsync();
                                         await AscribeDataAsync();
                                         await WriteDataAsync();
-                                        await OpcUaEvents.DispararLeituraFinalizadaAsync();
                                         await Task.Delay(delay_request, token); // Delay controlado
+                                        await OpcUaEvents.DispararLeituraFinalizadaAsync();
+                                        
                                         System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Métodos de leitura e escrita finalizados");
                                         GVL.StatusOpcua.xStatusOpcua = true;
                                     }
                                     catch (Exception ex)
                                     {
                                         System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na requisição");
-                                        Error = Error + 1;
+                                        Error = Error++;
                                     }
                                 }
                                 else

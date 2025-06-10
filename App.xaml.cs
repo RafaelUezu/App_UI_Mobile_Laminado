@@ -17,7 +17,7 @@ namespace App_UI_Mobile_Laminado
             InitializeComponent();
             _driver = driver;
             _driver.Start(); // Inicia driver ao abrir o app
-            MainPage = new Page_Manutencao_Saidas();
+            MainPage = new Page_Manutencao_Manual();
             //MainPage = new Shell();
         }
 

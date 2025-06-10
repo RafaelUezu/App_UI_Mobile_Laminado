@@ -36,4 +36,6 @@ public partial class UC_Switch_StatusDescription : ContentView
         set => SetValue(CommandToggleProperty, value);
     }
 
+
 }
+

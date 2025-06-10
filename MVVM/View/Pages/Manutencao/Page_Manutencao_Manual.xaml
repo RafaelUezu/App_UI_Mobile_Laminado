@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao.Page_Manutencao_Manual"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Operação Manual"
              xmlns:controles="clr-namespace:App_UI_Mobile_Laminado.Commands.UserControl"
              Background="White"
@@ -37,7 +38,16 @@
                 sLabel_Status="{Binding sLabel_Status_Ventilador}"
                 CommandToggle="{Binding Cmd_Toggle_Ventilador}"
                 />
-            </StackLayout>
+            <Grid>
+                <Image x:Name="DiscoImage"
+                Source="fan.png"
+                WidthRequest="200"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            </Grid>
+
+        </StackLayout>
         
         <Grid
             Grid.Column="1"
