@@ -19,7 +19,6 @@ namespace App_UI_Mobile_Laminado
             CriarMenuDinamico();
             // Rotas podem ser registradas aqui se forem navegáveis
             Routing.RegisterRoute(nameof(Page_Login_Inicial), typeof(Page_Login_Inicial));
-            Routing.RegisterRoute(nameof(Page_Manutencao_Entradas), typeof(Page_Manutencao_Entradas));
 
         }
 
@@ -31,7 +30,6 @@ namespace App_UI_Mobile_Laminado
         private void CriarMenuDinamico()
         {
             int nivel = Preferences.Get("NivelAcesso", 0); // padrão: OPERADOR
-
 
             // Operação (todos têm acesso)
             var itemOperacao = new FlyoutItem
@@ -166,7 +164,7 @@ namespace App_UI_Mobile_Laminado
                 {
                     Title = "Operação Manual",
                     Icon = "front_hand.png",
-                    ContentTemplate = new DataTemplate(typeof(Page_Operacao_Manual)),
+                    ContentTemplate = new DataTemplate(typeof(Page_Manutencao_Manual)),
                     Route = "Page_Operacao_Manual"
                 });
 
