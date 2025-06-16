@@ -160,23 +160,147 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog_Test"), AttributeId = Attributes.Value },//0
                             };
 
-                            var itemsToWrite = new List<OpcWriteItem>()
+
+                            List<ReadValueId> nodesToRead_GVL_Ihm_Manual = new List<ReadValueId>
                             {
-   
-     
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtAbreFechaDampSup"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtAbreFechaPortaSup"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaBomVac01"), AttributeId = Attributes.Value },//2
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaVentSup"), AttributeId = Attributes.Value },//3
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS01"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS03"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS04"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS05"), AttributeId = Attributes.Value },//7
+
                             };
 
+                            List<ReadValueId> nodesToRead_GVL_ImagensAlarmes = new List<ReadValueId>
+                            {
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgGeral"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgRetornoSsrSuperior"), AttributeId = Attributes.Value },//1
+
+                            };
+
+                            List<ReadValueId> nodesToRead_GVL_Energia = new List<ReadValueId>
+                            {
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteFaseA"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteFaseB"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteFaseC"), AttributeId = Attributes.Value },//2
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteNeutro"), AttributeId = Attributes.Value },//3
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAN"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoBN"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoCN"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAB"), AttributeId = Attributes.Value },//7
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoBC"), AttributeId = Attributes.Value },//8
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoCA"), AttributeId = Attributes.Value },//9
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaAN"), AttributeId = Attributes.Value },//10
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaBN"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaCN"), AttributeId = Attributes.Value },//12
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaAC"), AttributeId = Attributes.Value },//13
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaBC"), AttributeId = Attributes.Value },//14
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaCA"), AttributeId = Attributes.Value },//15
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAvgLL"), AttributeId = Attributes.Value },//16
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteAvg"), AttributeId = Attributes.Value },//17
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fPotenciaAtivaTotal"), AttributeId = Attributes.Value },//18
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fEnergiaAtivaAcumulada"), AttributeId = Attributes.Value },//19
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fAtualDemanda"), AttributeId = Attributes.Value },//20
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fPicoDemanda"), AttributeId = Attributes.Value },//21
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFatorPotenciaTotal"), AttributeId = Attributes.Value },//22
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFrequencia"), AttributeId = Attributes.Value },//23
+                            };
+
+                            List<ReadValueId> nodesToRead_GVL_ClpIhm = new List<ReadValueId>
+                            {
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPortaEsq"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.xVacuo01Ok"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.rFrequenciaAtualVentSup"), AttributeId = Attributes.Value },//2
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iTermoparSup01"), AttributeId = Attributes.Value },//3
+                            };
+
+
+                            
+
+                            var itemsToWrite_GVL_EntradasSaidas = new List<OpcWriteItem>();
                             for (int i = 0; i < 16; i++)
                             {
                                 int idx_opc = i + 1;
                                 int idx_sup = i;
-                                itemsToWrite.Add(new OpcWriteItem
+                                itemsToWrite_GVL_EntradasSaidas.Add(new OpcWriteItem
                                 {
                                     NodeIdString = $"ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog_Test[{idx_opc}]",
                                     GetValue = (index) => GVL.Opcua.EntradasSaidas.ImgForceSaiLog.GetWrite(idx_sup),
                                     ClearWriteFlag = (index) => GVL.Opcua.EntradasSaidas.ImgForceSaiLog.ClearWrite(idx_sup)
                                 });
                             }
+
+                            var itemsToWrite_GVL_Ihm_Manual = new List<OpcWriteItem>()
+                            {
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtAbreFechaDampSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaDampSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaDampSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtAbreFechaPortaSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaPortaSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaPortaSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaBomVac01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaBomVac01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaBomVac01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaVentSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaVentSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaVentSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS02",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS03",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS04",
+                                    GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Write = null
+                                },
+
+
+
+
+
+
+
+
+                            };
+
+
+                            List<List<OpcWriteItem>> allItemsToWrite = new()
+                            {
+                                itemsToWrite_GVL_Ihm_Manual,
+                                itemsToWrite_GVL_EntradasSaidas
+                            };
+
                             RequestHeader requestHeader_GVL_EntradasSaidas = new RequestHeader();
                             double maxAge_GVL_EntradasSaidas = 0;
                             TimestampsToReturn timestampsToReturn_GVL_EntradasSaidas = TimestampsToReturn.Both;
@@ -197,9 +321,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 {
                                     try
                                     {
-                                        
-                                        
-                                        await ReadDataAsync();
                                         await AscribeDataAsync();
                                         await WriteDataAsync();
                                         await Task.Delay(delay_request, token); // Delay controlado
@@ -253,11 +374,12 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 try
                                 {
                                     Stopwatch sw = Stopwatch.StartNew();
-
+                                    var allItems = allItemsToWrite.SelectMany(group => group).ToList();
                                     var validItems = new List<OpcWriteItem>();
                                     var nodesToWrite = new WriteValueCollection();
 
-                                    foreach (var item in itemsToWrite)
+
+                                    foreach (var item in allItems)
                                     {
                                         var value = item.GetValue(item.Index);
                                         if (value != null)
@@ -288,7 +410,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             }
                                         }
                                     }
-
                                     sw.Stop();
                                     System.Diagnostics.Debug.WriteLine($"Tempo de Escrita " + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
                                 }

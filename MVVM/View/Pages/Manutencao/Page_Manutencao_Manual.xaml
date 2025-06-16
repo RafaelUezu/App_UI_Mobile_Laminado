@@ -31,21 +31,100 @@
                 sLabel_Status="{Binding sLabel_Status_BombaVacuo}"
                 CommandToggle="{Binding Cmd_Toggle_BombaVacuo}"
                 />
-            <controles:UC_Switch_StatusDescription
-                x:Name="UC_Sw_SD_Ventilador"
-                xSwitch_Read="{Binding xSwitch_Read_Ventilador}"
-                sLabel_Dispositivo="Ventilador"
-                sLabel_Status="{Binding sLabel_Status_Ventilador}"
-                CommandToggle="{Binding Cmd_Toggle_Ventilador}"
-                />
-            <Grid>
-                <Image x:Name="DiscoImage"
-                Source="fan.png"
-                WidthRequest="200"
-                HeightRequest="200"
-                HorizontalOptions="Center"
-                VerticalOptions="Center" />
-            </Grid>
+
+            <Border
+                Padding="0"
+                Margin="5,5,5,5"
+                Background="Transparent"
+                Stroke="Gray"
+                StrokeThickness="0.5"
+                StrokeShape="RoundRectangle 5"
+                >
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <controles:UC_Switch_StatusDescription
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        x:Name="UC_Sw_SD_Ventilador"
+                        xSwitch_Read="{Binding xSwitch_Read_Ventilador}"
+                        sLabel_Dispositivo="Ventilador"
+                        sLabel_Status="{Binding sLabel_Status_Ventilador}"
+                        CommandToggle="{Binding Cmd_Toggle_Ventilador}"
+                        />
+
+                    <Image
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="5,5,5,5"
+                        x:Name="DiscoImage"
+                        Source="fan.png"
+                        WidthRequest="150"
+                        HeightRequest="150"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        />
+                    <StackLayout
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Orientation="Vertical"
+                        >
+                        <Frame
+                            Padding="5"
+                            Margin="5,5,5,5"
+                            CornerRadius="5"
+                            BorderColor="DarkBlue"
+                            >
+                            <StackLayout
+                                Orientation="Vertical"
+                                >
+                                <Label
+                                FontSize="Medium"
+                                HorizontalOptions="Center"
+                                Text="Frequência"
+                                />
+                                <Label
+                                    FontSize="Medium"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding iFrequencia_Ventilador01, StringFormat='{0} Hz'}"
+                                    />
+                            </StackLayout>
+                        </Frame>
+                        <Frame
+                            Padding="5"
+                            Margin="5,5,5,5"
+                            CornerRadius="5"
+                            BorderColor="DarkBlue"
+                            >
+                            <StackLayout
+                                Orientation="Vertical"
+                                >
+                                <Label
+                                FontSize="Medium"
+                                HorizontalOptions="Center"
+                                Text="Velocidade"
+                                />
+                                <Label
+                                    FontSize="Medium"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding iFrequencia_Ventilador01, StringFormat='{0} rpm'}"
+                                    />
+                            </StackLayout>
+                        </Frame>
+                        
+
+                    </StackLayout>
+                </Grid>
+            </Border>
+
 
         </StackLayout>
         
@@ -145,7 +224,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding sLabel_CorrenteR}"
+                            Text="{Binding iLabel_CorrenteR, StringFormat='{0} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
@@ -179,7 +258,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding sLabel_CorrenteS}"
+                            Text="{Binding iLabel_CorrenteS, StringFormat='{0} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
@@ -213,7 +292,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding sLabel_CorrenteT}"
+                            Text="{Binding iLabel_CorrenteT, StringFormat='{0} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
@@ -247,7 +326,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding sLabel_CorrenteN}"
+                            Text="{Binding iLabel_CorrenteN, StringFormat='{0} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
