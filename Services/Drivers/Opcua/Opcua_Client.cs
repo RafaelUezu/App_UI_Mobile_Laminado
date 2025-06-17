@@ -178,6 +178,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgGeral"), AttributeId = Attributes.Value },//0
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgRetornoSsrSuperior"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgMotor"), AttributeId = Attributes.Value },//2
 
                             };
 
@@ -566,7 +567,14 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.SetRead(i, (bool)ImgRetornoSsrSuperior[i]);
                                         }
                                     }
-
+                                    if (results_GVL_ImagensAlarmes[2].Value != null)
+                                    {
+                                        bool[] ImgMotor = results_GVL_ImagensAlarmes[2].Value as bool[];
+                                        for (int i = 0; i < ImgMotor.Length; i++)
+                                        {
+                                            GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.SetRead(i, (bool)ImgMotor[i]);
+                                        }
+                                    }
                                     if (results_GVL_Energia[0].Value != null)
                                     {
                                         GVL.Opcua.GVL_Energia.fCorrenteFaseA.Read = (float)results_GVL_Energia[0].Value;

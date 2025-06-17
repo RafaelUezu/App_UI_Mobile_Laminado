@@ -26,6 +26,13 @@
                 />
             <controles:UC_Switch_StatusDescription
                 x:Name="UC_Sw_SD_BombaVacuo"
+                xSwitch_Read="{Binding xSwitch_Read_PortaSup}"
+                sLabel_Dispositivo="Bomba de Vácuo"
+                sLabel_Status="{Binding sLabel_Status_PortaSup}"
+                CommandToggle="{Binding Cmd_Toggle_PortaSup}"
+                />
+            <controles:UC_Switch_StatusDescription
+                x:Name="UC_Sw_SD_BombaVacuo"
                 xSwitch_Read="{Binding xSwitch_Read_BombaVacuo}"
                 sLabel_Dispositivo="Bomba de Vácuo"
                 sLabel_Status="{Binding sLabel_Status_BombaVacuo}"
@@ -94,7 +101,7 @@
                                 <Label
                                     FontSize="Medium"
                                     HorizontalOptions="Center"
-                                    Text="{Binding iFrequencia_Ventilador01, StringFormat='{0} Hz'}"
+                                    Text="{Binding rFrequencia_Ventilador01, StringFormat='{0:F2} Hz'}"
                                     />
                             </StackLayout>
                         </Frame>
@@ -115,7 +122,7 @@
                                 <Label
                                     FontSize="Medium"
                                     HorizontalOptions="Center"
-                                    Text="{Binding iFrequencia_Ventilador01, StringFormat='{0} rpm'}"
+                                    Text="{Binding rVelocidade_Ventilador01, StringFormat='{0:F2} rpm'}"
                                     />
                             </StackLayout>
                         </Frame>
@@ -153,7 +160,7 @@
                     HorizontalOptions="Center"
                     />
                 <Label
-                    Text="{Binding sTemperaturaTermopar}"
+                    Text="{Binding iTemperaturaTermoparSup01, StringFormat='{0:F1} ºC'}"
                     FontSize="Medium"
                     TextColor="Red"
                     VerticalOptions="Center"
@@ -224,7 +231,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding iLabel_CorrenteR, StringFormat='{0} A'}"
+                            Text="{Binding fLabel_CorrenteR, StringFormat='{0:F2} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
@@ -258,7 +265,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding iLabel_CorrenteS, StringFormat='{0} A'}"
+                            Text="{Binding fLabel_CorrenteS, StringFormat='{0:F2} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
@@ -292,7 +299,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding iLabel_CorrenteT, StringFormat='{0} A'}"
+                            Text="{Binding fLabel_CorrenteT, StringFormat='{0:F2} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"
@@ -326,7 +333,7 @@
                             HorizontalOptions="Center"
                             />
                         <Label
-                            Text="{Binding iLabel_CorrenteN, StringFormat='{0} A'}"
+                            Text="{Binding fLabel_CorrenteN, StringFormat='{0:F2} A'}"
                             FontSize="Medium"
                             TextColor="Black"
                             VerticalTextAlignment="Center"

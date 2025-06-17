@@ -13,22 +13,5 @@ public partial class Page_Manutencao_Saidas : ContentPage
         BindingContext = _viewModel;
     }
 
-    /*
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        if (BindingContext is VM_Page_Manutencao_Saidas vm)
-            vm.StartAtualizacaoDQ(); // Liga a leitura periódica
-    }
-
-    protected override void OnDisappearing()
-    {
-        base.OnDisappearing();
-        if (BindingContext is VM_Page_Manutencao_Saidas vm)
-            vm.StopAtualizacaoDQ(); // Evita leitura fora da tela
-    }
-
-    */
 
 }

@@ -22,18 +22,11 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         }
 
 
-
-        private readonly System.Timers.Timer _timer;
-
         public VM_Page_Manutencao_Saidas()
         {
             
             IniciarlizarDescricao();
-            /*
-            _timer = new System.Timers.Timer(100);
-            _timer.Elapsed += Timer_Elapsed;
-            _timer.AutoReset = true;
-            */
+
             OpcUaEvents.LeituraFinalizadaAsync += () =>
             {
                 OnLeituraFinalizada();
@@ -42,22 +35,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
         }
 
-        /*
-        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            MainThread.BeginInvokeOnMainThread(AtualizaEstadoDQ);
-        }
-        
-        public void StartAtualizacaoDQ()
-        {
-            _timer?.Start();
-        }
-
-        public void StopAtualizacaoDQ()
-        {
-            _timer?.Stop();
-        }
-        */
         private void OnLeituraFinalizada()
         {
             MainThread.BeginInvokeOnMainThread(AtualizaEstadoDQ);
