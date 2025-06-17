@@ -38,18 +38,18 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             xSwitch_Read_Dumper = GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(1) ?? false;
             sLabel_Status_Dumper = (GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(1) ?? false) ? "Aberto" : "Fechado";
             xSwitch_Read_PortaSup = GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(7) ?? false;
-            sLabel_Status_PortaSup = (GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(7) ?? false) ? "Com Vácuo" : "Sem Vácuo";
-            xSwitch_Read_BombaVacuo = GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(5) ?? false;
-            sLabel_Status_BombaVacuo = (GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(5) ?? false) ? "Com Vácuo" : "Sem Vácuo";
+            sLabel_Status_PortaSup = (GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(7) ?? false) ? "Aberta" : "Fechada";
+            xSwitch_Read_BombaVacuo = GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.GetRead(5) ?? false;
+            sLabel_Status_BombaVacuo = (GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.GetRead(5) ?? false) ? "Com Vácuo" : "Sem Vácuo";
             xSwitch_Read_Ventilador = GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.GetRead(3) ?? false;
             sLabel_Status_Ventilador = (GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.GetRead(3) ?? false) ? "Ligado" : "Desligado";
-            xSwitch_Read_Resistencia01 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(1) ?? false);
+            xSwitch_Read_Resistencia01 = GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(1) ?? false;
             sLabel_Status_Resistencia01 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(1) ?? false) ? "Ligada" : "Desligada";
-            xSwitch_Read_Resistencia02 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(2) ?? false);
+            xSwitch_Read_Resistencia02 = GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(2) ?? false;
             sLabel_Status_Resistencia02 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(2) ?? false) ? "Ligada" : "Desligada";
-            xSwitch_Read_Resistencia03 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(3) ?? false);
+            xSwitch_Read_Resistencia03 = GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(3) ?? false;
             sLabel_Status_Resistencia03 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(3) ?? false) ? "Ligada" : "Desligada";
-            xSwitch_Read_Resistencia04 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(4) ?? false);
+            xSwitch_Read_Resistencia04 = GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(4) ?? false;
             sLabel_Status_Resistencia04 = (GVL.Opcua.GVL_ImagensAlarmes.ImgRetornoSsrSuperior.GetRead(4) ?? false) ? "Ligada" : "Desligada";
 
             fLabel_CorrenteR = GVL.Opcua.GVL_Energia.fCorrenteFaseA.Read ?? 0;
@@ -59,8 +59,11 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
             rFrequencia_Ventilador01 = GVL.Opcua.GVL_ClpIhm.rFrequenciaAtualVentSup.Read ?? 0;
             rVelocidade_Ventilador01 = (GVL.Opcua.GVL_ClpIhm.rFrequenciaAtualVentSup.Read ?? 0) / 60 * 3600;
-            iTemperaturaTermoparSup01 = GVL.Opcua.GVL_ClpIhm.iTermoparSup01.Read ?? 0;
+            iTemperaturaTermoparSup01 = (GVL.Opcua.GVL_ClpIhm.iTermoparSup01.Read ?? 0) /10;
         }
+
+
+
 
         public ICommand Cmd_Toggle_Dumper => new Command(() =>
         {

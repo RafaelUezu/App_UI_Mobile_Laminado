@@ -2198,8 +2198,8 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class ImgMotor
                 {
                     private static readonly object _lock = new object();
-                    private static readonly bool?[] _readValues = new bool?[10];
-                    private static readonly bool?[] _writeValues = new bool?[10];
+                    private static readonly bool?[] _readValues = new bool?[11];
+                    private static readonly bool?[] _writeValues = new bool?[11];
 
                     public static bool? GetRead(int index)
                     {

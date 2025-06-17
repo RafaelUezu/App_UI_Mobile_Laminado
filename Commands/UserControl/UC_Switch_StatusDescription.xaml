@@ -24,42 +24,35 @@
             >
 
             <Grid>
-                <Button
-                    x:Name="Button_Toggle"
-                    BackgroundColor="Transparent"
-                    Opacity="0.05"
-                    Command="{Binding CommandToggle, Source={x:Reference Root}}"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Fill" />
                 <Switch
                     IsToggled="{Binding xSwitch_Read, Source={x:Reference Name=Root}}"
                     OnColor="Green"
                     >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
-                            <VisualStateGroup
-                                x:Name="CommonStates">
-                                <VisualState
-                                    x:Name="On">
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="On">
                                     <VisualState.Setters>
-                                        <Setter
-                                            Property="ThumbColor"
-                                            Value="MediumSpringGreen" />
+                                        <Setter Property="ThumbColor"
+                                   Value="MediumSpringGreen" />
                                     </VisualState.Setters>
                                 </VisualState>
-                                <VisualState
-                                    x:Name="Off">
+                                <VisualState x:Name="Off">
                                     <VisualState.Setters>
-                                        <Setter
-                                            Property="ThumbColor"
-                                            Value="Red" />
+                                        <Setter Property="ThumbColor"
+                                   Value="Red" />
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateGroupList>
                     </VisualStateManager.VisualStateGroups>
                 </Switch>
-
+                <Button
+                    BackgroundColor="Transparent"
+                    Opacity="0.05"
+                    Command="{Binding CommandToggle, Source={x:Reference Name=Root}}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill" />
             </Grid>
             <Border
                 HorizontalOptions="Center"

@@ -18,8 +18,8 @@ namespace App_UI_Mobile_Laminado
             _driver = driver;
             _driver.Start(); // Inicia driver ao abrir o app
             //MainPage = new Page_Manutencao_Manual();
-            MainPage = new Page_Login_Inicial();
-            //MainPage = new AppShell();
+            //MainPage = new Page_Login_Inicial();
+            MainPage = new AppShell();
         }
 
         protected override void OnSleep()

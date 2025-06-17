@@ -157,7 +157,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             List<ReadValueId> nodesToRead_GVL_EntradasSaidas = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgTesteEntLog"), AttributeId = Attributes.Value },//0
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog_Test"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog"), AttributeId = Attributes.Value },//0
                             };
 
 
@@ -482,9 +482,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             }
                                         }
                                     }
-
-
-
 
 
 

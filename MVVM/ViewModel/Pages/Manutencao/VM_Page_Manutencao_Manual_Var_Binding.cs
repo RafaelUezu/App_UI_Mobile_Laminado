@@ -8,8 +8,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 {
     public partial class VM_Page_Manutencao_Manual
     {
-        private bool? _xSwitch_Read_Dumper;
-        public bool? xSwitch_Read_Dumper
+        private bool _xSwitch_Read_Dumper;
+        public bool xSwitch_Read_Dumper
         {
             get => _xSwitch_Read_Dumper;
             set
@@ -21,8 +21,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_Dumper;
-        public string? sLabel_Status_Dumper
+        private string _sLabel_Status_Dumper;
+        public string sLabel_Status_Dumper
         {
             get => _sLabel_Status_Dumper;
             set
@@ -34,8 +34,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_PortaSup;
-        public bool? xSwitch_Read_PortaSup
+        private bool _xSwitch_Read_PortaSup;
+        public bool xSwitch_Read_PortaSup
         {
             get => _xSwitch_Read_PortaSup;
             set
@@ -47,8 +47,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_PortaSup;
-        public string? sLabel_Status_PortaSup
+        private string _sLabel_Status_PortaSup;
+        public string sLabel_Status_PortaSup
         {
             get => _sLabel_Status_PortaSup;
             set
@@ -60,8 +60,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_BombaVacuo;
-        public bool? xSwitch_Read_BombaVacuo
+        private bool _xSwitch_Read_BombaVacuo;
+        public bool xSwitch_Read_BombaVacuo
         {
             get => _xSwitch_Read_BombaVacuo;
             set
@@ -73,8 +73,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_BombaVacuo;
-        public string? sLabel_Status_BombaVacuo
+        private string _sLabel_Status_BombaVacuo;
+        public string sLabel_Status_BombaVacuo
         {
             get => _sLabel_Status_BombaVacuo;
             set
@@ -86,8 +86,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_Ventilador;
-        public bool? xSwitch_Read_Ventilador
+        private bool _xSwitch_Read_Ventilador;
+        public bool xSwitch_Read_Ventilador
         {
             get => _xSwitch_Read_Ventilador;
             set
@@ -99,8 +99,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_Ventilador;
-        public string? sLabel_Status_Ventilador
+        private string _sLabel_Status_Ventilador;
+        public string sLabel_Status_Ventilador
         {
             get => _sLabel_Status_Ventilador;
             set
@@ -112,8 +112,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private float? _rFrequencia_Ventilador01;
-        public float? rFrequencia_Ventilador01
+        private float _rFrequencia_Ventilador01;
+        public float rFrequencia_Ventilador01
         {
             get => _rFrequencia_Ventilador01;
             set
@@ -125,8 +125,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private float? _rVelocidade_Ventilador01;
-        public float? rVelocidade_Ventilador01
+        private float _rVelocidade_Ventilador01;
+        public float rVelocidade_Ventilador01
         {
             get => _rVelocidade_Ventilador01;
             set
@@ -138,8 +138,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private int? _iTemperaturaTermoparSup01;
-        public int? iTemperaturaTermoparSup01
+        private int _iTemperaturaTermoparSup01;
+        public int iTemperaturaTermoparSup01
         {
             get => _iTemperaturaTermoparSup01;
             set
@@ -151,8 +151,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_Resistencia01;
-        public bool? xSwitch_Read_Resistencia01
+        private bool _xSwitch_Read_Resistencia01;
+        public bool xSwitch_Read_Resistencia01
         {
             get => _xSwitch_Read_Resistencia01;
             set
@@ -164,8 +164,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_Resistencia01;
-        public string? sLabel_Status_Resistencia01
+        private string _sLabel_Status_Resistencia01;
+        public string sLabel_Status_Resistencia01
         {
             get => _sLabel_Status_Resistencia01;
             set
@@ -177,8 +177,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_Resistencia02;
-        public bool? xSwitch_Read_Resistencia02
+        private bool _xSwitch_Read_Resistencia02;
+        public bool xSwitch_Read_Resistencia02
         {
             get => _xSwitch_Read_Resistencia02;
             set
@@ -190,8 +190,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_Resistencia02;
-        public string? sLabel_Status_Resistencia02
+        private string _sLabel_Status_Resistencia02;
+        public string sLabel_Status_Resistencia02
         {
             get => _sLabel_Status_Resistencia02;
             set
@@ -203,8 +203,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_Resistencia03;
-        public bool? xSwitch_Read_Resistencia03
+        private bool _xSwitch_Read_Resistencia03;
+        public bool xSwitch_Read_Resistencia03
         {
             get => _xSwitch_Read_Resistencia03;
             set
@@ -216,8 +216,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_Resistencia03;
-        public string? sLabel_Status_Resistencia03
+        private string _sLabel_Status_Resistencia03;
+        public string sLabel_Status_Resistencia03
         {
             get => _sLabel_Status_Resistencia03;
             set
@@ -229,8 +229,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private bool? _xSwitch_Read_Resistencia04;
-        public bool? xSwitch_Read_Resistencia04
+        private bool _xSwitch_Read_Resistencia04;
+        public bool xSwitch_Read_Resistencia04
         {
             get => _xSwitch_Read_Resistencia04;
             set
@@ -242,8 +242,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 }
             }
         }
-        private string? _sLabel_Status_Resistencia04;
-        public string? sLabel_Status_Resistencia04
+        private string _sLabel_Status_Resistencia04;
+        public string sLabel_Status_Resistencia04
         {
             get => _sLabel_Status_Resistencia04;
             set
@@ -256,8 +256,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
         }
 
-        private float? _fLabel_CorrenteR;
-        public float? fLabel_CorrenteR
+        private float _fLabel_CorrenteR;
+        public float fLabel_CorrenteR
         {
             get => _fLabel_CorrenteR;
             set
@@ -270,8 +270,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
         }
 
-        private float? _fLabel_CorrenteS;
-        public float? fLabel_CorrenteS
+        private float _fLabel_CorrenteS;
+        public float fLabel_CorrenteS
         {
             get => _fLabel_CorrenteS;
             set
@@ -284,8 +284,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
         }
 
-        private float? _fLabel_CorrenteT;
-        public float? fLabel_CorrenteT
+        private float _fLabel_CorrenteT;
+        public float fLabel_CorrenteT
         {
             get => _fLabel_CorrenteT;
             set
@@ -298,8 +298,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
         }
 
-        private float? _fLabel_CorrenteN;
-        public float? fLabel_CorrenteN
+        private float _fLabel_CorrenteN;
+        public float fLabel_CorrenteN
         {
             get => _fLabel_CorrenteN;
             set

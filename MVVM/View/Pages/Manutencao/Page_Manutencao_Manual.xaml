@@ -25,9 +25,9 @@
                 CommandToggle="{Binding Cmd_Toggle_Dumper}"
                 />
             <controles:UC_Switch_StatusDescription
-                x:Name="UC_Sw_SD_BombaVacuo"
+                x:Name="UC_Sw_SD_PortaSup"
                 xSwitch_Read="{Binding xSwitch_Read_PortaSup}"
-                sLabel_Dispositivo="Bomba de Vácuo"
+                sLabel_Dispositivo="Porta do Forno"
                 sLabel_Status="{Binding sLabel_Status_PortaSup}"
                 CommandToggle="{Binding Cmd_Toggle_PortaSup}"
                 />
