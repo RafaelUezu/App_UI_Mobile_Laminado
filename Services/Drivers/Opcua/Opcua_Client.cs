@@ -345,6 +345,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 {
                                     try
                                     {
+                                        await ReadDataAsync();
                                         await AscribeDataAsync();
                                         await WriteDataAsync();
                                         await Task.Delay(delay_request, token); // Delay controlado
@@ -517,37 +518,37 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             GVL.Opcua.EntradasSaidas.ImgForceSaiLog.SetRead(i, (bool)ImgForceSaiLog[i]);
                                         }
                                     }
-                                    if(results_GVL_EntradasSaidas[0].Value != null)
+                                    if(results_GVL_Ihm_Manual[0].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaDampSup.Read = ((bool)results_GVL_EntradasSaidas[0].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaDampSup.Read = ((bool)results_GVL_Ihm_Manual[0].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[1].Value != null)
+                                    if (results_GVL_Ihm_Manual[1].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaPortaSup.Read = ((bool)results_GVL_EntradasSaidas[1].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtAbreFechaPortaSup.Read = ((bool)results_GVL_Ihm_Manual[1].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[2].Value != null)
+                                    if (results_GVL_Ihm_Manual[2].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaBomVac01.Read = ((bool)results_GVL_EntradasSaidas[2].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaBomVac01.Read = ((bool)results_GVL_Ihm_Manual[2].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[3].Value != null)
+                                    if (results_GVL_Ihm_Manual[3].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaVentSup.Read = ((bool)results_GVL_EntradasSaidas[3].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaVentSup.Read = ((bool)results_GVL_Ihm_Manual[3].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[4].Value != null)
+                                    if (results_GVL_Ihm_Manual[4].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS01.Read = ((bool)results_GVL_EntradasSaidas[4].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS01.Read = ((bool)results_GVL_Ihm_Manual[4].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[5].Value != null)
+                                    if (results_GVL_Ihm_Manual[5].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS02.Read = ((bool)results_GVL_EntradasSaidas[5].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS02.Read = ((bool)results_GVL_Ihm_Manual[5].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[6].Value != null)
+                                    if (results_GVL_Ihm_Manual[6].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS03.Read = ((bool)results_GVL_EntradasSaidas[6].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS03.Read = ((bool)results_GVL_Ihm_Manual[6].Value);
                                     }
-                                    if (results_GVL_EntradasSaidas[7].Value != null)
+                                    if (results_GVL_Ihm_Manual[7].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Read = ((bool)results_GVL_EntradasSaidas[7].Value);
+                                        GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Read = ((bool)results_GVL_Ihm_Manual[7].Value);
                                     }
                                     if (results_GVL_ImagensAlarmes[0].Value != null)
                                     {
@@ -676,7 +677,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
                                     if (results_GVL_ClpIhm[3].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.iTermoparSup01.Read = (ushort)results_GVL_ClpIhm[3].Value;
+                                        GVL.Opcua.GVL_ClpIhm.iTermoparSup01.Read = (short)(Int16)results_GVL_ClpIhm[3].Value;
                                     }
 
 
@@ -685,9 +686,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     sw.Stop(); 
                                     System.Diagnostics.Debug.WriteLine("Tempo de passagem de valor" + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
                                 }
-                                catch
+                                catch(Exception ex)
                                 {
-                                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na passagem de valor");
+                                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na passagem de valor. " + "Linha: " + ex.StackTrace);
                                     Error = Error + 1;
                                     return;
                                 }

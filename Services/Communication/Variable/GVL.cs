@@ -2138,8 +2138,8 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class ImgGeral
                 {
                     private static readonly object _lock = new object();
-                    private static readonly bool?[] _readValues = new bool?[20];
-                    private static readonly bool?[] _writeValues = new bool?[20];
+                    private static readonly bool?[] _readValues = new bool?[21];
+                    private static readonly bool?[] _writeValues = new bool?[21];
 
                     public static bool? GetRead(int index)
                     {
@@ -2198,8 +2198,8 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class ImgRetornoSsrSuperior
                 {
                     private static readonly object _lock = new object();
-                    private static readonly bool?[] _readValues = new bool?[4];
-                    private static readonly bool?[] _writeValues = new bool?[4];
+                    private static readonly bool?[] _readValues = new bool?[5];
+                    private static readonly bool?[] _writeValues = new bool?[5];
 
                     public static bool? GetRead(int index)
                     {
