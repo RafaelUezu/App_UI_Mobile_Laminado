@@ -19,13 +19,20 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            MainThread.BeginInvokeOnMainThread(AtualizaEstadoDQ);
+        }
+
         public VM_Page_Manutencao_Manual()
         {
+            
             OpcUaEvents.LeituraFinalizadaAsync += () =>
             {
                 OnLeituraFinalizada();
                 return Task.CompletedTask;
             };
+     
         }
 
         private void OnLeituraFinalizada()

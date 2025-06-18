@@ -33,9 +33,6 @@ public partial class Page_Manutencao_Manual : ContentPage
         while ((bool)_viewModel.xSwitch_Read_Ventilador)
         {
             await DiscoImage.RotateTo(DiscoImage.Rotation + 3600, (uint)_viewModel.rVelocidade_Ventilador01, Easing.Linear);
-
-            if (DiscoImage.Rotation >= 36000)
-                DiscoImage.Rotation = 0;
         }
     }
 }

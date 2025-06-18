@@ -29,7 +29,7 @@
                     >
                     <Label
                         Grid.Column="0"
-                        Text="Potência"
+                        Text="Tensão média entre fases"
                         FontSize="Medium"
                         TextColor="White"
                         HorizontalOptions="Start"
@@ -56,31 +56,415 @@
                 BackgroundColor="{StaticResource Normal_Cor4}"
                 Margin="5,5,5,5"
                 >
-                <Grid
-                    ColumnDefinitions="Auto, *, Auto"
-                    >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                     <Label
+                        Grid.Row="0"
                         Grid.Column="0"
-                        Text="Tensão da Fase Neutro (A)"
-                        FontSize="Small"
+                        Grid.ColumnSpan="3"
+                        Text="Tensão entre Fases"
                         TextColor="White"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+
                         />
                     <Label
-                        Grid.Column="2"
-                        Text="{Binding iTensaoAN, StringFormat='{0} V'}"
-                        FontSize="Small"
-                        TextColor="Gold"
-                        HorizontalOptions="End"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Fases"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
                         />
-                </Grid>  
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="Instantâneo"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="Máximo"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="L1 - L2"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoAB, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoMaximaAB, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="L1 - L3"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoCA, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoMaximaCA, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="L2 - L3"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoBC, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoMaximaBC, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                </Grid>
             </Frame>
-            
-            
+
+            <Frame
+                 CornerRadius="5"
+                 Padding="5"
+                 BackgroundColor="{StaticResource Normal_Cor4}"
+                 Margin="5,5,5,5"
+                 >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Text="Tensão Fase e Neutro"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Fases"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="Instantâneo"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="Máximo"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="L1 - N"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoAN, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoMaximaAN, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="L2 - N"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoBN, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoMaximaBN, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="L2 - N"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoCN, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding fTensaoMaximaCN, StringFormat='{0:F1} V'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                </Grid>
+            </Frame>
         </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="2"
+            Background="{StaticResource Normal_Cor5}"
+            Margin="5,5,5,5"
+            >
+            <Frame
+                CornerRadius="5"
+                Padding="5"
+                BackgroundColor="{StaticResource Normal_Cor4}"
+                Margin="5,5,5,5"
+                >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Text="Corrente das Fases"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Fases"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="Instantâneo"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="Máximo"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="L1"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteFaseA, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteMaximaFaseA, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="L2"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteFaseB, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteMaximaFaseB, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="L3"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteFaseC, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteMaximaFaseC, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Text="N"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteNeutro, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                    <Label
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Text="{Binding fCorrenteMaximaNeutro, StringFormat='{0:F1} A'}"
+                        TextColor="White"
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        />
+                </Grid>
+            </Frame>
+
         
-        
-        
+        </VerticalStackLayout>
+
+
     </Grid>
 </ContentPage>

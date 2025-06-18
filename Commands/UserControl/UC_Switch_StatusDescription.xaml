@@ -25,7 +25,7 @@
 
             <Grid>
                 <Switch
-                    IsToggled="{Binding xSwitch_Read, Source={x:Reference Name=Root}}"
+                    IsToggled="{Binding xSwitch_Read, Source={x:Reference Name=Root}, Mode=OneWay}"
                     OnColor="Green"
                     >
                     <VisualStateManager.VisualStateGroups>
@@ -63,7 +63,7 @@
                 >
                 <Label
                     Text="{Binding sLabel_Status, Source={x:Reference Name=Root}}"
-                    FontSize="Medium"
+                    FontSize="Small"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
                     WidthRequest="100"

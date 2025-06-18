@@ -21,7 +21,7 @@
                 />
             <Grid>
                 <Switch
-                    IsToggled="{Binding DqEstado_Read, Source={x:Reference Name=Root}}"
+                    IsToggled="{Binding DqEstado_Read, Source={x:Reference Name=Root}, Mode=OneWay}"
                     OnColor="Green"
                     >
                     <VisualStateManager.VisualStateGroups>
