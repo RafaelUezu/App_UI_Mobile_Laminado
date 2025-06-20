@@ -188,27 +188,36 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteFaseB"), AttributeId = Attributes.Value },//1
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteFaseC"), AttributeId = Attributes.Value },//2
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteNeutro"), AttributeId = Attributes.Value },//3
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAN"), AttributeId = Attributes.Value },//4
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoBN"), AttributeId = Attributes.Value },//5
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoCN"), AttributeId = Attributes.Value },//6
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAB"), AttributeId = Attributes.Value },//7
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoBC"), AttributeId = Attributes.Value },//8
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoCA"), AttributeId = Attributes.Value },//9
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaAN"), AttributeId = Attributes.Value },//10
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaBN"), AttributeId = Attributes.Value },//11
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaCN"), AttributeId = Attributes.Value },//12
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaAC"), AttributeId = Attributes.Value },//13
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaBC"), AttributeId = Attributes.Value },//14
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaCA"), AttributeId = Attributes.Value },//15
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAvgLL"), AttributeId = Attributes.Value },//16
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteAvg"), AttributeId = Attributes.Value },//17
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fPotenciaAtivaTotal"), AttributeId = Attributes.Value },//18
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fEnergiaAtivaAcumulada"), AttributeId = Attributes.Value },//19
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fAtualDemanda"), AttributeId = Attributes.Value },//20
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fPicoDemanda"), AttributeId = Attributes.Value },//21
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFatorPotenciaTotal"), AttributeId = Attributes.Value },//22
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFrequencia"), AttributeId = Attributes.Value },//23
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteMaximaFaseA"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteMaximaFaseB"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteMaximaFaseC"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteMaximaNeutro"), AttributeId = Attributes.Value },//7
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAN"), AttributeId = Attributes.Value },//8
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoBN"), AttributeId = Attributes.Value },//9
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoCN"), AttributeId = Attributes.Value },//10
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAB"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoBC"), AttributeId = Attributes.Value },//12
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoCA"), AttributeId = Attributes.Value },//13
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaAN"), AttributeId = Attributes.Value },//14
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaBN"), AttributeId = Attributes.Value },//15
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaCN"), AttributeId = Attributes.Value },//16
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaAC"), AttributeId = Attributes.Value },//17
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaBC"), AttributeId = Attributes.Value },//18
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoMaximaCA"), AttributeId = Attributes.Value },//10
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fTensaoAvgLL"), AttributeId = Attributes.Value },//20
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteAvg"), AttributeId = Attributes.Value },//21
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fPotenciaAtivaTotal"), AttributeId = Attributes.Value },//22
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fEnergiaAtivaAcumulada"), AttributeId = Attributes.Value },//23
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fAtualDemanda"), AttributeId = Attributes.Value },//24
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fPicoDemanda"), AttributeId = Attributes.Value },//25
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFatorPotenciaTotal"), AttributeId = Attributes.Value },//26
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFrequencia"), AttributeId = Attributes.Value },//27
                             };
 
                             List<ReadValueId> nodesToRead_GVL_ClpIhm = new List<ReadValueId>
@@ -572,6 +581,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.SetRead(i, (bool)ImgMotor[i]);
                                         }
                                     }
+
+
                                     if (results_GVL_Energia[0].Value != null)
                                     {
                                         GVL.Opcua.GVL_Energia.fCorrenteFaseA.Read = (float)results_GVL_Energia[0].Value;
@@ -588,86 +599,115 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     {
                                         GVL.Opcua.GVL_Energia.fCorrenteNeutro.Read = (float)results_GVL_Energia[3].Value;
                                     }
+
                                     if (results_GVL_Energia[4].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoAN.Read = (float)results_GVL_Energia[4].Value;
+                                        GVL.Opcua.GVL_Energia.fCorrenteMaximaFaseA.Read = (float)results_GVL_Energia[4].Value;
                                     }
                                     if (results_GVL_Energia[5].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoBN.Read = (float)results_GVL_Energia[5].Value;
+                                        GVL.Opcua.GVL_Energia.fCorrenteMaximaFaseB.Read = (float)results_GVL_Energia[5].Value;
                                     }
                                     if (results_GVL_Energia[6].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoCN.Read = (float)results_GVL_Energia[6].Value;
+                                        GVL.Opcua.GVL_Energia.fCorrenteMaximaFaseC.Read = (float)results_GVL_Energia[6].Value;
                                     }
                                     if (results_GVL_Energia[7].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoAB.Read = (float)results_GVL_Energia[7].Value;
+                                        GVL.Opcua.GVL_Energia.fCorrenteMaximaNeutro.Read = (float)results_GVL_Energia[7].Value;
                                     }
+
+
+
+
+
                                     if (results_GVL_Energia[8].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoBC.Read = (float)results_GVL_Energia[8].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoAN.Read = (float)results_GVL_Energia[8].Value;
                                     }
                                     if (results_GVL_Energia[9].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoCA.Read = (float)results_GVL_Energia[9].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoBN.Read = (float)results_GVL_Energia[9].Value;
                                     }
                                     if (results_GVL_Energia[10].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoMaximaAN.Read = (float)results_GVL_Energia[10].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoCN.Read = (float)results_GVL_Energia[10].Value;
                                     }
+
                                     if (results_GVL_Energia[11].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoMaximaBN.Read = (float)results_GVL_Energia[11].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoAB.Read = (float)results_GVL_Energia[11].Value;
                                     }
                                     if (results_GVL_Energia[12].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoMaximaCN.Read = (float)results_GVL_Energia[12].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoBC.Read = (float)results_GVL_Energia[12].Value;
                                     }
                                     if (results_GVL_Energia[13].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoMaximaAB.Read = (float)results_GVL_Energia[13].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoCA.Read = (float)results_GVL_Energia[13].Value;
                                     }
+
                                     if (results_GVL_Energia[14].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoMaximaBC.Read = (float)results_GVL_Energia[14].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoMaximaAN.Read = (float)results_GVL_Energia[14].Value;
                                     }
                                     if (results_GVL_Energia[15].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoMaximaCA.Read = (float)results_GVL_Energia[15].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoMaximaBN.Read = (float)results_GVL_Energia[15].Value;
                                     }
                                     if (results_GVL_Energia[16].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fTensaoAvgLL.Read = (float)results_GVL_Energia[16].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoMaximaCN.Read = (float)results_GVL_Energia[16].Value;
                                     }
+
                                     if (results_GVL_Energia[17].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fCorrenteAvg.Read = (float)results_GVL_Energia[17].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoMaximaAB.Read = (float)results_GVL_Energia[17].Value;
                                     }
                                     if (results_GVL_Energia[18].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fPotenciaAtivaTotal.Read = (float)results_GVL_Energia[18].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoMaximaBC.Read = (float)results_GVL_Energia[18].Value;
                                     }
                                     if (results_GVL_Energia[19].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fEnergiaAtivaAcumulada.Read = (float)results_GVL_Energia[19].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoMaximaCA.Read = (float)results_GVL_Energia[19].Value;
                                     }
+
                                     if (results_GVL_Energia[20].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fAtualDemanda.Read = (float)results_GVL_Energia[20].Value;
+                                        GVL.Opcua.GVL_Energia.fTensaoAvgLL.Read = (float)results_GVL_Energia[20].Value;
                                     }
                                     if (results_GVL_Energia[21].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fPicoDemanda.Read = (float)results_GVL_Energia[21].Value;
+                                        GVL.Opcua.GVL_Energia.fCorrenteAvg.Read = (float)results_GVL_Energia[21].Value;
                                     }
                                     if (results_GVL_Energia[22].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fFatorPotenciaTotal.Read = (float)results_GVL_Energia[22].Value;
+                                        GVL.Opcua.GVL_Energia.fPotenciaAtivaTotal.Read = (float)results_GVL_Energia[22].Value;
                                     }
                                     if (results_GVL_Energia[23].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Energia.fFrequencia.Read = (float)results_GVL_Energia[23].Value;
+                                        GVL.Opcua.GVL_Energia.fEnergiaAtivaAcumulada.Read = (float)results_GVL_Energia[23].Value;
                                     }
+                                    if (results_GVL_Energia[24].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Energia.fAtualDemanda.Read = (float)results_GVL_Energia[24].Value;
+                                    }
+                                    if (results_GVL_Energia[25].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Energia.fPicoDemanda.Read = (float)results_GVL_Energia[25].Value;
+                                    }
+                                    if (results_GVL_Energia[26].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Energia.fFatorPotenciaTotal.Read = (float)results_GVL_Energia[26].Value;
+                                    }
+                                    if (results_GVL_Energia[27].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Energia.fFrequencia.Read = (float)results_GVL_Energia[27].Value;
+                                    }
+
+
+
                                     if (results_GVL_ClpIhm[0].Value != null)
                                     {
                                         GVL.Opcua.GVL_ClpIhm.wStatusPortaEsq.Read = (ushort)results_GVL_ClpIhm[0].Value;

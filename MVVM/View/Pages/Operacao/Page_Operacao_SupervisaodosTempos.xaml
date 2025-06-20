@@ -2,11 +2,244 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao.Page_Operacao_SupervisaodosTempos"
-             Title="Supervisão dos Tempos">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Supervisão dos Tempos"
+             Background="{StaticResource Normal_Cor6}"
+             >
+    <Grid
+        >
+        <Grid.ColumnDefinitions>
+            
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions
+            >
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+
+
+        </Grid.RowDefinitions>
+
+        <!-- Linha Horizontal -->
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="0"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="1"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="2"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="3"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="4"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="5"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="6"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="7"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="8"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="9"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="10"
+            Grid.ColumnSpan="5"
+            />
+        <BoxView
+            Color="{StaticResource Normal_Cor5}"
+            HeightRequest="1"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Grid.Row="11"
+            Grid.ColumnSpan="5"
+            />
+
+        <!--Legendas-->
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="Ciclo do Forno"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Tempos dos Estágios"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Rampa 01"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Patamar 01"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="4"
+            Grid.Column="0"
+            Text="Rampa 02"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="Patamar 02"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="6"
+            Grid.Column="0"
+            Text="Rampa 03"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="7"
+            Grid.Column="0"
+            Text="Patamar 03"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="8"
+            Grid.Column="0"
+            Text="Rampa 04"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="9"
+            Grid.Column="0"
+            Text="Patamar 04"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="10"
+            Grid.Column="0"
+            Text="Rampa 05"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+        <Label
+            Grid.Row="11"
+            Grid.Column="0"
+            Text="Patamar 05"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            />
+       
+        <!--Temperaturas-->
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="Temperaturas"
+            TextColor="{StaticResource Normal_Cor3}"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            />
+
+
+
+
+    </Grid>
+
+   
+    
+    
+    
 </ContentPage>

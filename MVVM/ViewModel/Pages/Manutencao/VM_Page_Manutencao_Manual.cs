@@ -1,6 +1,5 @@
 ﻿using MAUI_Opcua.Services.Communication.Variable;
 using MAUI_Opcua.Services.Drivers.Opcua;
-using MAUI_Opcua.Services.Drivers.Opcua;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +16,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         protected void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
-        {
-            MainThread.BeginInvokeOnMainThread(AtualizaEstadoDQ);
         }
 
         public VM_Page_Manutencao_Manual()

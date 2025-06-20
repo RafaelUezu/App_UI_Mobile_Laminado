@@ -2480,6 +2480,168 @@ namespace MAUI_Opcua.Services.Communication.Variable
                     }
                 }
 
+                public static class fCorrenteMaximaFaseA
+                {
+                    private static readonly object _lock = new object();
+                    private static float? _readValue;
+                    private static float? _writeValue;
+                    public static float? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static float? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class fCorrenteMaximaFaseB
+                {
+                    private static readonly object _lock = new object();
+                    private static float? _readValue;
+                    private static float? _writeValue;
+                    public static float? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static float? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class fCorrenteMaximaFaseC
+                {
+                    private static readonly object _lock = new object();
+                    private static float? _readValue;
+                    private static float? _writeValue;
+                    public static float? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static float? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class fCorrenteMaximaNeutro
+                {
+                    private static readonly object _lock = new object();
+                    private static float? _readValue;
+                    private static float? _writeValue;
+                    public static float? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static float? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+
+
                 public static class fTensaoAN
                 {
                     private static readonly object _lock = new object();

@@ -21,29 +21,195 @@
                 CornerRadius="5"
                 Padding="5"
                 BackgroundColor="{StaticResource Normal_Cor4}"
-                Margin="10,10,10,10"
+                Margin="5,5,5,5"
                 >
-                <Grid
-                    ColumnDefinitions="Auto, *, Auto"
-                    Padding="10"
-                    >
+                <VerticalStackLayout>
+
                     <Label
-                        Grid.Column="0"
-                        Text="Tensão média entre fases"
-                        FontSize="Medium"
-                        TextColor="White"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        />
-                    <Label
-                        Grid.Column="2"
-                        Text="100 kW"
-                        FontSize="Medium"
-                        TextColor="Gold"
-                        HorizontalOptions="End"
-                        />
-                </Grid>
+                            Grid.Column="0"
+                            Text="Amostragem"
+                            FontSize="Medium"
+                            TextColor="Gold"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            />
+
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Tensão média entre fases"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fTensaoAvgLL, StringFormat='{0:F1} V'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Corrente Média"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fCorrenteAvg, StringFormat='{0:F1} A'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Potência"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fPotenciaAtivaTotal, StringFormat='{0:F1} KW'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Consumo Total"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fEnergiaAtivaAcumulada, StringFormat='{0:F1} KWh'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Demanda"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fAtualDemanda, StringFormat='{0:F1} KW'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Demanda Máxima"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fPicoDemanda, StringFormat='{0:F1} KW'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Fator de Potência"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fFatorPotenciaTotal, StringFormat='{0:F1} W/VA'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="Auto, *, Auto"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Fator de Potência"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            />
+                        <Label
+                            Grid.Column="2"
+                            Text="{Binding fFrequencia, StringFormat='{0:F1} Hz'}"
+                            FontSize="Medium"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            />
+                    </Grid>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </VerticalStackLayout>
             </Frame>
+
         </VerticalStackLayout>
         <VerticalStackLayout
             Grid.Column="1"
@@ -74,7 +240,7 @@
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
                         Text="Tensão entre Fases"
-                        TextColor="White"
+                        TextColor="Gold"
                         FontSize="Medium"
                         HorizontalOptions="Center"
 
@@ -121,7 +287,7 @@
                         />
                     <Label
                         Grid.Row="2"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fTensaoMaximaAB, StringFormat='{0:F1} V'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -145,7 +311,7 @@
                         />
                     <Label
                         Grid.Row="3"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fTensaoMaximaCA, StringFormat='{0:F1} V'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -161,7 +327,7 @@
                         />
                     <Label
                         Grid.Row="4"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fTensaoBC, StringFormat='{0:F1} V'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -202,7 +368,7 @@
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
                         Text="Tensão Fase e Neutro"
-                        TextColor="White"
+                        TextColor="Gold"
                         FontSize="Medium"
                         HorizontalOptions="Center"
                         />
@@ -248,7 +414,7 @@
                         />
                     <Label
                         Grid.Row="2"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fTensaoMaximaAN, StringFormat='{0:F1} V'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -272,7 +438,7 @@
                         />
                     <Label
                         Grid.Row="3"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fTensaoMaximaBN, StringFormat='{0:F1} V'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -296,7 +462,7 @@
                         />
                     <Label
                         Grid.Row="4"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fTensaoMaximaCN, StringFormat='{0:F1} V'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -335,7 +501,7 @@
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
                         Text="Corrente das Fases"
-                        TextColor="White"
+                        TextColor="Gold"
                         FontSize="Medium"
                         HorizontalOptions="Center"
                         />
@@ -381,7 +547,7 @@
                         />
                     <Label
                         Grid.Row="2"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fCorrenteMaximaFaseA, StringFormat='{0:F1} A'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -405,7 +571,7 @@
                         />
                     <Label
                         Grid.Row="3"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fCorrenteMaximaFaseB, StringFormat='{0:F1} A'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -429,7 +595,7 @@
                         />
                     <Label
                         Grid.Row="4"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fCorrenteMaximaFaseC, StringFormat='{0:F1} A'}"
                         TextColor="White"
                         FontSize="Medium"
@@ -453,7 +619,7 @@
                         />
                     <Label
                         Grid.Row="5"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Text="{Binding fCorrenteMaximaNeutro, StringFormat='{0:F1} A'}"
                         TextColor="White"
                         FontSize="Medium"
