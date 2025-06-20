@@ -35,8 +35,6 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
 
-
-
         </Grid.RowDefinitions>
 
         <!-- Linha Horizontal -->
