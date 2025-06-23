@@ -5,7 +5,6 @@
              Title="Supervisão dos Tempos"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Background="{StaticResource Normal_Cor6}"
-             xmlns:SCADA="clr-namespace:App_UI_Mobile_Laminado.Commands.Controls"
              >
     <Grid
         >
@@ -247,24 +246,23 @@
             <HorizontalStackLayout
                 HorizontalOptions="Center"
                 >
-                <SCADA:CM_SCADA_NumericEntry
-                    x:Name="entrySetpoint"
-                    Value="{Binding rSetpointTemperatura, Mode=TwoWay}"
-                    IsInteger="False"
-                    MinValue="0"
-                    MaxValue="300"
-                    FontSize="28"
-                    TextColor="Red"
-                    WidthRequest="100"
-                    HorizontalTextAlignment="Center"
-                    />
                 <Label 
-                    Text="ºC"
+                    x:Name="sLabel_rTempCxSupPatamar01"
+                    Text="{Binding rTempCxSupPatamar01, Mode=OneWay, StringFormat='{0:F1} ºC'}"
                     FontSize="Large"
                     TextColor="Red"
                     Margin="0,0,0,0"
                     VerticalTextAlignment="Center"
-                    />
+                    >
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="sLabel_rTempCxSupPatamar01_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+
+                </Label>
+
             </HorizontalStackLayout>
         </Border>
 

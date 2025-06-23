@@ -226,7 +226,116 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.xVacuo01Ok"), AttributeId = Attributes.Value },//1
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.rFrequenciaAtualVentSup"), AttributeId = Attributes.Value },//2
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iTermoparSup01"), AttributeId = Attributes.Value },//3
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa01Sup"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa02Sup"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa03Sup"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa04Sup"), AttributeId = Attributes.Value },//7
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa05Sup"), AttributeId = Attributes.Value },//8
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa06Sup"), AttributeId = Attributes.Value },//9
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa07Sup"), AttributeId = Attributes.Value },//10
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorRampa08Sup"), AttributeId = Attributes.Value },//11
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa01Sup"), AttributeId = Attributes.Value },//12
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa02Sup"), AttributeId = Attributes.Value },//13
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa03Sup"), AttributeId = Attributes.Value },//14
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa04Sup"), AttributeId = Attributes.Value },//15
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa05Sup"), AttributeId = Attributes.Value },//16
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa06Sup"), AttributeId = Attributes.Value },//17
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa07Sup"), AttributeId = Attributes.Value },//18
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorRampa08Sup"), AttributeId = Attributes.Value },//19
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa01Sup"), AttributeId = Attributes.Value },//20
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa02Sup"), AttributeId = Attributes.Value },//21
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa03Sup"), AttributeId = Attributes.Value },//22
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa04Sup"), AttributeId = Attributes.Value },//23
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa05Sup"), AttributeId = Attributes.Value },//24
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa06Sup"), AttributeId = Attributes.Value },//25
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa07Sup"), AttributeId = Attributes.Value },//26
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa08Sup"), AttributeId = Attributes.Value },//27
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.uStatusAquecimentoSup"), AttributeId = Attributes.Value },//28
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa01Sup"), AttributeId = Attributes.Value },//29
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa02Sup"), AttributeId = Attributes.Value },//30
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa03Sup"), AttributeId = Attributes.Value },//31
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa04Sup"), AttributeId = Attributes.Value },//32
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa05Sup"), AttributeId = Attributes.Value },//33
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa06Sup"), AttributeId = Attributes.Value },//34
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa07Sup"), AttributeId = Attributes.Value },//35
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa08Sup"), AttributeId = Attributes.Value },//36
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTasbSup"), AttributeId = Attributes.Value },//37
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTasbSup"), AttributeId = Attributes.Value },//38
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorResfrSup"), AttributeId = Attributes.Value },//39
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorResfrSup"), AttributeId = Attributes.Value },//40
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorAbPortSup"), AttributeId = Attributes.Value },//41
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorAbPortSup"), AttributeId = Attributes.Value },//42
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorTotalSup"), AttributeId = Attributes.Value },//43
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTotalSup"), AttributeId = Attributes.Value },//44
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTotalSup"), AttributeId = Attributes.Value },//45
+
+                                
+
+
+
+
                             };
+                            List<ReadValueId> nodesToRead_GVL_Permanentes = new List<ReadValueId>
+                            {
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa01"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa02"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa03"), AttributeId = Attributes.Value },//2
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa04"), AttributeId = Attributes.Value },//3
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa05"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa06"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa07"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa08"), AttributeId = Attributes.Value },//7
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoExaustorMinSup"), AttributeId = Attributes.Value },//8
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoAberturaSup"), AttributeId = Attributes.Value },//9
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorProgTotalSup"), AttributeId = Attributes.Value },//10
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinProgTotalSup"), AttributeId = Attributes.Value },//11
+
+
+                            };
+                            List <ReadValueId> nodesToRead_GVL_IhmClp = new List<ReadValueId>
+                            {
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar01"), AttributeId = Attributes.Value },//0
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar02"), AttributeId = Attributes.Value },//1
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar03"), AttributeId = Attributes.Value },//2
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar04"), AttributeId = Attributes.Value },//3
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar05"), AttributeId = Attributes.Value },//4
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar06"), AttributeId = Attributes.Value },//5
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar07"), AttributeId = Attributes.Value },//6
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar08"), AttributeId = Attributes.Value },//7
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar01"), AttributeId = Attributes.Value },//8
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar02"), AttributeId = Attributes.Value },//9
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar03"), AttributeId = Attributes.Value },//10
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar04"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar05"), AttributeId = Attributes.Value },//12
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar06"), AttributeId = Attributes.Value },//13
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar07"), AttributeId = Attributes.Value },//14
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar08"), AttributeId = Attributes.Value },//15
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar01"), AttributeId = Attributes.Value },//16
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar02"), AttributeId = Attributes.Value },//17
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar03"), AttributeId = Attributes.Value },//18
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar04"), AttributeId = Attributes.Value },//19
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar05"), AttributeId = Attributes.Value },//20
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar06"), AttributeId = Attributes.Value },//21
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar07"), AttributeId = Attributes.Value },//22
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar08"), AttributeId = Attributes.Value },//23
+
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinTasbCxSup"), AttributeId = Attributes.Value },//24
+                            };
+
+
+
 
                             RequestHeader requestHeader_GVL_EntradasSaidas = new RequestHeader();
                             double maxAge_GVL_EntradasSaidas = 0;
@@ -257,6 +366,18 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             TimestampsToReturn timestampsToReturn_GVL_ClpIhm = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_ClpIhm = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_ClpIhm = null;
+
+                            RequestHeader requestHeader_GVL_Permanentes = new RequestHeader();
+                            double maxAge_GVL_Permanentes = 0;
+                            TimestampsToReturn timestampsToReturn_GVL_Permanentes = TimestampsToReturn.Both;
+                            DataValueCollection? results_GVL_Permanentes = null;
+                            DiagnosticInfoCollection? diagnosticInfos_GVL_Permanentes = null;
+
+                            RequestHeader requestHeader_GVL_IhmClp = new RequestHeader();
+                            double maxAge_GVL_IhmClp = 0;
+                            TimestampsToReturn timestampsToReturn_GVL_IhmClp = TimestampsToReturn.Both;
+                            DataValueCollection? results_GVL_IhmClp = null;
+                            DiagnosticInfoCollection? diagnosticInfos_GVL_IhmClp = null;
 
 
                             var itemsToWrite_GVL_EntradasSaidas = new List<OpcWriteItem>();
@@ -435,6 +556,26 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                                 );
 
 
+                                    ReadValueIdCollection nodesToReadCollection_GVL_Permanentes = new ReadValueIdCollection(nodesToRead_GVL_Permanentes);
+                                    session.Read(
+                                                requestHeader_GVL_Permanentes,
+                                                maxAge_GVL_Permanentes,
+                                                timestampsToReturn_GVL_Permanentes,
+                                                nodesToReadCollection_GVL_Permanentes,
+                                                out results_GVL_Permanentes,
+                                                out diagnosticInfos_GVL_Permanentes
+                                                );
+
+
+                                    ReadValueIdCollection nodesToReadCollection_GVL_IhmClp = new ReadValueIdCollection(nodesToRead_GVL_IhmClp);
+                                    session.Read(
+                                                requestHeader_GVL_IhmClp,
+                                                maxAge_GVL_IhmClp,
+                                                timestampsToReturn_GVL_IhmClp,
+                                                nodesToReadCollection_GVL_IhmClp,
+                                                out results_GVL_IhmClp,
+                                                out diagnosticInfos_GVL_IhmClp
+                                                );
 
 
                                     sw.Stop();

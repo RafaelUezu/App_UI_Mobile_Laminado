@@ -23,23 +23,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             }
         }
 
-        public ICommand Entry_TempCxSupPatamar01_SetpointCommand { get; }
 
-        public VM_Page_Operacao_SupervisaodosTempos()
-        {
-            Entry_TempCxSupPatamar01_SetpointCommand = new Command(ExecutarConfirmacao);
-        }
-
-        private void ExecutarConfirmacao()
-        {
-            System.Diagnostics.Debug.WriteLine($"Setpoint confirmado: {rTempCxSupPatamar01}");
-            WriteToPlc(rTempCxSupPatamar01);
-        }
-
-        private void WriteToPlc(float valor)
-        {
-            System.Diagnostics.Debug.WriteLine($"Enviando {valor} ºC para o PLC.");
-        }
 
     }
 }
