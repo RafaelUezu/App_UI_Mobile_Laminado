@@ -5,6 +5,7 @@
              Title="Supervisão dos Tempos"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Background="{StaticResource Normal_Cor6}"
+             xmlns:SCADA="clr-namespace:App_UI_Mobile_Laminado.Commands.Controls"
              >
     <Grid
         >
@@ -246,23 +247,17 @@
             <HorizontalStackLayout
                 HorizontalOptions="Center"
                 >
-                <Entry
-                    x:Name="Entry_TempCxSupPatamar01"
-                    FontSize="Large"
+                <SCADA:CM_SCADA_NumericEntry
+                    x:Name="entrySetpoint"
+                    Value="{Binding rSetpointTemperatura, Mode=TwoWay}"
+                    IsInteger="False"
+                    MinValue="0"
+                    MaxValue="300"
+                    FontSize="28"
                     TextColor="Red"
-                    Margin="0,0,0,0"
-                    BackgroundColor="Transparent"
-                    Text="{Binding rTempCxSupPatamar01, Mode=TwoWay}"
-                    Keyboard="Numeric"
-                    >
-                    <Entry.Behaviors>
-                        <toolkit:EventToCommandBehavior
-                            EventName="Completed"
-                            Command="{Binding Entry_TempCxSupPatamar01_SetpointCommand}"
-                            CommandParameter="{Binding Text, Source={x:Reference Entry_TempCxSupPatamar01}}"
-                            />
-                    </Entry.Behaviors>
-                </Entry>
+                    WidthRequest="100"
+                    HorizontalTextAlignment="Center"
+                    />
                 <Label 
                     Text="ºC"
                     FontSize="Large"

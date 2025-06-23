@@ -9,9 +9,9 @@
             <ResourceDictionary.MergedDictionaries>
             </ResourceDictionary.MergedDictionaries>
 
-            
+
             <controls:CurrentShellItemConverter x:Key="CurrentShellItemConverter" />
-            
+
             <!-- Cores HighPerformance -->
             <Color x:Key="Normal_Cor1">#E1E4EB</Color>
             <Color x:Key="Normal_Cor2">#CBD0DB</Color>
