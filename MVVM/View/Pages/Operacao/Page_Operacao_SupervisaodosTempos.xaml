@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao.Page_Operacao_SupervisaodosTempos"
              Title="Supervisão dos Tempos"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Background="{StaticResource Normal_Cor6}"
              >
     <Grid
@@ -231,13 +232,56 @@
             HorizontalTextAlignment="Center"
             />
 
+        
+        <Border
+            Grid.Row="3"
+            Grid.Column="1"
+            Stroke="{StaticResource Normal_Cor2}"
+            StrokeThickness="2"
+            BackgroundColor="Transparent"
+            StrokeShape="RoundRectangle 8"
+            Margin="0,0,0,0"
+            Padding="-8"
+            >
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                >
+                <Entry
+                    x:Name="Entry_TempCxSupPatamar01"
+                    FontSize="Large"
+                    TextColor="Red"
+                    Margin="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    Text="{Binding rTempCxSupPatamar01, Mode=TwoWay}"
+                    Keyboard="Numeric"
+                    >
+                    <Entry.Behaviors>
+                        <toolkit:EventToCommandBehavior
+                            EventName="Completed"
+                            Command="{Binding Entry_TempCxSupPatamar01_SetpointCommand}"
+                            CommandParameter="{Binding Text, Source={x:Reference Entry_TempCxSupPatamar01}}"
+                            />
+                    </Entry.Behaviors>
+                </Entry>
+                <Label 
+                    Text="ºC"
+                    FontSize="Large"
+                    TextColor="Red"
+                    Margin="0,0,0,0"
+                    VerticalTextAlignment="Center"
+                    />
+            </HorizontalStackLayout>
+        </Border>
+
+
+
 
 
 
     </Grid>
 
-   
-    
-    
-    
+
+
+
+
 </ContentPage>
