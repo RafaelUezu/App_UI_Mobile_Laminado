@@ -4576,12 +4576,12 @@ namespace MAUI_Opcua.Services.Communication.Variable
                     }
                 }
 
-                public static class uStatusAquecimentoSup
+                public static class iHorDecorPatam01Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4598,7 +4598,970 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam02Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam03Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam04Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam05Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam06Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam07Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iHorDecorPatam08Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+
+                public static class iMinDecorPatam01Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam02Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam03Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam04Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam05Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam06Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam07Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinDecorPatam08Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+
+                public static class iSegDecorPatam01Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam02Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam03Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam04Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam05Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam06Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam07Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSegDecorPatam08Sup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+
+                public static class uStatusAquecimentoSup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
                     {
                         get
                         {
@@ -4620,9 +5583,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa01Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4639,7 +5602,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4660,9 +5623,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa02Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4679,7 +5642,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4700,9 +5663,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa03Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4719,7 +5682,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4740,9 +5703,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa04Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4759,7 +5722,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4780,9 +5743,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa05Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4799,7 +5762,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4820,9 +5783,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa06Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4839,7 +5802,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4860,9 +5823,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa07Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4879,7 +5842,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {
@@ -4900,9 +5863,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class wStatusRampa08Sup
                 {
                     private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
                     {
                         get
                         {
@@ -4919,7 +5882,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static bool? Write
+                    public static int? Write
                     {
                         get
                         {

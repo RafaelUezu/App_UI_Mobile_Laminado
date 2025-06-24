@@ -31,7 +31,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
         if (resultado is double valor)
         {
             // Atribui o valor no Label
-            sLabel_rTempCxSupPatamar01.Text = valor.ToString("F1"); // Mostra com 1 casas decimais, opcional
+            _viewModel.rTempCxSupPatamar01_Write = (float)valor; // Mostra com 1 casas decimais, opcional
         }
         else
         {
@@ -39,5 +39,127 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
             Console.WriteLine("Cancelado.");
         }
     }
+    private async void sLabel_rTempCxSupPatamar02_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar02_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void sLabel_rTempCxSupPatamar03_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar03_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void sLabel_rTempCxSupPatamar04_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar04_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void sLabel_rTempCxSupPatamar05_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar05_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void sLabel_rTempCxSupPatamar06_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar06_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void sLabel_rTempCxSupPatamar07_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar07_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void sLabel_rTempCxSupPatamar08_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.rTempCxSupPatamar08_Write = (float)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void Label_iHorCxSupPatamar01_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iHorCxSupPatamar01_Write = (int)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+    private async void Label_iMinCxSupPatamar01_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iMinCxSupPatamar01_Write = (int)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
+
+
+
+
+
 
 }

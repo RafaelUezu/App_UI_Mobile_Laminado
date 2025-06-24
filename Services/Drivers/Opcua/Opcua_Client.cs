@@ -254,33 +254,56 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa07Sup"), AttributeId = Attributes.Value },//26
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorRampa08Sup"), AttributeId = Attributes.Value },//27
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.uStatusAquecimentoSup"), AttributeId = Attributes.Value },//28
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam01Sup"), AttributeId = Attributes.Value },//28
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam02Sup"), AttributeId = Attributes.Value },//29
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam03Sup"), AttributeId = Attributes.Value },//30
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam04Sup"), AttributeId = Attributes.Value },//31
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam05Sup"), AttributeId = Attributes.Value },//32
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam06Sup"), AttributeId = Attributes.Value },//33
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam07Sup"), AttributeId = Attributes.Value },//34
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorPatam08Sup"), AttributeId = Attributes.Value },//35
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa01Sup"), AttributeId = Attributes.Value },//29
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa02Sup"), AttributeId = Attributes.Value },//30
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa03Sup"), AttributeId = Attributes.Value },//31
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa04Sup"), AttributeId = Attributes.Value },//32
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa05Sup"), AttributeId = Attributes.Value },//33
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa06Sup"), AttributeId = Attributes.Value },//34
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa07Sup"), AttributeId = Attributes.Value },//35
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa08Sup"), AttributeId = Attributes.Value },//36
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam01Sup"), AttributeId = Attributes.Value },//36
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam02Sup"), AttributeId = Attributes.Value },//37
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam03Sup"), AttributeId = Attributes.Value },//38
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam04Sup"), AttributeId = Attributes.Value },//39
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam05Sup"), AttributeId = Attributes.Value },//40
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam06Sup"), AttributeId = Attributes.Value },//41
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam07Sup"), AttributeId = Attributes.Value },//42
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorPatam08Sup"), AttributeId = Attributes.Value },//43
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTasbSup"), AttributeId = Attributes.Value },//37
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTasbSup"), AttributeId = Attributes.Value },//38
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam01Sup"), AttributeId = Attributes.Value },//44
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam02Sup"), AttributeId = Attributes.Value },//45
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam03Sup"), AttributeId = Attributes.Value },//46
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam04Sup"), AttributeId = Attributes.Value },//47
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam05Sup"), AttributeId = Attributes.Value },//48
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam06Sup"), AttributeId = Attributes.Value },//49
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam07Sup"), AttributeId = Attributes.Value },//50
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorPatam08Sup"), AttributeId = Attributes.Value },//51
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorResfrSup"), AttributeId = Attributes.Value },//39
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorResfrSup"), AttributeId = Attributes.Value },//40
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.uStatusAquecimentoSup"), AttributeId = Attributes.Value },//52
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorAbPortSup"), AttributeId = Attributes.Value },//41
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorAbPortSup"), AttributeId = Attributes.Value },//42
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa01Sup"), AttributeId = Attributes.Value },//53
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa02Sup"), AttributeId = Attributes.Value },//54
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa03Sup"), AttributeId = Attributes.Value },//55
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa04Sup"), AttributeId = Attributes.Value },//56
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa05Sup"), AttributeId = Attributes.Value },//57
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa06Sup"), AttributeId = Attributes.Value },//58
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa07Sup"), AttributeId = Attributes.Value },//59
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusRampa08Sup"), AttributeId = Attributes.Value },//60
 
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorTotalSup"), AttributeId = Attributes.Value },//43
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTotalSup"), AttributeId = Attributes.Value },//44
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTotalSup"), AttributeId = Attributes.Value },//45
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTasbSup"), AttributeId = Attributes.Value },//61
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTasbSup"), AttributeId = Attributes.Value },//62
 
-                                
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorResfrSup"), AttributeId = Attributes.Value },//63
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorResfrSup"), AttributeId = Attributes.Value },//64
 
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorAbPortSup"), AttributeId = Attributes.Value },//65
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorAbPortSup"), AttributeId = Attributes.Value },//66
 
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorDecorTotalSup"), AttributeId = Attributes.Value },//67
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTotalSup"), AttributeId = Attributes.Value },//68
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTotalSup"), AttributeId = Attributes.Value },//69
 
 
                             };
@@ -443,21 +466,171 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     GetValue = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Write = null
                                 },
+                            };
+                            var itemsToWrite_GVL_IhmClp = new List<OpcWriteItem>()
+                            {
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar01",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar02",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar03",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar04",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar05",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar06",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar07",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar08",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar08.Write = null
+                                },
 
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar01",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar02",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar03",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar04",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar05",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar06",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar07",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iHorCxSupPatamar08",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Write = null
+                                },
 
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar01",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar02",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar03",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar04",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar05",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar06",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar07",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar08",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Write = null
+                                },
 
-
-
-
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinTasbCxSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Write = null
+                                },
 
 
                             };
 
-
-                            List<List<OpcWriteItem>> allItemsToWrite = new()
+                            List <List<OpcWriteItem>> allItemsToWrite = new()
                             {
                                 itemsToWrite_GVL_Ihm_Manual,
-                                itemsToWrite_GVL_EntradasSaidas
+                                itemsToWrite_GVL_EntradasSaidas,
+                                itemsToWrite_GVL_IhmClp
                             };
 
 
@@ -847,7 +1020,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         GVL.Opcua.GVL_Energia.fFrequencia.Read = (float)results_GVL_Energia[27].Value;
                                     }
 
-
+                                    // GVL_ClpIhm
 
                                     if (results_GVL_ClpIhm[0].Value != null)
                                     {
@@ -866,8 +1039,438 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         GVL.Opcua.GVL_ClpIhm.iTermoparSup01.Read = (short)(Int16)results_GVL_ClpIhm[3].Value;
                                     }
 
+                                    if (results_GVL_ClpIhm[4].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa01Sup.Read = (short)(Int16)results_GVL_ClpIhm[4].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[5].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa02Sup.Read = (short)(Int16)results_GVL_ClpIhm[5].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[6].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa03Sup.Read = (short)(Int16)results_GVL_ClpIhm[6].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[7].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa04Sup.Read = (short)(Int16)results_GVL_ClpIhm[7].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[8].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa05Sup.Read = (short)(Int16)results_GVL_ClpIhm[8].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[9].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa06Sup.Read = (short)(Int16)results_GVL_ClpIhm[9].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[10].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa07Sup.Read = (short)(Int16)results_GVL_ClpIhm[10].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[11].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorRampa08Sup.Read = (short)(Int16)results_GVL_ClpIhm[11].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[12].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa01Sup.Read = (short)(Int16)results_GVL_ClpIhm[12].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[13].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa02Sup.Read = (short)(Int16)results_GVL_ClpIhm[13].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[14].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa03Sup.Read = (short)(Int16)results_GVL_ClpIhm[14].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[15].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa04Sup.Read = (short)(Int16)results_GVL_ClpIhm[15].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[16].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa05Sup.Read = (short)(Int16)results_GVL_ClpIhm[16].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[17].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa06Sup.Read = (short)(Int16)results_GVL_ClpIhm[17].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[18].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa07Sup.Read = (short)(Int16)results_GVL_ClpIhm[18].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[19].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorRampa08Sup.Read = (short)(Int16)results_GVL_ClpIhm[19].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[20].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa01Sup.Read = (short)(Int16)results_GVL_ClpIhm[20].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[21].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa02Sup.Read = (short)(Int16)results_GVL_ClpIhm[21].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[22].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa03Sup.Read = (short)(Int16)results_GVL_ClpIhm[22].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[23].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa04Sup.Read = (short)(Int16)results_GVL_ClpIhm[23].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[24].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa05Sup.Read = (short)(Int16)results_GVL_ClpIhm[24].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[25].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa06Sup.Read = (short)(Int16)results_GVL_ClpIhm[25].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[26].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa07Sup.Read = (short)(Int16)results_GVL_ClpIhm[26].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[27].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorRampa08Sup.Read = (short)(Int16)results_GVL_ClpIhm[27].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[28].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam01Sup.Read = (short)(Int16)results_GVL_ClpIhm[28].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[29].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam02Sup.Read = (short)(Int16)results_GVL_ClpIhm[29].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[30].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam03Sup.Read = (short)(Int16)results_GVL_ClpIhm[30].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[31].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam04Sup.Read = (short)(Int16)results_GVL_ClpIhm[31].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[32].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam05Sup.Read = (short)(Int16)results_GVL_ClpIhm[32].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[33].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam06Sup.Read = (short)(Int16)results_GVL_ClpIhm[33].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[34].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam07Sup.Read = (short)(Int16)results_GVL_ClpIhm[34].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[35].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorPatam08Sup.Read = (short)(Int16)results_GVL_ClpIhm[35].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[36].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam01Sup.Read = (short)(Int16)results_GVL_ClpIhm[36].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[37].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam02Sup.Read = (short)(Int16)results_GVL_ClpIhm[37].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[38].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam03Sup.Read = (short)(Int16)results_GVL_ClpIhm[38].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[39].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam04Sup.Read = (short)(Int16)results_GVL_ClpIhm[39].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[40].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam05Sup.Read = (short)(Int16)results_GVL_ClpIhm[40].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[41].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam06Sup.Read = (short)(Int16)results_GVL_ClpIhm[41].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[42].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam07Sup.Read = (short)(Int16)results_GVL_ClpIhm[42].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[43].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorPatam08Sup.Read = (short)(Int16)results_GVL_ClpIhm[43].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[44].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam01Sup.Read = (short)(Int16)results_GVL_ClpIhm[44].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[45].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam02Sup.Read = (short)(Int16)results_GVL_ClpIhm[45].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[46].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam03Sup.Read = (short)(Int16)results_GVL_ClpIhm[46].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[47].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam04Sup.Read = (short)(Int16)results_GVL_ClpIhm[47].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[48].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam05Sup.Read = (short)(Int16)results_GVL_ClpIhm[48].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[49].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam06Sup.Read = (short)(Int16)results_GVL_ClpIhm[49].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[50].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam07Sup.Read = (short)(Int16)results_GVL_ClpIhm[50].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[51].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorPatam08Sup.Read = (short)(Int16)results_GVL_ClpIhm[51].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[52].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.uStatusAquecimentoSup.Read = (short)(Int16)results_GVL_ClpIhm[52].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[53].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa01Sup.Read = (int)(ushort)results_GVL_ClpIhm[53].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[54].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa02Sup.Read = (int)(ushort)results_GVL_ClpIhm[54].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[55].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa03Sup.Read = (int)(ushort)results_GVL_ClpIhm[55].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[56].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa04Sup.Read = (int)(ushort)results_GVL_ClpIhm[56].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[57].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa05Sup.Read = (int)(ushort)results_GVL_ClpIhm[57].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[58].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa06Sup.Read = (int)(ushort)results_GVL_ClpIhm[58].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[59].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa07Sup.Read = (int)(ushort)results_GVL_ClpIhm[59].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[60].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa08Sup.Read = (int)(ushort)results_GVL_ClpIhm[60].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[61].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorTasbSup.Read = (short)(Int16)results_GVL_ClpIhm[61].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[62].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorTasbSup.Read = (short)(Int16)results_GVL_ClpIhm[62].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[63].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorResfrSup.Read = (short)(Int16)results_GVL_ClpIhm[63].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[64].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorResfrSup.Read = (short)(Int16)results_GVL_ClpIhm[64].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[65].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorAbPortSup.Read = (short)(Int16)results_GVL_ClpIhm[65].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[66].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorAbPortSup.Read = (short)(Int16)results_GVL_ClpIhm[66].Value;
+                                    }
+
+                                    if (results_GVL_ClpIhm[67].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorDecorTotalSup.Read = (short)(Int16)results_GVL_ClpIhm[67].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[68].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinDecorTotalSup.Read = (short)(Int16)results_GVL_ClpIhm[68].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[69].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iSegDecorTotalSup.Read = (short)(Int16)results_GVL_ClpIhm[69].Value;
+                                    }
+
+                                    // GVL_Permanentes
+
+                                    if (results_GVL_Permanentes[0].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa01.Read = (short)(Int16)results_GVL_Permanentes[0].Value;
+                                    }
+                                    if (results_GVL_Permanentes[1].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa02.Read = (short)(Int16)results_GVL_Permanentes[1].Value;
+                                    }
+                                    if (results_GVL_Permanentes[2].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa03.Read = (short)(Int16)results_GVL_Permanentes[2].Value;
+                                    }
+                                    if (results_GVL_Permanentes[3].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa04.Read = (short)(Int16)results_GVL_Permanentes[3].Value;
+                                    }
+                                    if (results_GVL_Permanentes[4].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa05.Read = (short)(Int16)results_GVL_Permanentes[4].Value;
+                                    }
+                                    if (results_GVL_Permanentes[5].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa06.Read = (short)(Int16)results_GVL_Permanentes[5].Value;
+                                    }
+                                    if (results_GVL_Permanentes[6].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa07.Read = (short)(Int16)results_GVL_Permanentes[6].Value;
+                                    }
+                                    if (results_GVL_Permanentes[7].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Read = (short)(Int16)results_GVL_Permanentes[7].Value;
+                                    }
+
+                                    if (results_GVL_Permanentes[8].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Read = (short)(Int16)results_GVL_Permanentes[8].Value;
+                                    }
+                                    if (results_GVL_Permanentes[9].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iTempoAberturaSup.Read = (short)(Int16)results_GVL_Permanentes[9].Value;
+                                    }
+                                    if (results_GVL_Permanentes[10].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iHorProgTotalSup.Read = (short)(Int16)results_GVL_Permanentes[10].Value;
+                                    }
+                                    if (results_GVL_Permanentes[11].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iMinProgTotalSup.Read = (short)(Int16)results_GVL_Permanentes[11].Value;
+                                    }
+
+                                    // GVL_IhmClp
+
+                                    if (results_GVL_IhmClp[0].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar01.Read = (float)results_GVL_IhmClp[0].Value;
+                                    }
+                                    if (results_GVL_IhmClp[1].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar02.Read = (float)results_GVL_IhmClp[1].Value;
+                                    }
+                                    if (results_GVL_IhmClp[2].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar03.Read = (float)results_GVL_IhmClp[2].Value;
+                                    }
+                                    if (results_GVL_IhmClp[3].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar04.Read = (float)results_GVL_IhmClp[3].Value;
+                                    }
+                                    if (results_GVL_IhmClp[4].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar05.Read = (float)results_GVL_IhmClp[4].Value;
+                                    }
+                                    if (results_GVL_IhmClp[5].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar06.Read = (float)results_GVL_IhmClp[5].Value;
+                                    }
+                                    if (results_GVL_IhmClp[6].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar07.Read = (float)results_GVL_IhmClp[6].Value;
+                                    }
+                                    if (results_GVL_IhmClp[7].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar08.Read = (float)results_GVL_IhmClp[7].Value;
+                                    }
 
 
+                                    if (results_GVL_IhmClp[8].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Read = (short)(Int16)results_GVL_IhmClp[8].Value;
+                                    }
+                                    if (results_GVL_IhmClp[9].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Read = (short)(Int16)results_GVL_IhmClp[9].Value;
+                                    }
+                                    if (results_GVL_IhmClp[10].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Read = (short)(Int16)results_GVL_IhmClp[10].Value;
+                                    }
+                                    if (results_GVL_IhmClp[11].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Read = (short)(Int16)results_GVL_IhmClp[11].Value;
+                                    }
+                                    if (results_GVL_IhmClp[12].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Read = (short)(Int16)results_GVL_IhmClp[12].Value;
+                                    }
+                                    if (results_GVL_IhmClp[13].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Read = (short)(Int16)results_GVL_IhmClp[13].Value;
+                                    }
+                                    if (results_GVL_IhmClp[14].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Read = (short)(Int16)results_GVL_IhmClp[14].Value;
+                                    }
+                                    if (results_GVL_IhmClp[15].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Read = (short)(Int16)results_GVL_IhmClp[15].Value;
+                                    }
+
+                                    if (results_GVL_IhmClp[16].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Read = (short)(Int16)results_GVL_IhmClp[16].Value;
+                                    }
+                                    if (results_GVL_IhmClp[17].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Read = (short)(Int16)results_GVL_IhmClp[17].Value;
+                                    }
+                                    if (results_GVL_IhmClp[18].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Read = (short)(Int16)results_GVL_IhmClp[18].Value;
+                                    }
+                                    if (results_GVL_IhmClp[19].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Read = (short)(Int16)results_GVL_IhmClp[19].Value;
+                                    }
+                                    if (results_GVL_IhmClp[20].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Read = (short)(Int16)results_GVL_IhmClp[20].Value;
+                                    }
+                                    if (results_GVL_IhmClp[21].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Read = (short)(Int16)results_GVL_IhmClp[21].Value;
+                                    }
+                                    if (results_GVL_IhmClp[22].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Read = (short)(Int16)results_GVL_IhmClp[22].Value;
+                                    }
+                                    if (results_GVL_IhmClp[23].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Read = (short)(Int16)results_GVL_IhmClp[23].Value;
+                                    }
+
+                                    if (results_GVL_IhmClp[24].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Read = (short)(Int16)results_GVL_IhmClp[24].Value;
+                                    }
 
                                     sw.Stop(); 
                                     System.Diagnostics.Debug.WriteLine("Tempo de passagem de valor" + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);

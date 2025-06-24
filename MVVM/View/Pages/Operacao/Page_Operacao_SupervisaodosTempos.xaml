@@ -6,272 +6,1353 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Background="{StaticResource Normal_Cor6}"
              >
-    <Grid
+
+    <ScrollView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions
         >
-        <Grid.ColumnDefinitions>
-            
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions
-            >
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
 
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
 
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
 
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
 
-        </Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
 
-        <!-- Linha Horizontal -->
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="0"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="1"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="2"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="3"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="4"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="5"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="6"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="7"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="8"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="9"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="10"
-            Grid.ColumnSpan="5"
-            />
-        <BoxView
-            Color="{StaticResource Normal_Cor5}"
-            HeightRequest="1"
-            HorizontalOptions="Fill"
-            VerticalOptions="End"
-            Grid.Row="11"
-            Grid.ColumnSpan="5"
-            />
+            </Grid.RowDefinitions>
 
-        <!--Legendas-->
-        <Label
-            Grid.Row="0"
-            Grid.Column="0"
-            Text="Ciclo do Forno"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <!-- Linha Horizontal -->
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="0"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="1"
-            Grid.Column="0"
-            Text="Tempos dos Estágios"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="1"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="2"
-            Grid.Column="0"
-            Text="Rampa 01"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="2"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="3"
-            Grid.Column="0"
-            Text="Patamar 01"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="3"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="4"
-            Grid.Column="0"
-            Text="Rampa 02"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="4"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="5"
-            Grid.Column="0"
-            Text="Patamar 02"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="5"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="6"
-            Grid.Column="0"
-            Text="Rampa 03"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="6"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="7"
-            Grid.Column="0"
-            Text="Patamar 03"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="7"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="8"
-            Grid.Column="0"
-            Text="Rampa 04"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="8"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="9"
-            Grid.Column="0"
-            Text="Patamar 04"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="9"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="10"
-            Grid.Column="0"
-            Text="Rampa 05"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="10"
+                Grid.ColumnSpan="5"
             />
-        <Label
-            Grid.Row="11"
-            Grid.Column="0"
-            Text="Patamar 05"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="11"
+                Grid.ColumnSpan="5"
             />
-       
-        <!--Temperaturas-->
-        <Label
-            Grid.Row="0"
-            Grid.Column="1"
-            Text="Temperaturas"
-            TextColor="{StaticResource Normal_Cor3}"
-            FontSize="Large"
-            HorizontalTextAlignment="Center"
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="12"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="13"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="14"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="15"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="16"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="17"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="18"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="19"
+                Grid.ColumnSpan="5"
+            />
+            <BoxView
+                Color="{StaticResource Normal_Cor5}"
+                HeightRequest="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Grid.Row="20"
+                Grid.ColumnSpan="5"
             />
 
-        
-        <Border
-            Grid.Row="3"
-            Grid.Column="1"
-            Stroke="{StaticResource Normal_Cor2}"
-            StrokeThickness="2"
-            BackgroundColor="Transparent"
-            StrokeShape="RoundRectangle 8"
-            Margin="0,0,0,0"
-            Padding="-8"
-            >
+            <!--Legendas-->
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Ciclo do Forno"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Tempos dos Estágios"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Rampa 01"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Patamar 01"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Rampa 02"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                Text="Patamar 02"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="6"
+                Grid.Column="0"
+                Text="Rampa 03"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="7"
+                Grid.Column="0"
+                Text="Patamar 03"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="8"
+                Grid.Column="0"
+                Text="Rampa 04"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="9"
+                Grid.Column="0"
+                Text="Patamar 04"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="10"
+                Grid.Column="0"
+                Text="Rampa 05"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="11"
+                Grid.Column="0"
+                Text="Patamar 05"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="12"
+                Grid.Column="0"
+                Text="Rampa 06"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="13"
+                Grid.Column="0"
+                Text="Patamar 06"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="14"
+                Grid.Column="0"
+                Text="Rampa 07"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="15"
+                Grid.Column="0"
+                Text="Patamar 07"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="16"
+                Grid.Column="0"
+                Text="Rampa 08"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+            <Label
+                Grid.Row="17"
+                Grid.Column="0"
+                Text="Patamar 08"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                />
+
+            <!--Temperaturas-->
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Temperaturas"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                />
+            <Border
+                Grid.Row="3"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar01"
+                        Text="{Binding rTempCxSupPatamar01_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar01_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="5"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar02"
+                        Text="{Binding rTempCxSupPatamar02_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar02_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="7"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar03"
+                        Text="{Binding rTempCxSupPatamar03_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar03_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="9"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar04"
+                        Text="{Binding rTempCxSupPatamar04_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar04_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="11"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar05"
+                        Text="{Binding rTempCxSupPatamar05_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar05_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="13"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar06"
+                        Text="{Binding rTempCxSupPatamar06_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar06_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="15"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar07"
+                        Text="{Binding rTempCxSupPatamar07_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar07_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Grid.Row="17"
+                Grid.Column="1"
+                Stroke="{StaticResource Normal_Cor2}"
+                StrokeThickness="2"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 8"
+                Margin="0,0,0,0"
+                Padding="-8"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label 
+                        x:Name="sLabel_rTempCxSupPatamar08"
+                        Text="{Binding rTempCxSupPatamar08_Read, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                        FontSize="Large"
+                        TextColor="Red"
+                        Margin="0,0,0,0"
+                        VerticalTextAlignment="Center"
+                        >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="sLabel_rTempCxSupPatamar08_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+            </Border>
+            <!--Tempos Decorrido-->
+            <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="Tempo Decorrido"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
             <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="2"
                 HorizontalOptions="Center"
                 >
-                <Label 
-                    x:Name="sLabel_rTempCxSupPatamar01"
-                    Text="{Binding rTempCxSupPatamar01, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                <Label
+                    Text="HH"
+                    TextColor="{StaticResource Normal_Cor3}"
                     FontSize="Large"
-                    TextColor="Red"
-                    Margin="0,0,0,0"
-                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="MM"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="SS"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa01Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa01Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa01Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam01Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam01Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam01Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa02Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa02Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa02Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="5"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam02Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam02Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam02Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="6"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa03Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa03Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa03Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="7"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam03Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam03Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam03Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="8"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa04Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa04Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa04Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="9"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam04Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam04Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam04Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="10"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="11"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="11"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam05Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="12"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa06Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa06Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa06Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="13"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam06Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam06Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam06Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="14"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa07Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa07Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa07Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="15"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam07Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam07Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam07Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="16"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorRampa08Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorRampa08Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorRampa08Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="17"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorPatam08Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorPatam08Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorPatam08Sup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <!--Tempos Programado-->
+            <Label
+                Grid.Row="0"
+                Grid.Column="3"
+                Text="Tempo Decorrido"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="HH"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="MM"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="2"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa01_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar01_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
                     >
-
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="sLabel_rTempCxSupPatamar01_OnLabelTapped"
+                            Tapped="Label_iHorCxSupPatamar01_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar01_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar01_OnLabelTapped"
                         />
                     </Label.GestureRecognizers>
 
                 </Label>
-
             </HorizontalStackLayout>
-        </Border>
 
 
-
-
-
-
-    </Grid>
+        </Grid>
+    </ScrollView>
+    
 
 
 
