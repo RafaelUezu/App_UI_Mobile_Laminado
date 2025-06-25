@@ -1379,7 +1379,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         }
         #endregion
 
-        #region Status dos estágios
+        #region Status dos estágios Superiores
         private int _uStatusAquecimentoSup_Read;
         public int uStatusAquecimentoSup_Read
         {
@@ -1389,6 +1389,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_uStatusAquecimentoSup_Read != value)
                 {
                     _uStatusAquecimentoSup_Read = value;
+                    cStatusAquecimentoSup_Color = ObterCorStatus(value);
+                    sStatusAquecimentoSup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1402,6 +1404,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa01Sup_Read != value)
                 {
                     _wStatusRampa01Sup_Read = value;
+                    cStatusRampa01Sup_Color = ObterCorStatus(value);
+                    sStatusRampa01Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1415,6 +1419,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa02Sup_Read != value)
                 {
                     _wStatusRampa02Sup_Read = value;
+                    cStatusRampa02Sup_Color = ObterCorStatus(value);
+                    sStatusRampa02Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1428,6 +1434,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa03Sup_Read != value)
                 {
                     _wStatusRampa03Sup_Read = value;
+                    cStatusRampa03Sup_Color = ObterCorStatus(value);
+                    sStatusRampa03Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1441,6 +1449,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa04Sup_Read != value)
                 {
                     _wStatusRampa04Sup_Read = value;
+                    cStatusRampa04Sup_Color = ObterCorStatus(value);
+                    sStatusRampa04Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1454,6 +1464,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa05Sup_Read != value)
                 {
                     _wStatusRampa05Sup_Read = value;
+                    cStatusRampa05Sup_Color = ObterCorStatus(value);
+                    sStatusRampa05Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1467,6 +1479,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa06Sup_Read != value)
                 {
                     _wStatusRampa06Sup_Read = value;
+                    cStatusRampa06Sup_Color = ObterCorStatus(value);
+                    sStatusRampa06Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1480,6 +1494,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa07Sup_Read != value)
                 {
                     _wStatusRampa07Sup_Read = value;
+                    cStatusRampa07Sup_Color = ObterCorStatus(value);
+                    sStatusRampa07Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -1493,13 +1509,613 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa08Sup_Read != value)
                 {
                     _wStatusRampa08Sup_Read = value;
+                    cStatusRampa08Sup_Color = ObterCorStatus(value);
+                    sStatusRampa08Sup_Legend = ObterLegendaStatus(value);
                     OnPropertyChanged();
                 }
             }
         }
 
+        private int _wStatusPatamar01Sup_Read;
+        public int wStatusPatamar01Sup_Read
+        {
+            get => _wStatusPatamar01Sup_Read;
+            set
+            {
+                if (_wStatusPatamar01Sup_Read != value)
+                {
+                    _wStatusPatamar01Sup_Read = value;
+                    cStatusPatamar01Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar01Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar02Sup_Read;
+        public int wStatusPatamar02Sup_Read
+        {
+            get => _wStatusPatamar02Sup_Read;
+            set
+            {
+                if (_wStatusPatamar02Sup_Read != value)
+                {
+                    _wStatusPatamar02Sup_Read = value;
+                    cStatusPatamar02Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar02Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar03Sup_Read;
+        public int wStatusPatamar03Sup_Read
+        {
+            get => _wStatusPatamar03Sup_Read;
+            set
+            {
+                if (_wStatusPatamar03Sup_Read != value)
+                {
+                    _wStatusPatamar03Sup_Read = value;
+                    cStatusPatamar03Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar03Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar04Sup_Read;
+        public int wStatusPatamar04Sup_Read
+        {
+            get => _wStatusPatamar04Sup_Read;
+            set
+            {
+                if (_wStatusPatamar04Sup_Read != value)
+                {
+                    _wStatusPatamar04Sup_Read = value;
+                    cStatusPatamar04Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar04Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar05Sup_Read;
+        public int wStatusPatamar05Sup_Read
+        {
+            get => _wStatusPatamar05Sup_Read;
+            set
+            {
+                if (_wStatusPatamar05Sup_Read != value)
+                {
+                    _wStatusPatamar05Sup_Read = value;
+                    cStatusPatamar05Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar05Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar06Sup_Read;
+        public int wStatusPatamar06Sup_Read
+        {
+            get => _wStatusPatamar06Sup_Read;
+            set
+            {
+                if (_wStatusPatamar06Sup_Read != value)
+                {
+                    _wStatusPatamar06Sup_Read = value;
+                    cStatusPatamar06Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar06Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar07Sup_Read;
+        public int wStatusPatamar07Sup_Read
+        {
+            get => _wStatusPatamar07Sup_Read;
+            set
+            {
+                if (_wStatusPatamar07Sup_Read != value)
+                {
+                    _wStatusPatamar07Sup_Read = value;
+                    cStatusPatamar07Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar07Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _wStatusPatamar08Sup_Read;
+        public int wStatusPatamar08Sup_Read
+        {
+            get => _wStatusPatamar08Sup_Read;
+            set
+            {
+                if (_wStatusPatamar08Sup_Read != value)
+                {
+                    _wStatusPatamar08Sup_Read = value;
+                    cStatusPatamar08Sup_Color = ObterCorStatus(value);
+                    sStatusPatamar08Sup_Legend = ObterLegendaStatus(value);
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         #endregion
+
+        #region Cores dos Estágios Superiores
+
+        private Color _cStatusAquecimentoSup_Color;
+        public Color cStatusAquecimentoSup_Color
+        {
+            get => _cStatusAquecimentoSup_Color;
+            set
+            {
+                if (_cStatusAquecimentoSup_Color != value)
+                {
+
+                    _cStatusAquecimentoSup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa01Sup_Color;
+        public Color cStatusRampa01Sup_Color
+        {
+            get => _cStatusRampa01Sup_Color;
+            set
+            {
+                if (_cStatusRampa01Sup_Color != value)
+                {
+                    _cStatusRampa01Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa02Sup_Color;
+        public Color cStatusRampa02Sup_Color
+        {
+            get => _cStatusRampa02Sup_Color;
+            set
+            {
+                if (_cStatusRampa02Sup_Color != value)
+                {
+                    _cStatusRampa02Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa03Sup_Color;
+        public Color cStatusRampa03Sup_Color
+        {
+            get => _cStatusRampa03Sup_Color;
+            set
+            {
+                if (_cStatusRampa03Sup_Color != value)
+                {
+                    _cStatusRampa03Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa04Sup_Color;
+        public Color cStatusRampa04Sup_Color
+        {
+            get => _cStatusRampa04Sup_Color;
+            set
+            {
+                if (_cStatusRampa04Sup_Color != value)
+                {
+                    _cStatusRampa04Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa05Sup_Color;
+        public Color cStatusRampa05Sup_Color
+        {
+            get => _cStatusRampa05Sup_Color;
+            set
+            {
+                if (_cStatusRampa05Sup_Color != value)
+                {
+                    _cStatusRampa05Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa06Sup_Color;
+        public Color cStatusRampa06Sup_Color
+        {
+            get => _cStatusRampa06Sup_Color;
+            set
+            {
+                if (_cStatusRampa06Sup_Color != value)
+                {
+                    _cStatusRampa06Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa07Sup_Color;
+        public Color cStatusRampa07Sup_Color
+        {
+            get => _cStatusRampa07Sup_Color;
+            set
+            {
+                if (_cStatusRampa07Sup_Color != value)
+                {
+                    _cStatusRampa07Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusRampa08Sup_Color;
+        public Color cStatusRampa08Sup_Color
+        {
+            get => _cStatusRampa08Sup_Color;
+            set
+            {
+                if (_cStatusRampa08Sup_Color != value)
+                {
+                    _cStatusRampa08Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private Color _cStatusPatamar01Sup_Color;
+        public Color cStatusPatamar01Sup_Color
+        {
+            get => _cStatusPatamar01Sup_Color;
+            set
+            {
+                if (_cStatusPatamar01Sup_Color != value)
+                {
+                    _cStatusPatamar01Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar02Sup_Color;
+        public Color cStatusPatamar02Sup_Color
+        {
+            get => _cStatusPatamar02Sup_Color;
+            set
+            {
+                if (_cStatusPatamar02Sup_Color != value)
+                {
+                    _cStatusPatamar02Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar03Sup_Color;
+        public Color cStatusPatamar03Sup_Color
+        {
+            get => _cStatusPatamar03Sup_Color;
+            set
+            {
+                if (_cStatusPatamar03Sup_Color != value)
+                {
+                    _cStatusPatamar03Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar04Sup_Color;
+        public Color cStatusPatamar04Sup_Color
+        {
+            get => _cStatusPatamar04Sup_Color;
+            set
+            {
+                if (_cStatusPatamar04Sup_Color != value)
+                {
+                    _cStatusPatamar04Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar05Sup_Color;
+        public Color cStatusPatamar05Sup_Color
+        {
+            get => _cStatusPatamar05Sup_Color;
+            set
+            {
+                if (_cStatusPatamar05Sup_Color != value)
+                {
+                    _cStatusPatamar05Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar06Sup_Color;
+        public Color cStatusPatamar06Sup_Color
+        {
+            get => _cStatusPatamar06Sup_Color;
+            set
+            {
+                if (_cStatusPatamar06Sup_Color != value)
+                {
+                    _cStatusPatamar06Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar07Sup_Color;
+        public Color cStatusPatamar07Sup_Color
+        {
+            get => _cStatusPatamar07Sup_Color;
+            set
+            {
+                if (_cStatusPatamar07Sup_Color != value)
+                {
+                    _cStatusPatamar07Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusPatamar08Sup_Color;
+        public Color cStatusPatamar08Sup_Color
+        {
+            get => _cStatusPatamar08Sup_Color;
+            set
+            {
+                if (_cStatusPatamar08Sup_Color != value)
+                {
+                    _cStatusPatamar08Sup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private Color ObterCorStatus(int status)
+        {
+            return status switch
+            {
+                0 => Colors.Red,
+                1 => Colors.Green,
+                2 => Colors.Black,
+
+                _ => Colors.Gray
+            };
+        }
+
+        private string _sStatusAquecimentoSup_Legend;
+        public string sStatusAquecimentoSup_Legend
+        {
+            get => _sStatusAquecimentoSup_Legend;
+            set
+            {
+                if (_sStatusAquecimentoSup_Legend != value)
+                {
+
+                    _sStatusAquecimentoSup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa01Sup_Legend;
+        public string sStatusRampa01Sup_Legend
+        {
+            get => _sStatusRampa01Sup_Legend;
+            set
+            {
+                if (_sStatusRampa01Sup_Legend != value)
+                {
+                    _sStatusRampa01Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa02Sup_Legend;
+        public string sStatusRampa02Sup_Legend
+        {
+            get => _sStatusRampa02Sup_Legend;
+            set
+            {
+                if (_sStatusRampa02Sup_Legend != value)
+                {
+                    _sStatusRampa02Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa03Sup_Legend;
+        public string sStatusRampa03Sup_Legend
+        {
+            get => _sStatusRampa03Sup_Legend;
+            set
+            {
+                if (_sStatusRampa03Sup_Legend != value)
+                {
+                    _sStatusRampa03Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa04Sup_Legend;
+        public string sStatusRampa04Sup_Legend
+        {
+            get => _sStatusRampa04Sup_Legend;
+            set
+            {
+                if (_sStatusRampa04Sup_Legend != value)
+                {
+                    _sStatusRampa04Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa05Sup_Legend;
+        public string sStatusRampa05Sup_Legend
+        {
+            get => _sStatusRampa05Sup_Legend;
+            set
+            {
+                if (_sStatusRampa05Sup_Legend != value)
+                {
+                    _sStatusRampa05Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa06Sup_Legend;
+        public string sStatusRampa06Sup_Legend
+        {
+            get => _sStatusRampa06Sup_Legend;
+            set
+            {
+                if (_sStatusRampa06Sup_Legend != value)
+                {
+                    _sStatusRampa06Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa07Sup_Legend;
+        public string sStatusRampa07Sup_Legend
+        {
+            get => _sStatusRampa07Sup_Legend;
+            set
+            {
+                if (_sStatusRampa07Sup_Legend != value)
+                {
+                    _sStatusRampa07Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusRampa08Sup_Legend;
+        public string sStatusRampa08Sup_Legend
+        {
+            get => _sStatusRampa08Sup_Legend;
+            set
+            {
+                if (_sStatusRampa08Sup_Legend != value)
+                {
+                    _sStatusRampa08Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _sStatusPatamar01Sup_Legend;
+        public string sStatusPatamar01Sup_Legend
+        {
+            get => _sStatusPatamar01Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar01Sup_Legend != value)
+                {
+                    _sStatusPatamar01Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar02Sup_Legend;
+        public string sStatusPatamar02Sup_Legend
+        {
+            get => _sStatusPatamar02Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar02Sup_Legend != value)
+                {
+                    _sStatusPatamar02Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar03Sup_Legend;
+        public string sStatusPatamar03Sup_Legend
+        {
+            get => _sStatusPatamar03Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar03Sup_Legend != value)
+                {
+                    _sStatusPatamar03Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar04Sup_Legend;
+        public string sStatusPatamar04Sup_Legend
+        {
+            get => _sStatusPatamar04Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar04Sup_Legend != value)
+                {
+                    _sStatusPatamar04Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar05Sup_Legend;
+        public string sStatusPatamar05Sup_Legend
+        {
+            get => _sStatusPatamar05Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar05Sup_Legend != value)
+                {
+                    _sStatusPatamar05Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar06Sup_Legend;
+        public string sStatusPatamar06Sup_Legend
+        {
+            get => _sStatusPatamar06Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar06Sup_Legend != value)
+                {
+                    _sStatusPatamar06Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar07Sup_Legend;
+        public string sStatusPatamar07Sup_Legend
+        {
+            get => _sStatusPatamar07Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar07Sup_Legend != value)
+                {
+                    _sStatusPatamar07Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusPatamar08Sup_Legend;
+        public string sStatusPatamar08Sup_Legend
+        {
+            get => _sStatusPatamar08Sup_Legend;
+            set
+            {
+                if (_sStatusPatamar08Sup_Legend != value)
+                {
+                    _sStatusPatamar08Sup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private String ObterLegendaStatus(int status)
+        {
+            return status switch
+            {
+                0 => "Desligado",
+                1 => "Em Ciclo",
+                2 => "Finalizado",
+
+                _ => "Null"
+            };
+        }
+
+        #endregion
+
+
 
         #region Tempo da Bomba Ligada no Fim do Ciclo
         private int _iMinDecorTasbSup_Read;
@@ -1709,6 +2325,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         }
 
         #endregion
+
+
 
 
     }

@@ -1348,7 +1348,470 @@
 
                 </Label>
             </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa02_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="5"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar02_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar02_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar02_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar02_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
 
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="6"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa03_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="7"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar03_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar03_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar03_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar03_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="8"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa04_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="9"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar04_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar04_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar04_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar04_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="10"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa05_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="11"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar05_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar05_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar05_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar05_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="12"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa06_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="13"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar06_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar06_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar06_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar06_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="14"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa07_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="15"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar07_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar07_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar07_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar07_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="16"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupRampa08_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="17"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorCxSupPatamar08_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iHorCxSupPatamar08_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinCxSupPatamar08_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinCxSupPatamar08_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <Label
+                Grid.Row="0"
+                Grid.Column="4"
+                Text="{Binding sStatusAquecimentoSup_Legend}"
+                TextColor="{Binding cStatusAquecimentoSup_Color}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
+            <Label
+                Grid.Row="2"
+                Grid.Column="4"
+                Text="{Binding sStatusRampa01Sup_Legend}"
+                TextColor="{Binding cStatusRampa01Sup_Color}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
+            <Label
+                Grid.Row="3"
+                Grid.Column="4"
+                Text="{Binding sStatusPatamar01Sup_Legend}"
+                TextColor="{Binding cStatusPatamar01Sup_Color}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
+            <Label
+                Grid.Row="4"
+                Grid.Column="4"
+                Text="{Binding sStatusRampa02Sup_Legend}"
+                TextColor="{Binding cStatusRampa02Sup_Color}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
+            <Label
+                Grid.Row="5"
+                Grid.Column="4"
+                Text="{Binding sStatusPatamar02Sup_Legend}"
+                TextColor="{Binding cStatusPatamar02Sup_Color}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+            />
 
         </Grid>
     </ScrollView>

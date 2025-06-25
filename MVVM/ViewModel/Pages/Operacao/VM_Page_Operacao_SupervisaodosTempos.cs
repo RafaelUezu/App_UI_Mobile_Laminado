@@ -100,7 +100,28 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             iSegDecorPatam07Sup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorPatam07Sup.Read ?? 0;
             iSegDecorPatam08Sup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorPatam08Sup.Read ?? 0;
 
+            uStatusAquecimentoSup_Read = GVL.Opcua.GVL_ClpIhm.uStatusAquecimentoSup.Read ?? 0;
+            wStatusRampa01Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa01Sup.Read ?? 0;
+            wStatusRampa02Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa02Sup.Read ?? 0;
+            wStatusRampa03Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa03Sup.Read ?? 0;
+            wStatusRampa04Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa04Sup.Read ?? 0;
+            wStatusRampa05Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa05Sup.Read ?? 0;
+            wStatusRampa06Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa06Sup.Read ?? 0;
+            wStatusRampa07Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa07Sup.Read ?? 0;
+            wStatusRampa08Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa08Sup.Read ?? 0;
+
+            wStatusPatamar01Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar01Sup.Read ?? 0;
+            wStatusPatamar02Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar02Sup.Read ?? 0;
+            wStatusPatamar03Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar03Sup.Read ?? 0;
+            wStatusPatamar04Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar04Sup.Read ?? 0;
+            wStatusPatamar05Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar05Sup.Read ?? 0;
+            wStatusPatamar06Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar06Sup.Read ?? 0;
+            wStatusPatamar07Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar07Sup.Read ?? 0;
+            wStatusPatamar08Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar08Sup.Read ?? 0;
+
         }
+
+
         public void EscreveValores()
         {
             if (rTempCxSupPatamar01_Write.HasValue)

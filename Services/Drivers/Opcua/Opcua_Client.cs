@@ -305,6 +305,15 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinDecorTotalSup"), AttributeId = Attributes.Value },//68
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iSegDecorTotalSup"), AttributeId = Attributes.Value },//69
 
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar01Sup"), AttributeId = Attributes.Value },//70
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar02Sup"), AttributeId = Attributes.Value },//71
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar03Sup"), AttributeId = Attributes.Value },//72
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar04Sup"), AttributeId = Attributes.Value },//73
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar05Sup"), AttributeId = Attributes.Value },//74
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar06Sup"), AttributeId = Attributes.Value },//75
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar07Sup"), AttributeId = Attributes.Value },//76
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar08Sup"), AttributeId = Attributes.Value },//77
+
 
                             };
                             List<ReadValueId> nodesToRead_GVL_Permanentes = new List<ReadValueId>
@@ -1312,6 +1321,40 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     {
                                         GVL.Opcua.GVL_ClpIhm.iSegDecorTotalSup.Read = (short)(Int16)results_GVL_ClpIhm[69].Value;
                                     }
+                                    if (results_GVL_ClpIhm[70].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa01Sup.Read = (short)(Int16)results_GVL_ClpIhm[70].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[71].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa02Sup.Read = (short)(Int16)results_GVL_ClpIhm[71].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[72].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa03Sup.Read = (short)(Int16)results_GVL_ClpIhm[72].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[73].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa04Sup.Read = (short)(Int16)results_GVL_ClpIhm[73].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[74].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa05Sup.Read = (short)(Int16)results_GVL_ClpIhm[74].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[75].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa06Sup.Read = (short)(Int16)results_GVL_ClpIhm[75].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[76].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa07Sup.Read = (short)(Int16)results_GVL_ClpIhm[76].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[77].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa08Sup.Read = (short)(Int16)results_GVL_ClpIhm[77].Value;
+                                    }
+
+
 
                                     // GVL_Permanentes
 
