@@ -1908,13 +1908,291 @@
                 FontSize="Large"
                 HorizontalTextAlignment="Center"
             />
+        <!--Tempo da Bomba Ligada no Fim do Ciclo-->
+            <Label
+                Grid.Row="18"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="Tempo da Bomba Ligada no Fim do Ciclo"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Start"
+            />
+            <HorizontalStackLayout
+                Grid.Row="18"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorTasbSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorTasbSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="18"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinTasbCxSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                           Tapped="Label_iMinTasbCxSup_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <Label
+                Grid.Row="19"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="Tempo do Exaustor"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Start"
+            />
+            <HorizontalStackLayout
+                Grid.Row="19"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorResfrSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorResfrSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="19"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iTempoExaustorMinSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <Label
+                Grid.Row="20"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Text="Tempo para a Abertura da Porta após o Fim de Ciclo"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Start"
+            />
+            <HorizontalStackLayout
+                Grid.Row="20"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorAbPortSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorAbPortSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="20"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iTempoAberturaSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <Label
+                Grid.Row="21"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Text="Tempo Total"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Start"
+            />
+            <HorizontalStackLayout
+                Grid.Row="21"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorDecorTotalSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinDecorTotalSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iSegDecorTotalSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="21"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="{Binding iHorProgTotalSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iMinProgTotalSup_Read, StringFormat='{}{0:00}'}"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
 
         </Grid>
     </ScrollView>
-    
-
-
-
-
-
+   
 </ContentPage>

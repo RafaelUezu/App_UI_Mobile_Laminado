@@ -2,11 +2,228 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao.Page_Operacao_Manual"
-             Title="Operação Manual">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Operação Manual"
+             Background="{StaticResource Normal_Cor1}"
+             >
+
+    <AbsoluteLayout>
+
+        <Image
+            Source="forno_frontal_ecoeco.png"
+            AbsoluteLayout.LayoutBounds="250, 100, 864, 481"
+            AbsoluteLayout.LayoutFlags="None"
+        />
+
+        <Grid
+            AbsoluteLayout.LayoutBounds="578, 100, 172, 167"
+            AbsoluteLayout.LayoutFlags="None"
+            >
+            <Image
+                Source="ventilador_frontal.png"
+            >
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{Binding cImgMotor_Color}" />
+                </Image.Behaviors>
+            </Image>
+        </Grid>
+
+        <VerticalStackLayout
+            AbsoluteLayout.LayoutBounds="390, 50, 200, 200"
+            AbsoluteLayout.LayoutFlags="None"
+            >
+            <Label
+                Text="Ventilador"
+                FontSize="Medium"
+                TextColor="{StaticResource Normal_Cor6}"
+                HorizontalTextAlignment="Center"                
+            />
+            <Button
+                x:Name="Button_BtLigaDesligaVentSup"
+                BackgroundColor="{StaticResource Normal_Cor6}"
+                Text="{Binding sBtLigaDesligaVentSup_Legend}"
+                FontSize="Medium"
+                Padding="0"
+                Margin="2"
+                HeightRequest="50"
+                WidthRequest="125"
+                Command="{Binding Button_BtLigaDesligaVentSup_Command}"
+            />
+            <Label
+                Text="{Binding rFrequenciaAtualVentSup_Read, StringFormat='{0:F1} Hz'}"
+                FontSize="Large"
+                TextColor="{Binding cFrequenciaAtualVentSup_Color}"
+                HorizontalTextAlignment="Center"
+            />
+        </VerticalStackLayout>
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="150, 420, 100, 100"
+            AbsoluteLayout.LayoutFlags="None"
+            HeightRequest="4"
+            BackgroundColor="{StaticResource Normal_Cor6}"
+            HorizontalOptions="Fill"
+            />
+        <HorizontalStackLayout
+            AbsoluteLayout.LayoutBounds="50, 420, 100, 100"
+            AbsoluteLayout.LayoutFlags="None"
+            >
+        </HorizontalStackLayout>
+        <VerticalStackLayout
+            AbsoluteLayout.LayoutBounds="50, 347, 100, 100"
+            AbsoluteLayout.LayoutFlags="None"
+            >
+            <Label
+                Text="Bomba de Vácuo"
+                FontSize="Medium"
+                TextColor="{StaticResource Normal_Cor6}"
+                HorizontalTextAlignment="Center"
+                />
+            <Label
+                Text="{Binding sVacuo01Ok_Legend, StringFormat='{0:F1} Hz'}"
+                FontSize="Large"
+                TextColor="{Binding cVacuo01Ok_Color}"
+                HorizontalTextAlignment="Center"
+                />
+            <Image
+                Source="bomba_vacuo_simbolo.png"
+                >
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="{Binding cVacuo01Ok_Color}" />
+                </Image.Behaviors>
+            </Image>
+            <Label
+                Text="{Binding fImgMotor_Read, StringFormat='{0:F1} Hz'}"
+                FontSize="Large"
+                TextColor="{StaticResource Normal_Cor6}"
+                HorizontalTextAlignment="Center"
+            />
+            <Button
+                x:Name="Button_BtLdVacuoMesa01"
+                BackgroundColor="{StaticResource Normal_Cor6}"
+                Text="{Binding fBtLdVacuoMesa01_Read, StringFormat='{0:F1} Hz'}"
+                Padding="3"
+                FontSize="Large"
+                TextColor="White"
+                Command="{Binding Button_BtLdVacuoMesa01_Command}"
+                />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            AbsoluteLayout.LayoutBounds="120, 220, 125, 75"
+            AbsoluteLayout.LayoutFlags="None"
+            HorizontalOptions="Center"
+            >
+            <Label
+                Text="Porta do Forno"
+                FontSize="Medium"
+                TextColor="{StaticResource Normal_Cor6}"
+                HorizontalTextAlignment="Center"                
+                
+            />
+            <Button
+                x:Name="Button_BtAbreFechaPortaSup"
+                BackgroundColor="{StaticResource Normal_Cor6}"
+                Text="{Binding sBtAbreFechaPortaSup_Legend}"
+                FontSize="Medium"
+                Padding="0"
+                Margin="2"
+                HeightRequest="50"
+                WidthRequest="125"
+                Command="{Binding Button_BtAbreFechaPortaSup_Command}"
+                >
+            </Button>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout
+            AbsoluteLayout.LayoutBounds="232, 350, 125, 75"
+            AbsoluteLayout.LayoutFlags="None"
+            HorizontalOptions="Center"
+            >
+            <Image
+                Source="thermometer.png"
+                HeightRequest="75"
+                WidthRequest="75"
+                >
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior
+                        TintColor="{Binding cTermoparSup01_Color}"
+                        />
+                </Image.Behaviors>
+            </Image>
+            <Label
+                Text="{Binding fTermoparSup01_Read, StringFormat='{0:F1} ºC'}"
+                FontSize="Large"
+                TextColor="{StaticResource Normal_Cor6}"
+                HorizontalTextAlignment="Center"
+            />
+        </VerticalStackLayout>
+
+            
+        <Grid
+            x:Name="PortaFornoSuperior"
+            AbsoluteLayout.LayoutBounds="355, 328, 654, 123"
+            AbsoluteLayout.LayoutFlags="None"
+            HorizontalOptions="Center"
+            IsVisible="True"
+            >
+            <Image
+                Source="bandeja_frontal_ecoeco.png"
+                WidthRequest="654"
+                HeightRequest="123"
+            />
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding sStatusPortaEsq_Legend}"
+                FontSize="Large"
+                TextColor="{Binding cStatusPortaEsq_Color}"                
+            />
+        </Grid>
+        <VerticalStackLayout
+            AbsoluteLayout.LayoutBounds="730, 50, 200, 100"
+            AbsoluteLayout.LayoutFlags="None"
+            HorizontalOptions="Center"
+            >
+            <Label
+                Text="Resistências de Aquecimento"
+                FontSize="Medium"
+                TextColor="{StaticResource Normal_Cor6}"
+                HorizontalTextAlignment="Center"                
+            />
+            <Image
+                Source="electrical_place.png"
+                HeightRequest="75"
+                WidthRequest="75"
+                >
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior
+                        TintColor="{Binding cStatusAquecimentoSup_Color}"
+                        />
+                </Image.Behaviors>
+            </Image>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            AbsoluteLayout.LayoutBounds="1000, 50, 200, 120"
+            AbsoluteLayout.LayoutFlags="None"
+            HorizontalOptions="Center">
+            <Label
+                Text="{Binding sStatusAquecimentoSup_Legend}"
+                TextColor="{Binding cStatusAquecimentoSup_Color}"
+                FontSize="44"
+                HorizontalTextAlignment="Center"
+                />
+            <Label
+                Text="{Binding sStatusCiclosAquecimentoSup_Legend}"
+                TextColor="Black"
+                FontSize="34"
+                HorizontalTextAlignment="Center"
+                
+                
+                />
+
+        </VerticalStackLayout>
+
+    </AbsoluteLayout>
 </ContentPage>

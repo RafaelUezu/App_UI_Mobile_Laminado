@@ -7404,9 +7404,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar01
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7423,7 +7423,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7444,9 +7444,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar02
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7463,7 +7463,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7484,9 +7484,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar03
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7503,7 +7503,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7524,9 +7524,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar04
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7543,7 +7543,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7564,9 +7564,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar05
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7583,7 +7583,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7604,9 +7604,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar06
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7623,7 +7623,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7644,9 +7644,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar07
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7663,7 +7663,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7684,9 +7684,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iHorCxSupPatamar08
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7703,7 +7703,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7725,9 +7725,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar01
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7744,7 +7744,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7765,9 +7765,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar02
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7784,7 +7784,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7805,9 +7805,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar03
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7824,7 +7824,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7845,9 +7845,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar04
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7864,7 +7864,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7885,9 +7885,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar05
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7904,7 +7904,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7925,9 +7925,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar06
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7944,7 +7944,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7965,9 +7965,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar07
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7984,7 +7984,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -8005,9 +8005,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinCxSupPatamar08
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -8024,7 +8024,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -8046,9 +8046,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iMinTasbCxSup
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -8065,7 +8065,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {

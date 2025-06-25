@@ -2155,8 +2155,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 }
             }
         }
-        private int _iMinTasbCxSup_Write;
-        public int iMinTasbCxSup_Write
+        private int? _iMinTasbCxSup_Write;
+        public int? iMinTasbCxSup_Write
         {
             get => _iMinTasbCxSup_Write;
             set

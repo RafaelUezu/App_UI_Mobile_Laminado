@@ -575,7 +575,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     GetValue = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Write = null
                                 },
-
+                                
                                 new OpcWriteItem
                                 {
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar01",
@@ -1323,35 +1323,35 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
                                     if (results_GVL_ClpIhm[70].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa01Sup.Read = (short)(Int16)results_GVL_ClpIhm[70].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar01Sup.Read = (int)(ushort)results_GVL_ClpIhm[70].Value;
                                     }
                                     if (results_GVL_ClpIhm[71].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa02Sup.Read = (short)(Int16)results_GVL_ClpIhm[71].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar02Sup.Read = (int)(ushort)results_GVL_ClpIhm[71].Value;
                                     }
                                     if (results_GVL_ClpIhm[72].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa03Sup.Read = (short)(Int16)results_GVL_ClpIhm[72].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar03Sup.Read = (int)(ushort)results_GVL_ClpIhm[72].Value;
                                     }
                                     if (results_GVL_ClpIhm[73].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa04Sup.Read = (short)(Int16)results_GVL_ClpIhm[73].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar04Sup.Read = (int)(ushort)results_GVL_ClpIhm[73].Value;
                                     }
                                     if (results_GVL_ClpIhm[74].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa05Sup.Read = (short)(Int16)results_GVL_ClpIhm[74].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar05Sup.Read = (int)(ushort)results_GVL_ClpIhm[74].Value;
                                     }
                                     if (results_GVL_ClpIhm[75].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa06Sup.Read = (short)(Int16)results_GVL_ClpIhm[75].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar06Sup.Read = (int)(ushort)results_GVL_ClpIhm[75].Value;
                                     }
                                     if (results_GVL_ClpIhm[76].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa07Sup.Read = (short)(Int16)results_GVL_ClpIhm[76].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar07Sup.Read = (int)(ushort)results_GVL_ClpIhm[76].Value;
                                     }
                                     if (results_GVL_ClpIhm[77].Value != null)
                                     {
-                                        GVL.Opcua.GVL_ClpIhm.wStatusRampa08Sup.Read = (short)(Int16)results_GVL_ClpIhm[77].Value;
+                                        GVL.Opcua.GVL_ClpIhm.wStatusPatamar08Sup.Read = (int)(ushort)results_GVL_ClpIhm[77].Value;
                                     }
 
 
@@ -1446,73 +1446,73 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                     if (results_GVL_IhmClp[8].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Read = (short)(Int16)results_GVL_IhmClp[8].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Read = (Int16)results_GVL_IhmClp[8].Value;
                                     }
                                     if (results_GVL_IhmClp[9].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Read = (short)(Int16)results_GVL_IhmClp[9].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Read = (Int16)results_GVL_IhmClp[9].Value;
                                     }
                                     if (results_GVL_IhmClp[10].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Read = (short)(Int16)results_GVL_IhmClp[10].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Read = (Int16)results_GVL_IhmClp[10].Value;
                                     }
                                     if (results_GVL_IhmClp[11].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Read = (short)(Int16)results_GVL_IhmClp[11].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Read = (Int16)results_GVL_IhmClp[11].Value;
                                     }
                                     if (results_GVL_IhmClp[12].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Read = (short)(Int16)results_GVL_IhmClp[12].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Read = (Int16)results_GVL_IhmClp[12].Value;
                                     }
                                     if (results_GVL_IhmClp[13].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Read = (short)(Int16)results_GVL_IhmClp[13].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Read = (Int16)results_GVL_IhmClp[13].Value;
                                     }
                                     if (results_GVL_IhmClp[14].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Read = (short)(Int16)results_GVL_IhmClp[14].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Read = (Int16)results_GVL_IhmClp[14].Value;
                                     }
                                     if (results_GVL_IhmClp[15].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Read = (short)(Int16)results_GVL_IhmClp[15].Value;
+                                        GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Read = (Int16)results_GVL_IhmClp[15].Value;
                                     }
 
                                     if (results_GVL_IhmClp[16].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Read = (short)(Int16)results_GVL_IhmClp[16].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Read = (Int16)results_GVL_IhmClp[16].Value;
                                     }
                                     if (results_GVL_IhmClp[17].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Read = (short)(Int16)results_GVL_IhmClp[17].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Read = (Int16)results_GVL_IhmClp[17].Value;
                                     }
                                     if (results_GVL_IhmClp[18].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Read = (short)(Int16)results_GVL_IhmClp[18].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Read = (Int16)results_GVL_IhmClp[18].Value;
                                     }
                                     if (results_GVL_IhmClp[19].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Read = (short)(Int16)results_GVL_IhmClp[19].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Read = (Int16)results_GVL_IhmClp[19].Value;
                                     }
                                     if (results_GVL_IhmClp[20].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Read = (short)(Int16)results_GVL_IhmClp[20].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Read = (Int16)results_GVL_IhmClp[20].Value;
                                     }
                                     if (results_GVL_IhmClp[21].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Read = (short)(Int16)results_GVL_IhmClp[21].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Read = (Int16)results_GVL_IhmClp[21].Value;
                                     }
                                     if (results_GVL_IhmClp[22].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Read = (short)(Int16)results_GVL_IhmClp[22].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Read = (Int16)results_GVL_IhmClp[22].Value;
                                     }
                                     if (results_GVL_IhmClp[23].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Read = (short)(Int16)results_GVL_IhmClp[23].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Read = (Int16)results_GVL_IhmClp[23].Value;
                                     }
 
                                     if (results_GVL_IhmClp[24].Value != null)
                                     {
-                                        GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Read = (short)(Int16)results_GVL_IhmClp[24].Value;
+                                        GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Read = (Int16)results_GVL_IhmClp[24].Value;
                                     }
 
                                     sw.Stop(); 

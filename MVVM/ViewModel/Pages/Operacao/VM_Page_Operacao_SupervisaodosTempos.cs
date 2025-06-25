@@ -126,6 +126,33 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             iSegDecorPatam07Sup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorPatam07Sup.Read ?? 0;
             iSegDecorPatam08Sup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorPatam08Sup.Read ?? 0;
 
+            iMinCxSupRampa01_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa01.Read ?? 0;
+            iMinCxSupRampa02_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa02.Read ?? 0;
+            iMinCxSupRampa03_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa03.Read ?? 0;
+            iMinCxSupRampa04_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa04.Read ?? 0;
+            iMinCxSupRampa05_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa05.Read ?? 0;
+            iMinCxSupRampa06_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa06.Read ?? 0;
+            iMinCxSupRampa07_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa07.Read ?? 0;
+            iMinCxSupRampa08_Read = GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Read ?? 0;
+
+            iHorCxSupPatamar01_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Read ?? 0;
+            iHorCxSupPatamar02_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Read ?? 0;
+            iHorCxSupPatamar03_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Read ?? 0;
+            iHorCxSupPatamar04_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Read ?? 0;
+            iHorCxSupPatamar05_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Read ?? 0;
+            iHorCxSupPatamar06_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Read ?? 0;
+            iHorCxSupPatamar07_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Read ?? 0;
+            iHorCxSupPatamar08_Read = GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Read ?? 0;
+
+            iMinCxSupPatamar01_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Read ?? 0;
+            iMinCxSupPatamar02_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Read ?? 0;
+            iMinCxSupPatamar03_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Read ?? 0;
+            iMinCxSupPatamar04_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Read ?? 0;
+            iMinCxSupPatamar05_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Read ?? 0;
+            iMinCxSupPatamar06_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Read ?? 0;
+            iMinCxSupPatamar07_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Read ?? 0;
+            iMinCxSupPatamar08_Read = GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Read ?? 0;
+
             uStatusAquecimentoSup_Read = GVL.Opcua.GVL_ClpIhm.uStatusAquecimentoSup.Read ?? 0;
             wStatusRampa01Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa01Sup.Read ?? 0;
             wStatusRampa02Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusRampa02Sup.Read ?? 0;
@@ -144,6 +171,27 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             wStatusPatamar06Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar06Sup.Read ?? 0;
             wStatusPatamar07Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar07Sup.Read ?? 0;
             wStatusPatamar08Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar08Sup.Read ?? 0;
+
+            iMinDecorTasbSup_Read = GVL.Opcua.GVL_ClpIhm.iMinDecorTasbSup.Read ?? 0;
+            iSegDecorTasbSup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorTasbSup.Read ?? 0;
+            iMinTasbCxSup_Read = GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Read ?? 0;
+
+            iMinDecorResfrSup_Read = GVL.Opcua.GVL_ClpIhm.iMinDecorResfrSup.Read ?? 0;
+            iSegDecorResfrSup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorResfrSup.Read ?? 0;
+            iTempoExaustorMinSup_Read = GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Read ?? 0;
+
+            iMinDecorAbPortSup_Read = GVL.Opcua.GVL_ClpIhm.iMinDecorAbPortSup.Read ?? 0;
+            iSegDecorAbPortSup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorAbPortSup.Read ?? 0;
+            iTempoAberturaSup_Read = GVL.Opcua.GVL_Permanentes.iTempoAberturaSup.Read ?? 0;
+
+            iHorDecorTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iHorDecorTotalSup.Read ?? 0;
+            iMinDecorTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iMinDecorTotalSup.Read ?? 0;
+            iSegDecorTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorTotalSup.Read ?? 0;
+
+            iHorProgTotalSup_Read = GVL.Opcua.GVL_Permanentes.iHorProgTotalSup.Read ?? 0;
+            iMinProgTotalSup_Read = GVL.Opcua.GVL_Permanentes.iMinProgTotalSup.Read ?? 0;
+
+
             //stopwatch.Stop(); // Para o cronômetro
 
             //System.Diagnostics.Debug.WriteLine($"Tempo decorrido da Tela: {stopwatch.ElapsedMilliseconds} ms");
@@ -195,14 +243,100 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 
             if (iHorCxSupPatamar01_Write.HasValue)
             {
-                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Write = (Int16)(short)iHorCxSupPatamar01_Write.Value;
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Write = (Int16)iHorCxSupPatamar01_Write.Value;
                 iHorCxSupPatamar01_Write = null; // Limpa o valor após escrita
             }
             if (iMinCxSupPatamar01_Write.HasValue)
             {
-                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Write = (Int16)(short)iMinCxSupPatamar01_Write.Value;
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Write = (Int16)iMinCxSupPatamar01_Write.Value;
                 iMinCxSupPatamar01_Write = null; // Limpa o valor após escrita
             }
+            if (iHorCxSupPatamar01_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar01.Write = (Int16)iHorCxSupPatamar01_Write.Value;
+                iHorCxSupPatamar01_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar01_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar01.Write = (Int16)iMinCxSupPatamar01_Write.Value;
+                iMinCxSupPatamar01_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar02_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar02.Write = (Int16)iHorCxSupPatamar02_Write.Value;
+                iHorCxSupPatamar02_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar02_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar02.Write = (Int16)iMinCxSupPatamar02_Write.Value;
+                iMinCxSupPatamar02_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar03_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar03.Write = (Int16)iHorCxSupPatamar03_Write.Value;
+                iHorCxSupPatamar03_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar03_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar03.Write = (Int16)iMinCxSupPatamar03_Write.Value;
+                iMinCxSupPatamar03_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar04_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar04.Write = (Int16)iHorCxSupPatamar04_Write.Value;
+                iHorCxSupPatamar04_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar04_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar04.Write = (Int16)iMinCxSupPatamar04_Write.Value;
+                iMinCxSupPatamar04_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar05_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar05.Write = (Int16)iHorCxSupPatamar05_Write.Value;
+                iHorCxSupPatamar05_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar05_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar05.Write = (Int16)iMinCxSupPatamar05_Write.Value;
+                iMinCxSupPatamar05_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar06_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar06.Write = (Int16)iHorCxSupPatamar06_Write.Value;
+                iHorCxSupPatamar06_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar06_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar06.Write = (Int16)iMinCxSupPatamar06_Write.Value;
+                iMinCxSupPatamar06_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar07_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar07.Write = (Int16)iHorCxSupPatamar07_Write.Value;
+                iHorCxSupPatamar07_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar07_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar07.Write = (Int16)iMinCxSupPatamar07_Write.Value;
+                iMinCxSupPatamar07_Write = null; // Limpa o valor após escrita
+            }
+            if (iHorCxSupPatamar08_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iHorCxSupPatamar08.Write = (Int16)iHorCxSupPatamar08_Write.Value;
+                iHorCxSupPatamar08_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinCxSupPatamar08_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinCxSupPatamar08.Write = (Int16)iMinCxSupPatamar08_Write.Value;
+                iMinCxSupPatamar08_Write = null; // Limpa o valor após escrita
+            }
+            if (iMinTasbCxSup_Write.HasValue)
+            {
+                GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Write = (Int16)iMinTasbCxSup_Write.Value;
+                iMinTasbCxSup_Write = null; // Limpa o valor após escrita
+            }
+
         }
     }
 

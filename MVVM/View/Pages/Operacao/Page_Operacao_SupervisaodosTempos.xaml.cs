@@ -150,11 +150,11 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar01_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
-            _viewModel.iHorCxSupPatamar01_Write = (int)valor;
+            _viewModel.iHorCxSupPatamar01_Write = (Int16)valor;
         }
         else
         {
@@ -167,7 +167,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
-            _viewModel.iMinCxSupPatamar01_Write = (int)valor;
+            _viewModel.iMinCxSupPatamar01_Write = (Int16)valor;
         }
         else
         {
@@ -176,7 +176,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar02_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -202,7 +202,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar03_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -228,7 +228,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar04_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -254,7 +254,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar05_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -280,7 +280,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar06_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -306,7 +306,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar07_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -332,7 +332,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
     private async void Label_iHorCxSupPatamar08_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 24);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -358,7 +358,19 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
 
 
-
+    private async void Label_iMinTasbCxSup_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 59);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iMinTasbCxSup_Write = (int)valor;
+        }
+        else
+        {
+            Console.WriteLine("Cancelado.");
+        }
+    }
 
 
 

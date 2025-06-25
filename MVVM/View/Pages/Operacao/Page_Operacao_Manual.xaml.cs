@@ -6,4 +6,9 @@ public partial class Page_Operacao_Manual : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_BtLdVacuoMesa01_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
