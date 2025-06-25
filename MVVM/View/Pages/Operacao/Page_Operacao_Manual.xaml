@@ -93,7 +93,7 @@
                 </Image.Behaviors>
             </Image>
             <Label
-                Text="{Binding fImgMotor_Read, StringFormat='{0:F1} Hz'}"
+                Text="{Binding fFreqMotorBomba01_Read, StringFormat='{0:F1} Hz'}"
                 FontSize="Large"
                 TextColor="{StaticResource Normal_Cor6}"
                 HorizontalTextAlignment="Center"
@@ -101,7 +101,7 @@
             <Button
                 x:Name="Button_BtLdVacuoMesa01"
                 BackgroundColor="{StaticResource Normal_Cor6}"
-                Text="{Binding fBtLdVacuoMesa01_Read, StringFormat='{0:F1} Hz'}"
+                Text="{Binding sCmdMotorBomba01_Legend, StringFormat='{0:F1} Hz'}"
                 Padding="3"
                 FontSize="Large"
                 TextColor="White"
