@@ -19,6 +19,24 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
     }
 
 
+    // Remover depois de testar---------------------------------------------------
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is VM_Page_Operacao_SupervisaodosTempos vm)
+            vm.StartAtualizacaoDI(); // Liga a leitura periódica
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        if (BindingContext is VM_Page_Operacao_SupervisaodosTempos vm)
+            vm.StopAtualizacaoDI(); // Evita leitura fora da tela
+    }
+    // Remover depois de testar---------------------------------------------------
+
+
+
     private async void sLabel_rTempCxSupPatamar01_OnLabelTapped(object sender, TappedEventArgs e)
     {
         // Cria o Popup passando o valor mínimo e máximo

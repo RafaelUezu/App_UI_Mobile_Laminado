@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MAUI_Opcua.Services.Communication.Variable;
+using MAUI_Opcua.Services.Drivers.Opcua;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Communication.Variable;
-using MAUI_Opcua.Services.Drivers.Opcua;
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 {
@@ -16,7 +17,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        /*
         public VM_Page_Operacao_SupervisaodosTempos()
         {
 
@@ -27,7 +28,32 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             };
 
         }
+        */
+        // Remover depois de testar---------------------------------------------------
+        private readonly System.Timers.Timer _timer;
 
+        public VM_Page_Operacao_SupervisaodosTempos()
+        {
+            _timer = new System.Timers.Timer(200); // 200 ms
+            _timer.Elapsed += Timer_Elapsed;
+            _timer.AutoReset = true;
+        }
+
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            MainThread.BeginInvokeOnMainThread(OnLeituraFinalizada);
+        }
+
+        public void StartAtualizacaoDI()
+        {
+            _timer?.Start();
+        }
+
+        public void StopAtualizacaoDI()
+        {
+            _timer?.Stop();
+        }
+        // Remover depois de testar---------------------------------------------------
         private void OnLeituraFinalizada()
         {
             MainThread.BeginInvokeOnMainThread(AtualizaValores);
@@ -36,7 +62,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 
         public void AtualizaValores()
         {
-
+            //var stopwatch = Stopwatch.StartNew();
             rTempCxSupPatamar01_Read = GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar01.Read ?? 0F;
             rTempCxSupPatamar02_Read = GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar02.Read ?? 0F;
             rTempCxSupPatamar03_Read = GVL.Opcua.GVL_IhmClp.rTempCxSupPatamar03.Read ?? 0F;
@@ -118,7 +144,9 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             wStatusPatamar06Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar06Sup.Read ?? 0;
             wStatusPatamar07Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar07Sup.Read ?? 0;
             wStatusPatamar08Sup_Read = GVL.Opcua.GVL_ClpIhm.wStatusPatamar08Sup.Read ?? 0;
+            //stopwatch.Stop(); // Para o cronômetro
 
+            //System.Diagnostics.Debug.WriteLine($"Tempo decorrido da Tela: {stopwatch.ElapsedMilliseconds} ms");
         }
 
 

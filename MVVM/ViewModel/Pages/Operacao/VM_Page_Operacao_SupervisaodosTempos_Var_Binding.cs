@@ -1380,8 +1380,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         #endregion
 
         #region Status dos estágios Superiores
-        private int _uStatusAquecimentoSup_Read;
-        public int uStatusAquecimentoSup_Read
+        private int? _uStatusAquecimentoSup_Read;
+        public int? uStatusAquecimentoSup_Read
         {
             get => _uStatusAquecimentoSup_Read;
             set
@@ -1389,14 +1389,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_uStatusAquecimentoSup_Read != value)
                 {
                     _uStatusAquecimentoSup_Read = value;
-                    cStatusAquecimentoSup_Color = ObterCorStatus(value);
-                    sStatusAquecimentoSup_Legend = ObterLegendaStatus(value);
+                    cStatusAquecimentoSup_Color = ObterCorStatus(value ?? 0);
+                    sStatusAquecimentoSup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa01Sup_Read;
-        public int wStatusRampa01Sup_Read
+        private int? _wStatusRampa01Sup_Read;
+        public int? wStatusRampa01Sup_Read
         {
             get => _wStatusRampa01Sup_Read;
             set
@@ -1404,14 +1404,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa01Sup_Read != value)
                 {
                     _wStatusRampa01Sup_Read = value;
-                    cStatusRampa01Sup_Color = ObterCorStatus(value);
-                    sStatusRampa01Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa01Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa01Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa02Sup_Read;
-        public int wStatusRampa02Sup_Read
+        private int? _wStatusRampa02Sup_Read;
+        public int? wStatusRampa02Sup_Read
         {
             get => _wStatusRampa02Sup_Read;
             set
@@ -1419,14 +1419,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa02Sup_Read != value)
                 {
                     _wStatusRampa02Sup_Read = value;
-                    cStatusRampa02Sup_Color = ObterCorStatus(value);
-                    sStatusRampa02Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa02Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa02Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa03Sup_Read;
-        public int wStatusRampa03Sup_Read
+        private int? _wStatusRampa03Sup_Read;
+        public int? wStatusRampa03Sup_Read
         {
             get => _wStatusRampa03Sup_Read;
             set
@@ -1434,14 +1434,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa03Sup_Read != value)
                 {
                     _wStatusRampa03Sup_Read = value;
-                    cStatusRampa03Sup_Color = ObterCorStatus(value);
-                    sStatusRampa03Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa03Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa03Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa04Sup_Read;
-        public int wStatusRampa04Sup_Read
+        private int? _wStatusRampa04Sup_Read;
+        public int? wStatusRampa04Sup_Read
         {
             get => _wStatusRampa04Sup_Read;
             set
@@ -1449,14 +1449,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa04Sup_Read != value)
                 {
                     _wStatusRampa04Sup_Read = value;
-                    cStatusRampa04Sup_Color = ObterCorStatus(value);
-                    sStatusRampa04Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa04Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa04Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa05Sup_Read;
-        public int wStatusRampa05Sup_Read
+        private int? _wStatusRampa05Sup_Read;
+        public int? wStatusRampa05Sup_Read
         {
             get => _wStatusRampa05Sup_Read;
             set
@@ -1464,14 +1464,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa05Sup_Read != value)
                 {
                     _wStatusRampa05Sup_Read = value;
-                    cStatusRampa05Sup_Color = ObterCorStatus(value);
-                    sStatusRampa05Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa05Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa05Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa06Sup_Read;
-        public int wStatusRampa06Sup_Read
+        private int? _wStatusRampa06Sup_Read;
+        public int? wStatusRampa06Sup_Read
         {
             get => _wStatusRampa06Sup_Read;
             set
@@ -1479,14 +1479,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa06Sup_Read != value)
                 {
                     _wStatusRampa06Sup_Read = value;
-                    cStatusRampa06Sup_Color = ObterCorStatus(value);
-                    sStatusRampa06Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa06Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa06Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa07Sup_Read;
-        public int wStatusRampa07Sup_Read
+        private int? _wStatusRampa07Sup_Read;
+        public int? wStatusRampa07Sup_Read
         {
             get => _wStatusRampa07Sup_Read;
             set
@@ -1494,14 +1494,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa07Sup_Read != value)
                 {
                     _wStatusRampa07Sup_Read = value;
-                    cStatusRampa07Sup_Color = ObterCorStatus(value);
-                    sStatusRampa07Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa07Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa07Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusRampa08Sup_Read;
-        public int wStatusRampa08Sup_Read
+        private int? _wStatusRampa08Sup_Read;
+        public int? wStatusRampa08Sup_Read
         {
             get => _wStatusRampa08Sup_Read;
             set
@@ -1509,15 +1509,15 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusRampa08Sup_Read != value)
                 {
                     _wStatusRampa08Sup_Read = value;
-                    cStatusRampa08Sup_Color = ObterCorStatus(value);
-                    sStatusRampa08Sup_Legend = ObterLegendaStatus(value);
+                    cStatusRampa08Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusRampa08Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
 
-        private int _wStatusPatamar01Sup_Read;
-        public int wStatusPatamar01Sup_Read
+        private int? _wStatusPatamar01Sup_Read;
+        public int? wStatusPatamar01Sup_Read
         {
             get => _wStatusPatamar01Sup_Read;
             set
@@ -1525,14 +1525,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar01Sup_Read != value)
                 {
                     _wStatusPatamar01Sup_Read = value;
-                    cStatusPatamar01Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar01Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar01Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar01Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar02Sup_Read;
-        public int wStatusPatamar02Sup_Read
+        private int? _wStatusPatamar02Sup_Read;
+        public int? wStatusPatamar02Sup_Read
         {
             get => _wStatusPatamar02Sup_Read;
             set
@@ -1540,14 +1540,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar02Sup_Read != value)
                 {
                     _wStatusPatamar02Sup_Read = value;
-                    cStatusPatamar02Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar02Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar02Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar02Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar03Sup_Read;
-        public int wStatusPatamar03Sup_Read
+        private int? _wStatusPatamar03Sup_Read;
+        public int? wStatusPatamar03Sup_Read
         {
             get => _wStatusPatamar03Sup_Read;
             set
@@ -1555,14 +1555,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar03Sup_Read != value)
                 {
                     _wStatusPatamar03Sup_Read = value;
-                    cStatusPatamar03Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar03Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar03Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar03Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar04Sup_Read;
-        public int wStatusPatamar04Sup_Read
+        private int? _wStatusPatamar04Sup_Read;
+        public int? wStatusPatamar04Sup_Read
         {
             get => _wStatusPatamar04Sup_Read;
             set
@@ -1570,14 +1570,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar04Sup_Read != value)
                 {
                     _wStatusPatamar04Sup_Read = value;
-                    cStatusPatamar04Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar04Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar04Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar04Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar05Sup_Read;
-        public int wStatusPatamar05Sup_Read
+        private int? _wStatusPatamar05Sup_Read;
+        public int? wStatusPatamar05Sup_Read
         {
             get => _wStatusPatamar05Sup_Read;
             set
@@ -1585,14 +1585,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar05Sup_Read != value)
                 {
                     _wStatusPatamar05Sup_Read = value;
-                    cStatusPatamar05Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar05Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar05Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar05Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar06Sup_Read;
-        public int wStatusPatamar06Sup_Read
+        private int? _wStatusPatamar06Sup_Read;
+        public int? wStatusPatamar06Sup_Read
         {
             get => _wStatusPatamar06Sup_Read;
             set
@@ -1600,14 +1600,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar06Sup_Read != value)
                 {
                     _wStatusPatamar06Sup_Read = value;
-                    cStatusPatamar06Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar06Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar06Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar06Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar07Sup_Read;
-        public int wStatusPatamar07Sup_Read
+        private int? _wStatusPatamar07Sup_Read;
+        public int? wStatusPatamar07Sup_Read
         {
             get => _wStatusPatamar07Sup_Read;
             set
@@ -1615,14 +1615,14 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar07Sup_Read != value)
                 {
                     _wStatusPatamar07Sup_Read = value;
-                    cStatusPatamar07Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar07Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar07Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar07Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
         }
-        private int _wStatusPatamar08Sup_Read;
-        public int wStatusPatamar08Sup_Read
+        private int? _wStatusPatamar08Sup_Read;
+        public int? wStatusPatamar08Sup_Read
         {
             get => _wStatusPatamar08Sup_Read;
             set
@@ -1630,8 +1630,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 if (_wStatusPatamar08Sup_Read != value)
                 {
                     _wStatusPatamar08Sup_Read = value;
-                    cStatusPatamar08Sup_Color = ObterCorStatus(value);
-                    sStatusPatamar08Sup_Legend = ObterLegendaStatus(value);
+                    cStatusPatamar08Sup_Color = ObterCorStatus(value ?? 0);
+                    sStatusPatamar08Sup_Legend = ObterLegendaStatus(value ?? 0);
                     OnPropertyChanged();
                 }
             }
@@ -2101,7 +2101,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             }
         }
 
-        private String ObterLegendaStatus(int status)
+        private string ObterLegendaStatus(int status)
         {
             return status switch
             {
@@ -2114,8 +2114,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         }
 
         #endregion
-
-
 
         #region Tempo da Bomba Ligada no Fim do Ciclo
         private int _iMinDecorTasbSup_Read;
