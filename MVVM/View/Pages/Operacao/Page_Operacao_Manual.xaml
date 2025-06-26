@@ -70,7 +70,7 @@
             >
         </HorizontalStackLayout>
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="50, 347, 100, 100"
+            AbsoluteLayout.LayoutBounds="50, 347, 100, 300"
             AbsoluteLayout.LayoutFlags="None"
             >
             <Label
@@ -80,32 +80,33 @@
                 HorizontalTextAlignment="Center"
                 />
             <Label
-                Text="{Binding sVacuo01Ok_Legend, StringFormat='{0:F1} Hz'}"
+                Text="{Binding sMotorBombaVacuo01_Status_Legend, StringFormat='{0:F1} Hz'}"
                 FontSize="Large"
-                TextColor="{Binding cVacuo01Ok_Color}"
+                TextColor="{Binding cMotorBombaVacuo01_Status_Color}"
                 HorizontalTextAlignment="Center"
                 />
             <Image
                 Source="bomba_vacuo_simbolo.png"
                 >
                 <Image.Behaviors>
-                    <toolkit:IconTintColorBehavior TintColor="{Binding cVacuo01Ok_Color}" />
+                    <toolkit:IconTintColorBehavior TintColor="{Binding cMotorBombaVacuo01_Status_Color}" />
                 </Image.Behaviors>
             </Image>
             <Label
-                Text="{Binding fFreqMotorBomba01_Read, StringFormat='{0:F1} Hz'}"
+                Text="{Binding fMotorBombaVacuo01_Freq_Read, StringFormat='{0:F1} Hz'}"
                 FontSize="Large"
                 TextColor="{StaticResource Normal_Cor6}"
                 HorizontalTextAlignment="Center"
             />
             <Button
-                x:Name="Button_BtLdVacuoMesa01"
                 BackgroundColor="{StaticResource Normal_Cor6}"
-                Text="{Binding sCmdMotorBomba01_Legend, StringFormat='{0:F1} Hz'}"
+                Text="{Binding sMotorBombaVacuo01_Cmd_Legend}"
                 Padding="3"
                 FontSize="Large"
                 TextColor="White"
                 Command="{Binding Button_BtLdVacuoMesa01_Command}"
+                WidthRequest="100"
+                HeightRequest="50"
                 />
         </VerticalStackLayout>
         <VerticalStackLayout

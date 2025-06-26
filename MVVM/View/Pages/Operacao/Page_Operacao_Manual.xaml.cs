@@ -1,14 +1,17 @@
-namespace App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao;
 
+
+namespace App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao;
+using App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao;
 public partial class Page_Operacao_Manual : ContentPage
 {
-	public Page_Operacao_Manual()
+	private readonly VM_Page_Operacao_Manual _viewModel;
+
+
+    public Page_Operacao_Manual()
 	{
 		InitializeComponent();
-	}
-
-    private void Button_BtLdVacuoMesa01_Clicked(object sender, EventArgs e)
-    {
-
+		_viewModel = new VM_Page_Operacao_Manual();
+		BindingContext = _viewModel;
     }
+
 }
