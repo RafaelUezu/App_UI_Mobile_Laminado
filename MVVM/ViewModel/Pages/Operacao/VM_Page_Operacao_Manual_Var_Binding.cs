@@ -390,6 +390,168 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         #endregion
 
         #region Resistência
+        private int? _uStatusAquecimentoSup_Read;
+        public int? uStatusAquecimentoSup_Read
+        {
+            get => _uStatusAquecimentoSup_Read;
+            set
+            {
+                if (_uStatusAquecimentoSup_Read != value)
+                {
+                    _uStatusAquecimentoSup_Read = value;
+                    cStatusAquecimentoSup_Color = ObterCorStatus_FornoGeral(value ?? 0);
+                    sStatusAquecimentoSup_Legend = ObterLegendaStatus_FornoGeral(value ?? 0);
+                    cStatusAquecimentoSup_Resist_Color = ObterCorStatus_Rsistencia(value ?? 0);
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color _cStatusAquecimentoSup_Color;
+        public Color cStatusAquecimentoSup_Color
+        {
+            get => _cStatusAquecimentoSup_Color;
+            set
+            {
+                if (_cStatusAquecimentoSup_Color != value)
+                {
+                    _cStatusAquecimentoSup_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusAquecimentoSup_Legend;
+        public string sStatusAquecimentoSup_Legend
+        {
+            get => _sStatusAquecimentoSup_Legend;
+            set
+            {
+                if (_sStatusAquecimentoSup_Legend != value)
+                {
+                    _sStatusAquecimentoSup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string ObterLegendaStatus_FornoGeral(int status)
+        {
+            return status switch
+            {
+                0 => "Desligado",
+                1 => "Ligado",
+                2 => "Finalizado",
+
+                _ => "Null"
+            };
+        }
+        private Color ObterCorStatus_FornoGeral(int status)
+        {
+            return status switch
+            {
+                0 => Colors.Red,
+                1 => Colors.Green,
+                2 => Colors.Gray,
+
+                _ => Colors.Yellow
+            };
+        }
+        private Color _cStatusAquecimentoSup_Resist_Color;
+        public Color cStatusAquecimentoSup_Resist_Color
+        {
+            get => _cStatusAquecimentoSup_Resist_Color;
+            set
+            {
+                if (_cStatusAquecimentoSup_Resist_Color != value)
+                {
+                    _cStatusAquecimentoSup_Resist_Color = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color ObterCorStatus_Rsistencia(int status)
+        {
+            return status switch
+            {
+                0 => Colors.Gray,
+                1 => Colors.Yellow,
+                2 => Colors.Gray,
+
+                _ => Colors.Yellow
+            };
+        }
+
+        private int? _uStatusAquecimentoCicloSup_Read;
+        public int? uStatusAquecimentoCicloSup_Read
+        {
+            get => _uStatusAquecimentoCicloSup_Read;
+            set
+            {
+                if (_uStatusAquecimentoCicloSup_Read != value)
+                {
+                    _uStatusAquecimentoCicloSup_Read = value;
+                    sStatusAquecimentoCicloSup_Legend = ObterLegendaStatus_FornoCiclo(value ?? 0);
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _sStatusAquecimentoCicloSup_Legend;
+        public string sStatusAquecimentoCicloSup_Legend
+        {
+            get => _sStatusAquecimentoCicloSup_Legend;
+            set
+            {
+                if (_sStatusAquecimentoCicloSup_Legend != value)
+                {
+                    _sStatusAquecimentoCicloSup_Legend = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string ObterLegendaStatus_FornoCiclo(int status)
+        {
+            return status switch
+            {
+                0 => "",
+                1 => "Rampa 01",
+                2 => "Rampa 01",
+                3 => "Patamar 01",
+                4 => "Patamar 01",
+                5 => "Rampa 02",
+                6 => "Rampa 02",
+                7 => "Patamar 02",
+                8 => "Patamar 02",
+                9 => "Rampa 03",
+                10 => "Rampa 03",
+                11 => "Patamar 03",
+                12 => "Patamar 03",
+                13 => "Rampa 04",
+                14 => "Rampa 04",
+                15 => "Patamar 04",
+                16 => "Patamar 04",
+                17 => "Rampa 05",
+                18 => "Rampa 05",
+                19 => "Patamar 05",
+                20 => "Patamar 05",
+                21 => "Rampa 06",
+                22 => "Rampa 06",
+                23 => "Patamar 06",
+                24 => "Patamar 06",
+                25 => "Rampa 07",
+                26 => "Rampa 07",
+                27 => "Patamar 07",
+                28 => "Patamar 07",
+                29 => "Rampa 08",
+                30 => "Rampa 08",
+                31 => "Patamar 08",
+                32 => "Patamar 08",
+
+
+                _ => "Null"
+            };
+        }
+  
 
         #endregion
 

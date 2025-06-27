@@ -29,7 +29,7 @@
         </Grid>
 
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="390, 50, 200, 200"
+            AbsoluteLayout.LayoutBounds="450, 20, 200, 200"
             AbsoluteLayout.LayoutFlags="None"
             >
             <Label
@@ -165,8 +165,8 @@
             >
             <Image
                 Source="thermometer.png"
-                HeightRequest="75"
-                WidthRequest="75"
+                HeightRequest="50"
+                WidthRequest="50"
                 >
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior
@@ -176,7 +176,7 @@
             </Image>
             <Label
                 Text="{Binding fTermoparSup01_Read, StringFormat='{0:F1} ºC'}"
-                FontSize="Large"
+                FontSize="Medium"
                 TextColor="{StaticResource Normal_Cor6}"
                 HorizontalTextAlignment="Center"
             />
@@ -210,7 +210,7 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="1000, 50, 200, 120"
+            AbsoluteLayout.LayoutBounds="950, 50, 300, 120"
             AbsoluteLayout.LayoutFlags="None"
             HorizontalOptions="Center">
             <Label
@@ -220,7 +220,7 @@
                 HorizontalTextAlignment="Center"
                 />
             <Label
-                Text="{Binding sStatusCiclosAquecimentoSup_Legend}"
+                Text="{Binding sStatusAquecimentoCicloSup_Legend}"
                 TextColor="Black"
                 FontSize="34"
                 HorizontalTextAlignment="Center"
