@@ -17,7 +17,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        /*
+        
         public VM_Page_Operacao_SupervisaodosTempos()
         {
 
@@ -28,8 +28,9 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             };
 
         }
-        */
+        
         // Remover depois de testar---------------------------------------------------
+        /*
         private readonly System.Timers.Timer _timer;
 
         public VM_Page_Operacao_SupervisaodosTempos()
@@ -53,6 +54,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         {
             _timer?.Stop();
         }
+        */
         // Remover depois de testar---------------------------------------------------
         private void OnLeituraFinalizada()
         {
@@ -188,8 +190,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             iMinDecorTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iMinDecorTotalSup.Read ?? 0;
             iSegDecorTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iSegDecorTotalSup.Read ?? 0;
 
-            iHorProgTotalSup_Read = GVL.Opcua.GVL_Permanentes.iHorProgTotalSup.Read ?? 0;
-            iMinProgTotalSup_Read = GVL.Opcua.GVL_Permanentes.iMinProgTotalSup.Read ?? 0;
+            iHorProgTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iHorProgTotalSup.Read ?? 0;
+            iMinProgTotalSup_Read = GVL.Opcua.GVL_ClpIhm.iMinProgTotalSup.Read ?? 0;
 
 
             //stopwatch.Stop(); // Para o cronômetro

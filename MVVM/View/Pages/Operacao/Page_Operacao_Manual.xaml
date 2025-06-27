@@ -23,7 +23,7 @@
                 Source="ventilador_frontal.png"
             >
                 <Image.Behaviors>
-                    <toolkit:IconTintColorBehavior TintColor="{Binding cImgMotor_Color}" />
+                    <toolkit:IconTintColorBehavior TintColor="{Binding cVentSup_Status_Color}" />
                 </Image.Behaviors>
             </Image>
         </Grid>
@@ -41,7 +41,7 @@
             <Button
                 x:Name="Button_BtLigaDesligaVentSup"
                 BackgroundColor="{StaticResource Normal_Cor6}"
-                Text="{Binding sBtLigaDesligaVentSup_Legend}"
+                Text="{Binding sVentSup_Status_Legend}"
                 FontSize="Medium"
                 Padding="0"
                 Margin="2"
@@ -51,8 +51,8 @@
             />
             <Label
                 Text="{Binding rFrequenciaAtualVentSup_Read, StringFormat='{0:F1} Hz'}"
-                FontSize="Large"
-                TextColor="{Binding cFrequenciaAtualVentSup_Color}"
+                FontSize="Medium"
+                TextColor="{StaticResource Normal_Cor6}"
                 HorizontalTextAlignment="Center"
             />
         </VerticalStackLayout>
@@ -70,7 +70,7 @@
             >
         </HorizontalStackLayout>
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="50, 347, 100, 300"
+            AbsoluteLayout.LayoutBounds="6, 373, 170, 350"
             AbsoluteLayout.LayoutFlags="None"
             >
             <Label
@@ -80,13 +80,16 @@
                 HorizontalTextAlignment="Center"
                 />
             <Label
-                Text="{Binding sMotorBombaVacuo01_Status_Legend, StringFormat='{0:F1} Hz'}"
-                FontSize="Large"
+                Text="{Binding sMotorBombaVacuo01_Status_Legend}"
+                FontSize="Medium"
                 TextColor="{Binding cMotorBombaVacuo01_Status_Color}"
                 HorizontalTextAlignment="Center"
                 />
             <Image
+                Margin="0"
                 Source="bomba_vacuo_simbolo.png"
+                HeightRequest="75"
+                WidthRequest="120"
                 >
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="{Binding cMotorBombaVacuo01_Status_Color}" />
@@ -94,15 +97,15 @@
             </Image>
             <Label
                 Text="{Binding fMotorBombaVacuo01_Freq_Read, StringFormat='{0:F1} Hz'}"
-                FontSize="Large"
+                FontSize="Medium"
                 TextColor="{StaticResource Normal_Cor6}"
                 HorizontalTextAlignment="Center"
             />
             <Button
-                BackgroundColor="{StaticResource Normal_Cor6}"
+                BackgroundColor="{Binding cMotorBombaVacuo01_Status_Color}"
                 Text="{Binding sMotorBombaVacuo01_Cmd_Legend}"
                 Padding="3"
-                FontSize="Large"
+                FontSize="Medium"
                 TextColor="White"
                 Command="{Binding Button_BtLdVacuoMesa01_Command}"
                 WidthRequest="100"
@@ -110,7 +113,7 @@
                 />
         </VerticalStackLayout>
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="120, 220, 125, 75"
+            AbsoluteLayout.LayoutBounds="120, 220, 125, 125"
             AbsoluteLayout.LayoutFlags="None"
             HorizontalOptions="Center"
             >
@@ -134,7 +137,26 @@
                 >
             </Button>
         </VerticalStackLayout>
-
+        <Grid
+            x:Name="PortaFornoSuperior"
+            AbsoluteLayout.LayoutBounds="355, 328, 654, 123"
+            AbsoluteLayout.LayoutFlags="None"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            IsVisible="True"
+            >
+            <Image
+                Source="bandeja_frontal_ecoeco.png"
+                WidthRequest="654"
+                HeightRequest="123"
+            />
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding sStatusPortaEsq_Legend}"
+                FontSize="Large"
+                TextColor="{Binding cStatusPortaEsq_Color}"                
+            />
+        </Grid>
 
         <VerticalStackLayout
             AbsoluteLayout.LayoutBounds="232, 350, 125, 75"
@@ -161,25 +183,7 @@
         </VerticalStackLayout>
 
             
-        <Grid
-            x:Name="PortaFornoSuperior"
-            AbsoluteLayout.LayoutBounds="355, 328, 654, 123"
-            AbsoluteLayout.LayoutFlags="None"
-            HorizontalOptions="Center"
-            IsVisible="True"
-            >
-            <Image
-                Source="bandeja_frontal_ecoeco.png"
-                WidthRequest="654"
-                HeightRequest="123"
-            />
-            <Label
-                HorizontalOptions="Center"
-                Text="{Binding sStatusPortaEsq_Legend}"
-                FontSize="Large"
-                TextColor="{Binding cStatusPortaEsq_Color}"                
-            />
-        </Grid>
+
         <VerticalStackLayout
             AbsoluteLayout.LayoutBounds="730, 50, 200, 100"
             AbsoluteLayout.LayoutFlags="None"
@@ -198,7 +202,7 @@
                 >
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior
-                        TintColor="{Binding cStatusAquecimentoSup_Color}"
+                        TintColor="{Binding cStatusAquecimentoSup_Resist_Color}"
                         />
                 </Image.Behaviors>
             </Image>
@@ -226,5 +230,6 @@
 
         </VerticalStackLayout>
 
+        
     </AbsoluteLayout>
 </ContentPage>

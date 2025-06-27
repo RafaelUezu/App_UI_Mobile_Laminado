@@ -20,6 +20,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
 
 
     // Remover depois de testar---------------------------------------------------
+    /*
     protected override void OnAppearing()
     {
         base.OnAppearing();
@@ -33,6 +34,7 @@ public partial class Page_Operacao_SupervisaodosTempos : ContentPage
         if (BindingContext is VM_Page_Operacao_SupervisaodosTempos vm)
             vm.StopAtualizacaoDI(); // Evita leitura fora da tela
     }
+    */
     // Remover depois de testar---------------------------------------------------
 
 

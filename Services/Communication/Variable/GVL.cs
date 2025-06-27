@@ -6585,7 +6585,86 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-
+                public static class iHorProgTotalSup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iMinProgTotalSup
+                {
+                    private static readonly object _lock = new object();
+                    private static int? _readValue;
+                    private static int? _writeValue;
+                    public static int? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static int? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
 
 
 
@@ -6994,12 +7073,12 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class iHorProgTotalSup
+                public static class rTemperaturaMinimaSup
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static float? _readValue;
+                    private static float? _writeValue;
+                    public static float? Read
                     {
                         get
                         {
@@ -7016,47 +7095,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _writeValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _writeValue = value;
-                            }
-                        }
-                    }
-                }
-                public static class iMinProgTotalSup
-                {
-                    private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _readValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _readValue = value;
-                            }
-                        }
-                    }
-                    public static int? Write
+                    public static float? Write
                     {
                         get
                         {

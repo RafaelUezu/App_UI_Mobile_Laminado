@@ -314,7 +314,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar07Sup"), AttributeId = Attributes.Value },//76
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPatamar08Sup"), AttributeId = Attributes.Value },//77
 
-
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorProgTotalSup"), AttributeId = Attributes.Value },//78
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinProgTotalSup"), AttributeId = Attributes.Value },//79
                             };
                             List<ReadValueId> nodesToRead_GVL_Permanentes = new List<ReadValueId>
                             {
@@ -329,8 +330,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoExaustorMinSup"), AttributeId = Attributes.Value },//8
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoAberturaSup"), AttributeId = Attributes.Value },//9
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorProgTotalSup"), AttributeId = Attributes.Value },//10
-                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinProgTotalSup"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.rTemperaturaMinimaSup"), AttributeId = Attributes.Value },//10
+
+                                
 
 
                             };
@@ -364,6 +366,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinCxSupPatamar08"), AttributeId = Attributes.Value },//23
 
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinTasbCxSup"), AttributeId = Attributes.Value },//24
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.BtLdVacuoMesa01"), AttributeId = Attributes.Value },//25
                             };
 
 
@@ -631,9 +634,25 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     GetValue = (_) => GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Write = null
                                 },
-
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.BtLdVacuoMesa01",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Write = null
+                                },
 
                             };
+
+                            var itemsToWrite_GVL_Permanentes = new List<OpcWriteItem>()
+                            {
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.rTemperaturaMinimaSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Write = null
+                                },
+                            };
+                                
 
                             List <List<OpcWriteItem>> allItemsToWrite = new()
                             {
@@ -1354,6 +1373,14 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         GVL.Opcua.GVL_ClpIhm.wStatusPatamar08Sup.Read = (int)(ushort)results_GVL_ClpIhm[77].Value;
                                     }
 
+                                    if (results_GVL_ClpIhm[78].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iHorProgTotalSup.Read = (short)(Int16)results_GVL_ClpIhm[78].Value;
+                                    }
+                                    if (results_GVL_ClpIhm[79].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.iMinProgTotalSup.Read = (short)(Int16)results_GVL_ClpIhm[78].Value;
+                                    }
 
 
                                     // GVL_Permanentes
@@ -1401,12 +1428,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
                                     if (results_GVL_Permanentes[10].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.iHorProgTotalSup.Read = (short)(Int16)results_GVL_Permanentes[10].Value;
+                                        GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Read = (float)results_GVL_Permanentes[10].Value;
                                     }
-                                    if (results_GVL_Permanentes[11].Value != null)
-                                    {
-                                        GVL.Opcua.GVL_Permanentes.iMinProgTotalSup.Read = (short)(Int16)results_GVL_Permanentes[11].Value;
-                                    }
+
 
                                     // GVL_IhmClp
 
@@ -1513,6 +1537,11 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     if (results_GVL_IhmClp[24].Value != null)
                                     {
                                         GVL.Opcua.GVL_IhmClp.iMinTasbCxSup.Read = (Int16)results_GVL_IhmClp[24].Value;
+                                    }
+
+                                    if (results_GVL_IhmClp[25].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Read = (bool)results_GVL_IhmClp[25].Value;
                                     }
 
                                     sw.Stop(); 
