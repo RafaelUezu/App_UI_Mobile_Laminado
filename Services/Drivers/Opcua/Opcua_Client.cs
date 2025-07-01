@@ -332,7 +332,15 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoAberturaSup"), AttributeId = Attributes.Value },//9
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.rTemperaturaMinimaSup"), AttributeId = Attributes.Value },//10
 
-                                
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLdomingo"), AttributeId = Attributes.Value },//11
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsegunda"), AttributeId = Attributes.Value },//12
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLterca"), AttributeId = Attributes.Value },//13
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLquarta"), AttributeId = Attributes.Value },//14
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLquinta"), AttributeId = Attributes.Value },//15
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsexta"), AttributeId = Attributes.Value },//16
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsabado"), AttributeId = Attributes.Value },//17
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uHorProgramado"), AttributeId = Attributes.Value },//18
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uMinProgramado"), AttributeId = Attributes.Value },//19
 
 
                             };
@@ -650,6 +658,60 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.rTemperaturaMinimaSup",
                                     GetValue = (_) => GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLdomingo",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLdomingo.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLdomingo.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsegunda",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLsegunda.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLsegunda.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLterca",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLterca.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLterca.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLquarta",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLquarta.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLquarta.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLquinta",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLquinta.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLquinta.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsexta",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLsexta.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLsexta.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsabado",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uLsabado.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uLsabado.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uHorProgramado",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uHorProgramado.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uHorProgramado.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uMinProgramado",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.uMinProgramado.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uMinProgramado.Write = null
                                 },
                             };
                                 
@@ -1429,6 +1491,42 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     if (results_GVL_Permanentes[10].Value != null)
                                     {
                                         GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Read = (float)results_GVL_Permanentes[10].Value;
+                                    }
+                                    if (results_GVL_Permanentes[11].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLdomingo.Read = (uint)results_GVL_Permanentes[11].Value;
+                                    }
+                                    if (results_GVL_Permanentes[12].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLsegunda.Read = (uint)results_GVL_Permanentes[12].Value;
+                                    }
+                                    if (results_GVL_Permanentes[13].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLterca.Read = (uint)results_GVL_Permanentes[13].Value;
+                                    }
+                                    if (results_GVL_Permanentes[14].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLquarta.Read = (uint)results_GVL_Permanentes[14].Value;
+                                    }
+                                    if (results_GVL_Permanentes[15].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLquinta.Read = (uint)results_GVL_Permanentes[15].Value;
+                                    }
+                                    if (results_GVL_Permanentes[16].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLsexta.Read = (uint)results_GVL_Permanentes[16].Value;
+                                    }
+                                    if (results_GVL_Permanentes[17].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uLsabado.Read = (uint)results_GVL_Permanentes[17].Value;
+                                    }
+                                    if (results_GVL_Permanentes[18].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uHorProgramado.Read = (uint)results_GVL_Permanentes[18].Value;
+                                    }
+                                    if (results_GVL_Permanentes[19].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.uMinProgramado.Read = (uint)results_GVL_Permanentes[19].Value;
                                     }
 
 

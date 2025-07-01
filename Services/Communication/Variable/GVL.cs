@@ -7114,6 +7114,376 @@ namespace MAUI_Opcua.Services.Communication.Variable
                     }
                 }
 
+                public static class uLdomingo
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uLsegunda
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uLterca
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uLquarta
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uLquinta
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uLsexta
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uLsabado
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uHorProgramado
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class uMinProgramado
+                {
+                    private static readonly object _lock = new object();
+                    private static uint? _readValue;
+                    private static uint? _writeValue;
+                    public static uint? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
 
             }
 
