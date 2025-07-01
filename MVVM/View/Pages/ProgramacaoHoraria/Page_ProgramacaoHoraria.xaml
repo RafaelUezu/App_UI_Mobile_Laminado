@@ -2,19 +2,367 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.ProgramacaoHoraria.Page_ProgramacaoHoraria"
-             Title="Page_ProgramacaoHoraria">
+             Title="Programação Horária"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Background="{StaticResource Normal_Cor6}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
-    
-    
-    
-    
-    
+        <VerticalStackLayout
+            Grid.Column="0"
+            >
+            <Label
+                Text="Programação Semanal"
+                TextColor="White"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                />
+            <VerticalStackLayout
+                Background="{StaticResource Normal_Cor5}"
+                Padding="5"
+                Margin="5"
+                >
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0">
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLdomingo_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Domingo_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Domindo"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0"
+                    >
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLsegunda_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Segunda_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Segunda"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0"
+                    >
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLterca_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Terca_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Terça"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0"
+                    >
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLquarta_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Quarta_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Quarta"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0"
+                    >
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLquinta_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Quinta_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Quinta"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0"
+                    >
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLsexta_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Sexta_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Sexta"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Padding="0"
+                    Margin="0"
+                    >
+                    <Grid>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            >
+                            <CheckBox
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsChecked="{Binding uLsabado_Read}"
+                                Color="Green"
+                                Scale="3"
+                            />
+                        </Frame>
+                        <Frame
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="-10"
+                            >
+                            <Button
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Button_Sabado_Command}"
+                                />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Text="Sabado"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="Large"
+                        />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>  
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="1"
+            >
+            <Label
+                Text="Programação Horária"
+                FontSize="Large"
+                TextColor="White"
+                HorizontalTextAlignment="Center"             
+                />
+            <VerticalStackLayout
+                Background="{StaticResource Normal_Cor5}"
+                Margin="5"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    <Label
+                        Text="HH:MM"
+                        FontSize="50"
+                        TextColor="{StaticResource Normal_Cor2}"
+                        HorizontalTextAlignment="Center" 
+                        />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                         Text="{Binding uHorProgramado_Read, StringFormat='{}{0:00}'}"
+                         TextColor="White"
+                         FontSize="Large"
+                         HorizontalTextAlignment="Center"
+                         >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Label_uHorProgramado_Read_OnLabelTapped"
+                            />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label
+                        Text=":"
+                        TextColor="{StaticResource Normal_Cor3}"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                    />
+                    <Label
+                        Text="{Binding uMinProgramado_Read, StringFormat='{}{0:00}'}"
+                        TextColor="White"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_uMinProgramado_Read_OnLabelTapped"
+                            />
+                    </Label.GestureRecognizers>
+                    </Label> 
+                    </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
+
+
+
+
     </Grid>
     
     

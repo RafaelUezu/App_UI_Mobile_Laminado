@@ -128,6 +128,104 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.ProgramacaoHorario
         }
 
         #endregion
+
+        #region xVariaveis de Leitura
+
+       
+        private bool _xLdomingo_Read;
+        public bool xLdomingo_Read
+        {
+            get => _xLdomingo_Read;
+            set
+            {
+                if (_xLdomingo_Read != value)
+                {
+                    _xLdomingo_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xLsegunda_Read;
+        public bool xLsegunda_Read
+        {
+            get => _xLsegunda_Read;
+            set
+            {
+                if (_xLsegunda_Read != value)
+                {
+                    _xLsegunda_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xLterca_Read;
+        public bool xLterca_Read
+        {
+            get => _xLterca_Read;
+            set
+            {
+                if (_xLterca_Read != value)
+                {
+                    _xLterca_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xLquarta_Read;
+        public bool xLquarta_Read
+        {
+            get => _xLquarta_Read;
+            set
+            {
+                if (_xLquarta_Read != value)
+                {
+                    _xLquarta_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xLquinta_Read;
+        public bool xLquinta_Read
+        {
+            get => _xLquinta_Read;
+            set
+            {
+                if (_xLquinta_Read != value)
+                {
+                    _xLquinta_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xLsexta_Read;
+        public bool xLsexta_Read
+        {
+            get => _xLsexta_Read;
+            set
+            {
+                if (_xLsexta_Read != value)
+                {
+                    _xLsexta_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xLsabado_Read;
+        public bool xLsabado_Read
+        {
+            get => _xLsabado_Read;
+            set
+            {
+                if (_xLsabado_Read != value)
+                {
+                    _xLsabado_Read = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        #endregion
+
+
         #region Variaveis de Leitura
         private uint? _uLdomingo_Write;
         public uint? uLdomingo_Write
