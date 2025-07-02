@@ -2,11 +2,218 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao.Page_Manutencao_Configuracao"
-             Title="Page_Manutencao_Configuracao">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Page_Manutencao_Configuracao"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Background="{StaticResource Normal_Cor6}"
+             >
+
+    <ScrollView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="600" />
+                <RowDefinition Height="600" />
+            </Grid.RowDefinitions>
+            <VerticalStackLayout>
+                <Label
+                    Text="Parâmetros OpcUA"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    />
+                <VerticalStackLayout
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="5"
+                    Background="{StaticResource Normal_Cor5}"
+                    >
+                    <Grid
+                        ColumnDefinitions="*,*,*"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="URL do Servidor"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Entry
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            Text="opc.tcp://10.10.210.20:4840"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="400"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Tempo de Ping"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Entry
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            Text="1000"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            />
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Tempo de Varredura"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Entry
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            Text="1000"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            />
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Duração da Requisição"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Label
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            Text="1000 "
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            />
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Status do Servidor"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Label
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            Text="Tentando Conexão"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            />
+                    </Grid>
+                    
+
+                </VerticalStackLayout>
+
+
+
+            </VerticalStackLayout>
+            
+
+
+
+
+        </Grid>
+    </ScrollView>
+
 </ContentPage>

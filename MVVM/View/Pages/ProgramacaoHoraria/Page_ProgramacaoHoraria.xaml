@@ -323,16 +323,20 @@
                         HorizontalTextAlignment="Center" 
                         />
                 </HorizontalStackLayout>
-                <HorizontalStackLayout>
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    >
                     <Label
                          Text="{Binding uHorProgramado_Read, StringFormat='{}{0:00}'}"
                          TextColor="White"
-                         FontSize="Large"
+                         FontSize="50"
                          HorizontalTextAlignment="Center"
+                        
                          >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Label_uHorProgramado_Read_OnLabelTapped"
+                                Tapped="Label_uHorProgramado_OnLabelTapped"
                             />
                         </Label.GestureRecognizers>
                     </Label>
@@ -340,18 +344,18 @@
                     <Label
                         Text=":"
                         TextColor="{StaticResource Normal_Cor3}"
-                        FontSize="Large"
+                        FontSize="50"
                         HorizontalTextAlignment="Center"
                     />
                     <Label
                         Text="{Binding uMinProgramado_Read, StringFormat='{}{0:00}'}"
                         TextColor="White"
-                        FontSize="Large"
+                        FontSize="50"
                         HorizontalTextAlignment="Center"
                     >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="Label_uMinProgramado_Read_OnLabelTapped"
+                            Tapped="Label_uMinProgramado_OnLabelTapped"
                             />
                     </Label.GestureRecognizers>
                     </Label> 

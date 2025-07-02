@@ -226,7 +226,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.ProgramacaoHorario
         #endregion
 
 
-        #region Variaveis de Leitura
+        #region Variaveis de Escrita
         private uint? _uLdomingo_Write;
         public uint? uLdomingo_Write
         {

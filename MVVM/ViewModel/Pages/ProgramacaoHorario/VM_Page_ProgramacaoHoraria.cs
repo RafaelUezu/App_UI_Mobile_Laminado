@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MAUI_Opcua.Services.Communication.Variable;
+using MAUI_Opcua.Services.Drivers.Opcua;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Communication.Variable;
-using MAUI_Opcua.Services.Drivers.Opcua;
+using System.Windows.Input;
 
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.ProgramacaoHorario
@@ -56,8 +57,96 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.ProgramacaoHorario
 
         public void EscreveValores()
         {
-        
-
+            if (uHorProgramado_Write.HasValue)
+            {
+                GVL.Opcua.GVL_Permanentes.uHorProgramado.Write = (uint)uHorProgramado_Write.Value;
+                uHorProgramado_Write = null;
+            }
+            if (uMinProgramado_Write.HasValue)
+            {
+                GVL.Opcua.GVL_Permanentes.uMinProgramado.Write = (uint)uMinProgramado_Write.Value;
+                uMinProgramado_Write = null;
+            }
         }
+
+        public ICommand Button_Domingo_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLdomingo.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLdomingo.Write = (uint)7;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLdomingo.Read == (uint)7)
+            {
+                GVL.Opcua.GVL_Permanentes.uLdomingo.Write = (uint)0;
+            }
+        });
+        public ICommand Button_Segunda_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLsegunda.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLsegunda.Write = (uint)1;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLsegunda.Read == (uint)1)
+            {
+                GVL.Opcua.GVL_Permanentes.uLsegunda.Write = (uint)0;
+            }
+        });
+        public ICommand Button_Terca_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLterca.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLterca.Write = (uint)2;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLterca.Read == (uint)2)
+            {
+                GVL.Opcua.GVL_Permanentes.uLterca.Write = (uint)0;
+            }
+        });
+        public ICommand Button_Quarta_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLquarta.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLquarta.Write = (uint)3;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLquarta.Read == (uint)3)
+            {
+                GVL.Opcua.GVL_Permanentes.uLquarta.Write = (uint)0;
+            }
+        });
+        public ICommand Button_Quinta_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLquinta.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLquinta.Write = (uint)4;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLquinta.Read == (uint)4)
+            {
+                GVL.Opcua.GVL_Permanentes.uLquinta.Write = (uint)0;
+            }
+        });
+        public ICommand Button_Sexta_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLsexta.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLsexta.Write = (uint)5;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLsexta.Read == (uint)5)
+            {
+                GVL.Opcua.GVL_Permanentes.uLsexta.Write = (uint)0;
+            }
+        });
+        public ICommand Button_Sabado_Command => new Command(() =>
+        {
+            if (GVL.Opcua.GVL_Permanentes.uLsabado.Read == (uint)0)
+            {
+                GVL.Opcua.GVL_Permanentes.uLsabado.Write = (uint)6;
+            }
+            if (GVL.Opcua.GVL_Permanentes.uLsabado.Read == (uint)6)
+            {
+                GVL.Opcua.GVL_Permanentes.uLsabado.Write = (uint)0;
+            }
+        });
+
+
     }
 }
