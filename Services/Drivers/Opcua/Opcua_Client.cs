@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao.VM_Page_Manutencao_Saidas;
+//using static App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao.VM_Page_Manutencao_Saidas;
 
 namespace MAUI_Opcua.Services.Drivers.Opcua
 {

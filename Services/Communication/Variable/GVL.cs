@@ -10,212 +10,293 @@ namespace MAUI_Opcua.Services.Communication.Variable
 {
     public partial class GVL
     {
-        public class ExitProgram
+        public class ConfSuper
         {
-            private static object lockObjectFor_xContinueRunning = new object();
-            private static bool? _xContinueRunning;
-            public static bool? xContinueRunning
+            public static class UrlOpcUa
             {
-                get
+                private static readonly object _lock = new object();
+                private static string? _readValue;
+                private static string? _writeValue;
+                public static string? Read
                 {
-                    lock (lockObjectFor_xContinueRunning)
+                    get
                     {
-                        return _xContinueRunning;
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
                     }
                 }
-                set
+                public static string? Write
                 {
-                    lock (lockObjectFor_xContinueRunning)
+                    get
                     {
-                        _xContinueRunning = value;
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
                     }
                 }
             }
-        }
-        public class StatusCamera
-        {
-            private static object lockObjectFor_xTesteIniciaRelatorioCameraEntrada = new object();
-            private static bool? _xTesteIniciaRelatorioCameraEntrada;
-            public static bool? xTesteIniciaRelatorioCameraEntrada
+            public static class TimeOutPing
             {
-                get
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? Read
                 {
-                    lock (lockObjectFor_xTesteIniciaRelatorioCameraEntrada)
+                    get
                     {
-                        return _xTesteIniciaRelatorioCameraEntrada;
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
                     }
                 }
-                set
+                public static int? Write
                 {
-                    lock (lockObjectFor_xTesteIniciaRelatorioCameraEntrada)
+                    get
                     {
-                        _xTesteIniciaRelatorioCameraEntrada = value;
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
                     }
                 }
             }
-            private static object lockObjectFor_xStatusCamera = new object();
-            private static bool? _xStatusCamera;
-            public static bool? xStatusCamera
+            public static class TimeRequest
             {
-                get
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? Read
                 {
-                    lock (lockObjectFor_xStatusCamera)
+                    get
                     {
-                        return _xStatusCamera;
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
                     }
                 }
-                set
+                public static int? Write
                 {
-                    lock (lockObjectFor_xStatusCamera)
+                    get
                     {
-                        _xStatusCamera = value;
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
                     }
                 }
             }
-            private static object lockObjectFor_sTempoRegistroCamera = new object();
-            private static string? _sTempoRegistroCamera;
-            public static string? sTempoRegistroCamera
+            public static class MaxAgeOpcUa
             {
-                get
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? Read
                 {
-                    lock (lockObjectFor_sTempoRegistroCamera)
+                    get
                     {
-                        return _sTempoRegistroCamera;
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
                     }
                 }
-                set
+                public static int? Write
                 {
-                    lock (lockObjectFor_sTempoRegistroCamera)
+                    get
                     {
-                        _sTempoRegistroCamera = value;
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
                     }
                 }
             }
-            private static object lockObjectFor_sIdUltimaCarga = new object();
-            private static string? _sIdUltimaCarga;
-            public static string? sIdUltimaCarga
+            public static class MedAgeOpcUa
             {
-                get
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? Read
                 {
-                    lock (lockObjectFor_sIdUltimaCarga)
+                    get
                     {
-                        return _sIdUltimaCarga;
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
                     }
                 }
-                set
+                public static int? Write
                 {
-                    lock (lockObjectFor_sIdUltimaCarga)
+                    get
                     {
-                        _sIdUltimaCarga = value;
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
                     }
                 }
             }
-        }
-        public class Tempo
-        {
-            private static object lockObjectFor_sDataCompleta = new object();
-            private static string? _sDataCompleta;
-            public static string? sDataCompleta
+            public static class MinAgeOpcUa
             {
-                get
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? Read
                 {
-                    lock (lockObjectFor_sDataCompleta)
+                    get
                     {
-                        return _sDataCompleta;
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
                     }
                 }
-                set
+                public static int? Write
                 {
-                    lock (lockObjectFor_sDataCompleta)
+                    get
                     {
-                        _sDataCompleta = value;
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
                     }
                 }
             }
-        }
+            public static class ZeroAgeOpcUa
+            {
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? Read
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
+                    }
+                }
+                public static int? Write
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _writeValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _writeValue = value;
+                        }
+                    }
+                }
+            }
 
-        public class StatusOpcua
-        {
-            private static object lockObjectFor_xStatusIp = new object();
-            private static bool? _xStatusIp;
-            public static bool? xStatusIp
-            {
-                get
-                {
-                    lock (lockObjectFor_xStatusIp)
-                    {
-                        return _xStatusIp;
-                    }
-                }
-                set
-                {
-                    lock (lockObjectFor_xStatusIp)
-                    {
-                        _xStatusIp = value;
-                    }
-                }
-            }
-            private static object lockObjectFor_xStatusOpcua = new object();
-            private static bool? _xStatusOpcua;
-            public static bool? xStatusOpcua
-            {
-                get
-                {
-                    lock (lockObjectFor_xStatusOpcua)
-                    {
-                        return _xStatusOpcua;
-                    }
-                }
-                set
-                {
-                    lock (lockObjectFor_xStatusOpcua)
-                    {
-                        _xStatusOpcua = value;
-                    }
-                }
-            }
-            private static object lockObjectFor_sTempoCheckIp = new object();
-            private static string? _sTempoCheckIp;
-            public static string? sTempoCheckIp
-            {
-                get
-                {
-                    lock (lockObjectFor_sTempoCheckIp)
-                    {
-                        return _sTempoCheckIp;
-                    }
-                }
-                set
-                {
-                    lock (lockObjectFor_sTempoCheckIp)
-                    {
-                        _sTempoCheckIp = value;
-                    }
-                }
-            }
-
-            private static object lockObjectFor_sTempoRequesicaoOpcua = new object();
-            private static string? _sTempoRequesicaoOpcua;
-            public static string? sTempoRequesicaoOpcua
-            {
-                get
-                {
-                    lock (lockObjectFor_sTempoRequesicaoOpcua)
-                    {
-                        return _sTempoRequesicaoOpcua;
-                    }
-                }
-                set
-                {
-                    lock (lockObjectFor_sTempoRequesicaoOpcua)
-                    {
-                        _sTempoRequesicaoOpcua = value;
-                    }
-                }
-            }
 
 
         }
+       
 
 
         public class Opcua
