@@ -1,9 +1,9 @@
 ﻿{
   "UrlOpcUa": "opc.tcp://10.10.210.20:4840",
   "TimeOutPing": 1000,
-  "TimeRequest": 600,
+  "TimeRequest": 500,
   "MaxAgeOpcUa": 100,
   "MedAgeOpcUa": 50,
-  "MinAgeOpcUa": 10,
+  "MinAgeOpcUa": 20,
   "ZeroAgeOpcUa": 0
 }

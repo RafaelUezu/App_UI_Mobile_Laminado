@@ -5,6 +5,7 @@ using App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
+using App_UI_Mobile_Laminado.Services.db.db_ConfSuper;
 
 namespace App_UI_Mobile_Laminado
 {
@@ -15,12 +16,20 @@ namespace App_UI_Mobile_Laminado
         public App(Opcua_Client driver)
         {
             InitializeComponent();
+            InicializarVariaveisPermanentes();
             _driver = driver;
             _driver.Start(); // Inicia driver ao abrir o app
             //MainPage = new Page_Manutencao_Manual();
             //MainPage = new Page_Login_Inicial();
             MainPage = new AppShell();
         }
+
+        private void InicializarVariaveisPermanentes()
+        {
+            db_ConfSuper _db_ConfSuper = new db_ConfSuper();
+            _db_ConfSuper.LoadConfigAsync();
+        }
+
 
         protected override void OnSleep()
         {

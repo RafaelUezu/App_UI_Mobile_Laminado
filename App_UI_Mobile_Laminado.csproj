@@ -96,7 +96,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="Services\db\db_ConfSuper\Json_ConfSuper.json">
+	  <Content Include="Resources\Raw\Json_ConfSuper.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
 	</ItemGroup>

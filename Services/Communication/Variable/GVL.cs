@@ -17,7 +17,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 private static readonly object _lock = new object();
                 private static string? _readValue;
                 private static string? _writeValue;
-                public static string? Read
+                public static string? ReadWrite
                 {
                     get
                     {
@@ -34,30 +34,14 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static string? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+              
             }
             public static class TimeOutPing
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
                 private static int? _writeValue;
-                public static int? Read
+                public static int? ReadWrite
                 {
                     get
                     {
@@ -74,30 +58,14 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static int? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+             
             }
             public static class TimeRequest
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
                 private static int? _writeValue;
-                public static int? Read
+                public static int? ReadWrite
                 {
                     get
                     {
@@ -114,30 +82,14 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static int? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+             
             }
             public static class MaxAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
                 private static int? _writeValue;
-                public static int? Read
+                public static int? ReadWrite
                 {
                     get
                     {
@@ -154,30 +106,14 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static int? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+             
             }
             public static class MedAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
                 private static int? _writeValue;
-                public static int? Read
+                public static int? ReadWrite
                 {
                     get
                     {
@@ -194,30 +130,14 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static int? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+              
             }
             public static class MinAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
                 private static int? _writeValue;
-                public static int? Read
+                public static int? ReadWrite
                 {
                     get
                     {
@@ -234,30 +154,14 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static int? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+               
             }
             public static class ZeroAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
                 private static int? _writeValue;
-                public static int? Read
+                public static int? ReadWrite
                 {
                     get
                     {
@@ -274,23 +178,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static int? Write
-                {
-                    get
-                    {
-                        lock (_lock)
-                        {
-                            return _writeValue;
-                        }
-                    }
-                    set
-                    {
-                        lock (_lock)
-                        {
-                            _writeValue = value;
-                        }
-                    }
-                }
+               
             }
 
 

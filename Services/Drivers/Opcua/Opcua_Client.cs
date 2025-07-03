@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 //using static App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao.VM_Page_Manutencao_Saidas;
 
 namespace MAUI_Opcua.Services.Drivers.Opcua
@@ -32,6 +33,21 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
     public class Opcua_Client
     {
+        public static string? ExtractIpFromUrl(string opcUaUrl)
+        {
+            if (string.IsNullOrWhiteSpace(opcUaUrl))
+                return null;
+
+            // Remove o prefixo opc.tcp://
+            var withoutProtocol = opcUaUrl.Replace("opc.tcp://", "");
+
+            // Quebra no ':'
+            var parts = withoutProtocol.Split(':');
+
+            // O IP deve ser a primeira parte
+            return parts.Length > 0 ? parts[0] : null;
+        }
+
         private CancellationTokenSource _cts;
         private Task _backgroundTask;
        
@@ -51,8 +67,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
         {
             if (IsRunning) return;
 
+
             _cts = new CancellationTokenSource();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, "10.10.210.20", 4840, 1000, "opc.tcp://10.10.210.20:4840", 700));
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.TimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.UrlOpcUa.ReadWrite ?? "opc.tcp://10.10.210.20:4840", GVL.ConfSuper.TimeRequest.ReadWrite ?? 700));
         }
 
         public async Task StopAsync()
@@ -99,7 +116,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             }
         }
 
-        private async Task RunLoop(CancellationToken token, string Ip, int port, int timeout_Ping_Ip, string urlopcua, int delay_request)
+        private async Task RunLoop(CancellationToken token, int timeout_Ping_Ip, string urlopcua, int delay_request)
         {
 
             System.Diagnostics.Debug.WriteLine("Inicializando o Driver: " + urlopcua);
@@ -112,7 +129,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             {
                 timeout_Ping_Ip = 500;
             }
-
+            string Ip = ExtractIpFromUrl(urlopcua);
             var Ping_Ip = new TCP_IP.Ping_IP(timeout_Ping_Ip, Ip); // IP, timeout (ms), porta
             bool online;
             int Error = 0;
@@ -728,7 +745,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             while (!token.IsCancellationRequested)
                             {
                                 System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("Error :" + Error));
-                                GVL.StatusOpcua.xStatusOpcua = false;
                                 if (Error >= 20)
                                 {
                                     break;
@@ -746,7 +762,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         await OpcUaEvents.DispararLeituraFinalizadaAsync();
                                         
                                         System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Métodos de leitura e escrita finalizados");
-                                        GVL.StatusOpcua.xStatusOpcua = true;
                                     }
                                     catch (Exception ex)
                                     {
