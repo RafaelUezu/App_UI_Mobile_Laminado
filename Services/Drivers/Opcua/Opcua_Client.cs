@@ -69,7 +69,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
 
             _cts = new CancellationTokenSource();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.TimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.UrlOpcUa.ReadWrite ?? "opc.tcp://10.10.210.20:4840", GVL.ConfSuper.TimeRequest.ReadWrite ?? 700));
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://10.10.210.20:4840", GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
         }
 
         public async Task StopAsync()

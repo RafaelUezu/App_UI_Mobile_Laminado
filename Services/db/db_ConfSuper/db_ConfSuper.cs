@@ -16,18 +16,33 @@ namespace App_UI_Mobile_Laminado.Services.db.db_ConfSuper
     {
         public async Task LoadConfigAsync()
         {
-            using var stream = await FileSystem.OpenAppPackageFileAsync("Json_ConfSuper.json");
-            using var reader = new StreamReader(stream);
-            string jsonContent = await reader.ReadToEndAsync();
-            var config = JsonSerializer.Deserialize<ConfSuperConfig>(jsonContent);
+            try
+            {
+                using var stream = await FileSystem.OpenAppPackageFileAsync("Json_ConfSuper.json");
+                using var reader = new StreamReader(stream);
+                string jsonContent = await reader.ReadToEndAsync();
 
-            GVL.ConfSuper.UrlOpcUa.ReadWrite = config?.UrlOpcUa ?? "opc.tcp://10.10.255.20:4840";
-            GVL.ConfSuper.TimeOutPing.ReadWrite = config?.TimeOutPing ?? 1000;
-            GVL.ConfSuper.TimeRequest.ReadWrite = config?.TimeRequest ?? 600;
-            GVL.ConfSuper.MaxAgeOpcUa.ReadWrite = config?.MaxAgeOpcUa ?? 100;
-            GVL.ConfSuper.MedAgeOpcUa.ReadWrite = config?.MaxAgeOpcUa ?? 50;
-            GVL.ConfSuper.MinAgeOpcUa.ReadWrite = config?.MinAgeOpcUa ?? 10;
-            GVL.ConfSuper.ZeroAgeOpcUa.ReadWrite = config?.ZeroAgeOpcUa ?? 0;
+                var config = JsonSerializer.Deserialize<ConfSuperConfig>(jsonContent);
+
+                if (config is null)
+                    throw new InvalidOperationException("Arquivo de configuração inválido.");
+
+                GVL.ConfSuper.sUrlOpcUa.ReadWrite = config.UrlOpcUa ?? "opc.tcp://10.10.255.20:4840";
+                GVL.ConfSuper.iTimeOutPing.ReadWrite = config.TimeOutPing ?? 1000;
+                GVL.ConfSuper.iTimeRequest.ReadWrite = config.TimeRequest ?? 600;
+                GVL.ConfSuper.iMaxAgeOpcUa.ReadWrite = config.MaxAgeOpcUa ?? 100;
+                GVL.ConfSuper.iMedAgeOpcUa.ReadWrite = config.MedAgeOpcUa ?? 50;
+                GVL.ConfSuper.iMinAgeOpcUa.ReadWrite = config.MinAgeOpcUa ?? 10;
+                GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite = config.ZeroAgeOpcUa ?? 0;
+            }
+            catch (Exception ex)
+            {
+                // Logar ou tratar exceção
+                System.Diagnostics.Debug.WriteLine($"Erro ao carregar config: {ex.Message}");
+
+                // Você decide: lançar novamente ou continuar com defaults
+                // throw;
+            }
         }
 
     }

@@ -51,7 +51,7 @@
                             TextColor="White"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="opc.tcp://10.10.210.20:4840"
+                            Text="{Binding sUrlOpcUa_ReadWrite}"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
@@ -73,19 +73,26 @@
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Start"
                         />
-                        <Entry
+
+                        <Label
+                            Text="{Binding iTimeOutPing_ReadWrite}"
                             Grid.Column="1"
                             Grid.ColumnSpan="2"
                             TextColor="White"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="1000"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="End"
                             WidthRequest="360"
-                            />
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_iTimeOutPing_OnLabelTapped"
+                                    />
+                            </Label.GestureRecognizers>
+                        </Label>
                         <Label
                             Grid.Column="3"
                             Text="ms"
@@ -111,19 +118,25 @@
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Start"
                         />
-                        <Entry
+                        <Label
+                            Text="{Binding iTimeRequest_ReadWrite}"
                             Grid.Column="1"
                             Grid.ColumnSpan="2"
                             TextColor="White"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="1000"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="End"
                             WidthRequest="360"
-                            />
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_iTimeRequest_OnLabelTapped"
+                                    />
+                            </Label.GestureRecognizers>
+                        </Label>
                         <Label
                             Grid.Column="3"
                             Text="ms"
@@ -136,11 +149,191 @@
                             />
                     </Grid>
                     <Grid
+                        ColumnDefinitions="*,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Text="Idade Máxima da Variavel"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Label
+                            Text="{Binding iMaxAgeOpcUa_ReadWrite}"
+                            Grid.Column="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_iMaxAgeOpcUa_OnLabelTapped"
+                                    />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Text="Idade Média da Variável"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Label
+                            Text="{Binding iMedAgeOpcUa_ReadWrite}"
+                            Grid.Column="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_iMedAgeOpcUa_OnLabelTapped"
+                                    />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Text="Idade Mínima da Variável"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Label
+                            Text="{Binding iMinAgeOpcUa_ReadWrite}"
+                            Grid.Column="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_iMinAgeOpcUa_OnLabelTapped"
+                                    />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="*,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Text="Idade Nula da Variável"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Label
+                            Text="{Binding iZeroAgeOpcUa_ReadWrite}"
+                            Grid.Column="2"
+                            TextColor="White"
+                            FontSize="Medium"
+                            Background="Transparent"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="End"
+                            WidthRequest="360"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_iZeroAgeOpcUa_OnLabelTapped"
+                                    />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            Grid.Column="3"
+                            Text="ms"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            />
+                    </Grid>
+                    
+                    
+                    
+                    <Grid
                         ColumnDefinitions="230,*,*,40"
                         Padding="5"
                         >
                         <Label
                             Grid.Column="0"
+                            Grid.ColumnSpan="2"
                             Text="Duração da Requisição"
                             FontSize="Medium"
                             TextColor="{StaticResource Normal_Cor2}"
@@ -150,12 +343,11 @@
                             HorizontalTextAlignment="Start"
                         />
                         <Label
-                            Grid.Column="1"
-                            Grid.ColumnSpan="2"
+                            Grid.Column="2"
                             TextColor="{StaticResource Normal_Cor2}"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="1000 "
+                            Text="1000"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
@@ -188,8 +380,7 @@
                             HorizontalTextAlignment="Start"
                         />
                         <Label
-                            Grid.Column="1"
-                            Grid.ColumnSpan="2"
+                            Grid.Column="3"
                             TextColor="{StaticResource Normal_Cor2}"
                             FontSize="Medium"
                             Background="Transparent"
@@ -201,7 +392,33 @@
                             WidthRequest="360"
                             />
                     </Grid>
-                    
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Text="Salvar Mudanças"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Salvar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="100"
+                            Command="{Binding Button_SaveOpcUaConfig_Command}"
+                            />
+                    </Grid>
+
 
                 </VerticalStackLayout>
 

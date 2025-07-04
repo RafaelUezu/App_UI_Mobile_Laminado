@@ -18,16 +18,23 @@ namespace App_UI_Mobile_Laminado
             InitializeComponent();
             InicializarVariaveisPermanentes();
             _driver = driver;
-            _driver.Start(); // Inicia driver ao abrir o app
-            //MainPage = new Page_Manutencao_Manual();
-            //MainPage = new Page_Login_Inicial();
             MainPage = new AppShell();
+            _driver.Start(); // Inicia driver ao abrir o app
+                             //MainPage = new Page_Manutencao_Manual();
+                             //MainPage = new Page_Login_Inicial();
+            _ = InitializeAppAsync();
         }
 
-        private void InicializarVariaveisPermanentes()
+        private async Task InitializeAppAsync()
         {
-            db_ConfSuper _db_ConfSuper = new db_ConfSuper();
-            _db_ConfSuper.LoadConfigAsync();
+            await InicializarVariaveisPermanentes();
+            _driver.Start();
+        }
+
+        private async Task InicializarVariaveisPermanentes()
+        {
+            var _db_ConfSuper = new db_ConfSuper();
+            await _db_ConfSuper.LoadConfigAsync();
         }
 
 

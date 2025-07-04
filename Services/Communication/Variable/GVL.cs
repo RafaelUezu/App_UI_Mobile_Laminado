@@ -12,7 +12,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
     {
         public class ConfSuper
         {
-            public static class UrlOpcUa
+            public static class sUrlOpcUa
             {
                 private static readonly object _lock = new object();
                 private static string? _readValue;
@@ -36,7 +36,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
               
             }
-            public static class TimeOutPing
+            public static class iTimeOutPing
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
@@ -60,7 +60,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
              
             }
-            public static class TimeRequest
+            public static class iTimeRequest
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
@@ -84,7 +84,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
              
             }
-            public static class MaxAgeOpcUa
+            public static class iMaxAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
@@ -108,7 +108,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
              
             }
-            public static class MedAgeOpcUa
+            public static class iMedAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
@@ -132,7 +132,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
               
             }
-            public static class MinAgeOpcUa
+            public static class iMinAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
@@ -156,7 +156,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
                
             }
-            public static class ZeroAgeOpcUa
+            public static class iZeroAgeOpcUa
             {
                 private static readonly object _lock = new object();
                 private static int? _readValue;
@@ -179,6 +179,54 @@ namespace MAUI_Opcua.Services.Communication.Variable
                     }
                 }
                
+            }
+            public static class iQueryTime
+            {
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? ReadWrite
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
+                    }
+                }
+            }
+
+
+            public static class sStatusOpcUa
+            {
+                private static readonly object _lock = new object();
+                private static string? _readValue;
+                private static string? _writeValue;
+                public static string? ReadWrite
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
+                    }
+                }
             }
 
 
