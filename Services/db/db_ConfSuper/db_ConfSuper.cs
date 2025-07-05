@@ -14,46 +14,84 @@ namespace App_UI_Mobile_Laminado.Services.db.db_ConfSuper
 {
     public class db_ConfSuper
     {
-        public async Task LoadConfigAsync()
+        private const string FileName = "Json_ConfSuper.json";
+        private readonly string _localPath;
+
+        public ConfSuperConfig Config { get; private set; } = new();
+
+        public db_ConfSuper()
         {
-            try
-            {
-                using var stream = await FileSystem.OpenAppPackageFileAsync("Json_ConfSuper.json");
-                using var reader = new StreamReader(stream);
-                string jsonContent = await reader.ReadToEndAsync();
-
-                var config = JsonSerializer.Deserialize<ConfSuperConfig>(jsonContent);
-
-                if (config is null)
-                    throw new InvalidOperationException("Arquivo de configuração inválido.");
-
-                GVL.ConfSuper.sUrlOpcUa.ReadWrite = config.UrlOpcUa ?? "opc.tcp://10.10.255.20:4840";
-                GVL.ConfSuper.iTimeOutPing.ReadWrite = config.TimeOutPing ?? 1000;
-                GVL.ConfSuper.iTimeRequest.ReadWrite = config.TimeRequest ?? 600;
-                GVL.ConfSuper.iMaxAgeOpcUa.ReadWrite = config.MaxAgeOpcUa ?? 100;
-                GVL.ConfSuper.iMedAgeOpcUa.ReadWrite = config.MedAgeOpcUa ?? 50;
-                GVL.ConfSuper.iMinAgeOpcUa.ReadWrite = config.MinAgeOpcUa ?? 10;
-                GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite = config.ZeroAgeOpcUa ?? 0;
-            }
-            catch (Exception ex)
-            {
-                // Logar ou tratar exceção
-                System.Diagnostics.Debug.WriteLine($"Erro ao carregar config: {ex.Message}");
-
-                // Você decide: lançar novamente ou continuar com defaults
-                // throw;
-            }
+            _localPath = Path.Combine(FileSystem.AppDataDirectory, FileName);
         }
 
+        /// <summary>
+        /// Inicializa a configuração copiando o JSON do pacote se necessário
+        /// </summary>
+        /// 
+
+        public async Task CopyFromPackageIfNotExistsAsync()
+        {
+            if (File.Exists(_localPath))
+            {
+                // Já existe no local, não copia
+                return;
+            }
+
+            using var stream = await FileSystem.OpenAppPackageFileAsync(FileName);
+            using var reader = new StreamReader(stream);
+            var content = await reader.ReadToEndAsync();
+
+            await File.WriteAllTextAsync(_localPath, content);
+        }
+
+        public async Task ResetToDefaultAsync()
+        {
+            using var stream = await FileSystem.OpenAppPackageFileAsync(FileName);
+            using var reader = new StreamReader(stream);
+            var content = await reader.ReadToEndAsync();
+
+            await File.WriteAllTextAsync(_localPath, content);
+
+            await LoadConfigAsync();
+        }
+
+        /// <summary>
+        /// Carrega o JSON local para o objeto Config
+        /// </summary>
+        public async Task<ConfSuperConfig> LoadConfigAsync()
+        {
+            if (!File.Exists(_localPath))
+                throw new FileNotFoundException($"Config file not found at {_localPath}");
+
+            var content = await File.ReadAllTextAsync(_localPath);
+
+            Config = JsonSerializer.Deserialize<ConfSuperConfig>(content)
+                     ?? new ConfSuperConfig();
+            return Config;
+        }
+
+        /// <summary>
+        /// Salva a configuração atual no arquivo JSON local
+        /// </summary>
+        public async Task SaveConfigAsync(ConfSuperConfig Config)
+        {
+            var content = JsonSerializer.Serialize(Config, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            await File.WriteAllTextAsync(_localPath, content);
+        }
     }
+
     public class ConfSuperConfig
     {
-        public string? UrlOpcUa { get; set; }
-        public int? TimeOutPing { get; set; }
-        public int? TimeRequest { get; set; }
-        public int? MaxAgeOpcUa { get; set; }
-        public int? MedAgeOpcUa { get; set; }
-        public int? MinAgeOpcUa { get; set; }
-        public int? ZeroAgeOpcUa { get; set; }
+        public string? sUrlOpcUa { get; set; }
+        public int? iTimeOutPing { get; set; }
+        public int? iTimeRequest { get; set; }
+        public int? iMaxAgeOpcUa { get; set; }
+        public int? iMedAgeOpcUa { get; set; }
+        public int? iMinAgeOpcUa { get; set; }
+        public int? iZeroAgeOpcUa { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using App_UI_Mobile_Laminado.Services.db.db_ConfSuper;
+using MAUI_Opcua.Services.Communication.Variable;
 
 namespace App_UI_Mobile_Laminado
 {
@@ -16,7 +17,6 @@ namespace App_UI_Mobile_Laminado
         public App(Opcua_Client driver)
         {
             InitializeComponent();
-            InicializarVariaveisPermanentes();
             _driver = driver;
             MainPage = new AppShell();
             _driver.Start(); // Inicia driver ao abrir o app
@@ -34,7 +34,15 @@ namespace App_UI_Mobile_Laminado
         private async Task InicializarVariaveisPermanentes()
         {
             var _db_ConfSuper = new db_ConfSuper();
-            await _db_ConfSuper.LoadConfigAsync();
+            await _db_ConfSuper.CopyFromPackageIfNotExistsAsync();
+            ConfSuperConfig confSuperConfig = await _db_ConfSuper.LoadConfigAsync();
+            GVL.ConfSuper.sUrlOpcUa.ReadWrite = confSuperConfig.sUrlOpcUa;
+            GVL.ConfSuper.iTimeOutPing.ReadWrite = confSuperConfig.iTimeOutPing;
+            GVL.ConfSuper.iTimeRequest.ReadWrite = confSuperConfig.iTimeRequest;
+            GVL.ConfSuper.iMaxAgeOpcUa.ReadWrite = confSuperConfig.iMaxAgeOpcUa;
+            GVL.ConfSuper.iMedAgeOpcUa.ReadWrite = confSuperConfig.iMedAgeOpcUa;
+            GVL.ConfSuper.iMinAgeOpcUa.ReadWrite = confSuperConfig.iMinAgeOpcUa;
+            GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite = confSuperConfig.iZeroAgeOpcUa;
         }
 
 

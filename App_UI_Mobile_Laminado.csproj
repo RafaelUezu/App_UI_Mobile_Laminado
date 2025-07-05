@@ -195,10 +195,4 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-
-
-	<ItemGroup>
-	  <Folder Include="Services\db\Config\" />
-	</ItemGroup>
-
 </Project>

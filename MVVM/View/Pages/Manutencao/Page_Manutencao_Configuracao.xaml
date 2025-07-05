@@ -18,7 +18,164 @@
                 <RowDefinition Height="600" />
                 <RowDefinition Height="600" />
             </Grid.RowDefinitions>
-            <VerticalStackLayout>
+            <VerticalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                >
+                <Label
+                    Text="Parâmetros de Banco de Dados"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    />
+                <VerticalStackLayout
+                    Margin="5"
+                    Background="{StaticResource Normal_Cor5}"
+                    >
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text="Resetar Arquivo de Parâmetros Permanentes"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Resetar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="100"
+                            Command="{Binding Button_ResetToDefaultConfSuper_Command}"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text="Resetar Banco de Dados das Receitas"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Resetar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="100"
+                            Command="{Binding Button_ResetToDefaultRecipe_Command}"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text="Resetar Banco de Dados de Alarmes"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Resetar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="100"
+                            Command="{Binding Button_ResetToDefaultAlarms_Command}"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text="Resetar Banco de Dados de Eventos"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Resetar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="100"
+                            Command="{Binding Button_ResetToDefaultEvents_Command}"
+                            />
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text="Resetar Banco de Dados de Relatórios"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Resetar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="100"
+                            Command="{Binding Button_ResetToDefaultReport_Command}"
+                            />
+                    </Grid>
+                </VerticalStackLayout>
+
+                
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                Grid.Row="0"
+                Grid.Column="1"
+                >
                 <Label
                     Text="Parâmetros OpcUA"
                     FontSize="Large"
@@ -26,8 +183,7 @@
                     TextColor="{StaticResource Normal_Cor3}"
                     />
                 <VerticalStackLayout
-                    Grid.Row="0"
-                    Grid.Column="0"
+
                     Margin="5"
                     Background="{StaticResource Normal_Cor5}"
                     >
@@ -347,7 +503,7 @@
                             TextColor="{StaticResource Normal_Cor2}"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="1000"
+                            Text="{Binding iQueryTime}"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
@@ -384,7 +540,7 @@
                             TextColor="{StaticResource Normal_Cor2}"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="Tentando Conexão"
+                            Text="{Binding sStatusOpcUa_ReadWrite}"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
@@ -398,6 +554,7 @@
                         >
                         <Label
                             Grid.Column="0"
+                            Grid.ColumnSpan="2"
                             Text="Salvar Mudanças"
                             FontSize="Medium"
                             TextColor="{StaticResource Normal_Cor2}"
@@ -421,8 +578,6 @@
 
 
                 </VerticalStackLayout>
-
-
 
             </VerticalStackLayout>
             

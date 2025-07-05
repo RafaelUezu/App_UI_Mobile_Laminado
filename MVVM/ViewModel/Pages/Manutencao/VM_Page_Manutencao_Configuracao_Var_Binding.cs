@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MAUI_Opcua.Services.Communication.Variable;
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 {
     public partial class VM_Page_Manutencao_Configuracao
     {
         #region Properties
 
-        private string _sUrlOpcUa_ReadWrite;
-        public string sUrlOpcUa_ReadWrite
+        private string? _sUrlOpcUa_ReadWrite;
+        public string? sUrlOpcUa_ReadWrite
         {
             get => _sUrlOpcUa_ReadWrite;
             set
@@ -97,6 +97,32 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
                 if (_iZeroAgeOpcUa_ReadWrite != value)
                 {
                     _iZeroAgeOpcUa_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _iQueryTime_ReadWrite;
+        public int iQueryTime_ReadWrite
+        {
+            get => _iQueryTime_ReadWrite;
+            set
+            {
+                if (_iQueryTime_ReadWrite != value)
+                {
+                    _iQueryTime_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string _sStatusOpcUa_ReadWrite;
+        public string sStatusOpcUa_ReadWrite
+        {
+            get => _sStatusOpcUa_ReadWrite;
+            set
+            {
+                if (_sStatusOpcUa_ReadWrite != value)
+                {
+                    _sStatusOpcUa_ReadWrite = value;
                     OnPropertyChanged();
                 }
             }

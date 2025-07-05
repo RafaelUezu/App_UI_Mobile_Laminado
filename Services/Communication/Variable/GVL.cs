@@ -203,8 +203,6 @@ namespace MAUI_Opcua.Services.Communication.Variable
                     }
                 }
             }
-
-
             public static class sStatusOpcUa
             {
                 private static readonly object _lock = new object();

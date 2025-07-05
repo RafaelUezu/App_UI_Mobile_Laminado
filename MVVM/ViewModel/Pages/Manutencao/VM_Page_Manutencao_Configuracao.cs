@@ -44,15 +44,83 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             iZeroAgeOpcUa_ReadWrite = GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite ?? 0;
         }
 
-        public ICommand Button_SaveOpcUaConfig_Command => new Command(() =>
+        public ICommand Button_SaveOpcUaConfig_Command => new Command(async () =>
         {
-            db_ConfSuper _dbConfSuper = new db_ConfSuper();
-            _dbConfSuper.LoadConfigAsync();
-            OnStartValue();
+            await SaveOpcUaConfigAsync();
+        });
+        public ICommand Button_ResetToDefaultConfSuper_Command => new Command(async () =>
+        {
+            await ResetToDefaultConfSuper();
+        });
+        public ICommand Button_ResetToDefaultRecipe_Command => new Command(async () =>
+        {
+
+        });
+        public ICommand Button_ResetToDefaultAlarms_Command => new Command(async () =>
+        {
+
+        });
+        public ICommand Button_ResetToDefaultEvents_Command => new Command(async () =>
+        {
+
+        });
+        public ICommand Button_ResetToDefaultReport_Command => new Command(async () =>
+        {
+
         });
 
-        public void AtualizaValores()
+
+        private async Task ResetToDefaultConfSuper()
         {
+            db_ConfSuper _dbConfSuper = new db_ConfSuper();
+            await _dbConfSuper.ResetToDefaultAsync();
+            ConfSuperConfig newConfig = await _dbConfSuper.LoadConfigAsync();
+            GVL.ConfSuper.sUrlOpcUa.ReadWrite = newConfig.sUrlOpcUa;
+            GVL.ConfSuper.iTimeOutPing.ReadWrite = newConfig.iTimeOutPing;
+            GVL.ConfSuper.iTimeRequest.ReadWrite = newConfig.iTimeRequest;
+            GVL.ConfSuper.iMaxAgeOpcUa.ReadWrite = newConfig.iMaxAgeOpcUa;
+            GVL.ConfSuper.iMedAgeOpcUa.ReadWrite = newConfig.iMedAgeOpcUa;
+            GVL.ConfSuper.iMinAgeOpcUa.ReadWrite = newConfig.iMinAgeOpcUa;
+            GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite = newConfig.iZeroAgeOpcUa;
+            OnStartValue();
+        }
+
+        private async Task SaveOpcUaConfigAsync()
+        {
+
+            db_ConfSuper _dbConfSuper = new db_ConfSuper();
+            ConfSuperConfig config = new ConfSuperConfig
+            {
+                sUrlOpcUa = sUrlOpcUa_ReadWrite,
+                iTimeOutPing = iTimeOutPing_ReadWrite,
+                iTimeRequest = iTimeRequest_ReadWrite,
+                iMaxAgeOpcUa = iMaxAgeOpcUa_ReadWrite,
+                iMedAgeOpcUa = iMedAgeOpcUa_ReadWrite,
+                iMinAgeOpcUa = iMinAgeOpcUa_ReadWrite,
+                iZeroAgeOpcUa = iZeroAgeOpcUa_ReadWrite
+            };
+
+            await _dbConfSuper.SaveConfigAsync(config);
+            ConfSuperConfig newConfig = await _dbConfSuper.LoadConfigAsync();
+            GVL.ConfSuper.sUrlOpcUa.ReadWrite = newConfig.sUrlOpcUa;
+            GVL.ConfSuper.iTimeOutPing.ReadWrite = newConfig.iTimeOutPing;
+            GVL.ConfSuper.iTimeRequest.ReadWrite = newConfig.iTimeRequest;
+            GVL.ConfSuper.iMaxAgeOpcUa.ReadWrite = newConfig.iMaxAgeOpcUa;
+            GVL.ConfSuper.iMedAgeOpcUa.ReadWrite = newConfig.iMedAgeOpcUa;
+            GVL.ConfSuper.iMinAgeOpcUa.ReadWrite = newConfig.iMinAgeOpcUa;
+            GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite = newConfig.iZeroAgeOpcUa;
+
+            OnStartValue();
+            
+        }
+        private void AtualizaValores()
+        {
+            iQueryTime_ReadWrite = GVL.ConfSuper.iQueryTime.ReadWrite ?? 0;
+            sStatusOpcUa_ReadWrite = GVL.ConfSuper.sStatusOpcUa.ReadWrite ?? "Error";
+        }
+        private void EscreveValores()
+        {
+
         }
     }
 }
