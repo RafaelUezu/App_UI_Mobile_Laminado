@@ -13,7 +13,7 @@ namespace App_UI_Mobile_Laminado.Services.db.db_BaseClass
         /// </summary>
         /// <param name="db_RecipeName">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
         /// <returns>Retorna true se a atualização for bem-sucedida; caso contrário, false.</returns>
-        public async Task<bool?> DropDatabaseIfExists(string db_RecipeName)
+        public async Task<bool?> DropDatabaseIfExistsAsync(string db_RecipeName)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace App_UI_Mobile_Laminado.Services.db.db_BaseClass
         /// </summary>
         /// <param name="db_RecipeName">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
         /// <returns>Retorna true se a atualização for bem-sucedida; caso contrário, false.</returns>
-        public async Task<bool?> ExistDatabase(string db_RecipeName)
+        public async Task<bool?> ExistDatabaseAsync(string db_RecipeName)
         {
             try
             {
