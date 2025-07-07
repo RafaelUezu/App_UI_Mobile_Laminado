@@ -265,7 +265,21 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
         /// <param name="RecipeName">Nome da Receita que sera deletada </param>
         /// <param name="db_RecipeName">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
         /// <returns>Retorna true se a atualização for bem-sucedida; caso contrário, false.</returns>
-        /// 
+        ///
+
+        public async Task<Data_RecipeSup?> SelectRecipeAsync(string RecipeName, string db_RecipeName)
+        {
+            try
+            {
+                return null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
         public async Task<bool?> DeleteRecipeAsync(string RecipeName, string db_RecipeName)
         {
             try

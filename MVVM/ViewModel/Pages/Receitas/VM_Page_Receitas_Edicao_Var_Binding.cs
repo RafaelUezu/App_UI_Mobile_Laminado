@@ -58,7 +58,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             get => _sName_ReadWrite;
             set
             {
-                if(_sName_ReadWrite != value)
+                if (_sName_ReadWrite != value)
                 {
                     _sName_ReadWrite = value;
                     OnPropertyChanged();
@@ -71,7 +71,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             get => _iMinutoRampa01_ReadWrite;
             set
             {
-                if(_iMinutoRampa01_ReadWrite != value)
+                if (_iMinutoRampa01_ReadWrite != value)
                 {
                     _iMinutoRampa01_ReadWrite = value;
                     OnPropertyChanged();
@@ -84,7 +84,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             get => _dTemperaturaSP01_ReadWrite;
             set
             {
-                if(_dTemperaturaSP01_ReadWrite != value)
+                if (_dTemperaturaSP01_ReadWrite != value)
                 {
                     _dTemperaturaSP01_ReadWrite = value;
                     OnPropertyChanged();
@@ -97,7 +97,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             get => _iHoraPatamar01_ReadWrite;
             set
             {
-                if(_iHoraPatamar01_ReadWrite != value)
+                if (_iHoraPatamar01_ReadWrite != value)
                 {
                     _iHoraPatamar01_ReadWrite = value;
                     OnPropertyChanged();
@@ -110,7 +110,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             get => _iMinutoPatamar01_ReadWrite;
             set
             {
-                if(_iMinutoPatamar01_ReadWrite != value)
+                if (_iMinutoPatamar01_ReadWrite != value)
                 {
                     _iMinutoPatamar01_ReadWrite = value;
                     OnPropertyChanged();
@@ -598,4 +598,5 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 }
             }
         }
+    }
 }

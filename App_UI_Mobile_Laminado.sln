@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_UI_Mobile_Laminado", "App_UI_Mobile_Laminado.csproj", "{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App_UI_Mobile_Laminado", "App_UI_Mobile_Laminado.csproj", "{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,9 +13,9 @@ Global
 		Release|ARM64 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|Any CPU.ActiveCfg = Debug|ARM64
+		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|Any CPU.Build.0 = Debug|ARM64
+		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|Any CPU.Deploy.0 = Debug|ARM64
 		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|ARM64.Build.0 = Debug|ARM64
 		{21CCCAB0-8C0D-4E97-A1C3-FDDC5D3922E6}.Debug|ARM64.Deploy.0 = Debug|ARM64
