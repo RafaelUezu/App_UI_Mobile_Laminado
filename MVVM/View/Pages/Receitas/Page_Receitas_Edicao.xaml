@@ -2,11 +2,616 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Receitas.Page_Receitas_Edicao"
-             Title="Page_Receitas_Edicao">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Criação e Edição de Receitas"
+             Background="{StaticResource Normal_Cor6}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="530" />
+            <ColumnDefinition Width="800" />
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout
+            Grid.Column="0"
+            >
+            
+            
+            
+        </VerticalStackLayout>
+        
+        
+        <ScrollView
+            Grid.Column="1"
+            >
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+
+                </Grid.RowDefinitions>
+
+                <!-- Linha Horizontal -->
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="7"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="8"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="9"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="10"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="11"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="12"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="13"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="14"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="15"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="16"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="17"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="18"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="19"
+                    Grid.ColumnSpan="5"
+                />
+                <BoxView
+                    Color="{StaticResource Normal_Cor5}"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Grid.Row="20"
+                    Grid.ColumnSpan="5"
+                />
+                <!--Legendas-->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Ciclo do Forno"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Tempos dos Estágios"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Rampa 01"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Text="Patamar 01"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Text="Rampa 02"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Text="Patamar 02"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Text="Rampa 03"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Text="Patamar 03"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Text="Rampa 04"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Text="Patamar 04"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    Text="Rampa 05"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="11"
+                    Grid.Column="0"
+                    Text="Patamar 05"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="12"
+                    Grid.Column="0"
+                    Text="Rampa 06"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="13"
+                    Grid.Column="0"
+                    Text="Patamar 06"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="14"
+                    Grid.Column="0"
+                    Text="Rampa 07"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="15"
+                    Grid.Column="0"
+                    Text="Patamar 07"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="16"
+                    Grid.Column="0"
+                    Text="Rampa 08"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <Label
+                    Grid.Row="17"
+                    Grid.Column="0"
+                    Text="Patamar 08"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+                <!--Temperaturas-->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Temperaturas"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    />
+                <Border
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP01_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP01_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                       HorizontalOptions="Center"
+                       >
+                        <Label 
+                            Text="{Binding dTemperaturaSP02_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP02_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP03_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP03_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP04_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP04_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="11"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP05_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP05_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="13"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP06_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP06_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="15"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP07_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP07_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="17"
+                    Grid.Column="1"
+                    Stroke="{StaticResource Normal_Cor2}"
+                    StrokeThickness="2"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 8"
+                    Margin="0,0,0,0"
+                    Padding="-8"
+                    >
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        >
+                        <Label 
+                            Text="{Binding dTemperaturaSP08_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                            FontSize="Large"
+                            TextColor="Red"
+                            Margin="0,0,0,0"
+                            VerticalTextAlignment="Center"
+                            >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="Label_dTemperaturaSP08_OnLabelTapped"
+                                />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                </Border>
+
+
+
+
+
+
+            </Grid>
+
+
+
+        </ScrollView>
+        
+        
+    </Grid>
 </ContentPage>

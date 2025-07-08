@@ -43,6 +43,10 @@ namespace App_UI_Mobile_Laminado
             GVL.ConfSuper.iMedAgeOpcUa.ReadWrite = confSuperConfig.iMedAgeOpcUa;
             GVL.ConfSuper.iMinAgeOpcUa.ReadWrite = confSuperConfig.iMinAgeOpcUa;
             GVL.ConfSuper.iZeroAgeOpcUa.ReadWrite = confSuperConfig.iZeroAgeOpcUa;
+            GVL.ConfSuper.iMaxTempRecipe.ReadWrite = confSuperConfig.iMaxTempRecipe;
+            GVL.ConfSuper.iMinTempRecipe.ReadWrite = confSuperConfig.iMinTempRecipe;
+            GVL.ConfSuper.iMaxTempOperation.ReadWrite = confSuperConfig.iMaxTempOperation;
+            GVL.ConfSuper.iMinTempOperation.ReadWrite = confSuperConfig.iMinTempOperation;
         }
 
 

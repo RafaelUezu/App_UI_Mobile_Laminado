@@ -128,8 +128,62 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
         }
 
+
         #endregion
 
-
+        #region Parametros de limitação de campos
+        private int _iMaxTempRecipe_ReadWrite;
+        public int iMaxTempRecipe_ReadWrite
+        {
+            get => _iMaxTempRecipe_ReadWrite;
+            set
+            {
+                if (_iMaxTempRecipe_ReadWrite != value)
+                {
+                    _iMaxTempRecipe_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _iMinTempRecipe_ReadWrite;
+        public int iMinTempRecipe_ReadWrite
+        {
+            get => _iMinTempRecipe_ReadWrite;
+            set
+            {
+                if (_iMinTempRecipe_ReadWrite != value)
+                {
+                    _iMinTempRecipe_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _iMaxTempOperation_ReadWrite;
+        public int iMaxTempOperation_ReadWrite
+        {
+            get => _iMaxTempOperation_ReadWrite;
+            set
+            {
+                if (_iMaxTempOperation_ReadWrite != value)
+                {
+                    _iMaxTempOperation_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private int _iMinTempOperation_ReadWrite;
+        public int iMinTempOperation_ReadWrite
+        {
+            get => _iMinTempOperation_ReadWrite;
+            set
+            {
+                if (_iMinTempOperation_ReadWrite != value)
+                {
+                    _iMinTempOperation_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        #endregion
     }
 }

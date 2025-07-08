@@ -69,5 +69,41 @@ public partial class Page_Manutencao_Configuracao : ContentPage
             _viewModel.iZeroAgeOpcUa_ReadWrite = (int)valor;
         }
     }
+    private async void Label_iMaxTempRecipe_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 10000);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iMaxTempRecipe_ReadWrite = (int)valor;
+        }
+    }
+    private async void Label_iMinTempRecipe_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 10000);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iMinTempRecipe_ReadWrite = (int)valor;
+        }
+    }
+    private async void Label_iMaxTempOperation_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 10000);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iMaxTempOperation_ReadWrite = (int)valor;
+        }
+    }
+    private async void Label_iMinTempOperation_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 10000);
+        var resultado = await this.ShowPopupAsync(popup);
+        if (resultado is double valor)
+        {
+            _viewModel.iMinTempOperation_ReadWrite = (int)valor;
+        }
+    }
 
 }

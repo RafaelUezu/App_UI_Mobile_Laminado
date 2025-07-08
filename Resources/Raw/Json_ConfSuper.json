@@ -5,5 +5,9 @@
   "iMaxAgeOpcUa": 100,
   "iMedAgeOpcUa": 50,
   "iMinAgeOpcUa": 20,
-  "iZeroAgeOpcUa": 0
+  "iZeroAgeOpcUa": 0,
+  "iMaxTempRecipe": 155,
+  "iMinTempRecipe": 0,
+  "iMaxTempOperation": 155, 
+  "iMinTempOperation": 0
 }

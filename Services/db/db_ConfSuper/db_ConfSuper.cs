@@ -93,5 +93,9 @@ namespace App_UI_Mobile_Laminado.Services.db.db_ConfSuper
         public int? iMedAgeOpcUa { get; set; }
         public int? iMinAgeOpcUa { get; set; }
         public int? iZeroAgeOpcUa { get; set; }
+        public int? iMaxTempRecipe { get; set; }
+        public int? iMinTempRecipe { get; set; }
+        public int? iMaxTempOperation { get; set; }
+        public int? iMinTempOperation { get; set; }
     }
 }
