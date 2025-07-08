@@ -21,12 +21,12 @@ public partial class Page_Receitas_Edicao : ContentPage
         BindingContext = _viewModel;
 	}
 
-    //int MaxValue = GVL.ConfSuper;
-
+    int iMaxTempRecipe = GVL.ConfSuper.iMaxTempRecipe.ReadWrite ?? 145;
+    int iMinTempRecipe = GVL.ConfSuper.iMinTempRecipe.ReadWrite ?? 0;
     private async void Label_dTemperaturaSP01_OnLabelTapped(object sender, TappedEventArgs e)
     {
         // Cria o Popup passando o valor mínimo e máximo
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
 
         // Abre o Popup e espera o retorno
         var resultado = await this.ShowPopupAsync(popup);
@@ -45,7 +45,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP02_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -58,7 +58,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP03_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -71,7 +71,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP04_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -84,7 +84,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP05_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -97,7 +97,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP06_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -110,7 +110,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP07_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -123,7 +123,7 @@ public partial class Page_Receitas_Edicao : ContentPage
     }
     private async void Label_dTemperaturaSP08_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 155);
+        var popup = new NumericEntryPopup(valorMinimo: iMinTempRecipe, valorMaximo: iMaxTempRecipe);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {

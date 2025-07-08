@@ -8,50 +8,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
 {
     public partial class VM_Page_Receitas_Edicao
     {
-        /*
-        $sName,
-        $iMinutoRampa01,
-        $dTemperaturaSP01,
-        $iHoraPatamar01,
-        $iMinutoPatamar01,
-        $iMinutoRampa02,
-        $dTemperaturaSP02,
-        $iHoraPatamar02,
-        $iMinutoPatamar02,
-        $iMinutoRampa03,
-        $dTemperaturaSP03,
-        $iHoraPatamar03,
-        $iMinutoPatamar03,
-        $iMinutoRampa04,
-        $dTemperaturaSP04,
-        $iHoraPatamar04,
-        $iMinutoPatamar04,
-        $iMinutoRampa05,
-        $dTemperaturaSP05,
-        $iHoraPatamar05,
-        $iMinutoPatamar05,
-        $iMinutoRampa06,
-        $dTemperaturaSP06,
-        $iHoraPatamar06,
-        $iMinutoPatamar06,
-        $iMinutoRampa07,
-        $dTemperaturaSP07,
-        $iHoraPatamar07,
-        $iMinutoPatamar07,
-        $iMinutoRampa08,
-        $dTemperaturaSP08,
-        $iHoraPatamar08,
-        $iMinutoPatamar08,
-        $iBombaPatamar01,
-        $iBombaPatamar02,
-        $iBombaPatamar03,
-        $iBombaPatamar04,
-        $iBombaPatamar05,
-        $iBombaPatamar06,
-        $iBombaPatamar07,
-        $iBombaPatamar08,
-        $iTempoBombaFim
-        */
+      
         private string _sName_ReadWrite = string.Empty;
         public string sName_ReadWrite
         {
