@@ -2,30 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Receitas.Page_Receitas_Edicao"
+             xmlns:vm="clr-namespace:App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas"
+             x:DataType="vm:VM_Page_Receitas_Edicao"
              Title="Criação e Edição de Receitas"
              Background="{StaticResource Normal_Cor6}">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="530" />
-            <ColumnDefinition Width="800" />
-        </Grid.ColumnDefinitions>
 
-        <VerticalStackLayout
-            Grid.Column="0"
-            >
-            
-            
-            
-        </VerticalStackLayout>
         
-        
-        <ScrollView
-            Grid.Column="1"
-            >
+        <ScrollView>
             <Grid>
                 <Grid.ColumnDefinitions>
 
-                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -34,8 +20,8 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
 
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
 
                     <RowDefinition Height="40" />
                     <RowDefinition Height="40" />
@@ -63,23 +49,26 @@
                     <RowDefinition Height="40" />
 
                 </Grid.RowDefinitions>
-
+                <!-- Cabeçalho -->
+                
+                
+                
                 <!-- Linha Horizontal -->
-                <BoxView
+            <BoxView
                     Color="{StaticResource Normal_Cor5}"
                     HeightRequest="1"
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="0"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
-                <BoxView
+            <BoxView
                     Color="{StaticResource Normal_Cor5}"
                     HeightRequest="1"
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="1"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -87,7 +76,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="2"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -95,7 +84,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="3"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -103,7 +92,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="4"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -111,7 +100,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="5"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -119,7 +108,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="6"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -127,7 +116,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="7"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -135,7 +124,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="8"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -143,7 +132,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="9"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -151,7 +140,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="10"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -159,7 +148,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="11"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -167,7 +156,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="12"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -175,7 +164,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="13"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -183,7 +172,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="14"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -191,7 +180,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="15"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -199,7 +188,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="16"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -207,7 +196,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="17"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -215,7 +204,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="18"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -223,7 +212,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="19"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
                 <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -235,16 +224,11 @@
                 />
                 <!--Legendas-->
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Text="Ciclo do Forno"
-                    TextColor="{StaticResource Normal_Cor3}"
-                    FontSize="Large"
-                />
-                <Label
                     Grid.Row="1"
                     Grid.Column="0"
-                    Text="Tempos dos Estágios"
+                    Text="Estágios dos Cilos"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
                     TextColor="{StaticResource Normal_Cor3}"
                     FontSize="Large"
                 />
@@ -362,12 +346,13 @@
                 />
                 <!--Temperaturas-->
                 <Label
-                    Grid.Row="0"
+                    Grid.Row="1"
                     Grid.Column="1"
                     Text="Temperaturas"
                     TextColor="{StaticResource Normal_Cor3}"
                     FontSize="Large"
-                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
                     />
                 <Border
                     Grid.Row="3"
@@ -601,17 +586,586 @@
                     </HorizontalStackLayout>
                 </Border>
 
+            <!--Tempos Programado-->
+            <VerticalStackLayout
+                Grid.Row="1"
+                Grid.Column="2"
+                >
+                <Label
+                Text="Tempo Decorrido"
+                TextColor="{StaticResource Normal_Cor3}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                />
+                <HorizontalStackLayout
+                 HorizontalOptions="Center"
+                 >
+                    <Label
+                     Text="HH"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                    <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                    <Label
+                     Text="MM"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout
+                 Grid.Row="2"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                    Text="{Binding iMinutoRampa01_ReadWrite, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa01_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="3"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar01_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar01_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar01_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoPatamar01_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="4"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa02_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa02_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="5"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar02_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar02_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar02_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoPatamar02_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="6"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa03_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa03_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="7"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar03_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar03_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar03_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoPatamar03_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="8"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa04_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa04_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="9"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar04_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar04_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar04_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoPatamar04_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="10"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa05_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa05_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="11"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar05_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar05_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar05_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="Label_iMinutoPatamar05_OnLabelTapped"
+                     />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="12"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa06_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa06_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="13"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar06_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar06_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text=":"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                     Text="{Binding iMinutoPatamar06_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoPatamar06_OnLabelTapped"
+                            />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="14"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa07_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa07_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="15"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar07_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar07_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar07_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoPatamar07_OnLabelTapped"
+                            />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="16"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="00"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text=":"
+                     TextColor="Transparent"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoRampa08_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="Label_iMinutoRampa08_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                 Grid.Row="17"
+                 Grid.Column="2"
+                 HorizontalOptions="Center"
+                 >
+                <Label
+                     Text="{Binding iHoraPatamar08_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="Label_iHoraPatamar08_OnLabelTapped"
+                         />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                     Text=":"
+                     TextColor="{StaticResource Normal_Cor3}"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                 />
+                <Label
+                     Text="{Binding iMinutoPatamar08_ReadWrite, StringFormat='{}{0:00}'}"
+                     TextColor="White"
+                     FontSize="Large"
+                     HorizontalTextAlignment="Center"
+                     >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="Label_iMinutoPatamar08_OnLabelTapped"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
 
 
 
 
-
-            </Grid>
+        </Grid>
 
 
 
         </ScrollView>
         
         
-    </Grid>
+ 
 </ContentPage>
