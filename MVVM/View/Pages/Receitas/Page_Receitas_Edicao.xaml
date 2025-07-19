@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Receitas.Page_Receitas_Edicao"
              xmlns:vm="clr-namespace:App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas"
-
+             xmlns:control="clr-namespace:App_UI_Mobile_Laminado.Commands.UserControl"
              x:DataType="vm:VM_Page_Receitas_Edicao"
              Title="Criação e Edição de Receitas"
              Background="{StaticResource Normal_Cor6}">
@@ -1224,27 +1224,29 @@
                 HorizontalTextAlignment="Center"
                 />
 
+
             <HorizontalStackLayout
                 Grid.Row="2"
+                Grid.RowSpan="2"
                 Grid.Column="3"
-                VerticalOptions="End"
-                HorizontalOptions="End"
                 >
-                <AbsoluteLayout
-                    
+                <control:UC_Switch
 
-                    >
-                    <Switch
-                        HorizontalOptions="Center"
-
-
-                        Scale="3"
-                        AbsoluteLayout.LayoutBounds="-120, 0, 80, 80"
-                        AbsoluteLayout.LayoutFlags="None" 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar01_ReadWrite}"
                     />
-                </AbsoluteLayout>
+                <Label
+                    
+                    
+                    
+                    />
 
             </HorizontalStackLayout>
+  
+
 
         </Grid>
 

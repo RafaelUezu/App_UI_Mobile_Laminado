@@ -555,5 +555,9 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 }
             }
         }
+
+
+
+
     }
 }
