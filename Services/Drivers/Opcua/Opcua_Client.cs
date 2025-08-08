@@ -404,9 +404,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.BtLdVacuoMesa01"), AttributeId = Attributes.Value },//25
                             };
 
-
-
-
                             RequestHeader requestHeader_GVL_EntradasSaidas = new RequestHeader();
                             double maxAge_GVL_EntradasSaidas = 0;
                             TimestampsToReturn timestampsToReturn_GVL_EntradasSaidas = TimestampsToReturn.Both;
@@ -750,13 +747,12 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 itemsToWrite_GVL_IhmClp
                             };
 
-
-
                             while (!token.IsCancellationRequested)
                             {
                                 System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("Error :" + Error));
                                 if (Error >= 20)
                                 {
+                                    ErrorWriteDataAsync();
                                     break;
                                 }
                                 online = await Ping_Ip.PingHostAsync();
@@ -788,6 +784,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 else
                                 {
                                     GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Tentando Conexão";
+                                    ErrorWriteDataAsync();
                                     await OpcUaEvents.DispararLeituraFinalizadaAsync();
                                     await Task.Delay(timeout_Ping_Ip, token); // Delay controlado
                                     System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Dispositivo desconectado. A leitura e escrita não serão efetuadas");
@@ -882,6 +879,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na leitura do OPC UA");
                                     Error = Error + 1;
                                     GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Leitura";
+
                                     await OpcUaEvents.DispararLeituraFinalizadaAsync();
                                     return;
                                 }
@@ -931,8 +929,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         }
                                     }
 
-
-
                                     sw.Stop();
                                     System.Diagnostics.Debug.WriteLine($"Tempo de Escrita " + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
                                 }
@@ -940,10 +936,39 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 {
                                     System.Diagnostics.Debug.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}: Erro na escrita do OPC UA - {ex.Message}");
                                     GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Escrita";
+                                    ErrorWriteDataAsync();
                                     Error++;
                                 }
                             }
+                            async Task ErrorWriteDataAsync()
+                            {
+                                try
+                                {
+                                    var allItems = allItemsToWrite.SelectMany(group => group).ToList();
+                                    var validItems = new List<OpcWriteItem>();
+                                    var nodesToWrite = new WriteValueCollection();
 
+                                    if (nodesToWrite.Count > 0)
+                                    {
+                                        session.Write(null, nodesToWrite, out StatusCodeCollection results, out DiagnosticInfoCollection diagnosticInfos);
+                                        for (int i = 0; i < results.Count; i++)
+                                        {
+                                            if (StatusCode.IsGood(results[i]))
+                                            {
+                                                validItems[i].Clear(); // usa método .Clear() que chama o ClearWriteFlag(Index)
+                                            }
+                                            else
+                                            {
+                                                System.Diagnostics.Debug.WriteLine($"Erro ao escrever {nodesToWrite[i].NodeId}: {results[i]}");
+                                            }
+                                        }
+                                    }
+                                }
+                                catch
+                                {
+                                    return;
+                                }
+                            }
                             async Task AscribeDataAsync()
                             {
                                 try
@@ -1702,6 +1727,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                     }
                     else
                     {
+                        
                         GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Tentando Conexão";
                         await OpcUaEvents.DispararLeituraFinalizadaAsync();
                         await Task.Delay(timeout_Ping_Ip, token); // Delay controlado

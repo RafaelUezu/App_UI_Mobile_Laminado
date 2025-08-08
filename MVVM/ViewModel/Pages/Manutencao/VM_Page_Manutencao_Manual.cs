@@ -36,6 +36,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
         public void AtualizaEstadoDQ()
         {
+            
             xSwitch_Read_Dumper = GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(1) ?? false;
             sLabel_Status_Dumper = (GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(1) ?? false) ? "Aberto" : "Fechado";
             xSwitch_Read_PortaSup = GVL.Opcua.GVL_ImagensAlarmes.ImgGeral.GetRead(7) ?? false;

@@ -1211,7 +1211,6 @@
                 </Label>
             </HorizontalStackLayout>
 
-
             <Label
                 Grid.Row="1"
                 Grid.Column="3"
@@ -1223,15 +1222,12 @@
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
                 />
-
-
             <HorizontalStackLayout
                 Grid.Row="2"
                 Grid.RowSpan="2"
                 Grid.Column="3"
                 >
                 <control:UC_Switch
-
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     SwitchWidth="150"
@@ -1239,9 +1235,14 @@
                     IsToggled="{Binding iBombaPatamar01_ReadWrite}"
                     />
                 <Label
-                    
-                    
-                    
+                    Margin="20"
+                    Text="{Binding sBombaPatamar01_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar01_Color}"
                     />
 
             </HorizontalStackLayout>
