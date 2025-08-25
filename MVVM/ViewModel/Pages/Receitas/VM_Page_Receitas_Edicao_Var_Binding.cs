@@ -582,6 +582,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 _ => "Desligado"
             };
         }
+        
         private string _sBombaPatamar01_Legenda = string.Empty;
         public string sBombaPatamar01_Legenda
         {
@@ -688,7 +689,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         }
 
         #endregion
-        #region
+        #region Cores da Bomba de Vácuo
         private Color ObterCorStatus(int status)
         {
             return status switch

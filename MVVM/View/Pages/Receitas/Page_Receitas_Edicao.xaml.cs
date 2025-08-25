@@ -19,7 +19,20 @@ public partial class Page_Receitas_Edicao : ContentPage
 		InitializeComponent();
         _viewModel = new VM_Page_Receitas_Edicao();
         BindingContext = _viewModel;
-	}
+
+
+    }
+
+ 
+
+    #region OnStartRun
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+        _viewModel.OnStartRun();
+    }
+#endregion
+
 
     int iMaxTempRecipe = GVL.ConfSuper.iMaxTempRecipe.ReadWrite ?? 145;
     int iMinTempRecipe = GVL.ConfSuper.iMinTempRecipe.ReadWrite ?? 0;
@@ -73,6 +86,7 @@ public partial class Page_Receitas_Edicao : ContentPage
         var resultado = await this.ShowPopupAsync(popup);
         _viewModel.dTemperaturaSP08_ReadWrite = resultado is double v ? (float)v : _viewModel.dTemperaturaSP08_ReadWrite;
     }
+
     #region Declaração de variáveis para os tempos de rampa e patamar
     private async void Label_iMinutoRampa01_OnLabelTapped(object sender, TappedEventArgs e)
     {
@@ -218,7 +232,12 @@ public partial class Page_Receitas_Edicao : ContentPage
         var resultado = await this.ShowPopupAsync(popup);
         _viewModel.iMinutoPatamar08_ReadWrite = resultado is double v ? (int)v : _viewModel.iMinutoPatamar08_ReadWrite;
     }
-
+    private async void Label_iTempoBombaFim_OnLabelTapped(object sender, TappedEventArgs e)
+    {
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: iMaxTimeMinuteRecipe);
+        var resultado = await this.ShowPopupAsync(popup);
+        _viewModel.iTempoBombaFim_ReadWrite = resultado is double v ? (int)v : _viewModel.iTempoBombaFim_ReadWrite;
+    }
     #endregion
 
 

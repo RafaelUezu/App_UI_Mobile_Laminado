@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Receitas.Page_Receitas_Edicao"
@@ -8,7 +9,6 @@
              Title="Criação e Edição de Receitas"
              Background="{StaticResource Normal_Cor6}">
 
-        
     <ScrollView>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -258,7 +258,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="18"
-                    Grid.ColumnSpan="3"
+                    Grid.ColumnSpan="4"
                 />
             <BoxView
                     Color="{StaticResource Normal_Cor5}"
@@ -274,7 +274,7 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="End"
                     Grid.Row="20"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="4"
                 />
             <!--Legendas-->
             <Label
@@ -395,6 +395,14 @@
                     Grid.Row="17"
                     Grid.Column="0"
                     Text="Patamar 08"
+                    TextColor="{StaticResource Normal_Cor3}"
+                    FontSize="Large"
+                />
+            <Label
+                    Grid.Row="18"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Tempo de Bomba Ligada Após o Fim do Ciclo"
                     TextColor="{StaticResource Normal_Cor3}"
                     FontSize="Large"
                 />
@@ -1222,6 +1230,7 @@
                 VerticalTextAlignment="Center"
                 HorizontalTextAlignment="Center"
                 />
+            <!--Switch Bomba de Vácuo-->
             <HorizontalStackLayout
                 Grid.Row="2"
                 Grid.RowSpan="2"
@@ -1244,10 +1253,198 @@
                     FontSize="Large"
                     TextColor="{Binding cBombaPatamar01_Color}"
                     />
-
             </HorizontalStackLayout>
-  
-
+            <HorizontalStackLayout
+                Grid.Row="4"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar02_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar02_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar02_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="6"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar03_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar03_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar03_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="8"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar04_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar04_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar04_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="10"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar05_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar05_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar05_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="12"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar06_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar06_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar06_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="14"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar07_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar07_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar07_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="16"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                >
+                <control:UC_Switch
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    SwitchWidth="150"
+                    SwitchHeight="75"
+                    IsToggled="{Binding iBombaPatamar08_ReadWrite}"
+                    />
+                <Label
+                    Margin="20"
+                    Text="{Binding sBombaPatamar08_Legenda}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="{Binding cBombaPatamar08_Color}"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="18"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                >
+                <Label
+                    Text="00"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text=":"
+                    TextColor="Transparent"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                />
+                <Label
+                    Text="{Binding iTempoBombaFim_ReadWrite, StringFormat='{}{0:00}'}"
+                    TextColor="White"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="Label_iTempoBombaFim_OnLabelTapped"
+                    />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
 
         </Grid>
 

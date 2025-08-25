@@ -4,22 +4,40 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
 {
-    public partial class VM_Page_Receitas_Edicao : INotifyPropertyChanged
+    public partial class VM_Page_Receitas_Edicao : ObservableObject, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        [ObservableProperty] float x = 50;
+        [ObservableProperty] float y = 50;
+        [ObservableProperty] float lado = 120;
         public VM_Page_Receitas_Edicao()
         {
+            iBombaPatamar01_ReadWrite = 1;
+            iBombaPatamar02_ReadWrite = 1;
+            iBombaPatamar03_ReadWrite = 1;
+            iBombaPatamar04_ReadWrite = 1;
+            iBombaPatamar05_ReadWrite = 1;
+            iBombaPatamar06_ReadWrite = 1;
+            iBombaPatamar07_ReadWrite = 1;
+            iBombaPatamar08_ReadWrite = 1;
+
             SelecionarCommand = new Command(async () => await ExecutarSelecao());
+        }
+
+        public async Task OnStartRun()
+        {
+            
         }
 
         public ICommand SelecionarCommand { get; }
