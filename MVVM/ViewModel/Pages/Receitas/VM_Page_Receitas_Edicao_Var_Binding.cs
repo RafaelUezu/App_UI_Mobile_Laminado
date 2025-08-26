@@ -450,6 +450,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar01_ReadWrite = value;
                     cBombaPatamar01_Color = ObterCorStatus(value);
                     sBombaPatamar01_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar01_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -465,6 +466,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar02_ReadWrite = value;
                     cBombaPatamar02_Color = ObterCorStatus(value);
                     sBombaPatamar02_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar02_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -480,6 +482,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar03_ReadWrite = value;
                     cBombaPatamar03_Color = ObterCorStatus(value);
                     sBombaPatamar03_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar03_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -495,6 +498,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar04_ReadWrite = value;
                     cBombaPatamar04_Color = ObterCorStatus(value);
                     sBombaPatamar04_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar04_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -510,6 +514,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar05_ReadWrite = value;
                     cBombaPatamar05_Color = ObterCorStatus(value);
                     sBombaPatamar05_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar05_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -525,6 +530,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar06_ReadWrite = value;
                     cBombaPatamar06_Color = ObterCorStatus(value);
                     sBombaPatamar06_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar06_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -540,6 +546,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar07_ReadWrite = value;
                     cBombaPatamar07_Color = ObterCorStatus(value);
                     sBombaPatamar07_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar07_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -555,6 +562,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                     _iBombaPatamar08_ReadWrite = value;
                     cBombaPatamar08_Color = ObterCorStatus(value);
                     sBombaPatamar08_Legenda = ObterLegendaStatus(value);
+                    xBombaPatamar08_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
             }
@@ -805,6 +813,123 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         }
 
         #endregion
+
+        private bool ObterStatus(int status)
+        {
+            return status switch
+            {
+                0 => false,
+                1 => true,
+                _ => false
+            };
+        }
+
+        private bool _xBombaPatamar01_Status = false;
+        public bool xBombaPatamar01_Status
+        {
+            get => _xBombaPatamar01_Status;
+            set
+            {
+                if (_xBombaPatamar01_Status != value)
+                {
+                    _xBombaPatamar01_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar02_Status = false;
+        public bool xBombaPatamar02_Status
+        {
+            get => _xBombaPatamar02_Status;
+            set
+            {
+                if (_xBombaPatamar02_Status != value)
+                {
+                    _xBombaPatamar02_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar03_Status = false;
+        public bool xBombaPatamar03_Status
+        {
+            get => _xBombaPatamar03_Status;
+            set
+            {
+                if (_xBombaPatamar03_Status != value)
+                {
+                    _xBombaPatamar03_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar04_Status = false;
+        public bool xBombaPatamar04_Status
+        {
+            get => _xBombaPatamar04_Status;
+            set
+            {
+                if (_xBombaPatamar04_Status != value)
+                {
+                    _xBombaPatamar04_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar05_Status = false;
+        public bool xBombaPatamar05_Status
+        {
+            get => _xBombaPatamar05_Status;
+            set
+            {
+                if (_xBombaPatamar05_Status != value)
+                {
+                    _xBombaPatamar05_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar06_Status = false;
+        public bool xBombaPatamar06_Status
+        {
+            get => _xBombaPatamar06_Status;
+            set
+            {
+                if (_xBombaPatamar06_Status != value)
+                {
+                    _xBombaPatamar06_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar07_Status = false;
+        public bool xBombaPatamar07_Status
+        {
+            get => _xBombaPatamar07_Status;
+            set
+            {
+                if (_xBombaPatamar07_Status != value)
+                {
+                    _xBombaPatamar07_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool _xBombaPatamar08_Status = false;
+        public bool xBombaPatamar08_Status
+        {
+            get => _xBombaPatamar08_Status;
+            set
+            {
+                if (_xBombaPatamar08_Status != value)
+                {
+                    _xBombaPatamar08_Status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
         #endregion
+
+
     }
 }

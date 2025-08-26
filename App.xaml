@@ -19,6 +19,9 @@
             <Color x:Key="Normal_Cor4">#9DA7BB</Color>
             <Color x:Key="Normal_Cor5">#8592AB</Color>
             <Color x:Key="Normal_Cor6">#62718E</Color>
+            <Color x:Key="Normal_Cor7">#384152</Color>
+            <Color x:Key="Normal_Cor8">#232832</Color>
+            <Color x:Key="Normal_Cor9">#12151b</Color>
 
 
 

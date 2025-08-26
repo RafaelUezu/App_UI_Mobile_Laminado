@@ -199,10 +199,4 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-
-
-	<ItemGroup>
-	  <Folder Include="MVVM\View\NovaPasta\" />
-	</ItemGroup>
-
 </Project>

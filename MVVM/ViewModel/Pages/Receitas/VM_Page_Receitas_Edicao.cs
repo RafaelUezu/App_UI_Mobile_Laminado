@@ -18,9 +18,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        [ObservableProperty] float x = 50;
-        [ObservableProperty] float y = 50;
-        [ObservableProperty] float lado = 120;
+
         public VM_Page_Receitas_Edicao()
         {
             iBombaPatamar01_ReadWrite = 1;
