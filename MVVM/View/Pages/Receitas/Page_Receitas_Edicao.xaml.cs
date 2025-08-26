@@ -23,16 +23,6 @@ public partial class Page_Receitas_Edicao : ContentPage
 
     }
 
- 
-
-    #region OnStartRun
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
-    {
-        base.OnNavigatedTo(args);
-        _viewModel.OnStartRun();
-    }
-#endregion
-
 
     int iMaxTempRecipe = GVL.ConfSuper.iMaxTempRecipe.ReadWrite ?? 145;
     int iMinTempRecipe = GVL.ConfSuper.iMinTempRecipe.ReadWrite ?? 0;

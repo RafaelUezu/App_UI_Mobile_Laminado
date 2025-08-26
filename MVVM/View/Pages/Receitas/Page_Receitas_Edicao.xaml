@@ -86,6 +86,7 @@
                     Text="Salvar"
                     FontSize="Large"
                     WidthRequest="120"
+                    
                     TextColor="{StaticResource Normal_Cor1}"
                     Background="{StaticResource Normal_Cor4}"
                     />

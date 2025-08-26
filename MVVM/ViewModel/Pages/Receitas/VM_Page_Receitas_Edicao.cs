@@ -33,10 +33,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             SelecionarCommand = new Command(async () => await ExecutarSelecao());
         }
 
-        public async Task OnStartRun()
-        {
-            
-        }
 
         public ICommand SelecionarCommand { get; }
         public string Resultado { get; set; }
@@ -61,19 +57,10 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             "Opção 3"
         };
 
-        private string _ReceitaSelecionada_ReadWrite;
-        public string ReceitaSelecionada_ReadWrite
-        {
-            get => _ReceitaSelecionada_ReadWrite;
-            set
-            {
-                if (_ReceitaSelecionada_ReadWrite != value)
-                {
-                    _ReceitaSelecionada_ReadWrite = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
+
+
+
+        
 
         db_Recipe _db_Recipe = new db_Recipe();
         

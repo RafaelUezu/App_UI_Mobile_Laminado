@@ -8,7 +8,21 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
 {
     public partial class VM_Page_Receitas_Edicao
     {
-      
+
+        private string _ReceitaSelecionada_ReadWrite;
+        public string ReceitaSelecionada_ReadWrite
+        {
+            get => _ReceitaSelecionada_ReadWrite;
+            set
+            {
+                if (_ReceitaSelecionada_ReadWrite != value)
+                {
+                    _ReceitaSelecionada_ReadWrite = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         private string _sName_ReadWrite = string.Empty;
         public string sName_ReadWrite
         {
