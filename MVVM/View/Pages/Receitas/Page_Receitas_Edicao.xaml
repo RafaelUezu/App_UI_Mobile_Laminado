@@ -69,7 +69,7 @@
                     FontSize="Large"
                     Background="{StaticResource Normal_Cor4}"
                     TextColor="{StaticResource Normal_Cor1}"
-                    Command="{Binding SelecionarCommand}"
+                    Command="{Binding ICommand_Selecionar_Receita}"
                     WidthRequest="200"
    
                     />
@@ -96,6 +96,7 @@
                     Text="Excluir"
                     FontSize="Large"
                     WidthRequest="120"
+                    Command="{Binding ICommand_Excluir_Receita}"
                     TextColor="{StaticResource Normal_Cor1}"
                     Background="{StaticResource Normal_Cor4}"
                     />

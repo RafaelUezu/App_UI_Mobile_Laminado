@@ -81,7 +81,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         });
         public ICommand Button_ResetToDefaultRecipe_Command => new Command(async () =>
         {
-            bool? Success = await _db_Recipe.CreateDatabaseIfNotExistsAsync("db_RecipeSup");
+            bool? Success = await _db_Recipe.CreateTableIfNotExistsAsync("db_Recipe", "RecipeSup");
             if (Success == true)
             {
                 await Application.Current.MainPage.DisplayAlert("Reset", "Receitas restauradas com sucesso.", "Ok");

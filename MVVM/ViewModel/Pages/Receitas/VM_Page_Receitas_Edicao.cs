@@ -32,9 +32,10 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
 
             ZeraValores_ViewModel();
 
-            SelecionarCommand = new Command(async () => await ExecutarSelecao());
+            ICommand_Selecionar_Receita = new Command(async () => await ExecutarSelecao());
             ICommand_Salvar_Receita = new Command(async () => await SalvarReceitaAsync());
             ICommand_Nova_Receita = new Command(async () => await NovaReceitaAsync());
+            ICommand_Excluir_Receita = new Command(async () => await ExcluirReceitaAsync());
 
         }
         #region Instâncias das classes
@@ -42,8 +43,9 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         #endregion
         #region Declaração dos comandos
         public ICommand ICommand_Salvar_Receita { get; }
-        public ICommand SelecionarCommand { get; }
+        public ICommand ICommand_Selecionar_Receita { get; }
         public ICommand ICommand_Nova_Receita { get; }
+        public ICommand ICommand_Excluir_Receita { get; }
         #endregion
 
         public string Resultado { get; set; }
@@ -131,8 +133,32 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             iMinutoPatamar05_ReadWrite = _db_Recipe.RecipeSup.iMinutoPatamar05;
             iMinutoPatamar06_ReadWrite = _db_Recipe.RecipeSup.iMinutoPatamar06;
             iMinutoPatamar07_ReadWrite = _db_Recipe.RecipeSup.iMinutoPatamar07;
-
-
+            iMinutoPatamar08_ReadWrite = _db_Recipe.RecipeSup.iMinutoPatamar08;
+            iHoraPatamar01_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar01;
+            iHoraPatamar02_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar02;
+            iHoraPatamar03_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar03;
+            iHoraPatamar04_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar04;
+            iHoraPatamar05_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar05;
+            iHoraPatamar06_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar06;
+            iHoraPatamar07_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar07;
+            iHoraPatamar08_ReadWrite = _db_Recipe.RecipeSup.iHoraPatamar08;
+            dTemperaturaSP01_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP01;
+            dTemperaturaSP02_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP02;
+            dTemperaturaSP03_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP03;
+            dTemperaturaSP04_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP04;
+            dTemperaturaSP05_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP05;
+            dTemperaturaSP06_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP06;
+            dTemperaturaSP07_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP07;
+            dTemperaturaSP08_ReadWrite = _db_Recipe.RecipeSup.dTemperaturaSP08;
+            iBombaPatamar01_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar01;
+            iBombaPatamar02_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar02;
+            iBombaPatamar03_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar03;
+            iBombaPatamar04_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar04;
+            iBombaPatamar05_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar05;
+            iBombaPatamar06_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar06;
+            iBombaPatamar07_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar07;
+            iBombaPatamar08_ReadWrite = _db_Recipe.RecipeSup.iBombaPatamar08;
+            iTempoBombaFim_ReadWrite = _db_Recipe.RecipeSup.iTempoBombaFim;
         }
         private void ViewModelValue_to_db()
         {
@@ -180,23 +206,117 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             _db_Recipe.RecipeSup.iTempoBombaFim = iTempoBombaFim_ReadWrite;
         }
         
-        private async Task SalvarReceitaAsync()
+        private async Task ExcluirReceitaAsync()
         {
             try
             {
-                ViewModelValue_to_db();
-
-                bool? Validate = await _db_Recipe.InsertRecipeAsync("db_RecipeSup");
-                if (Validate == true)
+                if (!string.IsNullOrEmpty(sName_ReadWrite))
                 {
                     if (Application.Current?.MainPage != null)
-                        _ = Application.Current.MainPage.DisplayAlert("Sucesso", "Receita salva com sucesso!", "OK");
+                    {
+                        bool Validacao = await Application.Current.MainPage.DisplayAlert("Alerta", "Realmente deseja excluir a receita?", "SIM", "NÃO");
+                        if (Validacao)
+                        {
+                            List<string?>? sNomesColunaReceita = await _db_Recipe.AllListDatabaseAsync("db_Recipe", "RecipeSup", "sName");
+                            if (sNomesColunaReceita != null)
+                            {
+                                foreach (string? sNomeReceita in sNomesColunaReceita)
+                                {
+                                    if (sNomeReceita == sName_ReadWrite)
+                                    {
+                                        bool? Validate = await _db_Recipe.DeleteLineDatabaseAsync("db_Recipe", "RecipeSup", "sName", sName_ReadWrite);
+                                        if (Validate == true)
+                                        {
+                                            if (Application.Current?.MainPage != null)
+                                                _ = Application.Current.MainPage.DisplayAlert("Sucesso", "Receita excluída com sucesso!", "OK");
+                                        }
+                                        else
+                                        {
+                                            if (Application.Current?.MainPage != null)
+                                                _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao excluir receita.", "OK");
+                                        }
+                                        return;
+                                    }
+                                }
+                            }
+                            if (Application.Current?.MainPage != null)
+                                _ = Application.Current.MainPage.DisplayAlert("Erro", "Esta receita não existe!", "OK");
+                            return;
+                        }
+                    }
                 }
                 else
                 {
                     if (Application.Current?.MainPage != null)
-                        _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao salvar receita.", "OK");
+                        _ = Application.Current.MainPage.DisplayAlert("Falha", "Nome da receita não pode ser vazio.", "OK");
                 }
+            }
+            catch (Exception ex)
+            {
+                if (Application.Current?.MainPage != null)
+                    _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao excluir receita.", "OK");
+            }
+        }
+        private async Task SalvarReceitaAsync()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(sName_ReadWrite))
+                {
+                    if (Application.Current?.MainPage != null)
+                        _ = Application.Current.MainPage.DisplayAlert("Falha", "A Receita precisa de um nome", "OK");
+                    return;
+                }
+
+                List<string?>? sNomesColunaReceita = await _db_Recipe.AllListDatabaseAsync("db_Recipe", "RecipeSup", "sName");
+
+                if(sNomesColunaReceita != null)
+                {
+                    foreach (string? sNomeReceita in sNomesColunaReceita)
+                    {
+                        if (sNomeReceita == sName_ReadWrite)
+                        {
+                            if (Application.Current?.MainPage != null)
+                            {
+                                bool Validacao = await Application.Current.MainPage.DisplayAlert("Alerta", "Já existe uma receita com este nome, deseja sobreescrever?", "SIM", "NÃO");
+                                if (Validacao)
+                                {
+                                    ViewModelValue_to_db();
+                                    bool Validate_Update = await _db_Recipe.UpdateRecipeAsync("db_Recipe", "RecipeSup", sName_ReadWrite);
+                                    if (Validate_Update == true)
+                                    {
+                                        if (Application.Current?.MainPage != null)
+                                            _ = Application.Current.MainPage.DisplayAlert("Sucesso", "Receita editada com sucesso!", "OK");
+                                    }
+                                    else if (Validate_Update == false)
+                                    {
+                                        if (Application.Current?.MainPage != null)
+                                            _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao editada a receita.", "OK");
+                                    }
+                                    return;
+                                }
+                                else if(!Validacao)
+                                {
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ViewModelValue_to_db();
+                bool? Validate_Insert = await _db_Recipe.InsertRecipeAsync("db_Recipe", "RecipeSup");
+                if (Validate_Insert == true)
+                {
+                    if (Application.Current?.MainPage != null)
+                        _ = Application.Current.MainPage.DisplayAlert("Sucesso", "Receita salva com sucesso!", "OK");
+                }
+                else if (Validate_Insert == false)
+                {
+                    if (Application.Current?.MainPage != null)
+                        _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao salvar a receita.", "OK");
+                }
+
             }
             catch (Exception ex)
             {
