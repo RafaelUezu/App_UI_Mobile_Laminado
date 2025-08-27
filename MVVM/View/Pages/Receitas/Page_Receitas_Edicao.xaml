@@ -78,6 +78,7 @@
                     Text="Nova Receita"
                     FontSize="Large"
                     WidthRequest="200"
+                    Command="{Binding ICommand_Nova_Receita}"
                     TextColor="{StaticResource Normal_Cor1}"
                     Background="{StaticResource Normal_Cor4}"
                     />
@@ -107,6 +108,7 @@
                     FontSize="Large"
                     WidthRequest="500"
                     Placeholder="Nome da Receita" 
+                    Text="{Binding sName_ReadWrite}"
                     
                     >
 

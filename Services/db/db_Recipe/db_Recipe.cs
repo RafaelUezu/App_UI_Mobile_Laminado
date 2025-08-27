@@ -29,6 +29,7 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
                     {
                         string db_File = $"{db_RecipeName}.db";
                         string dbPath = Path.Combine(FileSystem.AppDataDirectory, db_File);
+                        
                         if (!File.Exists(dbPath))
                         {
                             using (var connection = new SqliteConnection($"Data Source={dbPath}"))
@@ -101,11 +102,11 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
         /// <param name="db_RecipeName">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
         /// <returns>Retorna true se a atualização for bem-sucedida; caso contrário, false.</returns>
         /// 
-        public async Task<bool?> InsertRecipeAsync(Data_RecipeSup recipe, string db_RecipeName)
+        public async Task<bool?> InsertRecipeAsync(string db_RecipeName)
         {
             try
             {
-                if (recipe == null || string.IsNullOrEmpty(db_RecipeName))
+                if (string.IsNullOrEmpty(db_RecipeName))
                 {
                     return false;
                 }
@@ -206,48 +207,48 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
                         $iBombaPatamar07,
                         $iBombaPatamar08,
                         $iTempoBombaFim);";
-                        command.Parameters.AddWithValue("$sName", recipe.sName);
-                        command.Parameters.AddWithValue("$iMinutoRampa01", recipe.iMinutoRampa01);
-                        command.Parameters.AddWithValue("$dTemperaturaSP01", recipe.dTemperaturaSP01);
-                        command.Parameters.AddWithValue("$iHoraPatamar01", recipe.iHoraPatamar01);
-                        command.Parameters.AddWithValue("$iMinutoPatamar01", recipe.iMinutoPatamar01);
-                        command.Parameters.AddWithValue("$iMinutoRampa02", recipe.iMinutoRampa02);
-                        command.Parameters.AddWithValue("$dTemperaturaSP02", recipe.dTemperaturaSP02);
-                        command.Parameters.AddWithValue("$iHoraPatamar02", recipe.iHoraPatamar02);
-                        command.Parameters.AddWithValue("$iMinutoPatamar02", recipe.iMinutoPatamar02);
-                        command.Parameters.AddWithValue("$iMinutoRampa03", recipe.iMinutoRampa03);
-                        command.Parameters.AddWithValue("$dTemperaturaSP03", recipe.dTemperaturaSP03);
-                        command.Parameters.AddWithValue("$iHoraPatamar03", recipe.iHoraPatamar03);
-                        command.Parameters.AddWithValue("$iMinutoPatamar03", recipe.iMinutoPatamar03);
-                        command.Parameters.AddWithValue("$iMinutoRampa04", recipe.iMinutoRampa04);
-                        command.Parameters.AddWithValue("$dTemperaturaSP04", recipe.dTemperaturaSP04);
-                        command.Parameters.AddWithValue("$iHoraPatamar04", recipe.iHoraPatamar04);
-                        command.Parameters.AddWithValue("$iMinutoPatamar04", recipe.iMinutoPatamar04);
-                        command.Parameters.AddWithValue("$iMinutoRampa05", recipe.iMinutoRampa05);
-                        command.Parameters.AddWithValue("$dTemperaturaSP05", recipe.dTemperaturaSP05);
-                        command.Parameters.AddWithValue("$iHoraPatamar05", recipe.iHoraPatamar05);
-                        command.Parameters.AddWithValue("$iMinutoPatamar05", recipe.iMinutoPatamar05);
-                        command.Parameters.AddWithValue("$iMinutoRampa06", recipe.iMinutoRampa06);
-                        command.Parameters.AddWithValue("$dTemperaturaSP06", recipe.dTemperaturaSP06);
-                        command.Parameters.AddWithValue("$iHoraPatamar06", recipe.iHoraPatamar06);
-                        command.Parameters.AddWithValue("$iMinutoPatamar06", recipe.iMinutoPatamar06);
-                        command.Parameters.AddWithValue("$iMinutoRampa07", recipe.iMinutoRampa07);
-                        command.Parameters.AddWithValue("$dTemperaturaSP07", recipe.dTemperaturaSP07);
-                        command.Parameters.AddWithValue("$iHoraPatamar07", recipe.iHoraPatamar07);
-                        command.Parameters.AddWithValue("$iMinutoPatamar07", recipe.iMinutoPatamar07);
-                        command.Parameters.AddWithValue("$iMinutoRampa08", recipe.iMinutoRampa08);
-                        command.Parameters.AddWithValue("$dTemperaturaSP08", recipe.dTemperaturaSP08);
-                        command.Parameters.AddWithValue("$iHoraPatamar08", recipe.iHoraPatamar08);
-                        command.Parameters.AddWithValue("$iMinutoPatamar08", recipe.iMinutoPatamar08);
-                        command.Parameters.AddWithValue("$iBombaPatamar01", recipe.iBombaPatamar01);
-                        command.Parameters.AddWithValue("$iBombaPatamar02", recipe.iBombaPatamar02);
-                        command.Parameters.AddWithValue("$iBombaPatamar03", recipe.iBombaPatamar03);
-                        command.Parameters.AddWithValue("$iBombaPatamar04", recipe.iBombaPatamar04);
-                        command.Parameters.AddWithValue("$iBombaPatamar05", recipe.iBombaPatamar05);
-                        command.Parameters.AddWithValue("$iBombaPatamar06", recipe.iBombaPatamar06);
-                        command.Parameters.AddWithValue("$iBombaPatamar07", recipe.iBombaPatamar07);
-                        command.Parameters.AddWithValue("$iBombaPatamar08", recipe.iBombaPatamar08);
-                        command.Parameters.AddWithValue("$iTempoBombaFim", recipe.iTempoBombaFim);
+                        command.Parameters.AddWithValue("$sName", RecipeSup.sName);
+                        command.Parameters.AddWithValue("$iMinutoRampa01", RecipeSup.iMinutoRampa01);
+                        command.Parameters.AddWithValue("$dTemperaturaSP01", RecipeSup.dTemperaturaSP01);
+                        command.Parameters.AddWithValue("$iHoraPatamar01", RecipeSup.iHoraPatamar01);
+                        command.Parameters.AddWithValue("$iMinutoPatamar01", RecipeSup.iMinutoPatamar01);
+                        command.Parameters.AddWithValue("$iMinutoRampa02", RecipeSup.iMinutoRampa02);
+                        command.Parameters.AddWithValue("$dTemperaturaSP02", RecipeSup.dTemperaturaSP02);
+                        command.Parameters.AddWithValue("$iHoraPatamar02", RecipeSup.iHoraPatamar02);
+                        command.Parameters.AddWithValue("$iMinutoPatamar02", RecipeSup.iMinutoPatamar02);
+                        command.Parameters.AddWithValue("$iMinutoRampa03", RecipeSup.iMinutoRampa03);
+                        command.Parameters.AddWithValue("$dTemperaturaSP03", RecipeSup.dTemperaturaSP03);
+                        command.Parameters.AddWithValue("$iHoraPatamar03", RecipeSup.iHoraPatamar03);
+                        command.Parameters.AddWithValue("$iMinutoPatamar03", RecipeSup.iMinutoPatamar03);
+                        command.Parameters.AddWithValue("$iMinutoRampa04", RecipeSup.iMinutoRampa04);
+                        command.Parameters.AddWithValue("$dTemperaturaSP04", RecipeSup.dTemperaturaSP04);
+                        command.Parameters.AddWithValue("$iHoraPatamar04", RecipeSup.iHoraPatamar04);
+                        command.Parameters.AddWithValue("$iMinutoPatamar04", RecipeSup.iMinutoPatamar04);
+                        command.Parameters.AddWithValue("$iMinutoRampa05", RecipeSup.iMinutoRampa05);
+                        command.Parameters.AddWithValue("$dTemperaturaSP05", RecipeSup.dTemperaturaSP05);
+                        command.Parameters.AddWithValue("$iHoraPatamar05", RecipeSup.iHoraPatamar05);
+                        command.Parameters.AddWithValue("$iMinutoPatamar05", RecipeSup.iMinutoPatamar05);
+                        command.Parameters.AddWithValue("$iMinutoRampa06", RecipeSup.iMinutoRampa06);
+                        command.Parameters.AddWithValue("$dTemperaturaSP06", RecipeSup.dTemperaturaSP06);
+                        command.Parameters.AddWithValue("$iHoraPatamar06", RecipeSup.iHoraPatamar06);
+                        command.Parameters.AddWithValue("$iMinutoPatamar06", RecipeSup.iMinutoPatamar06);
+                        command.Parameters.AddWithValue("$iMinutoRampa07", RecipeSup.iMinutoRampa07);
+                        command.Parameters.AddWithValue("$dTemperaturaSP07", RecipeSup.dTemperaturaSP07);
+                        command.Parameters.AddWithValue("$iHoraPatamar07", RecipeSup.iHoraPatamar07);
+                        command.Parameters.AddWithValue("$iMinutoPatamar07", RecipeSup.iMinutoPatamar07);
+                        command.Parameters.AddWithValue("$iMinutoRampa08", RecipeSup.iMinutoRampa08);
+                        command.Parameters.AddWithValue("$dTemperaturaSP08", RecipeSup.dTemperaturaSP08);
+                        command.Parameters.AddWithValue("$iHoraPatamar08", RecipeSup.iHoraPatamar08);
+                        command.Parameters.AddWithValue("$iMinutoPatamar08", RecipeSup.iMinutoPatamar08);
+                        command.Parameters.AddWithValue("$iBombaPatamar01", RecipeSup.iBombaPatamar01);
+                        command.Parameters.AddWithValue("$iBombaPatamar02", RecipeSup.iBombaPatamar02);
+                        command.Parameters.AddWithValue("$iBombaPatamar03", RecipeSup.iBombaPatamar03);
+                        command.Parameters.AddWithValue("$iBombaPatamar04", RecipeSup.iBombaPatamar04);
+                        command.Parameters.AddWithValue("$iBombaPatamar05", RecipeSup.iBombaPatamar05);
+                        command.Parameters.AddWithValue("$iBombaPatamar06", RecipeSup.iBombaPatamar06);
+                        command.Parameters.AddWithValue("$iBombaPatamar07", RecipeSup.iBombaPatamar07);
+                        command.Parameters.AddWithValue("$iBombaPatamar08", RecipeSup.iBombaPatamar08);
+                        command.Parameters.AddWithValue("$iTempoBombaFim", RecipeSup.iTempoBombaFim);
 
                         command.ExecuteNonQuery();
                     });
@@ -445,6 +446,8 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
             }
 
         }
+
+        public Data_RecipeSup RecipeSup { get; set; } = new Data_RecipeSup();
         public class Data_RecipeSup
         {
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using App_UI_Mobile_Laminado.Services.db.db_ConfSuper;
+using App_UI_Mobile_Laminado.Services.db.db_Recipe;
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 {
@@ -29,6 +30,9 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 
             };
         }
+
+        private readonly db_Recipe _db_Recipe = new db_Recipe();
+
         private void OnLeituraFinalizada()
         {
             MainThread.BeginInvokeOnMainThread(AtualizaValores);
@@ -77,7 +81,15 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         });
         public ICommand Button_ResetToDefaultRecipe_Command => new Command(async () =>
         {
-
+            bool? Success = await _db_Recipe.CreateDatabaseIfNotExistsAsync("db_RecipeSup");
+            if (Success == true)
+            {
+                await Application.Current.MainPage.DisplayAlert("Reset", "Receitas restauradas com sucesso.", "Ok");
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Reset", "Falha ao restaurar as receitas.", "Ok");
+            }
         });
         public ICommand Button_ResetToDefaultAlarms_Command => new Command(async () =>
         {
