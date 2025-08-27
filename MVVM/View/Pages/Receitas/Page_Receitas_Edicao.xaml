@@ -65,12 +65,12 @@
                 >
                 <Button
                     Margin="5"
-                    Text="Editar Receita"
+                    Text="Selecionar Receita"
                     FontSize="Large"
                     Background="{StaticResource Normal_Cor4}"
                     TextColor="{StaticResource Normal_Cor1}"
                     Command="{Binding ICommand_Selecionar_Receita}"
-                    WidthRequest="200"
+                    WidthRequest="250"
    
                     />
                 <Button

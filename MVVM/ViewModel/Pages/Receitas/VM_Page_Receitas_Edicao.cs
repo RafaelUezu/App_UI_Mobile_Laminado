@@ -53,7 +53,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         {
             var page = Application.Current.MainPage;
 
-            string[] opcoes = { "Item A", "Item B", "Item C" };
+            string[] opcoes = { "Item A1", "Item B", "Item C" };
             var resposta = await page.DisplayActionSheet("Escolha", "Cancelar", null, opcoes);
 
             if (resposta != null && resposta != "Cancelar")
@@ -63,12 +63,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
             }
         }
 
-        public ObservableCollection<string> ListaReceitas_ReadWrite { get; } = new()
-        {
-            "Opção 1",
-            "Opção 2",
-            "Opção 3"
-        };
 
         private void ZeraValores_ViewModel()
         {
@@ -235,6 +229,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                                             if (Application.Current?.MainPage != null)
                                                 _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao excluir receita.", "OK");
                                         }
+                                        ZeraValores_ViewModel();
                                         return;
                                     }
                                 }
