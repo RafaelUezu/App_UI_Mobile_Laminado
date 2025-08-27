@@ -86,7 +86,7 @@
                     Text="Salvar"
                     FontSize="Large"
                     WidthRequest="120"
-                    
+                    Command="{Binding ICommand_Salvar_Receita}"
                     TextColor="{StaticResource Normal_Cor1}"
                     Background="{StaticResource Normal_Cor4}"
                     />

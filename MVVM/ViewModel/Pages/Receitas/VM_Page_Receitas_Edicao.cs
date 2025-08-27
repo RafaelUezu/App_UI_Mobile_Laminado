@@ -63,7 +63,13 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         
 
         db_Recipe _db_Recipe = new db_Recipe();
-        
+
+        public ICommand ICommand_Salvar_Receita => new Command(async () =>
+        {
+            
+
+        });
+
         public ICommand Button_DeleteRecipe_Command => new Command(async () =>
         {
             try
