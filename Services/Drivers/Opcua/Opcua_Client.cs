@@ -71,7 +71,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             _cts = new CancellationTokenSource();
             GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Iniciando";
             OpcUaEvents.DispararLeituraFinalizadaAsync();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://10.10.210.20:4840", GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://192.168.1.11:4840", GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
         }
 
         public async Task StopAsync()
@@ -186,8 +186,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgTesteEntLog"), AttributeId = Attributes.Value },//0
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgForceSaiLog"), AttributeId = Attributes.Value },//0
                             };
-
-
                             List<ReadValueId> nodesToRead_GVL_Ihm_Manual = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtAbreFechaDampSup"), AttributeId = Attributes.Value },//0
@@ -200,7 +198,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Ihm_Manual.xBtLigaDesligaSsrS05"), AttributeId = Attributes.Value },//7
 
                             };
-
                             List<ReadValueId> nodesToRead_GVL_ImagensAlarmes = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgGeral"), AttributeId = Attributes.Value },//0
@@ -208,7 +205,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.ImgMotor"), AttributeId = Attributes.Value },//2
 
                             };
-
                             List<ReadValueId> nodesToRead_GVL_Energia = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fCorrenteFaseA"), AttributeId = Attributes.Value },//0
@@ -246,7 +242,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFatorPotenciaTotal"), AttributeId = Attributes.Value },//26
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Energia.fFrequencia"), AttributeId = Attributes.Value },//27
                             };
-
                             List<ReadValueId> nodesToRead_GVL_ClpIhm = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.wStatusPortaEsq"), AttributeId = Attributes.Value },//0
@@ -449,49 +444,49 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             };
 
                             RequestHeader requestHeader_GVL_EntradasSaidas = new RequestHeader();
-                            double maxAge_GVL_EntradasSaidas = 0;
+                            double maxAge_GVL_EntradasSaidas = 30;
                             TimestampsToReturn timestampsToReturn_GVL_EntradasSaidas = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_EntradasSaidas = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_EntradasSaidas = null;
 
                             RequestHeader requestHeader_GVL_Ihm_Manual = new RequestHeader();
-                            double maxAge_GVL_Ihm_Manual = 0;
+                            double maxAge_GVL_Ihm_Manual = 30;
                             TimestampsToReturn timestampsToReturn_GVL_Ihm_Manual = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_Ihm_Manual = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_Ihm_Manual = null;
 
                             RequestHeader requestHeader_GVL_ImagensAlarmes = new RequestHeader();
-                            double maxAge_GVL_ImagensAlarmes = 0;
+                            double maxAge_GVL_ImagensAlarmes = 30;
                             TimestampsToReturn timestampsToReturn_GVL_ImagensAlarmes = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_ImagensAlarmes = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_ImagensAlarmes = null;
 
                             RequestHeader requestHeader_GVL_Energia = new RequestHeader();
-                            double maxAge_GVL_Energia = 0;
+                            double maxAge_GVL_Energia = 30;
                             TimestampsToReturn timestampsToReturn_GVL_Energia = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_Energia = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_Energia = null;
 
                             RequestHeader requestHeader_GVL_ClpIhm = new RequestHeader();
-                            double maxAge_GVL_ClpIhm = 0;
+                            double maxAge_GVL_ClpIhm = 30;
                             TimestampsToReturn timestampsToReturn_GVL_ClpIhm = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_ClpIhm = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_ClpIhm = null;
 
                             RequestHeader requestHeader_GVL_Permanentes = new RequestHeader();
-                            double maxAge_GVL_Permanentes = 0;
+                            double maxAge_GVL_Permanentes = 30;
                             TimestampsToReturn timestampsToReturn_GVL_Permanentes = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_Permanentes = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_Permanentes = null;
 
                             RequestHeader requestHeader_GVL_IhmClp = new RequestHeader();
-                            double maxAge_GVL_IhmClp = 0;
+                            double maxAge_GVL_IhmClp = 30;
                             TimestampsToReturn timestampsToReturn_GVL_IhmClp = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_IhmClp = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_IhmClp = null;
 
                             RequestHeader requestHeader_GVL_Receita = new RequestHeader();
-                            double maxAge_GVL_Receita = 0;
+                            double maxAge_GVL_Receita = 30;
                             TimestampsToReturn timestampsToReturn_GVL_Receita = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_Receita = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_Receita = null;
@@ -1338,6 +1333,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     {
                                         GVL.Opcua.GVL_Ihm_Manual.xBtLigaDesligaSsrS04.Read = ((bool)results_GVL_Ihm_Manual[7].Value);
                                     }
+
+
+
                                     if (results_GVL_ImagensAlarmes[0].Value != null)
                                     {
                                         bool[] ImgGeral = results_GVL_ImagensAlarmes[0].Value as bool[];
@@ -1870,39 +1868,39 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
                                     if (results_GVL_Permanentes[11].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLdomingo.Read = (uint)results_GVL_Permanentes[11].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLdomingo.Read = (uint)(UInt16)results_GVL_Permanentes[11].Value;
                                     }
                                     if (results_GVL_Permanentes[12].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLsegunda.Read = (uint)results_GVL_Permanentes[12].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLsegunda.Read = (uint)(UInt16)results_GVL_Permanentes[12].Value;
                                     }
                                     if (results_GVL_Permanentes[13].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLterca.Read = (uint)results_GVL_Permanentes[13].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLterca.Read = (uint)(UInt16)results_GVL_Permanentes[13].Value;
                                     }
                                     if (results_GVL_Permanentes[14].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLquarta.Read = (uint)results_GVL_Permanentes[14].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLquarta.Read = (uint)(UInt16)results_GVL_Permanentes[14].Value;
                                     }
                                     if (results_GVL_Permanentes[15].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLquinta.Read = (uint)results_GVL_Permanentes[15].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLquinta.Read = (uint)(UInt16)results_GVL_Permanentes[15].Value;
                                     }
                                     if (results_GVL_Permanentes[16].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLsexta.Read = (uint)results_GVL_Permanentes[16].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLsexta.Read = (uint)(UInt16)results_GVL_Permanentes[16].Value;
                                     }
                                     if (results_GVL_Permanentes[17].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uLsabado.Read = (uint)results_GVL_Permanentes[17].Value;
+                                        GVL.Opcua.GVL_Permanentes.uLsabado.Read = (uint)(UInt16)results_GVL_Permanentes[17].Value;
                                     }
                                     if (results_GVL_Permanentes[18].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uHorProgramado.Read = (uint)results_GVL_Permanentes[18].Value;
+                                        GVL.Opcua.GVL_Permanentes.uHorProgramado.Read = (uint)(UInt16)results_GVL_Permanentes[18].Value;
                                     }
                                     if (results_GVL_Permanentes[19].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.uMinProgramado.Read = (uint)results_GVL_Permanentes[19].Value;
+                                        GVL.Opcua.GVL_Permanentes.uMinProgramado.Read = (uint)(UInt16)results_GVL_Permanentes[19].Value;
                                     }
 
 

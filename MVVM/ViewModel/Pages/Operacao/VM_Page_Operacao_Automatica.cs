@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using App_UI_Mobile_Laminado.Services.db.db_Recipe;
+using MAUI_Opcua.Services.Drivers.Opcua;
+using MAUI_Opcua.Services.Communication.Variable;
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 {
@@ -22,6 +24,12 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         {
             ICommand_Selecionar_Receita = new Command(async () => await ExecutarSelecao());
             ICommand_Enviar_Receita = new Command(async () => await ExecutarEnvio());
+
+            OpcUaEvents.LeituraFinalizadaAsync += () =>
+            {
+                OnLeituraFinalizada();
+                return Task.CompletedTask;
+            };
         }
         #region Instâncias das classes
         private readonly db_Recipe _db_Recipe = new db_Recipe(); // Move automaticamente para o construtor
@@ -30,6 +38,12 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         public ICommand ICommand_Selecionar_Receita { get; }
         public ICommand ICommand_Enviar_Receita { get; }
         #endregion
+        private void OnLeituraFinalizada()
+        {
+            MainThread.BeginInvokeOnMainThread(AtualizaValores);
+            MainThread.BeginInvokeOnMainThread(EscreveValores);
+        }
+
         private async Task ExecutarSelecao()
         {
             try
@@ -63,7 +77,16 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 return;
             }
         }
+        private async Task ExecutarEnvio()
+        {
 
+        }
+        public void AtualizaValores()
+        {
+        }
+        public void EscreveValores()
+        {
+        }
         private void db_to_ViewModelValue()
         {
             sName_ReadWrite = _db_Recipe.RecipeSup.sName ?? string.Empty;
@@ -110,10 +133,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             iTempoBombaFim_ReadWrite = _db_Recipe.RecipeSup.iTempoBombaFim;
         }
 
-        private async Task ExecutarEnvio()
-        {
 
-        }
 
 
     }

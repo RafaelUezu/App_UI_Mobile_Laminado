@@ -17,18 +17,19 @@ namespace App_UI_Mobile_Laminado
         public App(Opcua_Client driver)
         {
             InitializeComponent();
+            _ = InitializeAppAsync();
+         
             _driver = driver;
             MainPage = new AppShell();
             _driver.Start(); // Inicia driver ao abrir o app
-                             //MainPage = new Page_Manutencao_Manual();
-                             //MainPage = new Page_Login_Inicial();
-            _ = InitializeAppAsync();
+                             // MainPage = new Page_Manutencao_Manual();
+                             // MainPage = new Page_Login_Inicial();
+            
         }
 
         private async Task InitializeAppAsync()
         {
             await InicializarVariaveisPermanentes();
-            _driver.Start();
         }
 
         private async Task InicializarVariaveisPermanentes()

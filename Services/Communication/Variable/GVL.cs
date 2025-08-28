@@ -2363,8 +2363,8 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class ImgRetornoSsrSuperior
                 {
                     private static readonly object _lock = new object();
-                    private static readonly bool?[] _readValues = new bool?[5];
-                    private static readonly bool?[] _writeValues = new bool?[5];
+                    private static readonly bool?[] _readValues = new bool?[7];
+                    private static readonly bool?[] _writeValues = new bool?[7];
 
                     public static bool? GetRead(int index)
                     {
