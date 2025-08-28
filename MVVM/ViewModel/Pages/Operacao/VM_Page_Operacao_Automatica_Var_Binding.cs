@@ -4,23 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
+namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 {
-    public partial class VM_Page_Receitas_Edicao
+    public partial class VM_Page_Operacao_Automatica
     {
-        private string _ReceitaSelecionada_ReadWrite;
-        public string ReceitaSelecionada_ReadWrite
-        {
-            get => _ReceitaSelecionada_ReadWrite;
-            set
-            {
-                if (_ReceitaSelecionada_ReadWrite != value)
-                {
-                    _ReceitaSelecionada_ReadWrite = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
         #region Dados da Receita
         private string _sName_ReadWrite = string.Empty;
         public string sName_ReadWrite
@@ -35,7 +22,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 }
             }
         }
-        
+
         private int _iMinutoRampa01_ReadWrite = 0;
         public int iMinutoRampa01_ReadWrite
         {
@@ -452,7 +439,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 }
             }
         }
-        #region Váriaveis da Bomba de Vácuo
+        
         private int _iBombaPatamar01_ReadWrite = 0;
         public int iBombaPatamar01_ReadWrite
         {
@@ -462,8 +449,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar01_ReadWrite != value)
                 {
                     _iBombaPatamar01_ReadWrite = value;
-                    cBombaPatamar01_Color = ObterCorStatus(value);
-                    sBombaPatamar01_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar01_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -478,8 +463,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar02_ReadWrite != value)
                 {
                     _iBombaPatamar02_ReadWrite = value;
-                    cBombaPatamar02_Color = ObterCorStatus(value);
-                    sBombaPatamar02_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar02_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -494,8 +477,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar03_ReadWrite != value)
                 {
                     _iBombaPatamar03_ReadWrite = value;
-                    cBombaPatamar03_Color = ObterCorStatus(value);
-                    sBombaPatamar03_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar03_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -510,8 +491,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar04_ReadWrite != value)
                 {
                     _iBombaPatamar04_ReadWrite = value;
-                    cBombaPatamar04_Color = ObterCorStatus(value);
-                    sBombaPatamar04_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar04_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -526,8 +505,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar05_ReadWrite != value)
                 {
                     _iBombaPatamar05_ReadWrite = value;
-                    cBombaPatamar05_Color = ObterCorStatus(value);
-                    sBombaPatamar05_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar05_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -542,8 +519,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar06_ReadWrite != value)
                 {
                     _iBombaPatamar06_ReadWrite = value;
-                    cBombaPatamar06_Color = ObterCorStatus(value);
-                    sBombaPatamar06_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar06_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -558,8 +533,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar07_ReadWrite != value)
                 {
                     _iBombaPatamar07_ReadWrite = value;
-                    cBombaPatamar07_Color = ObterCorStatus(value);
-                    sBombaPatamar07_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar07_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -574,8 +547,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (_iBombaPatamar08_ReadWrite != value)
                 {
                     _iBombaPatamar08_ReadWrite = value;
-                    cBombaPatamar08_Color = ObterCorStatus(value);
-                    sBombaPatamar08_Legenda = ObterLegendaStatus(value);
                     xBombaPatamar08_Status = ObterStatus(value);
                     OnPropertyChanged();
                 }
@@ -594,239 +565,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 }
             }
         }
-        #endregion
-        #region Legendas da Bomba de Vácuo
-        private string ObterLegendaStatus(int status)
-        {
-            return status switch
-            {
-                0 => "Desligado",
-                1 => "Ligado",
-                _ => "Desligado"
-            };
-        }
-        
-        private string _sBombaPatamar01_Legenda = string.Empty;
-        public string sBombaPatamar01_Legenda
-        {
-            get => _sBombaPatamar01_Legenda;
-            set
-            {
-                if (_sBombaPatamar01_Legenda != value)
-                {
-                    _sBombaPatamar01_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar02_Legenda = string.Empty;
-        public string sBombaPatamar02_Legenda
-        {
-            get => _sBombaPatamar02_Legenda ;
-            set
-            {
-                if (_sBombaPatamar02_Legenda  != value)
-                {
-                    _sBombaPatamar02_Legenda  = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar03_Legenda = string.Empty;
-        public string sBombaPatamar03_Legenda
-        {
-            get => _sBombaPatamar03_Legenda;
-            set
-            {
-                if (_sBombaPatamar03_Legenda != value)
-                {
-                    _sBombaPatamar03_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar04_Legenda = string.Empty;
-        public string sBombaPatamar04_Legenda
-        {
-            get => _sBombaPatamar04_Legenda;
-            set
-            {
-                if (_sBombaPatamar04_Legenda != value)
-                {
-                    _sBombaPatamar04_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar05_Legenda = string.Empty;
-        public string sBombaPatamar05_Legenda
-        {
-            get => _sBombaPatamar05_Legenda;
-            set
-            {
-                if (_sBombaPatamar05_Legenda != value)
-                {
-                    _sBombaPatamar05_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar06_Legenda = string.Empty;
-        public string sBombaPatamar06_Legenda
-        {
-            get => _sBombaPatamar06_Legenda;
-            set
-            {
-                if (_sBombaPatamar06_Legenda != value)
-                {
-                    _sBombaPatamar06_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar07_Legenda = string.Empty;
-        public string sBombaPatamar07_Legenda
-        {
-            get => _sBombaPatamar07_Legenda;
-            set
-            {
-                if (_sBombaPatamar07_Legenda != value)
-                {
-                    _sBombaPatamar07_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private string _sBombaPatamar08_Legenda = string.Empty;
-        public string sBombaPatamar08_Legenda
-        {
-            get => _sBombaPatamar08_Legenda;
-            set
-            {
-                if (_sBombaPatamar08_Legenda != value)
-                {
-                    _sBombaPatamar08_Legenda = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-        #endregion
-        #region Cores da Bomba de Vácuo
-        private Color ObterCorStatus(int status)
-        {
-            return status switch
-            {
-                0 => Colors.DarkGray,
-                1 => Colors.LightGreen,
-                _ => Colors.DarkGray
-            };
-        }
-        private Color _cBombaPatamar01_Color = Colors.Red;
-        public Color cBombaPatamar01_Color
-        {
-            get => _cBombaPatamar01_Color;
-            set
-            {
-                if (_cBombaPatamar01_Color != value)
-                {
-                    _cBombaPatamar01_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar02_Color = Colors.Red;
-        public Color cBombaPatamar02_Color
-        {
-            get => _cBombaPatamar02_Color;
-            set
-            {
-                if (_cBombaPatamar02_Color != value)
-                {
-                    _cBombaPatamar02_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar03_Color = Colors.Red;
-        public Color cBombaPatamar03_Color
-        {
-            get => _cBombaPatamar03_Color;
-            set
-            {
-                if (_cBombaPatamar03_Color != value)
-                {
-                    _cBombaPatamar03_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar04_Color = Colors.Red;
-        public Color cBombaPatamar04_Color
-        {
-            get => _cBombaPatamar04_Color;
-            set
-            {
-                if (_cBombaPatamar04_Color != value)
-                {
-                    _cBombaPatamar04_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar05_Color = Colors.Red;
-        public Color cBombaPatamar05_Color
-        {
-            get => _cBombaPatamar05_Color;
-            set
-            {
-                if (_cBombaPatamar05_Color != value)
-                {
-                    _cBombaPatamar05_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar06_Color = Colors.Red;
-        public Color cBombaPatamar06_Color
-        {
-            get => _cBombaPatamar06_Color;
-            set
-            {
-                if (_cBombaPatamar06_Color != value)
-                {
-                    _cBombaPatamar06_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar07_Color = Colors.Red;
-        public Color cBombaPatamar07_Color
-        {
-            get => _cBombaPatamar07_Color;
-            set
-            {
-                if (_cBombaPatamar07_Color != value)
-                {
-                    _cBombaPatamar07_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        private Color _cBombaPatamar08_Color = Colors.Red;
-        public Color cBombaPatamar08_Color
-        {
-            get => _cBombaPatamar08_Color;
-            set
-            {
-                if (_cBombaPatamar08_Color != value)
-                {
-                    _cBombaPatamar08_Color = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
         #endregion
 
         private bool ObterStatus(int status)
@@ -943,8 +681,5 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 }
             }
         }
-        #endregion
-
-
     }
 }

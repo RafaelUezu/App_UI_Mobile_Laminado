@@ -54,8 +54,6 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="560" />
 
-
-
             </Grid.RowDefinitions>
             <!-- Cabeçalho -->
             <HorizontalStackLayout
@@ -71,7 +69,6 @@
                     TextColor="{StaticResource Normal_Cor1}"
                     Command="{Binding ICommand_Selecionar_Receita}"
                     WidthRequest="250"
-   
                     />
                 <Button
                     Margin="5"

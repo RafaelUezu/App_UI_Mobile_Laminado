@@ -2,16 +2,1403 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_UI_Mobile_Laminado.MVVM.View.Pages.Operacao.Page_Operacao_Automatica"
+             Background="{StaticResource Normal_Cor6}"
+             Title="Operação Automática"
+             x:Name="OperacaoAutomatica"
              
-             Title="Operação Automática">
-    <VerticalStackLayout
-        BackgroundColor="Red"
-        VerticalOptions="Center"
-        >
-        <Label 
-            Text="Esta será a tela de operação"
-            VerticalOptions="Center" 
-            FontSize="30"
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:vm="clr-namespace:App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:control="clr-namespace:App_UI_Mobile_Laminado.Commands.UserControl"
+             xmlns:Drawables="clr-namespace:App_UI_Mobile_Laminado.MVVM.View.Drawables"
+             >
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="600"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+
+            </Grid.ColumnDefinitions>
+            
+            <Frame
+                Margin="0"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="{StaticResource Normal_Cor5}"
+                HeightRequest="640"
+                WidthRequest="1320">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="560"/>
+                        
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+   
+                    <HorizontalStackLayout
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Start"
+                        >
+                        <Button
+                            Margin="5"
+                            Text="Selecionar Receita"
+                            FontSize="Large"
+                            Background="{StaticResource Normal_Cor6}"
+                            TextColor="{StaticResource Normal_Cor1}"
+                            Command="{Binding ICommand_Selecionar_Receita}"
+                            WidthRequest="250"
+                            />
+                        <Button
+                            Margin="5"
+                            Text="Enviar Receita"
+                            FontSize="Large"
+                            Background="{StaticResource Normal_Cor6}"
+                            TextColor="{StaticResource Normal_Cor1}"
+                            Command="{Binding ICommand_Enviar_Receita}"
+                            WidthRequest="250"
+                            />
+                    </HorizontalStackLayout>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding sName_ReadWrite}"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        FontSize="30"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        />
+                    <Frame
+                        Margin="0"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="{StaticResource Normal_Cor4}"
+                        HeightRequest="550"
+                        WidthRequest="1300">
+                        <Grid>
+                            <GraphicsView
+                                x:Name="eixotemperatura"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference eixotemperatura}"
+                                        X1="50"
+                                        Y1="0"
+                                        X2="50"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="eixotempo"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference eixotempo}"
+                                        X1="50"
+                                        Y1="450"
+                                        X2="1200"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                    x:Name="linha_rampa01"
+                                    BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa01}"
+                                        X1="50"
+                                        Y1="450"
+                                        X2="100"
+                                        Y2="400"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar01"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar01}"
+                                        X1="100"
+                                        Y1="400"
+                                        X2="150"
+                                        Y2="400"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa02"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa02}"
+                                        X1="150"
+                                        Y1="400"
+                                        X2="200"
+                                        Y2="350"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar02"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar02}"
+                                        X1="200"
+                                        Y1="350"
+                                        X2="250"
+                                        Y2="350"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa03"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa03}"
+                                        X1="250"
+                                        Y1="350"
+                                        X2="300"
+                                        Y2="300"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar03"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar03}"
+                                        X1="300"
+                                        Y1="300"
+                                        X2="350"
+                                        Y2="300"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round"
+                                        TipoLinha="Continua"
+                                        />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa04"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa04}"
+                                        X1="350"
+                                        Y1="300"
+                                        X2="400"
+                                        Y2="250"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar04"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar04}"
+                                        X1="400"
+                                        Y1="250"
+                                        X2="450"
+                                        Y2="250"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round"
+                                        TipoLinha="Continua"
+                                        />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa05"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa05}"
+                                        X1="450"
+                                        Y1="250"
+                                        X2="500"
+                                        Y2="200"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar05"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar05}"
+                                        X1="500"
+                                        Y1="200"
+                                        X2="550"
+                                        Y2="200"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round"
+                                        TipoLinha="Continua"
+                                        />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa06"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa06}"
+                                        X1="550"
+                                        Y1="200"
+                                        X2="600"
+                                        Y2="150"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar06"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar06}"
+                                        X1="600"
+                                        Y1="150"
+                                        X2="650"
+                                        Y2="150"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round"
+                                        TipoLinha="Continua"
+                                        />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa07"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa07}"
+                                        X1="650"
+                                        Y1="150"
+                                        X2="700"
+                                        Y2="100"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar07"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar07}"
+                                        X1="700"
+                                        Y1="100"
+                                        X2="750"
+                                        Y2="100"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round"
+                                        TipoLinha="Continua"
+                                        />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_rampa08"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_rampa08}"
+                                        X1="750"
+                                        Y1="100"
+                                        X2="800"
+                                        Y2="50"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_patamar08"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_patamar08}"
+                                        X1="800"
+                                        Y1="50"
+                                        X2="850"
+                                        Y2="50"
+                                        Cor="Red"
+                                        Espessura="2"
+                                        Ponta="Round"
+                                        TipoLinha="Continua"
+                                        />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_resfriamento01"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_resfriamento01}"
+                                        X1="850"
+                                        Y1="50"
+                                        X2="1150"
+                                        Y2="450"
+                                        Cor="Blue"
+                                        Espessura="2"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria01"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria01}"
+                                        X1="100"
+                                        Y1="400"
+                                        X2="100"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria02"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria02}"
+                                        X1="150"
+                                        Y1="400"
+                                        X2="150"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria03"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria03}"
+                                        X1="200"
+                                        Y1="350"
+                                        X2="200"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria04"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria04}"
+                                        X1="250"
+                                        Y1="350"
+                                        X2="250"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria05"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria05}"
+                                        X1="300"
+                                        Y1="300"
+                                        X2="300"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria06"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria06}"
+                                        X1="350"
+                                        Y1="300"
+                                        X2="350"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria07"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria07}"
+                                        X1="400"
+                                        Y1="250"
+                                        X2="400"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria08"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria08}"
+                                        X1="450"
+                                        Y1="250"
+                                        X2="450"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria09"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria09}"
+                                        X1="500"
+                                        Y1="200"
+                                        X2="500"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria10"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria10}"
+                                        X1="550"
+                                        Y1="200"
+                                        X2="550"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria11"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria11}"
+                                        X1="600"
+                                        Y1="150"
+                                        X2="600"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria12"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria12}"
+                                        X1="650"
+                                        Y1="150"
+                                        X2="650"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria13"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria13}"
+                                        X1="700"
+                                        Y1="100"
+                                        X2="700"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria14"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria14}"
+                                        X1="750"
+                                        Y1="100"
+                                        X2="750"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria15"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria15}"
+                                        X1="800"
+                                        Y1="50"
+                                        X2="800"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor6}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView
+                                x:Name="linha_divisoria16"
+                                BackgroundColor="#0F000000">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Linha
+                                        Host="{x:Reference linha_divisoria16}"
+                                        X1="850"
+                                        Y1="50"
+                                        X2="850"
+                                        Y2="450"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        Espessura="2"
+                                        TipoLinha="Pontilhada"
+                                        EscalaTipoDeLinha="0.5"
+                                        Ponta="Round" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp1" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp1}"
+                                        BindingContext="{Binding Source={x:Reference text_temp1}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP01_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="125"
+                                        Y="400"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="0" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp2" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp2}"
+                                        BindingContext="{Binding Source={x:Reference text_temp2}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP02_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="225"
+                                        Y="350"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp3" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp3}"
+                                        BindingContext="{Binding Source={x:Reference text_temp3}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP03_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="325"
+                                        Y="300"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp4" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp4}"
+                                        BindingContext="{Binding Source={x:Reference text_temp4}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP04_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="425"
+                                        Y="250"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp5" BackgroundColor="Transparent"
+                                 BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp5}"
+                                        BindingContext="{Binding Source={x:Reference text_temp5}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP05_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="525"
+                                        Y="200"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp6" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp6}"
+                                        BindingContext="{Binding Source={x:Reference text_temp6}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP06_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="625"
+                                        Y="150"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp7" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}">
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                    Host="{x:Reference text_temp7}"
+                                    BindingContext="{Binding Source={x:Reference text_temp7}, Path=BindingContext}"
+                                    Conteudo="{Binding dTemperaturaSP07_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                    X="725"
+                                    Y="100"
+                                    Cor="Red"
+                                    TamanhoFonte="16"
+                                    Fonte="OpenSansSemibold"
+                                    AlinhamentoHorizontal="Center"
+                                    AlinhamentoVertical="Bottom"
+                                    RotacaoGraus="0"
+                                    Fundo="Transparent"
+                                    Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_temp8" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_temp8}"
+                                        BindingContext="{Binding Source={x:Reference text_temp8}, Path=BindingContext}"
+                                        Conteudo="{Binding dTemperaturaSP08_ReadWrite, Mode=OneWay, StringFormat='{0:F1} ºC'}"
+                                        X="825"
+                                        Y="50"
+                                        Cor="Red"
+                                        TamanhoFonte="16"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa01" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa01}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa01}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa01_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="75"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar01" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_HoraPatamar01}"
+                                        BindingContext="{Binding Source={x:Reference text_HoraPatamar01}, Path=BindingContext}"
+                                        Conteudo="{Binding iHoraPatamar01_ReadWrite, StringFormat='{0:00}:'}"
+                                        X="125"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Right"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar01" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar01}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar01}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar01_ReadWrite, StringFormat='{0:00}'}"
+                                        X="125"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa02" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa02}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa02}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa02_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="175"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar02" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_HoraPatamar02}"
+                                        BindingContext="{Binding Source={x:Reference text_HoraPatamar02}, Path=BindingContext}"
+                                        Conteudo="{Binding iHoraPatamar02_ReadWrite, StringFormat='{0:00}:'}"
+                                        X="225"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Right"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar02" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                    Host="{x:Reference text_MinutoPatamar02}"
+                                    BindingContext="{Binding Source={x:Reference text_MinutoPatamar02}, Path=BindingContext}"
+                                    Conteudo="{Binding iMinutoPatamar02_ReadWrite, StringFormat='{0:00}'}"
+                                    X="225"
+                                    Y="465"
+                                    Cor="{StaticResource Normal_Cor7}"
+                                    TamanhoFonte="15"
+                                    Fonte="OpenSansSemibold"
+                                    AlinhamentoHorizontal="Left"
+                                    AlinhamentoVertical="Bottom"
+                                    RotacaoGraus="0"
+                                    Fundo="Transparent"
+                                    Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa03" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa03}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa03}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa03_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="275"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar03" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_HoraPatamar03}"
+                                        BindingContext="{Binding Source={x:Reference text_HoraPatamar03}, Path=BindingContext}"
+                                        Conteudo="{Binding iHoraPatamar03_ReadWrite, StringFormat='{0:00}:'}"
+                                        X="325"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Right"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar03" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar03}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar03}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar03_ReadWrite, StringFormat='{0:00}'}"
+                                        X="325"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa04" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa04}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa04}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa04_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="375"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar04" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                    Host="{x:Reference text_HoraPatamar04}"
+                                    BindingContext="{Binding Source={x:Reference text_HoraPatamar04}, Path=BindingContext}"
+                                    Conteudo="{Binding iHoraPatamar04_ReadWrite, StringFormat='{0:00}:'}"
+                                    X="425"
+                                    Y="465"
+                                    Cor="{StaticResource Normal_Cor7}"
+                                    TamanhoFonte="15"
+                                    Fonte="OpenSansSemibold"
+                                    AlinhamentoHorizontal="Right"
+                                    AlinhamentoVertical="Bottom"
+                                    RotacaoGraus="0"
+                                    Fundo="Transparent"
+                                    Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar04" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar04}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar04}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar04_ReadWrite, StringFormat='{0:00}'}"
+                                        X="425"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa05" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa05}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa05}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa05_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="475"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar05" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_HoraPatamar05}"
+                                        BindingContext="{Binding Source={x:Reference text_HoraPatamar05}, Path=BindingContext}"
+                                        Conteudo="{Binding iHoraPatamar05_ReadWrite, StringFormat='{0:00}:'}"
+                                        X="525"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Right"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar05" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar05}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar05}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar05_ReadWrite, StringFormat='{0:00}'}"
+                                        X="525"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa06" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa06}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa06}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa06_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="575"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar06" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_HoraPatamar06}"
+                                        BindingContext="{Binding Source={x:Reference text_HoraPatamar06}, Path=BindingContext}"
+                                        Conteudo="{Binding iHoraPatamar06_ReadWrite, StringFormat='{0:00}:'}"
+                                        X="625"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Right"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar06" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar06}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar06}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar06_ReadWrite, StringFormat='{0:00}'}"
+                                        X="625"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa07" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa07}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa07}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa07_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="675"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar07" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                    Host="{x:Reference text_HoraPatamar07}"
+                                    BindingContext="{Binding Source={x:Reference text_HoraPatamar07}, Path=BindingContext}"
+                                    Conteudo="{Binding iHoraPatamar07_ReadWrite, StringFormat='{0:00}:'}"
+                                    X="725"
+                                    Y="465"
+                                    Cor="{StaticResource Normal_Cor7}"
+                                    TamanhoFonte="15"
+                                    Fonte="OpenSansSemibold"
+                                    AlinhamentoHorizontal="Right"
+                                    AlinhamentoVertical="Bottom"
+                                    RotacaoGraus="0"
+                                    Fundo="Transparent"
+                                    Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar07" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar07}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar07}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar07_ReadWrite, StringFormat='{0:00}'}"
+                                        X="725"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoRampa08" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoRampa08}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoRampa08}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoRampa08_ReadWrite, StringFormat='00:{0:00}'}"
+                                        X="775"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Center"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_HoraPatamar08" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_HoraPatamar08}"
+                                        BindingContext="{Binding Source={x:Reference text_HoraPatamar08}, Path=BindingContext}"
+                                        Conteudo="{Binding iHoraPatamar08_ReadWrite, StringFormat='{0:00}:'}"
+                                        X="825"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Right"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+                            <GraphicsView x:Name="text_MinutoPatamar08" BackgroundColor="Transparent"
+                                BindingContext="{Binding Source={x:Reference OperacaoAutomatica}, Path=BindingContext}"
+                                >
+                                <GraphicsView.Drawable>
+                                    <Drawables:Texto
+                                        Host="{x:Reference text_MinutoPatamar08}"
+                                        BindingContext="{Binding Source={x:Reference text_MinutoPatamar08}, Path=BindingContext}"
+                                        Conteudo="{Binding iMinutoPatamar08_ReadWrite, StringFormat='{0:00}'}"
+                                        X="825"
+                                        Y="465"
+                                        Cor="{StaticResource Normal_Cor7}"
+                                        TamanhoFonte="15"
+                                        Fonte="OpenSansSemibold"
+                                        AlinhamentoHorizontal="Left"
+                                        AlinhamentoVertical="Bottom"
+                                        RotacaoGraus="0"
+                                        Fundo="Transparent"
+                                        Padding="2" />
+                                </GraphicsView.Drawable>
+                            </GraphicsView>
+
+                            <!-- Imagens -->
+
+                            <AbsoluteLayout>
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 190, 750"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar01_Status}"
+                                    />
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 390, 650"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar02_Status}"
+                                    />              
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 590, 550"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar03_Status}"
+                                    />
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 790, 450"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar04_Status}"
+                                    />
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 990, 350"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar05_Status}"
+                                    />
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 1190, 250"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar06_Status}"
+                                    />
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 1390, 150"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar07_Status}"
+                                    />
+                                <Image
+                                    Margin="0"
+                                    Source="bombavacuoverde.png"
+                                    HeightRequest="30"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    AbsoluteLayout.LayoutBounds="30, 50, 1590, 050"
+                                    AbsoluteLayout.LayoutFlags="None"
+                                    IsVisible="{Binding xBombaPatamar08_Status}"
+                                    />
+                            </AbsoluteLayout>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ScrollView>
 </ContentPage>

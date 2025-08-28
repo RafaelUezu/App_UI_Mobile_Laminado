@@ -371,7 +371,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
 
                             };
-                            List <ReadValueId> nodesToRead_GVL_IhmClp = new List<ReadValueId>
+                            List<ReadValueId> nodesToRead_GVL_IhmClp = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar01"), AttributeId = Attributes.Value },//0
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.rTempCxSupPatamar02"), AttributeId = Attributes.Value },//1
@@ -402,6 +402,50 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinTasbCxSup"), AttributeId = Attributes.Value },//24
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.BtLdVacuoMesa01"), AttributeId = Attributes.Value },//25
+                            };
+
+                            List<ReadValueId> nodesToRead_GVL_Receita = new List<ReadValueId>
+                            {
+
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar01"), AttributeId = Attributes.Value },//0
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar02"), AttributeId = Attributes.Value },//1
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar03"), AttributeId = Attributes.Value },//2
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar04"), AttributeId = Attributes.Value },//3
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar05"), AttributeId = Attributes.Value },//4
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar06"), AttributeId = Attributes.Value },//5
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar07"), AttributeId = Attributes.Value },//6
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar08"), AttributeId = Attributes.Value },//7
+
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar01"), AttributeId = Attributes.Value },//8
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar02"), AttributeId = Attributes.Value },//9
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar03"), AttributeId = Attributes.Value },//10
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar04"), AttributeId = Attributes.Value },//11
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar05"), AttributeId = Attributes.Value },//12
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar06"), AttributeId = Attributes.Value },//13
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar07"), AttributeId = Attributes.Value },//14
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar08"), AttributeId = Attributes.Value },//15
+
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar01"), AttributeId = Attributes.Value },//16
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar02"), AttributeId = Attributes.Value },//17
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar03"), AttributeId = Attributes.Value },//18
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar04"), AttributeId = Attributes.Value },//19
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar05"), AttributeId = Attributes.Value },//20
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar06"), AttributeId = Attributes.Value },//21
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar07"), AttributeId = Attributes.Value },//22
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar08"), AttributeId = Attributes.Value },//23
+
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo01"), AttributeId = Attributes.Value },//24
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo02"), AttributeId = Attributes.Value },//25
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo03"), AttributeId = Attributes.Value },//26
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo04"), AttributeId = Attributes.Value },//27
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo05"), AttributeId = Attributes.Value },//28
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo06"), AttributeId = Attributes.Value },//29
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo07"), AttributeId = Attributes.Value },//30
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo08"), AttributeId = Attributes.Value },//31
+
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinTasbCxSup"), AttributeId = Attributes.Value },//32
+                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iEscreveReceitaCxSup"), AttributeId = Attributes.Value },//33
+
                             };
 
                             RequestHeader requestHeader_GVL_EntradasSaidas = new RequestHeader();
@@ -445,6 +489,12 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             TimestampsToReturn timestampsToReturn_GVL_IhmClp = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_IhmClp = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_IhmClp = null;
+
+                            RequestHeader requestHeader_GVL_Receita = new RequestHeader();
+                            double maxAge_GVL_Receita = 0;
+                            TimestampsToReturn timestampsToReturn_GVL_Receita = TimestampsToReturn.Both;
+                            DataValueCollection? results_GVL_Receita = null;
+                            DiagnosticInfoCollection? diagnosticInfos_GVL_Receita = null;
 
 
                             var itemsToWrite_GVL_EntradasSaidas = new List<OpcWriteItem>();
@@ -674,7 +724,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 },
 
                             };
-
                             var itemsToWrite_GVL_Permanentes = new List<OpcWriteItem>()
                             {
                                 new OpcWriteItem
@@ -737,14 +786,271 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     GetValue = (_) => GVL.Opcua.GVL_Permanentes.uMinProgramado.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.uMinProgramado.Write = null
                                 },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa02",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa03",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa04",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa05",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa06",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa07",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa08",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Write = null
+                                },
                             };
-                                
+                            var itemsToWrite_GVL_Receita = new List<OpcWriteItem>()
+                            {
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar02",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar03",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar04",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar05",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar06",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar07",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinCxSupPatamar08",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar08.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar02",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar03",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar04",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar05",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar06",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar07",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecHorCxSupPatamar08",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar08.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar02",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar03",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar04",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar05",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar06",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar07",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.rRecTempCxSupPatamar08",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar08.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo02",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo02.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo02.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo03",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo03.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo03.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo04",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo04.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo04.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo05",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo05.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo05.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo06",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo06.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo06.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo07",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo07.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo07.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecSp01Vacuo08",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo08.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecSp01Vacuo08.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iRecMinTasbCxSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iRecMinTasbCxSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iRecMinTasbCxSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Receita.iEscreveReceitaCxSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Receita.iEscreveReceitaCxSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Receita.iEscreveReceitaCxSup.Write = null
+                                },
+
+
+                            };
 
                             List <List<OpcWriteItem>> allItemsToWrite = new()
                             {
                                 itemsToWrite_GVL_Ihm_Manual,
                                 itemsToWrite_GVL_EntradasSaidas,
-                                itemsToWrite_GVL_IhmClp
+                                itemsToWrite_GVL_IhmClp,
+                                itemsToWrite_GVL_Receita
                             };
 
                             while (!token.IsCancellationRequested)
@@ -868,6 +1174,16 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                                 nodesToReadCollection_GVL_IhmClp,
                                                 out results_GVL_IhmClp,
                                                 out diagnosticInfos_GVL_IhmClp
+                                                );
+
+                                    ReadValueIdCollection nodesToReadCollection_GVL_Receita = new ReadValueIdCollection(nodesToRead_GVL_Receita);
+                                    session.Read(
+                                                requestHeader_GVL_Receita,
+                                                maxAge_GVL_Receita,
+                                                timestampsToReturn_GVL_Receita,
+                                                nodesToReadCollection_GVL_Receita,
+                                                out results_GVL_Receita,
+                                                out diagnosticInfos_GVL_Receita
                                                 );
 
 
@@ -1046,7 +1362,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             GVL.Opcua.GVL_ImagensAlarmes.ImgMotor.SetRead(i, (bool)ImgMotor[i]);
                                         }
                                     }
-
 
                                     if (results_GVL_Energia[0].Value != null)
                                     {
@@ -1702,6 +2017,158 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     {
                                         GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Read = (bool)results_GVL_IhmClp[25].Value;
                                     }
+
+                                    // GVL_Receita
+
+                                    if (results_GVL_Receita[0].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar01.Read = (short)(Int16)results_GVL_Receita[0].Value;
+                                    }
+                                    if (results_GVL_Receita[1].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar02.Read = (short)(Int16)results_GVL_Receita[1].Value;
+                                    }
+                                    if (results_GVL_Receita[2].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar03.Read = (short)(Int16)results_GVL_Receita[2].Value;
+                                    }
+                                    if (results_GVL_Receita[3].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar04.Read = (short)(Int16)results_GVL_Receita[3].Value;
+                                    }
+                                    if (results_GVL_Receita[4].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar05.Read = (short)(Int16)results_GVL_Receita[4].Value;
+                                    }
+                                    if (results_GVL_Receita[5].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar06.Read = (short)(Int16)results_GVL_Receita[5].Value;
+                                    }
+                                    if (results_GVL_Receita[6].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar07.Read = (short)(Int16)results_GVL_Receita[6].Value;
+                                    }
+                                    if (results_GVL_Receita[7].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar08.Read = (short)(Int16)results_GVL_Receita[7].Value;
+                                    }
+
+
+                                    if (results_GVL_Receita[8].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar01.Read = (short)(Int16)results_GVL_Receita[8].Value;
+                                    }
+                                    if (results_GVL_Receita[9].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar02.Read = (short)(Int16)results_GVL_Receita[9].Value;
+                                    }
+                                    if (results_GVL_Receita[10].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar03.Read = (short)(Int16)results_GVL_Receita[10].Value;
+                                    }
+                                    if (results_GVL_Receita[11].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar04.Read = (short)(Int16)results_GVL_Receita[11].Value;
+                                    }
+                                    if (results_GVL_Receita[12].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar05.Read = (short)(Int16)results_GVL_Receita[12].Value;
+                                    }
+                                    if (results_GVL_Receita[13].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar06.Read = (short)(Int16)results_GVL_Receita[13].Value;
+                                    }
+                                    if (results_GVL_Receita[14].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar07.Read = (short)(Int16)results_GVL_Receita[14].Value;
+                                    }
+                                    if (results_GVL_Receita[15].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar08.Read = (short)(Int16)results_GVL_Receita[15].Value;
+                                    }
+
+
+
+                                    if (results_GVL_Receita[16].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar01.Read = (float)results_GVL_Receita[16].Value;
+                                    }
+                                    if (results_GVL_Receita[17].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar02.Read = (float)results_GVL_Receita[17].Value;
+                                    }
+                                    if (results_GVL_Receita[18].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar03.Read = (float)results_GVL_Receita[18].Value;
+                                    }
+                                    if (results_GVL_Receita[19].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar04.Read = (float)results_GVL_Receita[19].Value;
+                                    }
+                                    if (results_GVL_Receita[20].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar05.Read = (float)results_GVL_Receita[20].Value;
+                                    }
+                                    if (results_GVL_Receita[21].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar06.Read = (float)results_GVL_Receita[21].Value;
+                                    }
+                                    if (results_GVL_Receita[22].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar07.Read = (float)results_GVL_Receita[22].Value;
+                                    }
+                                    if (results_GVL_Receita[23].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar08.Read = (float)results_GVL_Receita[23].Value;
+                                    }
+
+
+
+                                    if (results_GVL_Receita[24].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo01.Read = (short)(Int16)results_GVL_Receita[24].Value;
+                                    }
+                                    if (results_GVL_Receita[25].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo02.Read = (short)(Int16)results_GVL_Receita[25].Value;
+                                    }
+                                    if (results_GVL_Receita[26].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo03.Read = (short)(Int16)results_GVL_Receita[26].Value;
+                                    }
+                                    if (results_GVL_Receita[27].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo04.Read = (short)(Int16)results_GVL_Receita[27].Value;
+                                    }
+                                    if (results_GVL_Receita[28].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo05.Read = (short)(Int16)results_GVL_Receita[28].Value;
+                                    }
+                                    if (results_GVL_Receita[29].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo06.Read = (short)(Int16)results_GVL_Receita[29].Value;
+                                    }
+                                    if (results_GVL_Receita[30].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo07.Read = (short)(Int16)results_GVL_Receita[30].Value;
+                                    }
+                                    if (results_GVL_Receita[31].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecSp01Vacuo08.Read = (short)(Int16)results_GVL_Receita[31].Value;
+                                    }
+
+
+
+
+                                    if (results_GVL_Receita[32].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iRecMinTasbCxSup.Read = (short)(Int16)results_GVL_Receita[32].Value;
+                                    }
+                                    if (results_GVL_Receita[33].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Receita.iEscreveReceitaCxSup.Read = (short)(Int16)results_GVL_Receita[33].Value;
+                                    }
+
 
                                     sw.Stop(); 
                                     System.Diagnostics.Debug.WriteLine("Tempo de passagem de valor" + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
