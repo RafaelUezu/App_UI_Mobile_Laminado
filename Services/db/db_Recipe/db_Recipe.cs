@@ -1,10 +1,11 @@
-﻿using System;
+﻿using App_UI_Mobile_Laminado.Services.db.db_BaseClass;
+using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.Sqlite;
-using App_UI_Mobile_Laminado.Services.db.db_BaseClass;
 namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
 {
     public class db_Recipe : db_BaseClass_Basic
@@ -263,55 +264,110 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
         /// <summary>
         /// Atualiza uma receita específica no banco de dados.
         /// </summary>
-        /// <param name="RecipeName">Nome da Receita que sera deletada </param>
-        /// <param name="db_RecipeName">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
+        /// <param name="db_Name">Nome do db </param>
+        /// <param name="Table_Name">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "RecipeSup").</param>
         /// <returns>Retorna true se a atualização for bem-sucedida; caso contrário, false.</returns>
         ///
 
-        public async Task<Data_RecipeSup?> SelectRecipeAsync(string RecipeName, string db_RecipeName)
+        public async Task<bool?> SelectRecipeAsync(string? db_Name, string? Table_Name, string? Field_Name, string? NameRecipe)
         {
             try
             {
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-
-        public async Task<bool?> DeleteRecipeAsync(string RecipeName, string db_RecipeName)
-        {
-            try
-            {
-                return await Task.Run(async () =>
+                if (string.IsNullOrEmpty(db_Name) && string.IsNullOrEmpty(Table_Name) && string.IsNullOrEmpty(NameRecipe))
                 {
-                    if (string.IsNullOrEmpty(RecipeName) || string.IsNullOrEmpty(db_RecipeName))
+                    return false;
+                }
+                else
+                {
+                    bool? Validade_DataBase = await ExistDatabaseAsync(db_Name);
+                    if (Validade_DataBase != null && Validade_DataBase != false)
                     {
-                        return false;
-                    }
-                    else
-                    {
-                        string db_File = $"{db_RecipeName}.db";
+                        string db_File = $"{db_Name}.db";
                         string dbPath = Path.Combine(FileSystem.AppDataDirectory, db_File);
-                        bool ExistDataBase = await ExistDatabaseAsync(db_RecipeName) ?? false;
-                        if(!ExistDataBase)
+                        if (!File.Exists(dbPath))
                         {
-                            return false;
+                            return null;
                         }
                         else
                         {
-                            using var connection = new SqliteConnection($"Data Source={dbPath}");
-                            connection.Open();
-                            using var command = connection.CreateCommand();
-                            command.CommandText = $@"DELETE FROM {db_RecipeName} WHERE sName = $sName;";
-                            command.Parameters.AddWithValue("$sName", RecipeName);
-                            int? rowsAffected = command.ExecuteNonQuery();
-                            return ((rowsAffected ?? 0) > 0);
+                            return await Task.Run(() =>
+                            {
+                                using (var connection = new SqliteConnection($"Data Source={dbPath}"))
+                                {
+                                    connection.Open();
+                                    using var command = connection.CreateCommand();
+                                    command.CommandText =
+                                    $@"
+                                    Select *
+                                    FROM {Table_Name}
+                                    WHERE {Field_Name} = @NameRecipe;";
+
+                                    command.Parameters.AddWithValue("@NameRecipe", NameRecipe);
+                                    SqliteDataReader DataReader = command.ExecuteReader();
+
+                                    if (DataReader.Read() && DataReader != null)
+                                    {
+                                        RecipeSup.sName = DataReader["sName"].ToString();
+
+                                        RecipeSup.iMinutoRampa01 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa01"));
+                                        RecipeSup.iMinutoRampa02 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa02"));
+                                        RecipeSup.iMinutoRampa03 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa03"));
+                                        RecipeSup.iMinutoRampa04 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa04"));
+                                        RecipeSup.iMinutoRampa05 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa05"));
+                                        RecipeSup.iMinutoRampa06 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa06"));
+                                        RecipeSup.iMinutoRampa07 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa07"));
+                                        RecipeSup.iMinutoRampa08 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa08"));
+
+                                        RecipeSup.iHoraPatamar01 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar01"));
+                                        RecipeSup.iHoraPatamar02 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar02"));
+                                        RecipeSup.iHoraPatamar03 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar03"));
+                                        RecipeSup.iHoraPatamar04 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar04"));
+                                        RecipeSup.iHoraPatamar05 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar05"));
+                                        RecipeSup.iHoraPatamar06 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar06"));
+                                        RecipeSup.iHoraPatamar07 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar07"));
+                                        RecipeSup.iHoraPatamar08 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar08"));
+
+                                        RecipeSup.iHoraPatamar01 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar01"));
+                                        RecipeSup.iHoraPatamar02 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar02"));
+                                        RecipeSup.iHoraPatamar03 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar03"));
+                                        RecipeSup.iHoraPatamar04 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar04"));
+                                        RecipeSup.iHoraPatamar05 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar05"));
+                                        RecipeSup.iHoraPatamar06 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar06"));
+                                        RecipeSup.iHoraPatamar07 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar07"));
+                                        RecipeSup.iHoraPatamar08 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar08"));
+
+                                        RecipeSup.dTemperaturaSP01 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP01"));
+                                        RecipeSup.dTemperaturaSP02 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP02"));
+                                        RecipeSup.dTemperaturaSP03 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP03"));
+                                        RecipeSup.dTemperaturaSP04 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP04"));
+                                        RecipeSup.dTemperaturaSP05 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP05"));
+                                        RecipeSup.dTemperaturaSP06 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP06"));
+                                        RecipeSup.dTemperaturaSP07 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP07"));
+                                        RecipeSup.dTemperaturaSP08 = DataReader.GetDouble(DataReader.GetOrdinal("rTemperaturaSP08"));
+
+                                        RecipeSup.iBombaPatamar01 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar01"));
+                                        RecipeSup.iBombaPatamar02 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar02"));
+                                        RecipeSup.iBombaPatamar03 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar03"));
+                                        RecipeSup.iBombaPatamar04 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar04"));
+                                        RecipeSup.iBombaPatamar05 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar05"));
+                                        RecipeSup.iBombaPatamar06 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar06"));
+                                        RecipeSup.iBombaPatamar07 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar07"));
+                                        RecipeSup.iBombaPatamar08 = DataReader.GetInt32(DataReader.GetOrdinal("iBombaPatamar08"));
+
+                                        RecipeSup.iTempoBombaFim = DataReader.GetInt32(DataReader.GetOrdinal("iTempoBombaFim"));
+                                    }
+                                    DataReader.Close();
+                                    return true;
+                                }
+
+                            });
                         }
                     }
-                });
+                    else
+                    {
+                        return false;
+                    }
+                }
             }
             catch
             {
@@ -447,8 +503,8 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
 
         }
 
-        public Data_RecipeSup RecipeSup { get; set; } = new Data_RecipeSup();
-        public class Data_RecipeSup
+        public Data_Recipe RecipeSup { get; set; } = new Data_Recipe();
+        public class Data_Recipe
         {
 
             public string sName { get; set; }

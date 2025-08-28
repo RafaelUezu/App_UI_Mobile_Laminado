@@ -48,20 +48,40 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
         public ICommand ICommand_Excluir_Receita { get; }
         #endregion
 
-        public string Resultado { get; set; }
         private async Task ExecutarSelecao()
         {
-            var page = Application.Current.MainPage;
-
-            string[] opcoes = { "Item A1", "Item B", "Item C" };
-            var resposta = await page.DisplayActionSheet("Escolha", "Cancelar", null, opcoes);
-
-            if (resposta != null && resposta != "Cancelar")
+            try
             {
-                Resultado = $"Selecionou: {resposta}";
-                OnPropertyChanged(nameof(Resultado));
+                List<string?>? sNomesColunaReceita = await _db_Recipe.AllListDatabaseAsync("db_Recipe", "RecipeSup", "sName");
+                string[] opcoes = sNomesColunaReceita?
+                        .Where(s => s != null)
+                        .Select(s => s!)
+                        .ToArray()
+                        ?? Array.Empty<string>();
+                Page? page = Application.Current.MainPage;
+                string? resposta = await page.DisplayActionSheet("Escolha", "Cancelar", null, opcoes);
+
+                if (!string.IsNullOrEmpty(resposta) && resposta != "Cancelar")
+                {
+                    bool? ValidadeSelect = await _db_Recipe.SelectRecipeAsync("db_Recipe", "RecipeSup", "sName", resposta);
+                    if (ValidadeSelect == true)
+                    {
+                        db_to_ViewModelValue();                    
+                    }
+                    else if (ValidadeSelect == false)
+                    {
+                        if (Application.Current?.MainPage != null)
+                            _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao carregar a receita.", "OK");
+                        return;
+                    }
+                }
+            }
+            catch
+            {
+                return;
             }
         }
+
 
 
         private void ZeraValores_ViewModel()
@@ -304,12 +324,12 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas
                 if (Validate_Insert == true)
                 {
                     if (Application.Current?.MainPage != null)
-                        _ = Application.Current.MainPage.DisplayAlert("Sucesso", "Receita salva com sucesso!", "OK");
+                        _ = Application.Current.MainPage.DisplayAlert("Sucesso", "Receita criada com sucesso!", "OK");
                 }
                 else if (Validate_Insert == false)
                 {
                     if (Application.Current?.MainPage != null)
-                        _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao salvar a receita.", "OK");
+                        _ = Application.Current.MainPage.DisplayAlert("Falha", "Erro ao criada a receita.", "OK");
                 }
 
             }
