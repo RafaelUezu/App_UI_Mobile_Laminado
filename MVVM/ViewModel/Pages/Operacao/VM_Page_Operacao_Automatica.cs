@@ -83,9 +83,11 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         }
         public void AtualizaValores()
         {
+
         }
         public void EscreveValores()
         {
+
         }
         private void db_to_ViewModelValue()
         {
