@@ -16,37 +16,106 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
-                <RowDefinition Height="600"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="750"/>
             </Grid.RowDefinitions>
             
             <Grid.ColumnDefinitions>
 
             </Grid.ColumnDefinitions>
-            
+
             <Frame
                 Margin="0"
                 Grid.Row="1"
-                Grid.Column="0"
+                Grid.Column="2"
                 Grid.ColumnSpan="5"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 BackgroundColor="{StaticResource Normal_Cor5}"
-                HeightRequest="640"
+                HeightRequest="200"
                 WidthRequest="1320">
                 <Grid>
+                    
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="80"/>
-                        <RowDefinition Height="560"/>
-                        
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-   
-                    <HorizontalStackLayout
+
+                    <Label
+                        Padding="0"
+                        Margin="0"
                         Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Text="Inicialização da Operação"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="42"
+                        TextColor="AliceBlue"  
+                        />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="5"
+                        Text="{Binding sLegenda_CicloLaminaSupHabilitado}"
+                        FontSize="Large"
+                        Background="{Binding cLegenda_CicloLaminaSupHabilitado}"
+                        TextColor="{Binding cStatus_CicloLaminaSupHabilitado}"
+                        Command="{Binding ICommand_IniciarCiclo_Receita}"
+                        />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="5"
+                        Text="{Binding sLegenda_CicloLaminaSupHabilitado}"
+                        FontSize="Large"
+                        Background="{Binding cLegenda_CicloLaminaSupHabilitado}"
+                        TextColor="{Binding cStatus_CicloLaminaSupHabilitado}"
+                        Command="{Binding ICommand_IniciarCiclo_Receita}"
+                        />
+                </Grid>
+                    
+
+            </Frame>
+
+            <Frame
+                Margin="0"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BackgroundColor="{StaticResource Normal_Cor5}"
+                HeightRequest="740"
+                WidthRequest="1320">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="560"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Text="Seleção da Receita"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontSize="42"
+                        TextColor="AliceBlue"                        
+                        />
+                    <HorizontalStackLayout
+                        Grid.Row="1"
                         Grid.Column="0"
                         HorizontalOptions="Start"
                         >
@@ -71,8 +140,8 @@
                     </HorizontalStackLayout>
 
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.Column="2"
                         Text="{Binding sName_ReadWrite}"
                         HorizontalOptions="End"
                         VerticalOptions="Center"
@@ -83,7 +152,7 @@
                         />
                     <Frame
                         Margin="0"
-                        Grid.Row="1"
+                        Grid.Row="2"
                         Grid.Column="0"
                         Grid.ColumnSpan="4"
                         HorizontalOptions="Center"
@@ -1394,6 +1463,18 @@
                                     AbsoluteLayout.LayoutFlags="None"
                                     IsVisible="{Binding xBombaPatamar08_Status}"
                                     />
+                                <HorizontalStackLayout
+                                    AbsoluteLayout.LayoutBounds="50, 470, 1590, 050"
+                                    AbsoluteLayout.LayoutFlags="None">
+                                    <Label
+                                        Text="Tempo de Bomba Desligada Após Fim do Ciclo: "
+                                        FontSize="Medium"
+                                    />
+                                    <Label
+                                        Text="{Binding iTempoBombaFim_ReadWrite}"
+                                        FontSize="Medium"
+                                    />
+                                </HorizontalStackLayout>
                             </AbsoluteLayout>
                         </Grid>
                     </Frame>

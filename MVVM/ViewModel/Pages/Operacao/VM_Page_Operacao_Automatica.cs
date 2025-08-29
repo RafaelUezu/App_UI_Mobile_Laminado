@@ -23,7 +23,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         public VM_Page_Operacao_Automatica()
         {
             ICommand_Selecionar_Receita = new Command(async () => await ExecutarSelecao());
-            ICommand_Enviar_Receita = new Command(async () => await ExecutarEnvio());
+            ICommand_Enviar_Receita = new Command(() => ExecutarEnvio());
 
             OpcUaEvents.LeituraFinalizadaAsync += () =>
             {
@@ -77,9 +77,68 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 return;
             }
         }
-        private async Task ExecutarEnvio()
+        private void ExecutarEnvio()
         {
+            if( string.IsNullOrEmpty(sName_ReadWrite) )
+            {
+                if (Application.Current?.MainPage != null)
+                    _ = Application.Current.MainPage.DisplayAlert("Validação", "Nenhuma receita foi selecionada!", "Ok");
+                return;
+            }
+            else
+            {
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa01.Write = (Int16)iMinutoRampa01_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa02.Write = (Int16)iMinutoRampa02_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa03.Write = (Int16)iMinutoRampa03_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa04.Write = (Int16)iMinutoRampa04_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa05.Write = (Int16)iMinutoRampa05_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa06.Write = (Int16)iMinutoRampa06_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa07.Write = (Int16)iMinutoRampa07_ReadWrite;
+            GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Write = (Int16)iMinutoRampa08_ReadWrite;
 
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar01.Write = (Int16)iMinutoPatamar01_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar02.Write = (Int16)iMinutoPatamar02_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar03.Write = (Int16)iMinutoPatamar03_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar04.Write = (Int16)iMinutoPatamar04_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar05.Write = (Int16)iMinutoPatamar05_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar06.Write = (Int16)iMinutoPatamar06_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar07.Write = (Int16)iMinutoPatamar07_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecMinCxSupPatamar08.Write = (Int16)iMinutoPatamar08_ReadWrite;
+
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar01.Write = (Int16)iHoraPatamar01_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar02.Write = (Int16)iHoraPatamar02_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar03.Write = (Int16)iHoraPatamar03_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar04.Write = (Int16)iHoraPatamar04_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar05.Write = (Int16)iHoraPatamar05_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar06.Write = (Int16)iHoraPatamar06_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar07.Write = (Int16)iHoraPatamar07_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecHorCxSupPatamar08.Write = (Int16)iHoraPatamar08_ReadWrite;
+
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar01.Write = (float)dTemperaturaSP01_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar02.Write = (float)dTemperaturaSP02_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar03.Write = (float)dTemperaturaSP03_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar04.Write = (float)dTemperaturaSP04_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar05.Write = (float)dTemperaturaSP05_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar06.Write = (float)dTemperaturaSP06_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar07.Write = (float)dTemperaturaSP07_ReadWrite;
+            GVL.Opcua.GVL_Receita.rRecTempCxSupPatamar08.Write = (float)dTemperaturaSP08_ReadWrite;
+
+            GVL.Opcua.GVL_Receita.iRecSp01Vacuo01.Write = (Int16)iBombaPatamar01_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp02Vacuo01.Write = (Int16)iBombaPatamar02_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp03Vacuo01.Write = (Int16)iBombaPatamar03_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp04Vacuo01.Write = (Int16)iBombaPatamar04_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp05Vacuo01.Write = (Int16)iBombaPatamar05_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp06Vacuo01.Write = (Int16)iBombaPatamar06_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp07Vacuo01.Write = (Int16)iBombaPatamar07_ReadWrite;
+            GVL.Opcua.GVL_Receita.iRecSp08Vacuo01.Write = (Int16)iBombaPatamar08_ReadWrite;
+
+            GVL.Opcua.GVL_Receita.iRecMinTasbCxSup.Write = (Int16)iTempoBombaFim_ReadWrite;
+
+            GVL.Opcua.GVL_Receita.iEscreveReceitaCxSup.Write = 1;
+
+            if (Application.Current?.MainPage != null)
+                _ = Application.Current.MainPage.DisplayAlert("Notificação", "A Receita '" + sName_ReadWrite + "' foi enviada ao controlador", "Ok");
+            }
         }
         public void AtualizaValores()
         {

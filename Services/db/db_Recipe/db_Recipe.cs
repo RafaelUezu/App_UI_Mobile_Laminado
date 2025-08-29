@@ -30,15 +30,14 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
                     {
                         string db_File = $"{db_Name}.db";
                         string dbPath = Path.Combine(FileSystem.AppDataDirectory, db_File);
-                        
-                        if (!File.Exists(dbPath))
+
+
+                        using (var connection = new SqliteConnection($"Data Source={dbPath}"))
                         {
-                            using (var connection = new SqliteConnection($"Data Source={dbPath}"))
-                            {
-                                connection.Open();
-                                var command = connection.CreateCommand();
-                                command.CommandText =
-                                $@"
+                            connection.Open();
+                            var command = connection.CreateCommand();
+                            command.CommandText =
+                            $@"
                                 CREATE TABLE IF NOT EXISTS {Table_Name} (
                                 sName TEXT NOT NULL,
                                 iMinutoRampa01 INTEGER NOT NULL,
@@ -84,8 +83,8 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
                                 iTempoBombaFim INTEGER NOT NULL
                                 );
                                 ";
-                                command.ExecuteNonQuery();
-                            }
+                            command.ExecuteNonQuery();
+
                         }
                     });
                     return true;
@@ -99,8 +98,8 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
         /// <summary>
         /// Atualiza uma receita específica no banco de dados.
         /// </summary>
-        /// <param name="recipe"> Objeto de Parâmetros </param>
-        /// <param name="db_Name">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
+        /// <param name="db_Name"> Objeto de Parâmetros </param>
+        /// <param name="table_Name">Nome do arquivo ou identificador do banco de dados de receitas (ex.: "db_RecipeSup").</param>
         /// <returns>Retorna true se a atualização for bem-sucedida; caso contrário, false.</returns>
         /// 
         public async Task<bool?> InsertRecipeAsync(string db_Name, string table_Name)
@@ -318,14 +317,14 @@ namespace App_UI_Mobile_Laminado.Services.db.db_Recipe
                                         RecipeSup.iMinutoRampa07 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa07"));
                                         RecipeSup.iMinutoRampa08 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoRampa08"));
 
-                                        RecipeSup.iHoraPatamar01 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar01"));
-                                        RecipeSup.iHoraPatamar02 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar02"));
-                                        RecipeSup.iHoraPatamar03 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar03"));
-                                        RecipeSup.iHoraPatamar04 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar04"));
-                                        RecipeSup.iHoraPatamar05 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar05"));
-                                        RecipeSup.iHoraPatamar06 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar06"));
-                                        RecipeSup.iHoraPatamar07 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar07"));
-                                        RecipeSup.iHoraPatamar08 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar08"));
+                                        RecipeSup.iMinutoPatamar01 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar01"));
+                                        RecipeSup.iMinutoPatamar02 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar02"));
+                                        RecipeSup.iMinutoPatamar03 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar03"));
+                                        RecipeSup.iMinutoPatamar04 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar04"));
+                                        RecipeSup.iMinutoPatamar05 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar05"));
+                                        RecipeSup.iMinutoPatamar06 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar06"));
+                                        RecipeSup.iMinutoPatamar07 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar07"));
+                                        RecipeSup.iMinutoPatamar08 = DataReader.GetInt32(DataReader.GetOrdinal("iMinutoPatamar08"));
 
                                         RecipeSup.iHoraPatamar01 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar01"));
                                         RecipeSup.iHoraPatamar02 = DataReader.GetInt32(DataReader.GetOrdinal("iHoraPatamar02"));

@@ -2676,7 +2676,7 @@
                                 Padding="2" />
                         </GraphicsView.Drawable>
                     </GraphicsView>
-                    
+
                     <!-- Imagens -->
 
                     <AbsoluteLayout>
@@ -2768,6 +2768,19 @@
                             AbsoluteLayout.LayoutFlags="None"
                             IsVisible="{Binding xBombaPatamar08_Status}"
                             />
+                        <HorizontalStackLayout
+                            AbsoluteLayout.LayoutBounds="50, 470, 1590, 050"
+                            AbsoluteLayout.LayoutFlags="None">
+                            <Label
+                                Text="Tempo de Bomba Desligada Após Fim do Ciclo: "
+                                FontSize="Medium"
+                                 />
+                            <Label
+                                Text="{Binding iTempoBombaFim_ReadWrite}"
+                                FontSize="Medium"
+                                 />
+                        </HorizontalStackLayout>
+                        
 
 
                     </AbsoluteLayout>

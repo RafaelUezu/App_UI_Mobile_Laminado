@@ -509,7 +509,7 @@
                             TextColor="{StaticResource Normal_Cor2}"
                             FontSize="Medium"
                             Background="Transparent"
-                            Text="{Binding iQueryTime}"
+                            Text="{Binding iQueryTime_ReadWrite}"
                             HorizontalOptions="End"
                             VerticalOptions="Center"
                             VerticalTextAlignment="Center"
