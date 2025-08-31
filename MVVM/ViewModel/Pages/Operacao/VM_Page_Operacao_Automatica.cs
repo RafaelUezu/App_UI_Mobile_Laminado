@@ -24,6 +24,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         {
             ICommand_Selecionar_Receita = new Command(async () => await ExecutarSelecao());
             ICommand_Enviar_Receita = new Command(() => ExecutarEnvio());
+            ICommand_IniciarCiclo_Receita = new Command(async() => await IniciarCiclo_Receita());
+            ICommand_AbortaCicloSup = new Command(async() => await AbortaCiclo_Receita());
 
             OpcUaEvents.LeituraFinalizadaAsync += () =>
             {
@@ -37,11 +39,27 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         #region Declaração dos comandos
         public ICommand ICommand_Selecionar_Receita { get; }
         public ICommand ICommand_Enviar_Receita { get; }
+        public ICommand ICommand_IniciarCiclo_Receita { get; }
+        public ICommand ICommand_AbortaCicloSup { get; }
         #endregion
         private void OnLeituraFinalizada()
         {
             MainThread.BeginInvokeOnMainThread(AtualizaValores);
             MainThread.BeginInvokeOnMainThread(EscreveValores);
+        }
+
+        private async Task AbortaCiclo_Receita()
+        {
+            bool resposta = await Application.Current.MainPage.DisplayAlert("Atenção", "Confirma o aborto do ciclo?", "Sim", "Não");
+            if (resposta == true)
+            {
+                GVL.Opcua.GVL_IhmClp.xAbortaCicloSup.Write = true;
+            }
+        }
+
+        private async Task IniciarCiclo_Receita()
+        {
+            GVL.Opcua.GVL_IhmClp.xBtIniciaCicloSup.Write = true;
         }
 
         private async Task ExecutarSelecao()
@@ -142,6 +160,22 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         }
         public void AtualizaValores()
         {
+            bool xCicloLaminaSupHabilitado = GVL.Opcua.GVL_ClpIhm.xCicloLaminaSupHabilitado.Read ?? false;
+            if (xCicloLaminaSupHabilitado)
+            {
+                sLegenda_CicloLaminaSupHabilitado = "Ciclo Habilitado";
+                cLegenda_CicloLaminaSupHabilitado = Colors.Green;
+                cStatus_CicloLaminaSupHabilitado = Colors.Black;
+            }
+            else
+            {
+                sLegenda_CicloLaminaSupHabilitado = "Ciclo Desabilitado";
+                cLegenda_CicloLaminaSupHabilitado = Colors.Gray;
+                cStatus_CicloLaminaSupHabilitado = Colors.White;
+            }
+
+
+
 
         }
         public void EscreveValores()

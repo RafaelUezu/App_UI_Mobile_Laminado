@@ -62,7 +62,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Margin="5"
-                        Text="{Binding sLegenda_CicloLaminaSupHabilitado}"
+                        Text="{Binding cLegenda_CicloLaminaSupHabilitado}"
                         FontSize="Large"
                         Background="{Binding cLegenda_CicloLaminaSupHabilitado}"
                         TextColor="{Binding cStatus_CicloLaminaSupHabilitado}"
@@ -72,11 +72,11 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Margin="5"
-                        Text="{Binding sLegenda_CicloLaminaSupHabilitado}"
+                        Text="{Binding sLegenda_AbortaCicloSup}"
                         FontSize="Large"
-                        Background="{Binding cLegenda_CicloLaminaSupHabilitado}"
-                        TextColor="{Binding cStatus_CicloLaminaSupHabilitado}"
-                        Command="{Binding ICommand_IniciarCiclo_Receita}"
+                        Background="{Binding cLegenda_AbortaCicloSup}"
+                        TextColor="{Binding cStatus_AbortaCicloSup}"
+                        Command="{Binding ICommand_AbortaCicloSup}"
                         />
                 </Grid>
                     

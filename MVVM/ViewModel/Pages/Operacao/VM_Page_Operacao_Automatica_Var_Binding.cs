@@ -2210,6 +2210,53 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             }
         }
         #endregion
+
+        #region Comandos de Inicialziação
+
+        private string? _sLegenda_CicloLaminaSupHabilitado;
+        public string? sLegenda_CicloLaminaSupHabilitado
+        {
+            get => _sLegenda_CicloLaminaSupHabilitado;
+            set
+            {
+                if (_sLegenda_CicloLaminaSupHabilitado != value)
+                {
+                    _sLegenda_CicloLaminaSupHabilitado = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cLegenda_CicloLaminaSupHabilitado;
+        public Color? cLegenda_CicloLaminaSupHabilitado
+        {
+            get => _cLegenda_CicloLaminaSupHabilitado;
+            set
+            {
+                if (_cLegenda_CicloLaminaSupHabilitado != value)
+                {
+                    _cLegenda_CicloLaminaSupHabilitado = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cStatus_CicloLaminaSupHabilitado;
+        public Color? cStatus_CicloLaminaSupHabilitado
+        {
+            get => _cStatus_CicloLaminaSupHabilitado;
+            set
+            {
+                if (_cStatus_CicloLaminaSupHabilitado != value)
+                {
+                    _cStatus_CicloLaminaSupHabilitado = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
         #endregion
+
+        #endregion
+
+
+
     }
 }

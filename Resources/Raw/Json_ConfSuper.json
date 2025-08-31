@@ -1,5 +1,5 @@
 ﻿{
-  "sUrlOpcUa": "opc.tcp://10.10.210.20:4840",
+  "sUrlOpcUa": "opc.tcp://192.168.1.11:4840",
   "iTimeOutPing": 1000,
   "iTimeRequest": 500,
   "iMaxAgeOpcUa": 100,

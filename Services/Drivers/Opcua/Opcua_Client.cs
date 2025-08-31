@@ -338,6 +338,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iHorProgTotalSup"), AttributeId = Attributes.Value },//78
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.iMinProgTotalSup"), AttributeId = Attributes.Value },//79
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ClpIhm.xCicloLaminaSupHabilitado"), AttributeId = Attributes.Value },//80
                             };
                             List<ReadValueId> nodesToRead_GVL_Permanentes = new List<ReadValueId>
                             {
@@ -397,6 +398,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.iMinTasbCxSup"), AttributeId = Attributes.Value },//24
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.BtLdVacuoMesa01"), AttributeId = Attributes.Value },//25
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.xBtIniciaCicloSup"), AttributeId = Attributes.Value },//26
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.xAbortaCicloSup"), AttributeId = Attributes.Value },//27
                             };
 
                             List<ReadValueId> nodesToRead_GVL_Receita = new List<ReadValueId>
@@ -715,6 +718,18 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.BtLdVacuoMesa01",
                                     GetValue = (_) => GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.xBtIniciaCicloSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.xBtIniciaCicloSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.xBtIniciaCicloSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.xAbortaCicloSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_IhmClp.xAbortaCicloSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_IhmClp.xAbortaCicloSup.Write = null
                                 },
 
                             };
@@ -1820,6 +1835,12 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
 
 
+                                    if (results_GVL_ClpIhm[80].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_ClpIhm.xCicloLaminaSupHabilitado.Read = (bool)results_GVL_ClpIhm[80].Value;
+                                    }
+
+
                                     // GVL_Permanentes
 
                                     if (results_GVL_Permanentes[0].Value != null)
@@ -2015,6 +2036,14 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     if (results_GVL_IhmClp[25].Value != null)
                                     {
                                         GVL.Opcua.GVL_IhmClp.BtLdVacuoMesa01.Read = (bool)results_GVL_IhmClp[25].Value;
+                                    }
+                                    if (results_GVL_IhmClp[26].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.xBtIniciaCicloSup.Read = (bool)results_GVL_IhmClp[26].Value;
+                                    }
+                                    if (results_GVL_IhmClp[27].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_IhmClp.xAbortaCicloSup.Read = (bool)results_GVL_IhmClp[27].Value;
                                     }
 
                                     // GVL_Receita
