@@ -62,7 +62,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Margin="5"
-                        Text="{Binding cLegenda_CicloLaminaSupHabilitado}"
+                        Text="{Binding sLegenda_CicloLaminaSupHabilitado}"
                         FontSize="Large"
                         Background="{Binding cLegenda_CicloLaminaSupHabilitado}"
                         TextColor="{Binding cStatus_CicloLaminaSupHabilitado}"

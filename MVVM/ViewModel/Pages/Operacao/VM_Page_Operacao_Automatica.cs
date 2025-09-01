@@ -42,6 +42,10 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         public ICommand ICommand_IniciarCiclo_Receita { get; }
         public ICommand ICommand_AbortaCicloSup { get; }
         #endregion
+        #region Variaveis privadas da classe
+        bool xCicloLaminaSupHabilitado;
+        #endregion
+
         private void OnLeituraFinalizada()
         {
             MainThread.BeginInvokeOnMainThread(AtualizaValores);
@@ -50,7 +54,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 
         private async Task AbortaCiclo_Receita()
         {
-            bool resposta = await Application.Current.MainPage.DisplayAlert("Atenção", "Confirma o aborto do ciclo?", "Sim", "Não");
+            bool resposta = await Application.Current.MainPage.DisplayAlert("Atenção", "Deseja abortar do ciclo?", "Sim", "Não");
             if (resposta == true)
             {
                 GVL.Opcua.GVL_IhmClp.xAbortaCicloSup.Write = true;
@@ -59,7 +63,15 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 
         private async Task IniciarCiclo_Receita()
         {
-            GVL.Opcua.GVL_IhmClp.xBtIniciaCicloSup.Write = true;
+            if (xCicloLaminaSupHabilitado == true)
+            {
+                GVL.Opcua.GVL_IhmClp.xBtIniciaCicloSup.Write = true;
+            }
+            else
+            {
+                if (Application.Current?.MainPage != null)
+                    _ = Application.Current.MainPage.DisplayAlert("Validação", "O ciclo esta desabilitado!", "Ok");
+            }
         }
 
         private async Task ExecutarSelecao()
@@ -95,6 +107,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 return;
             }
         }
+
         private void ExecutarEnvio()
         {
             if( string.IsNullOrEmpty(sName_ReadWrite) )
@@ -160,22 +173,26 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         }
         public void AtualizaValores()
         {
-            bool xCicloLaminaSupHabilitado = GVL.Opcua.GVL_ClpIhm.xCicloLaminaSupHabilitado.Read ?? false;
+            xCicloLaminaSupHabilitado = GVL.Opcua.GVL_ClpIhm.xCicloLaminaSupHabilitado.Read ?? false;
             if (xCicloLaminaSupHabilitado)
             {
                 sLegenda_CicloLaminaSupHabilitado = "Ciclo Habilitado";
                 cLegenda_CicloLaminaSupHabilitado = Colors.Green;
-                cStatus_CicloLaminaSupHabilitado = Colors.Black;
+                cStatus_CicloLaminaSupHabilitado = Colors.White;
+                sLegenda_AbortaCicloSup = "Abortar Ciclo!";
+                cLegenda_AbortaCicloSup = Colors.Yellow;
+                cStatus_AbortaCicloSup = Colors.Red;
+
             }
             else
             {
                 sLegenda_CicloLaminaSupHabilitado = "Ciclo Desabilitado";
                 cLegenda_CicloLaminaSupHabilitado = Colors.Gray;
                 cStatus_CicloLaminaSupHabilitado = Colors.White;
+                sLegenda_AbortaCicloSup = "Abortar Ciclo!";
+                cLegenda_AbortaCicloSup = Colors.Gray;
+                cStatus_AbortaCicloSup = Colors.White;
             }
-
-
-
 
         }
         public void EscreveValores()

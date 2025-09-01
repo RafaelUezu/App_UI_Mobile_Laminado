@@ -364,7 +364,11 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uLsabado"), AttributeId = Attributes.Value },//17
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uHorProgramado"), AttributeId = Attributes.Value },//18
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.uMinProgramado"), AttributeId = Attributes.Value },//19
-
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.rTemperaturaMinimaSup"), AttributeId = Attributes.Value },//20
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoAberturaSup"), AttributeId = Attributes.Value },//21
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iFreqManCxSuperior"), AttributeId = Attributes.Value },//22
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iSpContHorProgB01"), AttributeId = Attributes.Value },//23
+                                new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTemperaturaSegurancaSup"), AttributeId = Attributes.Value },//24
 
                             };
                             List<ReadValueId> nodesToRead_GVL_IhmClp = new List<ReadValueId>
@@ -842,6 +846,42 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iMinCxSupRampa08",
                                     GetValue = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Write,
                                     ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iMinCxSupRampa08.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoExaustorMinSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.rTemperaturaMinimaSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTempoAberturaSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iTempoAberturaSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iTempoAberturaSup.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iFreqManCxSuperior",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iSpContHorProgB01",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iSpContHorProgB01.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iSpContHorProgB01.Write = null
+                                },
+                                new OpcWriteItem
+                                {
+                                    NodeIdString = "ns=4;s=|var|AX-324NA0PA1P.Application.GVL_Permanentes.iTemperaturaSegurancaSup",
+                                    GetValue = (_) => GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Write,
+                                    ClearWriteFlag = (_) => GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Write = null
                                 },
                             };
                             var itemsToWrite_GVL_Receita = new List<OpcWriteItem>()
@@ -1878,7 +1918,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
                                     if (results_GVL_Permanentes[8].Value != null)
                                     {
-                                        GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Read = (short)(Int16)results_GVL_Permanentes[8].Value;
+                                        GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Read = (Int16)results_GVL_Permanentes[8].Value;
                                     }
                                     if (results_GVL_Permanentes[9].Value != null)
                                     {
@@ -1923,6 +1963,26 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     if (results_GVL_Permanentes[19].Value != null)
                                     {
                                         GVL.Opcua.GVL_Permanentes.uMinProgramado.Read = (uint)(UInt16)results_GVL_Permanentes[19].Value;
+                                    }
+                                    if (results_GVL_Permanentes[20].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Read = (float)results_GVL_Permanentes[20].Value;
+                                    }
+                                    if (results_GVL_Permanentes[21].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iTempoAberturaSup.Read = (Int16)results_GVL_Permanentes[21].Value;
+                                    }
+                                    if (results_GVL_Permanentes[22].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Read = (Int16)results_GVL_Permanentes[22].Value;
+                                    }
+                                    if (results_GVL_Permanentes[23].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iSpContHorProgB01.Read = (Int16)results_GVL_Permanentes[23].Value;
+                                    }
+                                    if (results_GVL_Permanentes[24].Value != null)
+                                    {
+                                        GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Read = (Int16)results_GVL_Permanentes[24].Value;
                                     }
 
 

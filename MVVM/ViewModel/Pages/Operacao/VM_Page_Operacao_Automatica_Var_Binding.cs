@@ -2252,6 +2252,45 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 }
             }
         }
+        private string? _sLegenda_AbortaCicloSup;
+        public string? sLegenda_AbortaCicloSup
+        {
+            get => _sLegenda_AbortaCicloSup;
+            set
+            {
+                if (_sLegenda_AbortaCicloSup != value)
+                {
+                    _sLegenda_AbortaCicloSup = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cLegenda_AbortaCicloSup;
+        public Color? cLegenda_AbortaCicloSup
+        {
+            get => _cLegenda_AbortaCicloSup;
+            set
+            {
+                if (_cLegenda_AbortaCicloSup != value)
+                {
+                    _cLegenda_AbortaCicloSup = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cStatus_AbortaCicloSup;
+        public Color? cStatus_AbortaCicloSup
+        {
+            get => _cStatus_AbortaCicloSup;
+            set
+            {
+                if (_cStatus_AbortaCicloSup != value)
+                {
+                    _cStatus_AbortaCicloSup = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
         #endregion
 
         #endregion

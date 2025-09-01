@@ -1782,7 +1782,6 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 }
             }
 
-
             public class EntradasSaidas
             {
                 public static class ImgTesteEntLog
@@ -7141,9 +7140,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iTempoExaustorMinSup
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7160,7 +7159,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7181,9 +7180,9 @@ namespace MAUI_Opcua.Services.Communication.Variable
                 public static class iTempoAberturaSup
                 {
                     private static readonly object _lock = new object();
-                    private static int? _readValue;
-                    private static int? _writeValue;
-                    public static int? Read
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
                     {
                         get
                         {
@@ -7200,7 +7199,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                             }
                         }
                     }
-                    public static int? Write
+                    public static Int16? Write
                     {
                         get
                         {
@@ -7579,6 +7578,46 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
+                public static class iFreqManCxSuperior
+                {
+                    private static readonly object _lock = new object();
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static Int16? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
                 public static class uMinProgramado
                 {
                     private static readonly object _lock = new object();
@@ -7602,6 +7641,86 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                     public static uint? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iSpContHorProgB01
+                {
+                    private static readonly object _lock = new object();
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static Int16? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class iTemperaturaSegurancaSup
+                {
+                    private static readonly object _lock = new object();
+                    private static Int16? _readValue;
+                    private static Int16? _writeValue;
+                    public static Int16? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static Int16? Write
                     {
                         get
                         {
