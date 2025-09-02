@@ -66,12 +66,10 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
         public void Start()
         {
             if (IsRunning) return;
-
-
             _cts = new CancellationTokenSource();
             GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Iniciando";
             OpcUaEvents.DispararLeituraFinalizadaAsync();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://192.168.1.11:4840", GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://192.168.42.20:4840", GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
         }
 
         public async Task StopAsync()

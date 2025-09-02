@@ -10,13 +10,13 @@
     <AbsoluteLayout>
 
         <Image
-            Source="forno_frontal_ecoeco.png"
-            AbsoluteLayout.LayoutBounds="250, 100, 864, 481"
+            Source="forno_frontal_ecoeco_4b_n.png"
+            AbsoluteLayout.LayoutBounds="250, 100, 720, 510"
             AbsoluteLayout.LayoutFlags="None"
         />
 
         <Grid
-            AbsoluteLayout.LayoutBounds="578, 100, 172, 167"
+            AbsoluteLayout.LayoutBounds="515, 112, 160, 156"
             AbsoluteLayout.LayoutFlags="None"
             >
             <Image
@@ -29,7 +29,7 @@
         </Grid>
 
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="450, 20, 200, 200"
+            AbsoluteLayout.LayoutBounds="400, 20, 200, 200"
             AbsoluteLayout.LayoutFlags="None"
             >
             <Label
@@ -139,16 +139,16 @@
         </VerticalStackLayout>
         <Grid
             x:Name="PortaFornoSuperior"
-            AbsoluteLayout.LayoutBounds="355, 328, 654, 123"
+            AbsoluteLayout.LayoutBounds="327, 315, 565, 164"
             AbsoluteLayout.LayoutFlags="None"
             HorizontalOptions="Center"
             VerticalOptions="Start"
             IsVisible="True"
             >
             <Image
-                Source="bandeja_frontal_ecoeco.png"
-                WidthRequest="654"
-                HeightRequest="123"
+                Source="bandeja_frontal_ecoeco_4b_n.png"
+                WidthRequest="565"
+                HeightRequest="164"
             />
             <Label
                 HorizontalOptions="Center"
@@ -159,7 +159,7 @@
         </Grid>
 
         <VerticalStackLayout
-            AbsoluteLayout.LayoutBounds="232, 350, 125, 75"
+            AbsoluteLayout.LayoutBounds="960, 320, 125, 75"
             AbsoluteLayout.LayoutFlags="None"
             HorizontalOptions="Center"
             >

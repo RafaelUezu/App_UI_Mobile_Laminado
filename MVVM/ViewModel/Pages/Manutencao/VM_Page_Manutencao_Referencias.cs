@@ -32,15 +32,16 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             MainThread.BeginInvokeOnMainThread(AtualizaValores);
             MainThread.BeginInvokeOnMainThread(EscreveValores);
         }
-
+        Int16 Normalizacao = 10;
         private void AtualizaValores()
         {
             iTempoExaustorMinSup_Read = GVL.Opcua.GVL_Permanentes.iTempoExaustorMinSup.Read ?? 0;
             rTemperaturaMinimaSup_Read = GVL.Opcua.GVL_Permanentes.rTemperaturaMinimaSup.Read ?? 0;
             iTempoAberturaSup_Read = GVL.Opcua.GVL_Permanentes.iTempoAberturaSup.Read ?? 0;
-            iFreqManCxSuperior_Read = GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Read ?? 0;
+            iFreqManCxSuperior_Read = (Int16)(((short?)GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Read ?? 0)/10);
+
             iSpContHorProgB01_Read = GVL.Opcua.GVL_Permanentes.iSpContHorProgB01.Read ?? 0;
-            iTemperaturaSegurancaSup_Read = GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Read ?? 0;
+            iTemperaturaSegurancaSup_Read = (Int16)(((short?)GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Read ?? 0)/10);
         }
 
         private void EscreveValores()
@@ -62,7 +63,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
             if (iFreqManCxSuperior_Write.HasValue)
             {
-                GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Write = (Int16)iFreqManCxSuperior_Write.Value;
+                GVL.Opcua.GVL_Permanentes.iFreqManCxSuperior.Write = (Int16)((short)iFreqManCxSuperior_Write.Value/10);
                 iFreqManCxSuperior_Write = null;
             }
             if (iSpContHorProgB01_Write.HasValue)
@@ -72,7 +73,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
             }
             if (iTemperaturaSegurancaSup_Write.HasValue)
             {
-                GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Write = (Int16)iTemperaturaSegurancaSup_Write.Value;
+                GVL.Opcua.GVL_Permanentes.iTemperaturaSegurancaSup.Write = (Int16)((short)iTemperaturaSegurancaSup_Write.Value/10);
                 iTemperaturaSegurancaSup_Write = null;
             }
             /*

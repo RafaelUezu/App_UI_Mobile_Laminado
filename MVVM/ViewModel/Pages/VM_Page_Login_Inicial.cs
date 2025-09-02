@@ -9,6 +9,7 @@ using System.Windows.Input;
 using App_UI_Mobile_Laminado.Services.Authentication.Login;
 using App_UI_Mobile_Laminado.MVVM.Model.Pages;
 using App_UI_Mobile_Laminado.Services.db.Login;
+using MAUI_Opcua.Services.Communication.Variable;
 
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages
@@ -83,9 +84,10 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages
                 MensagemErro = "Usuário ou senha inválidos.";
                 return;
             }
+
             Preferences.Set("UsuarioLogado", user.Nome);
             Preferences.Set("NivelAcesso", (int)user.Nivel);
-
+            GVL.Authentication.SessaoUsuario.sUsuario.Read = user.Nome;
             Application.Current.MainPage = new AppShell();
 
         }

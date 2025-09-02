@@ -8,6 +8,7 @@ using App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao;
 using App_UI_Mobile_Laminado.MVVM.View.Pages.Login;
 using App_UI_Mobile_Laminado.Services.db.Login;
 using App_UI_Mobile_Laminado.MVVM.Model.Pages;
+using MAUI_Opcua.Services.Communication.Variable;
 
 namespace App_UI_Mobile_Laminado
 {
@@ -30,7 +31,7 @@ namespace App_UI_Mobile_Laminado
         private void CriarMenuDinamico()
         {
             int nivel = Preferences.Get("NivelAcesso", 0); // padrão: OPERADOR
-
+            Label_UserName.Text = GVL.Authentication.SessaoUsuario.sUsuario.Read;
             // Operação (todos têm acesso)
             var itemOperacao = new FlyoutItem
             {

@@ -27,7 +27,7 @@ public partial class Page_Manutencao_Referencias : ContentPage
     }
     private async void Label_TemperaturaMinimaSup_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 120);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 80);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -45,7 +45,7 @@ public partial class Page_Manutencao_Referencias : ContentPage
     }
     private async void Label_FreqManCxSuperior_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 120);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 60);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -54,7 +54,7 @@ public partial class Page_Manutencao_Referencias : ContentPage
     }
     private async void Label_SpContHorProgB01_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 120);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 5000);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {
@@ -63,7 +63,7 @@ public partial class Page_Manutencao_Referencias : ContentPage
     }
     private async void Label_TemperaturaSegurancaSup_OnLabelTapped(object sender, TappedEventArgs e)
     {
-        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 120);
+        var popup = new NumericEntryPopup(valorMinimo: 0, valorMaximo: 160);
         var resultado = await this.ShowPopupAsync(popup);
         if (resultado is double valor)
         {

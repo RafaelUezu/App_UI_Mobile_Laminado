@@ -42,7 +42,7 @@
             </Frame>
             <Label
                 x:Name="Label_UserName"
-                Text="Teste_Usuário1"
+                Text="teste1"
                 TextColor="{StaticResource Normal_Cor6}"
                 FontAttributes="Bold"
                 VerticalOptions="Center"

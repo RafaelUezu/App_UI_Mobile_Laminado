@@ -30,6 +30,7 @@ public partial class Page_Login_Inicial : ContentPage
                 _viewModel.MensagemErro = string.Empty;
             }
         }
+
     }
 
 
