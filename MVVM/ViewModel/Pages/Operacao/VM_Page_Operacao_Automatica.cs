@@ -211,7 +211,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             xOperacaoAutomatico = GVL.Opcua.GVL_ClpIhm.xOperacaoAutomatico.Read;
             if(xOperacaoAutomatico == true)
             {
-
+                sText_Alarme = "Forno em Automático";
+                cTextColor_OperacaoAutomatico = Colors.Green;
             }
             else
             {
