@@ -44,6 +44,8 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         #endregion
         #region Variaveis privadas da classe
         bool xCicloLaminaSupHabilitado;
+  
+
         #endregion
 
         private void OnLeituraFinalizada()
@@ -193,7 +195,28 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 cLegenda_AbortaCicloSup = Colors.Gray;
                 cStatus_AbortaCicloSup = Colors.White;
             }
+            xAlarme = GVL.Opcua.GVL_ClpIhm.xAlarme.Read;
+            if (xAlarme == true)
+            {
+                cBackground_Alarme = Colors.Yellow;
+                cTextColor_Alarme = Colors.Red;
+                sText_Alarme = "Forno em Falha!";
+            }
+            else
+            {
+                cBackground_Alarme = Colors.Gray;
+                cTextColor_Alarme = Colors.White;
+                sText_Alarme = "Sem falhas!";
+            }
+            xOperacaoAutomatico = GVL.Opcua.GVL_ClpIhm.xOperacaoAutomatico.Read;
+            if(xOperacaoAutomatico == true)
+            {
 
+            }
+            else
+            {
+
+            }
         }
         public void EscreveValores()
         {

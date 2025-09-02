@@ -3636,46 +3636,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-                public static class xBtRstAlm
-                {
-                    private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    public static bool? Read
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _readValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _readValue = value;
-                            }
-                        }
-                    }
-                    public static bool? Write
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _writeValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _writeValue = value;
-                            }
-                        }
-                    }
-                }
+             
                 public static class wStatusPortaEsq
                 {
                     private static readonly object _lock = new object();
@@ -7873,6 +7834,46 @@ namespace MAUI_Opcua.Services.Communication.Variable
 
             public class GVL_IhmClp
             {
+                public static class xBtRstAlm
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
                 public static class rTempCxSupPatamar01
                 {
                     private static readonly object _lock = new object();

@@ -2294,7 +2294,114 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         #endregion
 
         #endregion
+        #region Operação
+        private Color? _cBackground_OperacaoAutomatico;
+        public Color? cBackground_OperacaoAutomatico
+        {
+            get => _cBackground_OperacaoAutomatico;
+            set
+            {
+                if (_cBackground_OperacaoAutomatico != value)
+                {
+                    _cBackground_OperacaoAutomatico = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cTextColor_OperacaoAutomatico;
+        public Color? cTextColor_OperacaoAutomatico
+        {
+            get => _cTextColor_OperacaoAutomatico;
+            set
+            {
+                if (_cTextColor_OperacaoAutomatico != value)
+                {
+                    _cTextColor_OperacaoAutomatico = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool? _xOperacaoAutomatico;
+        public bool? xOperacaoAutomatico
+        {
+            get => _xOperacaoAutomatico;
+            set
+            {
+                if (_xOperacaoAutomatico != value)
+                {
+                    _xOperacaoAutomatico = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string? _sText_OperacaoAutomatico;
+        public string? sText_OperacaoAutomatico
+        {
+            get => _sText_OperacaoAutomatico;
+            set
+            {
+                if (_sText_OperacaoAutomatico != value)
+                {
+                    _sText_OperacaoAutomatico = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cBackground_Alarme;
+        public Color? cBackground_Alarme
+        {
+            get => _cBackground_Alarme;
+            set
+            {
+                if (_cBackground_Alarme != value)
+                {
+                    _cBackground_Alarme = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private Color? _cTextColor_Alarme;
+        public Color? cTextColor_Alarme
+        {
+            get => _cTextColor_Alarme;
+            set
+            {
+                if (_cTextColor_Alarme != value)
+                {
+                    _cTextColor_Alarme = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private bool? _xAlarme;
+        public bool? xAlarme
+        {
+            get => _xAlarme;
+            set
+            {
+                if (_xAlarme != value)
+                {
+                    _xAlarme = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        private string? _sText_Alarme;
+        public string? sText_Alarme
+        {
+            get => _sText_Alarme;
+            set
+            {
+                if (_sText_Alarme != value)
+                {
+                    _sText_Alarme = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
+
+        #endregion
 
 
     }

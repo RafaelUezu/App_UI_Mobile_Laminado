@@ -19,7 +19,6 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         public VM_Page_Manutencao_Configuracao()
         {
             OnStartValue();

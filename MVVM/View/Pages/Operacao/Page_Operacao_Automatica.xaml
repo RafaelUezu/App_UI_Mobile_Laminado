@@ -23,7 +23,66 @@
             <Grid.ColumnDefinitions>
 
             </Grid.ColumnDefinitions>
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                >
+                <Frame
+                    Margin="5"
+                    Background="{StaticResource Normal_Cor4}"
+                    Padding="0"
+                    >
+                    <HorizontalStackLayout
+                        WidthRequest="350"
+                        Padding="0"
+                        Background="{Binding cBackground_Alarme}"
+                        >
+                        <Label
+                            Text="{Binding sText_Alarme}"
+                            FontSize="Large"
+                            TextColor="{Binding cTextColor_Alarme}"
+                            FontAttributes="Bold"
+                            WidthRequest="200"
+                            HeightRequest="70"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            />
+                        <Button
+                            Margin="5"
+                            Text="Resetar"
+                            FontSize="Large"
+                            Command="{Binding ICommand_BtRstAlm}"
+                            TextColor="{StaticResource Normal_Cor8}"
+                            Background="{StaticResource Normal_Cor5}"
+                            />
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame
+                    Margin="5"
+                    Background="{StaticResource Normal_Cor4}"
+                    >
+                    <Label
+                        Text="{Binding sText_OperacaoAutomatica}"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        TextColor="{Binding cTextColor_OperacaoAutomatica}"
+                        
+                        WidthRequest="150"
+                        HeightRequest="70"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        />
+                </Frame>
 
+
+            </HorizontalStackLayout>
             <Frame
                 Margin="0"
                 Grid.Row="1"
@@ -78,6 +137,7 @@
                         TextColor="{Binding cStatus_AbortaCicloSup}"
                         Command="{Binding ICommand_AbortaCicloSup}"
                         />
+                    
                 </Grid>
                     
 
