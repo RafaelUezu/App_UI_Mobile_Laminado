@@ -2360,6 +2360,19 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 }
             }
         }
+        private Color? _cBackground_BtRstAlm;
+        public Color? cBackground_BtRstAlm
+        {
+            get => _cBackground_BtRstAlm;
+            set
+            {
+                if (_cBackground_BtRstAlm != value)
+                {
+                    _cBackground_BtRstAlm = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
         private Color? _cTextColor_Alarme;
         public Color? cTextColor_Alarme
         {

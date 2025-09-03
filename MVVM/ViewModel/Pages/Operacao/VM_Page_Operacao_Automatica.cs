@@ -26,6 +26,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
             ICommand_Enviar_Receita = new Command(() => ExecutarEnvio());
             ICommand_IniciarCiclo_Receita = new Command(async() => await IniciarCiclo_Receita());
             ICommand_AbortaCicloSup = new Command(async() => await AbortaCiclo_Receita());
+            ICommand_BtRstAlm = new Command(async() => await SilenciarAlarmes());
 
             OpcUaEvents.LeituraFinalizadaAsync += () =>
             {
@@ -41,6 +42,7 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
         public ICommand ICommand_Enviar_Receita { get; }
         public ICommand ICommand_IniciarCiclo_Receita { get; }
         public ICommand ICommand_AbortaCicloSup { get; }
+        public ICommand ICommand_BtRstAlm { get; }
         #endregion
         #region Variaveis privadas da classe
         bool xCicloLaminaSupHabilitado;
@@ -75,7 +77,10 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                     _ = Application.Current.MainPage.DisplayAlert("Validação", "O ciclo esta desabilitado!", "Ok");
             }
         }
-
+        private async Task SilenciarAlarmes()
+        {
+            GVL.Opcua.GVL_IhmClp.xBtRstAlm.Write = true;
+        }
         private async Task ExecutarSelecao()
         {
             try
@@ -181,19 +186,12 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 sLegenda_CicloLaminaSupHabilitado = "Ciclo Habilitado";
                 cLegenda_CicloLaminaSupHabilitado = Colors.Green;
                 cStatus_CicloLaminaSupHabilitado = Colors.White;
-                sLegenda_AbortaCicloSup = "Abortar Ciclo!";
-                cLegenda_AbortaCicloSup = Colors.Yellow;
-                cStatus_AbortaCicloSup = Colors.Red;
-
             }
             else
             {
                 sLegenda_CicloLaminaSupHabilitado = "Ciclo Desabilitado";
                 cLegenda_CicloLaminaSupHabilitado = Colors.Gray;
                 cStatus_CicloLaminaSupHabilitado = Colors.White;
-                sLegenda_AbortaCicloSup = "Abortar Ciclo!";
-                cLegenda_AbortaCicloSup = Colors.Gray;
-                cStatus_AbortaCicloSup = Colors.White;
             }
             xAlarme = GVL.Opcua.GVL_ClpIhm.xAlarme.Read;
             if (xAlarme == true)
@@ -201,23 +199,27 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
                 cBackground_Alarme = Colors.Yellow;
                 cTextColor_Alarme = Colors.Red;
                 sText_Alarme = "Forno em Falha!";
+                cBackground_BtRstAlm = Colors.LightBlue;
             }
             else
             {
                 cBackground_Alarme = Colors.Gray;
                 cTextColor_Alarme = Colors.White;
                 sText_Alarme = "Sem falhas!";
+                cBackground_BtRstAlm = Colors.LightGray;
             }
             xOperacaoAutomatico = GVL.Opcua.GVL_ClpIhm.xOperacaoAutomatico.Read;
             if(xOperacaoAutomatico == true)
             {
-                sText_Alarme = "Forno em Automático";
+                sText_OperacaoAutomatico = "Forno em Automático";
                 cTextColor_OperacaoAutomatico = Colors.Green;
             }
             else
             {
-
+                sText_OperacaoAutomatico = "Forno em Manual";
+                cTextColor_OperacaoAutomatico = Colors.Red;
             }
+
         }
         public void EscreveValores()
         {

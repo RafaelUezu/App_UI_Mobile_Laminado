@@ -58,7 +58,7 @@
                             FontSize="Large"
                             Command="{Binding ICommand_BtRstAlm}"
                             TextColor="{StaticResource Normal_Cor8}"
-                            Background="{StaticResource Normal_Cor5}"
+                            Background="{Binding cBackground_BtRstAlm}"
                             />
                     </HorizontalStackLayout>
                 </Frame>
@@ -67,10 +67,10 @@
                     Background="{StaticResource Normal_Cor4}"
                     >
                     <Label
-                        Text="{Binding sText_OperacaoAutomatica}"
+                        Text="{Binding sText_OperacaoAutomatico}"
                         FontSize="Large"
                         FontAttributes="Bold"
-                        TextColor="{Binding cTextColor_OperacaoAutomatica}"
+                        TextColor="{Binding cTextColor_OperacaoAutomatico}"
                         
                         WidthRequest="150"
                         HeightRequest="70"
@@ -131,10 +131,10 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Margin="5"
-                        Text="{Binding sLegenda_AbortaCicloSup}"
+                        Text="Abortar!"
                         FontSize="Large"
-                        Background="{Binding cLegenda_AbortaCicloSup}"
-                        TextColor="{Binding cStatus_AbortaCicloSup}"
+                        Background="{StaticResource Normal_Cor4}"
+                        TextColor="{StaticResource Normal_Cor7}"
                         Command="{Binding ICommand_AbortaCicloSup}"
                         />
                     
