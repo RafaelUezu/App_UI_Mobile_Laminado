@@ -152,6 +152,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                     {
                         try
                         {
+                            #region Declarando Sessão
                             Opc.Ua.ApplicationConfiguration configuration = new Opc.Ua.ApplicationConfiguration();
                             ClientConfiguration clientConfiguration = new ClientConfiguration();
                             configuration.ClientConfiguration = clientConfiguration;
@@ -167,7 +168,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             List<string>? preferredLocales = null;
 
                             // Create the session
-
+                            
                             Session session = Session.Create(
                                  configuration,
                                  endpoint,
@@ -178,7 +179,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                  user,
                                  preferredLocales
                              ).Result;
-
+                            #endregion
+                            #region Declarando nós de Leitura
                             List<ReadValueId> nodesToRead_GVL_EntradasSaidas = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgTesteEntLog"), AttributeId = Attributes.Value },//0
@@ -407,7 +409,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.xAbortaCicloSup"), AttributeId = Attributes.Value },//27
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_IhmClp.xBtRstAlm"), AttributeId = Attributes.Value },//28
                             };
-
                             List<ReadValueId> nodesToRead_GVL_Receita = new List<ReadValueId>
                             {
 
@@ -499,8 +500,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             TimestampsToReturn timestampsToReturn_GVL_Receita = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_Receita = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_Receita = null;
-
-
+                            #endregion
+                            #region Declarando nós de Escrita
                             var itemsToWrite_GVL_EntradasSaidas = new List<OpcWriteItem>();
                             for (int i = 0; i < 16; i++)
                             {
@@ -1102,7 +1103,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
 
                             };
-
                             List <List<OpcWriteItem>> allItemsToWrite = new()
                             {
                                 itemsToWrite_GVL_Ihm_Manual,
@@ -1112,6 +1112,7 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 itemsToWrite_GVL_IhmClp,
                                 itemsToWrite_GVL_Receita
                             };
+                            #endregion
 
                             while (!token.IsCancellationRequested)
                             {
@@ -1261,8 +1262,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 }
 
                             }
-
-                            // Função local de escrita
                             async Task WriteDataAsync()
                             {
                                 try

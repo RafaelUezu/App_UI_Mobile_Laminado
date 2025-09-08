@@ -21,10 +21,11 @@ namespace App_UI_Mobile_Laminado
          
             _driver = driver;
             MainPage = new AppShell();
+
+            // MainPage = new Page_Manutencao_Manual();
+            // MainPage = new Page_Login_Inicial();
             _driver.Start(); // Inicia driver ao abrir o app
-                             // MainPage = new Page_Manutencao_Manual();
-                             // MainPage = new Page_Login_Inicial();
-            
+
         }
 
         private async Task InitializeAppAsync()

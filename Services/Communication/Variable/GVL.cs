@@ -318,6 +318,29 @@ namespace MAUI_Opcua.Services.Communication.Variable
                     }
                 }
             }
+            public static class iContagemErro
+            {
+                private static readonly object _lock = new object();
+                private static int? _readValue;
+                private static int? _writeValue;
+                public static int? ReadWrite
+                {
+                    get
+                    {
+                        lock (_lock)
+                        {
+                            return _readValue;
+                        }
+                    }
+                    set
+                    {
+                        lock (_lock)
+                        {
+                            _readValue = value;
+                        }
+                    }
+                }
+            }
 
         }
        
