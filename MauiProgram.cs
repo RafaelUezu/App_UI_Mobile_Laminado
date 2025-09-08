@@ -20,6 +20,11 @@ namespace App_UI_Mobile_Laminado
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // Providers básicos:
+            builder.Logging.ClearProviders();
+            builder.Logging.SetMinimumLevel(LogLevel.Information);
+            builder.Logging.AddDebug(); // VS Output / logcat (Android)
+
             builder.Services.AddSingleton<Opcua_Client>();
 #if DEBUG
             builder.Logging.AddDebug();
