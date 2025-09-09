@@ -22,12 +22,51 @@ namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
         public VM_Page_Manutencao_Configuracao()
         {
             OnStartValue();
+
+            ICommand_ExportLog = new Command(async () => await ExecutarSelecao());
+
             OpcUaEvents.LeituraFinalizadaAsync += () =>
             {
                 OnLeituraFinalizada();
                 return Task.CompletedTask;
 
             };
+        }
+        public ICommand ICommand_ExportLog { get; }
+        private async Task ExecutarSelecao()
+        {
+            try
+            {
+                List<string?>? sDataLogsNames = await Services.LogExporter.LogExporter.DataLogsNames();
+                string[] opcoes = sDataLogsNames?
+                        .Where(s => s != null)
+                        .Select(s => s!)
+                        .ToArray()
+                        ?? Array.Empty<string>();
+                Page? page = Application.Current.MainPage;
+                string? resposta = await page.DisplayActionSheet("Escolha", "Cancelar", null, opcoes);
+                if (!string.IsNullOrEmpty(resposta) && resposta != "Cancelar")
+                {
+                    bool? ValidadeSelect = await Services.LogExporter.LogExporter.ShareLogAsync(resposta);
+                    // perae 1
+                    if (ValidadeSelect == true)
+                    {
+                        if (Application.Current?.MainPage != null)
+                            _ = Application.Current.MainPage.DisplayAlert("Exportação", "Exportado", "OK");
+                    }
+                    else if (ValidadeSelect == null)
+                    {
+                        if (Application.Current?.MainPage != null)
+                            _ = Application.Current.MainPage.DisplayAlert("Exportação", "Erro ao Exportar", "OK");
+                        return;
+                    }
+                    
+                }
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private readonly db_Recipe _db_Recipe = new db_Recipe();

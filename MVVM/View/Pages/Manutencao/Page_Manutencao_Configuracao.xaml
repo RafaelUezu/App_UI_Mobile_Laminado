@@ -168,7 +168,37 @@
                             />
                     </Grid>
                 </VerticalStackLayout>
-
+                <VerticalStackLayout
+                    Margin="5"
+                    Background="{StaticResource Normal_Cor5}">
+                    <Grid
+                        ColumnDefinitions="230,*,*,40"
+                        Padding="5"
+                        >
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Text="Logs da Aplicação"
+                            FontSize="Medium"
+                            TextColor="{StaticResource Normal_Cor2}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                        />
+                        <Button
+                            Grid.Column="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Background="{StaticResource Normal_Cor1}"
+                            Text="Exportar"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="120"
+                            Command="{Binding ICommand_ExportLog}"
+                            />
+                    </Grid>
+                </VerticalStackLayout>
                 
             </VerticalStackLayout>
 

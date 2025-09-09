@@ -1,5 +1,7 @@
-﻿using MAUI_Opcua.Services.Communication.Variable;
+﻿
+using MAUI_Opcua.Services.Communication.Variable;
 using MAUI_Opcua.Services.Net.Tools;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using Opc.Ua;
 using Opc.Ua.Client;
@@ -31,8 +33,11 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
         }
     }
 
-    public class Opcua_Client
+    public class Opcua_Client(ILogger<Opcua_Client> logger)
     {
+        #region Instânciamento do Logger
+        private readonly ILogger<Opcua_Client> _logger = logger;
+        #endregion
         public static string? ExtractIpFromUrl(string opcUaUrl)
         {
             if (string.IsNullOrWhiteSpace(opcUaUrl))
@@ -51,7 +56,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
         private CancellationTokenSource _cts;
         private Task _backgroundTask;
        
-
         public bool IsRunning
         {
             get
@@ -69,7 +73,12 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             _cts = new CancellationTokenSource();
             GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Iniciando";
             OpcUaEvents.DispararLeituraFinalizadaAsync();
-            _backgroundTask = Task.Run(() => RunLoop(_cts.Token, GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000, GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://192.168.42.20:4840", GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
+            
+            _backgroundTask = Task.Run(() => RunLoop(_cts.Token,
+                                                    GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000,
+                                                    GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://192.168.1.11:4840",
+                                                    GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
+            
         }
 
         public async Task StopAsync()
@@ -139,19 +148,22 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             string Ip = ExtractIpFromUrl(urlopcua);
             var Ping_Ip = new TCP_IP.Ping_IP(timeout_Ping_Ip, Ip); // IP, timeout (ms), porta
             bool online;
-            int Error = 0;
+            int ConectionCount = 0;
 
             try
             {
+                _logger.LogInformation($"Cliente OPCUA instanciado. Aguardando conexão para criar a sessão");
                 while (!token.IsCancellationRequested)
                 {
-                    Error = 0;
+                    await Task.Delay(delay_request, token); // Delay controlado
                     online = await Ping_Ip.PingHostAsync();
                     
                     if (online)
                     {
+                        _logger.LogInformation($"Dispositivo {urlopcua} esta conectado");
                         try
                         {
+                            _logger.LogInformation($"Iniciando sessão do cliente OPCUA {urlopcua}");
                             #region Declarando Sessão
                             Opc.Ua.ApplicationConfiguration configuration = new Opc.Ua.ApplicationConfiguration();
                             ClientConfiguration clientConfiguration = new ClientConfiguration();
@@ -179,8 +191,10 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                  user,
                                  preferredLocales
                              ).Result;
+                            _logger.LogInformation($"Sessão do cliente OPCUA {urlopcua} criada");
                             #endregion
                             #region Declarando nós de Leitura
+                            _logger.LogInformation($"Iniciando declaração de leitura de nós do cliente OPCUA {urlopcua}");
                             List<ReadValueId> nodesToRead_GVL_EntradasSaidas = new List<ReadValueId>
                             {
                                 new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_EntradasSaidas.ImgTesteEntLog"), AttributeId = Attributes.Value },//0
@@ -500,8 +514,10 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                             TimestampsToReturn timestampsToReturn_GVL_Receita = TimestampsToReturn.Both;
                             DataValueCollection? results_GVL_Receita = null;
                             DiagnosticInfoCollection? diagnosticInfos_GVL_Receita = null;
+                            _logger.LogInformation($"Declaração de leitura de nós do cliente OPCUA {urlopcua} realizada");
                             #endregion
                             #region Declarando nós de Escrita
+                            _logger.LogInformation($"Iniciando declaração de escrita de nós do cliente OPCUA {urlopcua}");
                             var itemsToWrite_GVL_EntradasSaidas = new List<OpcWriteItem>();
                             for (int i = 0; i < 16; i++)
                             {
@@ -1112,16 +1128,11 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 itemsToWrite_GVL_IhmClp,
                                 itemsToWrite_GVL_Receita
                             };
+                            _logger.LogInformation($"Declaração de escrita de nós do cliente OPCUA {urlopcua} realizada");
                             #endregion
-
+                            _logger.LogInformation($"Iniciando loop de requisições {urlopcua}");
                             while (!token.IsCancellationRequested)
                             {
-                                System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("Error :" + Error));
-                                if (Error >= 20)
-                                {
-                                    ErrorWriteDataAsync();
-                                    break;
-                                }
                                 online = await Ping_Ip.PingHostAsync();
 
                                 if (online)
@@ -1142,19 +1153,25 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                     }
                                     catch (Exception ex)
                                     {
+                                        System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + $": Erro no ciclo de comunicação - {ex.Message}");
+                                        _logger.LogError($": Erro no ciclo de comunicação - {ex.Message}");
                                         GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Requisição";
                                         await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                                        System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na requisição");
-                                        Error = Error++;
+                                        throw new InvalidOperationException("Erro no Ciclo de Comunicação", ex);
                                     }
                                 }
                                 else
                                 {
-                                    GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Tentando Conexão";
+                                    ConectionCount++;
+                                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Dispositivo desconectado. O ciclo de comunicação não será realizado");
+                                    GVL.ConfSuper.sStatusOpcUa.ReadWrite = $"Tentando Conexão Nº: {ConectionCount}";
                                     ErrorWriteDataAsync();
                                     await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                                    await Task.Delay(timeout_Ping_Ip, token); // Delay controlado
-                                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Dispositivo desconectado. A leitura e escrita não serão efetuadas");
+                                    
+                                    if (ConectionCount >= 20)
+                                    {
+                                        throw new InvalidOperationException("Número de tentativas conexões excedida, o driver irá reiniciar.");
+                                    }
                                 }
                             }
 
@@ -1247,18 +1264,16 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                                 out diagnosticInfos_GVL_Receita
                                                 );
 
-
                                     sw.Stop();
                                     System.Diagnostics.Debug.WriteLine("Tempo de Leitura" + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
                                 }
-                                catch
+                                catch(Exception ex)
                                 {
                                     System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na leitura do OPC UA");
-                                    Error = Error + 1;
+                                    _logger.LogError($"Erro na Leitura dos nós: {ex.Message}");
                                     GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Leitura";
-
                                     await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                                    return;
+                                    throw new InvalidOperationException("Erro na Leitura dos nós OPCUA", ex);
                                 }
 
                             }
@@ -1303,16 +1318,16 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                             }
                                         }
                                     }
-
                                     sw.Stop();
                                     System.Diagnostics.Debug.WriteLine($"Tempo de Escrita " + " - " + sw.Elapsed.Milliseconds + ":" + sw.Elapsed.Microseconds + ":" + sw.Elapsed.Nanoseconds);
                                 }
                                 catch (Exception ex)
                                 {
                                     System.Diagnostics.Debug.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}: Erro na escrita do OPC UA - {ex.Message}");
+                                    _logger.LogError($"Erro na Escrita dos nós: {ex.Message}");
                                     GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Escrita";
                                     ErrorWriteDataAsync();
-                                    Error++;
+                                    throw new InvalidOperationException("Erro na Escrita dos nós OPCUA", ex);
                                 }
                             }
                             async Task ErrorWriteDataAsync()
@@ -1339,9 +1354,11 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         }
                                     }
                                 }
-                                catch
+                                catch (Exception ex)
                                 {
-                                    return;
+                                    System.Diagnostics.Debug.WriteLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}: Erro na limpeza dos valores de Escrita - {ex.Message}");
+                                    _logger.LogError($"Erro na limpeza dos valores de Escrita: {ex.Message}");
+                                    throw new InvalidOperationException("Erro na limpeza dos valores de Escrita", ex);
                                 }
                             }
                             async Task AscribeDataAsync()
@@ -2266,9 +2283,6 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                         GVL.Opcua.GVL_Receita.iRecSp08Vacuo01.Read = (short)(Int16)results_GVL_Receita[31].Value;
                                     }
 
-
-
-
                                     if (results_GVL_Receita[32].Value != null)
                                     {
                                         GVL.Opcua.GVL_Receita.iRecMinTasbCxSup.Read = (short)(Int16)results_GVL_Receita[32].Value;
@@ -2284,29 +2298,33 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
                                 }
                                 catch(Exception ex)
                                 {
-                                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na passagem de valor. " + "Linha: " + ex.StackTrace);
-                                    Error = Error + 1;
+                                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Erro na passagem de valor. " + "Linha: " + ex);
+                                    _logger.LogError($"Erro na passagem dos valores de Leitura: {ex.Message}");
                                     GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Passagem";
                                     await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                                    return;
+                                    throw new InvalidOperationException("Erro na passagem dos valores de Leitura", ex);
                                 }
                             }
                         }
-                        catch
+                        catch(InvalidOperationException ex)
                         {
-                            System.Diagnostics.Debug.WriteLine("Inicializando o Driver por Erro 1: " + urlopcua);
-                            Error = Error + 1;
+                            System.Diagnostics.Debug.WriteLine("Erro na comunicação do Cliente OPCUA: " + urlopcua);
+                            _logger.LogError($"Erro na comunicação do Cliente OPCUA {urlopcua}: {ex.Message}");
+                            _logger.LogError($"A sessão do cliente OPCUA {urlopcua} será recriada");
+                            GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Comunicação";
+                        }
+                        catch(Exception ex)
+                        { 
+                            System.Diagnostics.Debug.WriteLine("Erro na criação do Cliente OPCUA: " + urlopcua);
+                            _logger.LogError($"Erro na criação da sessão do cliente OPCUA {urlopcua}: {ex.Message}");
+                            _logger.LogError($"A sessão do cliente OPCUA {urlopcua} será recriada");
                             GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Criação";
-                            await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                            break;
                         }
                     }
                     else
                     {
-                        
                         GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Tentando Conexão";
                         await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                        await Task.Delay(timeout_Ping_Ip, token); // Delay controlado
                         System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff") + ": Dispositivo desconectado. O serviço Driver OPCUA Client não será iniciado");
                     }
                 }
@@ -2314,9 +2332,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
             }
             catch
             {
-                GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro na Criação";
+                GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Erro em criar o drive";
                 await OpcUaEvents.DispararLeituraFinalizadaAsync();
-                System.Diagnostics.Debug.WriteLine("Inicializando o Driver por Erro 2: " + urlopcua);
+                System.Diagnostics.Debug.WriteLine("Erro em criar o drive: " + urlopcua);
             }
         }
     }

@@ -1,16 +1,19 @@
 ﻿using MAUI_Opcua.Services.Drivers.Opcua;
-using Microsoft.Extensions.Logging;
+
 using CommunityToolkit.Maui;
+
+using Serilog;
+using Serilog.Extensions.Logging;
 
 namespace App_UI_Mobile_Laminado
 {
     public static class MauiProgram
     {
-
         public static MauiApp CreateMauiApp()
         {
 
             var builder = MauiApp.CreateBuilder();
+
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
@@ -20,15 +23,19 @@ namespace App_UI_Mobile_Laminado
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // Providers básicos:
-            builder.Logging.ClearProviders();
-            builder.Logging.SetMinimumLevel(LogLevel.Information);
-            builder.Logging.AddDebug(); // VS Output / logcat (Android)
 
+            builder.Logging.AddSerilog(
+                new LoggerConfiguration()
+                    .WriteTo.File(Path.Combine(FileSystem.Current.AppDataDirectory, "AppLogs//log.txt"),
+                        rollingInterval: RollingInterval.Day,
+                        fileSizeLimitBytes: 50*1024*1024,
+                        retainedFileCountLimit: 31)
+                    .CreateLogger()
+            );
+
+            #region Serviços
             builder.Services.AddSingleton<Opcua_Client>();
-#if DEBUG
-            builder.Logging.AddDebug();
-#endif
+            #endregion
 
             return builder.Build();
         }

@@ -344,7 +344,94 @@ namespace MAUI_Opcua.Services.Communication.Variable
 
         }
        
+        public class Alarms
+        {
+            public class Standart
+            {
 
+            }
+            public class Motor
+            {
+
+            }
+            public class Encoder
+            {
+
+            }
+            public class Resistence
+            {
+
+            }
+            public class Thermocouple
+            {
+
+            }
+            public class Piston
+            {
+
+            }
+            public class Button
+            {
+                public static class EmergencyStop
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    private static string? _MessageValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                    public static string? Message
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _MessageValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _MessageValue = value;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         public class Opcua
         {
