@@ -7,20 +7,24 @@ using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using App_UI_Mobile_Laminado.Services.db.db_ConfSuper;
 using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.StandartTests;
 
 namespace App_UI_Mobile_Laminado
 {
     public partial class App : Application
     {
         private readonly Opcua_Client _driver;
-
-        public App(Opcua_Client driver)
+        private readonly StandartTests_Services _StandartTests;
+        public static IServiceProvider Services { get; set; } = default!;
+        public App(Opcua_Client driver, StandartTests_Services standartTests)
         {
             InitializeComponent();
             _ = InitializeAppAsync();
          
             _driver = driver;
+            _StandartTests = standartTests;
             MainPage = new AppShell();
+
 
             // MainPage = new Page_Manutencao_Manual();
             // MainPage = new Page_Login_Inicial();
@@ -63,6 +67,8 @@ namespace App_UI_Mobile_Laminado
             // Reativa driver ao retornar do fundo
             if (!_driver.IsRunning)
                 _driver.Start();
+            if (!_StandartTests.IsRunning)
+                _StandartTests.Start();
         }
 
         private async Task StopDriverAsync()
@@ -70,6 +76,7 @@ namespace App_UI_Mobile_Laminado
             try
             {
                 await _driver.StopAsync();
+                await _StandartTests.StopAsync();
             }
             catch (Exception ex)
             {
