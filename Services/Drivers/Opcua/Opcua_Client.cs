@@ -228,6 +228,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 								new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.xAlarmeSsrSuperiorAberto"), AttributeId = Attributes.Value },//11
 								new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.xAlarmeSsrInferiorFechado"), AttributeId = Attributes.Value },//12
 								new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.xAlarmeSsrSuperiorFechado"), AttributeId = Attributes.Value },//13
+								new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.AlmGeral"), AttributeId = Attributes.Value },//14
+								new ReadValueId { NodeId = NodeId.Parse("ns=4;s=|var|AX-324NA0PA1P.Application.GVL_ImagensAlarmes.AlmMotor"), AttributeId = Attributes.Value },//15
 							};
 							List<ReadValueId> nodesToRead_GVL_Energia = new List<ReadValueId>
 							{
@@ -1546,8 +1548,23 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 											GVL.Opcua.GVL_ImagensAlarmes.xAlarmeSsrSuperiorFechado.SetRead(i, (bool)ImgResult[i]);
 										}
 									}
-
-									if (results_GVL_Energia[0].Value != null)
+                                    if (results_GVL_ImagensAlarmes[14].Value != null)
+                                    {
+                                        bool[] ImgResult = results_GVL_ImagensAlarmes[14].Value as bool[];
+                                        for (int i = 0; i < ImgResult.Length; i++)
+                                        {
+                                            GVL.Opcua.GVL_ImagensAlarmes.AlmGeral.SetRead(i, (bool)ImgResult[i]);
+                                        }
+                                    }
+                                    if (results_GVL_ImagensAlarmes[15].Value != null)
+                                    {
+                                        bool[] ImgResult = results_GVL_ImagensAlarmes[15].Value as bool[];
+                                        for (int i = 0; i < ImgResult.Length; i++)
+                                        {
+                                            GVL.Opcua.GVL_ImagensAlarmes.AlmMotor.SetRead(i, (bool)ImgResult[i]);
+                                        }
+                                    }
+                                    if (results_GVL_Energia[0].Value != null)
 									{
 										GVL.Opcua.GVL_Energia.fCorrenteFaseA.Read = (float)results_GVL_Energia[0].Value;
 									}

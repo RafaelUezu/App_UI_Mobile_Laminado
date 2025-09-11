@@ -2384,6 +2384,126 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
+                public static class AlmGeral
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[21];
+                    private static readonly bool?[] _writeValues = new bool?[21];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class AlmMotor
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[11];
+                    private static readonly bool?[] _writeValues = new bool?[11];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
                 public static class ImgRetornoSsrInferior
                 {
                     private static readonly object _lock = new object();

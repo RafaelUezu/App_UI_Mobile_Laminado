@@ -1,4 +1,6 @@
-﻿using MAUI_Opcua.Services.Communication.Variable;
+﻿
+using MAUI_Opcua.Services.Communication.Variable;
+using MAUI_Opcua.Services.Drivers.Opcua;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Drivers.Opcua;
 
 namespace App_UI_Mobile_Laminado.Services.Alarms
 {
@@ -46,8 +47,13 @@ namespace App_UI_Mobile_Laminado.Services.Alarms
         {
             Standard,
             Movement,
+            Ventilation,
+            Signals,
+            Heating,
             Positioning,
             Signaling,
+            Preventive,
+            Emergency
         }
         public string? FunctionDescription { get; set; } = string.Empty;
         public string? RecommendedAction { get; set; } = string.Empty;
@@ -97,12 +103,13 @@ namespace App_UI_Mobile_Laminado.Services.Alarms
         /// <param name="id">Identificador único do alarme (ex.: "ALM_GERAL_1").</param>
         /// <param name="displayName">Nome amigável; se nulo/vazio, usa o id.</param>
         /// <param name="description">Descrição do ID</param>
-        /// <param name="Location_Panel">Local no painel</param>
-        /// <param name="Location_Machine">Local na máquina</param>
+        /// <param name="location_Panel">Local no painel</param>
+        /// <param name="location_Machine">Local na máquina</param>
         /// <param name="category">Categoria do alarme</param>
         /// <param name="subCategory">Subcategoria do alarme</param>
         /// <param name="functionDescription">Descrição da função do alarme</param>
         /// <param name="recommended">Ação recomendada</param>
+        /// <param name="severity">Severidade do alarme</param>
         /// <param name="readAsync">
         /// Função assíncrona que retorna o valor booleano atual (fonte: OPC UA, simulação, etc.).
         /// </param>
@@ -117,6 +124,7 @@ namespace App_UI_Mobile_Laminado.Services.Alarms
             SubCategoryLevel? subCategory,
             string? functionDescription,
             string? recommended,
+            SeverityLevel? severity,
             Func<CancellationToken, ValueTask<bool>> readAsync
         )
         {
@@ -132,6 +140,7 @@ namespace App_UI_Mobile_Laminado.Services.Alarms
             SubCategory         = subCategory ?? SubCategoryLevel.Standard;
             FunctionDescription = functionDescription ?? string.Empty;
             RecommendedAction   = recommended ?? string.Empty;
+            Severity            = severity ?? SeverityLevel.Medium;
             _readAsync          = readAsync ?? throw new ArgumentNullException(nameof(readAsync));
         }
 
