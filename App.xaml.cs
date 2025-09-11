@@ -29,7 +29,7 @@ namespace App_UI_Mobile_Laminado
             // MainPage = new Page_Manutencao_Manual();
             // MainPage = new Page_Login_Inicial();
             _driver.Start(); // Inicia driver ao abrir o app
-
+            _StandartTests.Start(); // Inicia testes padroes ao abrir o app
         }
 
         private async Task InitializeAppAsync()

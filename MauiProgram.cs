@@ -37,25 +37,12 @@ namespace App_UI_Mobile_Laminado
 
             builder.Services.AddSingleton<StandartTests_Services>();
             builder.Services.AddSingleton<Opcua_Client>();   // continua valendo, o cliente existe
-            builder.Services.AddSingleton<AlarmEngine>();
-            builder.Services.AddSingleton<AlarmConfig>();
-            builder.Services.AddSingleton<AlarmsSupervisory.OpcUaAlarmAdapter>(sp =>
-            {
-                var engine = sp.GetRequiredService<AlarmEngine>();
-                var cfg = sp.GetRequiredService<AlarmConfig>();
-
-                engine.RegisterMany(cfg.GetDefinitions());
-                return new AlarmsSupervisory.OpcUaAlarmAdapter(engine, cfg.BuildReaders());
-            });
 
 
             #endregion
 
             // Constrói o app
             var app = builder.Build();
-
-            // FORÇA a criação do adaptador na partida (assim ele já assina o evento do OPC)
-            _ = app.Services.GetRequiredService<AlarmsSupervisory.OpcUaAlarmAdapter>();
 
 
             return app;
