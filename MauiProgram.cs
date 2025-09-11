@@ -34,7 +34,7 @@ namespace App_UI_Mobile_Laminado
             );
 
             #region Serviços (DI)
-
+            builder.Services.AddSingleton<AlarmEngine>();
             builder.Services.AddSingleton<StandartTests_Services>();
             builder.Services.AddSingleton<Opcua_Client>();   // continua valendo, o cliente existe
 

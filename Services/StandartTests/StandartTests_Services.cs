@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using App_UI_Mobile_Laminado.Services.Alarms;
 namespace App_UI_Mobile_Laminado.Services.StandartTests
 {
     public partial class StandartTests_Services : IAsyncDisposable
@@ -16,9 +16,10 @@ namespace App_UI_Mobile_Laminado.Services.StandartTests
         private CancellationTokenSource? _cts;
         private Task? _backgroundTask;
         private int _consecutiveErrors;
-
-        public StandartTests_Services(TimeSpan? period = null, ILogger<StandartTests_Services>? logger = null)
+        private readonly AlarmEngine _alarmEngine;
+        public StandartTests_Services(AlarmEngine alarmEngine, TimeSpan? period = null, ILogger<StandartTests_Services>? logger = null)
         {
+            _alarmEngine = alarmEngine ?? throw new ArgumentNullException(nameof(alarmEngine));
             _period = period ?? TimeSpan.FromMilliseconds(1000); // ajuste conforme sua necessidade
             _logger = logger;
         }
@@ -37,7 +38,7 @@ namespace App_UI_Mobile_Laminado.Services.StandartTests
             lock (_gate)
             {
                 if (IsRunning) return;
-
+                RegisterAlarms();
                 _cts = new CancellationTokenSource();
                 _backgroundTask = Task.Run(() => RunLoopAsync(_cts.Token));
             }

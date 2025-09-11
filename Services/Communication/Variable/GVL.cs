@@ -344,94 +344,7 @@ namespace MAUI_Opcua.Services.Communication.Variable
 
         }
        
-        public class Alarms
-        {
-            public class Standart
-            {
-
-            }
-            public class Motor
-            {
-
-            }
-            public class Encoder
-            {
-
-            }
-            public class Resistence
-            {
-
-            }
-            public class Thermocouple
-            {
-
-            }
-            public class Piston
-            {
-
-            }
-            public class Button
-            {
-                public static class EmergencyStop
-                {
-                    private static readonly object _lock = new object();
-                    private static bool? _readValue;
-                    private static bool? _writeValue;
-                    private static string? _MessageValue;
-                    public static bool? Read
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _readValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _readValue = value;
-                            }
-                        }
-                    }
-                    public static bool? Write
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _writeValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _writeValue = value;
-                            }
-                        }
-                    }
-                    public static string? Message
-                    {
-                        get
-                        {
-                            lock (_lock)
-                            {
-                                return _MessageValue;
-                            }
-                        }
-                        set
-                        {
-                            lock (_lock)
-                            {
-                                _MessageValue = value;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        
 
         public class Opcua
         {
@@ -2346,9 +2259,11 @@ namespace MAUI_Opcua.Services.Communication.Variable
 
 
             }
-
+            
             public class GVL_ImagensAlarmes
             {
+                static int SupNum = 7;
+                static int InfNum = 4;
                 public static class ImgGeral
                 {
                     private static readonly object _lock = new object();
@@ -2469,11 +2384,671 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
+                public static class ImgRetornoSsrInferior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[InfNum];
+                    private static readonly bool?[] _writeValues = new bool?[InfNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
                 public static class ImgRetornoSsrSuperior
                 {
                     private static readonly object _lock = new object();
-                    private static readonly bool?[] _readValues = new bool?[7];
-                    private static readonly bool?[] _writeValues = new bool?[7];
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class AlmTemperaturaExcedeuInferior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[InfNum];
+                    private static readonly bool?[] _writeValues = new bool?[InfNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class AlmTemperaturaExcedeuSuperior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class AlmTermoparAbertoInferior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[InfNum];
+                    private static readonly bool?[] _writeValues = new bool?[InfNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class AlmTermoparAbertoSuperior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class xAlarmeResistRompidaInferior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[InfNum];
+                    private static readonly bool?[] _writeValues = new bool?[InfNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class xAlarmeResistRompidaSuperior
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class xAlarmeSsrInferiorAberto
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class xAlarmeSsrSuperiorAberto
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class xAlarmeSsrInferiorFechado
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
+
+                    public static bool? GetRead(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            return _readValues[index];
+                        }
+                    }
+
+                    public static void SetRead(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _readValues.Length)
+                                throw new IndexOutOfRangeException("Índice de leitura fora do intervalo.");
+
+                            _readValues[index] = value;
+                        }
+                    }
+
+                    public static bool? GetWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            return _writeValues[index];
+                        }
+                    }
+
+                    public static void SetWrite(int index, bool? value)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de escrita fora do intervalo.");
+
+                            _writeValues[index] = value;
+                        }
+                    }
+                    public static void ClearWrite(int index)
+                    {
+                        lock (_lock)
+                        {
+                            if (index < 0 || index >= _writeValues.Length)
+                                throw new IndexOutOfRangeException("Índice de limpeza fora do intervalo.");
+
+                            _writeValues[index] = null;
+                        }
+                    }
+                }
+                public static class xAlarmeSsrSuperiorFechado
+                {
+                    private static readonly object _lock = new object();
+                    private static readonly bool?[] _readValues = new bool?[SupNum];
+                    private static readonly bool?[] _writeValues = new bool?[SupNum];
 
                     public static bool? GetRead(int index)
                     {
@@ -3746,7 +4321,6 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-             
                 public static class wStatusPortaEsq
                 {
                     private static readonly object _lock = new object();
@@ -3907,7 +4481,6 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-
                 public static class iHorDecorRampa01Sup
                 {
                     private static readonly object _lock = new object();
@@ -4228,7 +4801,6 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-
                 public static class iMinDecorRampa01Sup
                 {
                     private static readonly object _lock = new object();
@@ -7000,9 +7572,206 @@ namespace MAUI_Opcua.Services.Communication.Variable
                         }
                     }
                 }
-
-
-
+                public static class xAlarmeHorimetroB01
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xAlarmeHorimetroB02
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xEmergencia
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xFimCurso
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
+                public static class xTermostatoOn
+                {
+                    private static readonly object _lock = new object();
+                    private static bool? _readValue;
+                    private static bool? _writeValue;
+                    public static bool? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static bool? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
             }
 
             public class GVL_Permanentes
