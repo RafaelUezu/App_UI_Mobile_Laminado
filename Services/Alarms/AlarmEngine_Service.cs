@@ -4,19 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using App_UI_Mobile_Laminado.Services.Alarms;
-namespace App_UI_Mobile_Laminado.Services.StandartTests
+
+namespace App_UI_Mobile_Laminado.Services.Alarms
 {
-    public partial class StandartTests_Services : IAsyncDisposable
+    public sealed partial class AlarmEngine
     {
         private readonly TimeSpan _period;
-        private readonly ILogger<StandartTests_Services>? _logger;
-        private readonly object _gate = new();
+        private readonly ILogger<AlarmEngine>? _logger;
 
         private CancellationTokenSource? _cts;
         private Task? _backgroundTask;
         private int _consecutiveErrors;
-        public StandartTests_Services(AlarmEngine alarmEngine, TimeSpan? period = null, ILogger<StandartTests_Services>? logger = null)
+
+        public AlarmEngine(TimeSpan? period = null, ILogger<AlarmEngine>? logger = null)
         {
             _period = period ?? TimeSpan.FromMilliseconds(1000); // ajuste conforme sua necessidade
             _logger = logger;
@@ -36,6 +36,7 @@ namespace App_UI_Mobile_Laminado.Services.StandartTests
             lock (_gate)
             {
                 if (IsRunning) return;
+                RegisterAlarms();
                 _cts = new CancellationTokenSource();
                 _backgroundTask = Task.Run(() => RunLoopAsync(_cts.Token));
             }
@@ -104,9 +105,11 @@ namespace App_UI_Mobile_Laminado.Services.StandartTests
         }
         public async ValueTask DisposeAsync()
         {
-            await StopAsync(TimeSpan.FromMilliseconds(1000));
+            await StopAsync(TimeSpan.FromMilliseconds(5000));
         }
-  
-
+        private async Task DoWorkOnceAsync(CancellationToken ct)
+        {
+            await ScanOnceAsync(ct);
+        }
     }
 }

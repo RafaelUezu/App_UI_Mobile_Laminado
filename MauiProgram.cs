@@ -1,4 +1,4 @@
-﻿using MAUI_Opcua.Services.Drivers.Opcua;
+﻿using App_UI_Mobile_Laminado.Services.Drivers.Opcua;
 
 using CommunityToolkit.Maui;
 
@@ -13,6 +13,7 @@ namespace App_UI_Mobile_Laminado
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+            
 
             builder
                 .UseMauiApp<App>()
@@ -36,7 +37,8 @@ namespace App_UI_Mobile_Laminado
             #region Serviços (DI)
             builder.Services.AddSingleton<AlarmEngine>();
             builder.Services.AddSingleton<StandartTests_Services>();
-            builder.Services.AddSingleton<Opcua_Client>();   // continua valendo, o cliente existe
+            builder.Services.AddSingleton<AlarmPersistenceService>();
+            builder.Services.AddSingleton<Opcua_Client>();
 
 
             #endregion

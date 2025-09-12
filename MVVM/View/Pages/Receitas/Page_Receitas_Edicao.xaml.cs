@@ -1,7 +1,7 @@
 using App_UI_Mobile_Laminado.MVVM.Popup;
 using CommunityToolkit.Maui.Views;
 using App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Receitas;
-using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
 using System.Numerics;
 
 namespace App_UI_Mobile_Laminado.MVVM.View.Pages.Receitas;

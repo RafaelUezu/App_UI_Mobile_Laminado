@@ -1,22 +1,23 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using App_UI_Mobile_Laminado.Services.Communication.Variables;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using App_UI_Mobile_Laminado.Services.Alarms;
-namespace App_UI_Mobile_Laminado.Services.StandartTests
+
+namespace App_UI_Mobile_Laminado.Services.Alarms
 {
-    public partial class StandartTests_Services : IAsyncDisposable
+    public sealed partial class AlarmUINotification : IAsyncDisposable
     {
         private readonly TimeSpan _period;
-        private readonly ILogger<StandartTests_Services>? _logger;
+        private readonly ILogger<AlarmUINotification>? _logger;
         private readonly object _gate = new();
 
         private CancellationTokenSource? _cts;
         private Task? _backgroundTask;
         private int _consecutiveErrors;
-        public StandartTests_Services(AlarmEngine alarmEngine, TimeSpan? period = null, ILogger<StandartTests_Services>? logger = null)
+        public AlarmUINotification(AlarmEngine alarmEngine, TimeSpan? period = null, ILogger<AlarmUINotification>? logger = null)
         {
             _period = period ?? TimeSpan.FromMilliseconds(1000); // ajuste conforme sua necessidade
             _logger = logger;
@@ -91,7 +92,7 @@ namespace App_UI_Mobile_Laminado.Services.StandartTests
                 }
                 catch (Exception ex)
                 {
-                    _logger?.LogError(ex, "[StandartTests_Services] erro de iteração");
+                    _logger?.LogError(ex, "[AlarmUINotification] erro de iteração");
                     // backoff exponencial limitado (250ms, 500ms, 1s, ... até 10s)
                     _consecutiveErrors = Math.Min(_consecutiveErrors + 1, 8);
                     var backoff = TimeSpan.FromMilliseconds(250 * (1 << Math.Min(_consecutiveErrors, 7)));
@@ -106,7 +107,9 @@ namespace App_UI_Mobile_Laminado.Services.StandartTests
         {
             await StopAsync(TimeSpan.FromMilliseconds(1000));
         }
-  
+        private async Task DoWorkOnceAsync(CancellationToken ct)
+        {
 
+        }
     }
 }

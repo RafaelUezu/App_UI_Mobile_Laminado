@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
 using Microsoft.Maui.Storage;
 
 namespace App_UI_Mobile_Laminado.Services.db.db_ConfSuper

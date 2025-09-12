@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using App_UI_Mobile_Laminado.Services.db.db_Recipe;
-using MAUI_Opcua.Services.Drivers.Opcua;
-using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.Drivers.Opcua;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 {

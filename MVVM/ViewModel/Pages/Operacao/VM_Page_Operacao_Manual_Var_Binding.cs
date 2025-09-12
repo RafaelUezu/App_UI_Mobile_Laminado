@@ -1,11 +1,11 @@
-﻿using MAUI_Opcua.Services.Communication.Variable;
+﻿using App_UI_Mobile_Laminado.Services.Communication.Variables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using static MAUI_Opcua.Services.Communication.Variable.GVL.Opcua.GVL_Permanentes;
+using static App_UI_Mobile_Laminado.Services.Communication.Variables.GVL.Opcua.GVL_Permanentes;
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Operacao
 {
     public partial class VM_Page_Operacao_Manual

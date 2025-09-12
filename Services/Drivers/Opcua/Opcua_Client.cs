@@ -1,6 +1,6 @@
 ﻿
-using MAUI_Opcua.Services.Communication.Variable;
-using MAUI_Opcua.Services.Net.Tools;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
+using App_UI_Mobile_Laminado.Services.Net.Tools;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using Opc.Ua;
@@ -10,13 +10,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 //using static App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao.VM_Page_Manutencao_Saidas;
 
-namespace MAUI_Opcua.Services.Drivers.Opcua
+namespace App_UI_Mobile_Laminado.Services.Drivers.Opcua
 {
-	public static class OpcUaEvents
+
+    public static class OpcUaEvents
 	{
 		public static event Func<Task>? LeituraFinalizadaAsync;
 
@@ -33,8 +35,8 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 		}
 	}
 
-	public class Opcua_Client(ILogger<Opcua_Client> logger)
-	{
+	public sealed class Opcua_Client(ILogger<Opcua_Client> logger)
+    {
 		#region Instânciamento do Logger
 		private readonly ILogger<Opcua_Client> _logger = logger;
 		#endregion
@@ -55,8 +57,10 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 
 		private CancellationTokenSource _cts;
 		private Task _backgroundTask;
-	   
-		public bool IsRunning
+        private int _timeoutPingIp;
+        private string _urlOpcUa;
+        private int _delayRequestMs;
+        public bool IsRunning
 		{
 			get
 			{
@@ -67,17 +71,21 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 			}
 		}
 
+
+
 		public void Start()
 		{
 			if (IsRunning) return;
 			_cts = new CancellationTokenSource();
 			GVL.ConfSuper.sStatusOpcUa.ReadWrite = "Iniciando";
-			OpcUaEvents.DispararLeituraFinalizadaAsync();
+
+            _timeoutPingIp = GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000;
+			_urlOpcUa = GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://opc.tcp://192.168.1.11:4840";
+			_delayRequestMs = GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700;
+
+            OpcUaEvents.DispararLeituraFinalizadaAsync();
 			
-			_backgroundTask = Task.Run(() => RunLoop(_cts.Token,
-													GVL.ConfSuper.iTimeOutPing.ReadWrite ?? 1000,
-													GVL.ConfSuper.sUrlOpcUa.ReadWrite ?? "opc.tcp://192.168.1.11:4840",
-													GVL.ConfSuper.iTimeRequest.ReadWrite ?? 700));
+			_backgroundTask = Task.Run(() => RunAsync(_cts.Token));
 			
 		}
 
@@ -131,8 +139,9 @@ namespace MAUI_Opcua.Services.Drivers.Opcua
 				ClearWriteFlag(Index);
 			}
 		}
-
-		private async Task RunLoop(CancellationToken token, int timeout_Ping_Ip, string urlopcua, int delay_request)
+        public Task RunAsync(CancellationToken token)
+        => RunAsync(token, _timeoutPingIp, _urlOpcUa, _delayRequestMs);
+        public async Task RunAsync(CancellationToken token, int timeout_Ping_Ip, string urlopcua, int delay_request)
 		{
 
 			System.Diagnostics.Debug.WriteLine("Inicializando o Driver: " + urlopcua);

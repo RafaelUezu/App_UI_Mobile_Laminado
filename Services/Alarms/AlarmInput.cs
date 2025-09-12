@@ -1,6 +1,6 @@
 ﻿
-using MAUI_Opcua.Services.Communication.Variable;
-using MAUI_Opcua.Services.Drivers.Opcua;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
+using App_UI_Mobile_Laminado.Services.Drivers.Opcua;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -48,6 +48,7 @@ namespace App_UI_Mobile_Laminado.Services.Alarms
             Standard,
             Movement,
             Ventilation,
+            Vacuum,
             Signals,
             Heating,
             Positioning,

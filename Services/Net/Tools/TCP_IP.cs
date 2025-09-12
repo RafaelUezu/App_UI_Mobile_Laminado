@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MAUI_Opcua.Services.Net.Tools
+namespace App_UI_Mobile_Laminado.Services.Net.Tools
 {
     public partial class TCP_IP
     {

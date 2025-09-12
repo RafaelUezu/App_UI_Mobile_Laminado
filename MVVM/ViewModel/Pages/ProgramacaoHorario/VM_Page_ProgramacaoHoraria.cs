@@ -1,5 +1,5 @@
-﻿using MAUI_Opcua.Services.Communication.Variable;
-using MAUI_Opcua.Services.Drivers.Opcua;
+﻿using App_UI_Mobile_Laminado.Services.Communication.Variables;
+using App_UI_Mobile_Laminado.Services.Drivers.Opcua;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

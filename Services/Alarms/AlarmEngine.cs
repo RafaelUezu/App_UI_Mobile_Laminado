@@ -10,8 +10,8 @@ namespace App_UI_Mobile_Laminado.Services.Alarms
     /// Motor passivo de alarmes: mantém a coleção de AlarmInput e realiza uma varredura por chamada.
     /// Os eventos são disparados durante a varredura de cada item.
     /// </summary>
-    public sealed class AlarmEngine
-    {
+    public sealed partial class AlarmEngine
+    { 
         // ----- Eventos -----
         public event Action<AlarmInput, DateTimeOffset>? AlarmActivated;
         public event Action<AlarmInput, DateTimeOffset>? AlarmCleared;

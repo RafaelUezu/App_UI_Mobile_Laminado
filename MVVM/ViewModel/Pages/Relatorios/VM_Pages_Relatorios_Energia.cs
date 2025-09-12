@@ -1,12 +1,12 @@
-﻿using MAUI_Opcua.Services.Drivers.Opcua;
+﻿using App_UI_Mobile_Laminado.Services.Drivers.Opcua;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Drivers.Opcua;
-using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.Drivers.Opcua;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
 
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Relatorios
 {

@@ -206,6 +206,8 @@
 
 	<ItemGroup>
 	  <Folder Include="MVVM\View\Header\" />
+	  <Folder Include="Platforms\Android\Services\" />
+	  <Folder Include="Services\ForegroundService\" />
 	</ItemGroup>
 
 </Project>

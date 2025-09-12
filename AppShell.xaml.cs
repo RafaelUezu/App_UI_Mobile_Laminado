@@ -8,7 +8,7 @@ using App_UI_Mobile_Laminado.MVVM.View.Pages.Manutencao;
 using App_UI_Mobile_Laminado.MVVM.View.Pages.Login;
 using App_UI_Mobile_Laminado.Services.db.Login;
 using App_UI_Mobile_Laminado.MVVM.Model.Pages;
-using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
 
 namespace App_UI_Mobile_Laminado
 {

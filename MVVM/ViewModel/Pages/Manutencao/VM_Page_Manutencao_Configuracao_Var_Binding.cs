@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MAUI_Opcua.Services.Communication.Variable;
+using App_UI_Mobile_Laminado.Services.Communication.Variables;
 namespace App_UI_Mobile_Laminado.MVVM.ViewModel.Pages.Manutencao
 {
     public partial class VM_Page_Manutencao_Configuracao

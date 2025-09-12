@@ -1,4 +1,4 @@
-﻿using MAUI_Opcua.Services.Communication.Variable;
+﻿using App_UI_Mobile_Laminado.Services.Communication.Variables;
 using Microsoft.Maui.Dispatching;
 using Microsoft.Maui.Dispatching;
 using System;

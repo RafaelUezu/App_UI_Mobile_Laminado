@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace MAUI_Opcua.Services.Communication.Variable
+namespace App_UI_Mobile_Laminado.Services.Communication.Variables
 {
     public partial class GVL
     {
@@ -343,9 +343,55 @@ namespace MAUI_Opcua.Services.Communication.Variable
             }
 
         }
-       
-        
+        public class Alarm
+        {
+            public class Notification
+            {
+                public static class Message
+                {
+                    private static readonly object _lock = new object();
+                    private static string? _readValue;
+                    private static string? _writeValue;
+                    public static string? Read
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _readValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _readValue = value;
+                            }
+                        }
+                    }
+                    public static string? Write
+                    {
+                        get
+                        {
+                            lock (_lock)
+                            {
+                                return _writeValue;
+                            }
+                        }
+                        set
+                        {
+                            lock (_lock)
+                            {
+                                _writeValue = value;
+                            }
+                        }
+                    }
+                }
 
+
+
+            }
+        }
         public class Opcua
         {
             public class Test
